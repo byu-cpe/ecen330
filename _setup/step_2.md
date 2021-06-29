@@ -42,7 +42,7 @@ VSCode should now be in folder view, and if you click the top-left *Explorer* bu
 ### Install VSCode Extensions 
 When you open the folder using VSCode, you should see a message indicating that there are recommended extensions for your code.  Click *Install All*.
 
-<img src="{% link media/setup/vscode_recommendations.png %}">
+<img src="{% link media/setup/vscode_recommendations.png %}" alt="VS Code popup suggesting to install recommended packages">
 
 <ins>**Important:** You should always work on your code by opening the folder like explained above, instead of just individually opening your files in VSCode.</ins>It provides several benefits:
   * It will load the configurations of VSCode that we have placed in the [.vscode](https://github.com/byu-cpe/ecen330_student/tree/master/.vscode) folder.

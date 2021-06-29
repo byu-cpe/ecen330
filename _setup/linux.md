@@ -46,7 +46,7 @@ cmake --version
 
 If you are using the WSL terminal on Windows, you still install the Windows version of VSCode.  After you install it, run it.  There should be a popup suggesting you install the 'Remote WSL' package.  Install it, then close VS Code.
 
-<img src="{% link media/setup/vscode_wsl.png %}">
+<img src="{% link media/setup/vscode_wsl.png %}" alt="VS Code Remote - WSL extension popup">
 
 **Verifying installation**: Open your Linux terminal and run `code` to make sure it opens VS Code.
 

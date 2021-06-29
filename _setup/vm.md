@@ -41,11 +41,11 @@ You will likely need to authenticate with your BYU credentials. The file is in c
     <iframe width="800" height="600" allow="fullscreen" src="https://www.youtube.com/embed/xIMztTEp7Lw"> </iframe>
 
 8. When attempting to first download to the 330 board, it will sometimes fail. If this occurs, turn the power off on the board, wait about 5 seconds, and then turn the power back on. You should see the dialog below appear after 5-10 seconds. Make sure to click the button as shown in the box. After that, your downloads will usually be successful.
-    <img src="{% link media/setup/vm_board_connect.jpg %}" width="600">
+    <img src="{% link media/setup/vm_board_connect.jpg %}" width="600" alt="New USB Device Detected Popup Window">
 
 9. **Important** Make certain to always shutdown the VM and to quit VM-ware prior to removing your flash-drive from the lab computer. If you forget to do this, the VM image will be corrupted and you will not be able to start it. When this happens, you can restart from a previous snap-shot. Hence, the importance of taking regular snapshots. To shut down your VM, you can use the power-on button. On my Mac, it looks something like the screenshot shown below. I reached that dialog by clicking on the power-on button located to the far right on the top menu bar.
     
-    <img src="{% link media/setup/vmshutdown.png %}" width="600">
+    <img src="{% link media/setup/vmshutdown.png %}" width="600" alt="VM Power menu">
 
 
 ## Continue
