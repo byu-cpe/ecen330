@@ -13,16 +13,14 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: "ECEn 427"
+title: "ECEN 330"
 class_name: Embedded Linux Systems
-class_number: ECEn 427
+class_number: ECEN 330
 email: jgoeders@byu.edu
-description: >-
-  Class website for BYU's ECEn 625: Compilation Strategies for High-Performance Systems.
-baseurl: "/ecen427"
+baseurl: "/ecen330"
 url: "https://byu-cpe.github.io"
 github:
-  url: https://github.com/byu-cpe/ecen427
+  url: https://github.com/byu-cpe/ecen330
 
 permalink: pretty
 
