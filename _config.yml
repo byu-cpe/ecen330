@@ -14,7 +14,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: "ECEN 330"
-class_name: Embedded Linux Systems
+class_name: Introduction to Embedded System Programming
 class_number: ECEN 330
 email: jgoeders@byu.edu
 baseurl: "/ecen330"
@@ -27,6 +27,10 @@ permalink: pretty
 markdown: kramdown
 
 collections:
+  setup:
+    output: true
+    permalink: /:collection/:name/
+    sort_by: number
   labs:
     output: true
     permalink: /:collection/:name/
