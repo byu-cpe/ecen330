@@ -35,15 +35,11 @@ Complete [Setup Step #1]({% link _setup/step_1.md %}) and [Setup Step #2]({% lin
 
 <ins>**Follow all steps carefully.  Make sure everything if working before proceeding.  If you get stuck during a setup step, DO NOT SKIP IT.  Ask for help on Piazza**</ins>.
 
-### Compile the Lab1 Code 
+### Compile and Run the Lab1 Code 
 
-Carefully read the entire page on [Compiling Code]({% link _documentation/compiling.md %}).  **Follow the steps to compile the Lab1 code.**
-
+Carefully read the entire page on [Compiling Code]({% link _documentation/compiling.md %}).  **Follow the steps to compile the Lab1 code and run it on the board or emulator.**
 
 ## Implementation 
-
-**Run the Lab1 Code**. Read the [Running Programs]({% link _documentation/running.md %}) page to run the Lab 1 program on the board or emulator.
-
 1. When you provide characters to the *printf* function,  the characters are temporarily stored in a buffer, and then output to the terminal (also called *flushed*) in groups.  Normally the buffer is flushed at every new line character, but also when the program ends.
   * Modify the first *hello world* program and remove the `\n` from the string used in the *printf* function and recompile and execute the program. What happens? Does *hello world!* still appear in the console?
   * Now add a `while (1);` statement after the printf so that your program never ends.  Recompile and execute.  Does *hello world!* still appear in the console?

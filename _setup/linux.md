@@ -55,7 +55,7 @@ If you are using the WSL terminal on Windows, you still install the Windows vers
 In order to display graphical Linux programs from Windows, you need to run an X-Windows server.  
 If you only want to run on the board, and never run the emulator, you can skip this step.  Or, if you are running Linux and not WSL on Windows, you can skip this step.
 
-Otherwise, [install an X server]({% link _setup/xserver.md %}).
+Otherwise, [install an X server]({% link _pages/xserver.md %}).
 
 ## Continue
 

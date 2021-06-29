@@ -1,6 +1,6 @@
 ---
 layout: page
 toc: false
-title: "Running Programs"
+title: "CMake"
 number: 2
 ---
