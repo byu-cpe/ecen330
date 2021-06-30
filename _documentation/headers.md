@@ -31,7 +31,7 @@ Why have already configured CMake to instruct it which folders in our code repos
 If you look at the top-level [CMakeLists.txt](https://github.com/byu-cpe/ecen330_student/blob/master/CMakeLists.txt) file, you will see lines like so:
 
     include_directories(include)
-    include_directories(my_libs)
+    include_directories(drivers)
 
 which instruct CMake that we want to include header files directly from these directories.  If you look around in the *CMakeLists.txt* file you will see other paths that are included as well.
 

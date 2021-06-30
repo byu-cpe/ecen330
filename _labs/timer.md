@@ -30,9 +30,9 @@ Read over the page on [Timer overview and detailed description of timer operatio
 ### Building Lab 3 
 
 #### Driver Code 
-  * Most of this lab consists of writing a driver for the Interval Timer.  This driver will be written in *intervalTimer.c*, which you must create yourself.  You are provided with the [intervalTimer.h](https://github.com/byu-cpe/ecen330_student/blob/master/my_libs/intervalTimer.h) file, which you must not change.
-  * Since the Interval Timer driver will be used in later labs, *intervalTimer.c* should be placed in your *my_libs* folder.
-  * Uncomment the line in the *my_libs* [CMakeLists.txt](https://github.com/byu-cpe/ecen330_student/blob/master/my_libs/CMakeLists.txt) file so that the *intervalTimer* library is built.  
+  * Most of this lab consists of writing a driver for the Interval Timer.  This driver will be written in *intervalTimer.c*, which you must create yourself.  You are provided with the [intervalTimer.h](https://github.com/byu-cpe/ecen330_student/blob/master/drivers/intervalTimer.h) file, which you must not change.
+  * Since the Interval Timer driver will be used in later labs, *intervalTimer.c* should be placed in your *drivers* folder.
+  * Uncomment the line in the *drivers* [CMakeLists.txt](https://github.com/byu-cpe/ecen330_student/blob/master/drivers/CMakeLists.txt) file so that the *intervalTimer* library is built.  
 
 #### Application Code 
   * The application code, which will test your interval timer driver, is provided to you as [main.c](https://github.com/byu-cpe/ecen330_student/blob/master/lab3/main.c) in the *lab3* directory.  A [CMakeLists.txt](https://github.com/byu-cpe/ecen330_student/tree/master/lab3) file is also provided.
@@ -60,7 +60,7 @@ You will complete this lab off in two milestones:
 ## Requirements
 
   - You must write the *intervalTimer.c* file.
-  - You must use [intervalTimer.h](https://github.com/byu-cpe/ecen330_student/blob/master/my_libs/intervalTimer.h) as given. No modifications are necessary or allowed.
+  - You must use [intervalTimer.h](https://github.com/byu-cpe/ecen330_student/blob/master/drivers/intervalTimer.h) as given. No modifications are necessary or allowed.
   - You must follow the coding standard.
   - You must provide the following functions for the three interval timers (see below).
   - You must use the Xilinx low-level access functions *Xil_In32()* and *Xil_Out32()* to access the registers in the timer hardware. These functions were discussed in a previous lab.
