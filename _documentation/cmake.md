@@ -23,7 +23,7 @@ Look at the *lab1* [CMakeLists.txt](https://github.com/byu-cpe/ecen330_student/b
 **In later labs you can create a new *CMakeLists.txt* file that is almost identical to this one.**  You will only need to update the lists of source files and libraries, and of course the name of the executable.
 
 ## Creating Libraries using CMakeLists.txt Files 
-The [CMakeLists.txt](https://github.com/byu-cpe/ecen330_student/blob/master/supportFiles/CMakeLists.txt) file in the *my_libs* directory is used to create libraries instead of executables (ie., the code doesn't have a *main*, just functions that are called by other programs).
+The [CMakeLists.txt](https://github.com/byu-cpe/ecen330_student/blob/master/my_libs/CMakeLists.txt) file in the *my_libs* directory is used to create libraries instead of executables (ie., the code doesn't have a *main*, just functions that are called by other programs).
   * *Line 1:* The `add_library` command creates a new library.  The first argument is the name for your library, and the remaining arguments are all of the source files that should be compiled together to create the library.  
   * *Line 2:* Like described above, the `target_link_libraries` command instructs CMake that this library depends on other libraries.  Because the buttons and switches code calls the LED functions, it needs to link to the provided 330 libraries specified by the `${330_LIBS}` variable.
 
