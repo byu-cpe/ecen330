@@ -1,10 +1,9 @@
 ---
 layout: page
 toc: false
-title: ECEN 330 Coding Standard
-short_title: Coding Standard
+title: Coding State Machines
 indent: 0
-number: 1
+number: 2
 ---
 
 
