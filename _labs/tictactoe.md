@@ -6,14 +6,11 @@ short_title: Tic Tac Toe
 number: 5
 ---
 
-{{ tictactoe.jpg?400 }}
+<img src="{% link media/lab5/tictactoe.jpg %}" width="400" alt="Tic tac toe board on LCD">
 
-===== Overview =====
+## Overview 
 
 For our next lab, we will implement a program that can play an **unbeatable** game of Tic-Tac-Toe. This project will consist of three individual milestones that you will pass off one-by-one (display, algorithm, control). That way you can get partial credit if you don't complete the entire lab. **A word of warning: some of you may find this lab very challenging.** You will implement the algorithm for the computer player using a recursive minimax search. The algorithm is not that complex but recursive algorithms can be a challenge to debug so start early to give yourself extra time. If you are a little squeamish about recursion, make sure to start early.
-
-
-
 
 This lab will consist of three milestones:
   - **Algorithm**. You will write the software that makes it impossible to beat the computer.
@@ -22,8 +19,7 @@ This lab will consist of three milestones:
 
 You will implement and test the Display and Algorithm milestones separately. The Control milestone will bring everything together to implement the entire game.
 
-----
-===== Objectives =====
+## Objectives 
   - Practice developing your own state diagrams.
   - More practice implementing synchronous state machines.
   - Practice implementing and debugging your synchronous controller state machine.
@@ -31,48 +27,40 @@ You will implement and test the Display and Algorithm milestones separately. The
   - Develop your own state-diagram for control and implement it using the synchronous state-machine techniques discussed in class.
   - Implement a recursive mini-max algorithm and use it to create an unbeatable game of tic-tac-toe.
 
-----
+## Preliminary 
 
-===== Preliminary =====
+### Building this Lab 
+All of your code for this lab will written in the *lab5* directory.  You will need to create a *CMakeLists.txt* file in this directory to build the clock application and link it to any necessary libraries.
 
-==== Building this Lab ====
-All of your code for this lab will written in the ''lab5'' directory.  You will need to create a ''CMakeLists.txt'' file in this directory to build the clock application and link it to any necessary libraries.
-
-
-----
-==== Program Organization ====
+### Program Organization 
 The program is divided into three main parts or packages: 
   - minimax: provides the algorithm that you will need to create your unbeatable game.
   - ticTacToeDisplay: provides the functions to draw the board and players "X" and "O".
   - ticTacToeControl: provides the top-level control of the game, invoking minimax and the display functions as necessary.
 
-----
 
-===== Implementation =====
+### Implementation 
 Your program will be implemented in three separate milestones that correspond to the three different packages that you will implement: ticTacToeDisplay, minimax, ticTacToeControl. Each milestone will be checked by the TAs separately and the requirements are stated at the end of the description for each of the milestones below.
 
-Like previous labs, you are provided with a ''main.c'' file that will run the different milestones.  Do not change the file, except to uncomment the appropriate line to run the desired milestone.
+Like previous labs, you are provided with a *main.c* file that will run the different milestones.  Do not change the file, except to uncomment the appropriate line to run the desired milestone.
 
-<code c>
-////////////////////////////////////////////////////////////////////////////////
-// Uncomment one of the following lines to run Milestone 1, 2, or 3    /////////
-////////////////////////////////////////////////////////////////////////////////
-// #define RUN_PROGRAM MILESTONE_1
-// #define RUN_PROGRAM MILESTONE_2
-// #define RUN_PROGRAM MILESTONE_3
+    ////////////////////////////////////////////////////////////////////////////////
+    // Uncomment one of the following lines to run Milestone 1, 2, or 3    /////////
+    ////////////////////////////////////////////////////////////////////////////////
+    // #define RUN_PROGRAM MILESTONE_1
+    // #define RUN_PROGRAM MILESTONE_2
+    // #define RUN_PROGRAM MILESTONE_3
 </code>
 
-1. [[Lab 5 Milestone 1| Milestone 1: Minimax Algorithm Details and Pass-Off]]\\
-2. [[Lab 5 Milestone 2 | Milestone 2: Minimax Display Details and Pass-Off]]\\
-3. [[Lab 5 Milestone 3 | Milestone 3: Minimax Game and Control Details and Pass-Off]]\\
-
-----
+1. [Milestone 1: Minimax Algorithm Details and Pass-Off]({% link _pages/tictactoe_m1.md %})
+2. [Milestone 2: Minimax Display Details and Pass-Off]({% link _pages/tictactoe_m2.md %})
+3. [Milestone 3: Minimax Game and Control Details and Pass-Off]({% link _pages/tictactoe_m3.md %})
 
 
-===== Submission & Pass Off =====
-Follow the [[submitting_source_code|instructions on submitting source code]] to submit your code.
+## Submission & Pass Off
+Follow the [instructions on submitting source code]({% link _documentation/submission.md %}) to submit your code.
 
-==== Grade Breakdown====  
+### Grade Breakdown 
   * Milestone 1 (algorithm): 25%
     * -10% overall, if you don't create and print the output of the 10 extra test boards.
   * Milestone 2 (display): 10%
