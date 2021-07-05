@@ -11,6 +11,7 @@ Try to answer questions from the study list as you read each chapter. Some test 
 [[https://github.com/byu-cpe/ecen330_student/tree/master/playground|the provided code playground]]. 
 
 * [K & R Chapter 1]({% link _pages/kr_ch1.md %})
+* [K & R Chapter 2]({% link _pages/kr_ch2.md %})
 [[K & R Chapter 2]]\\
 [[K & R Chapter 3]]\\
 [[K & R Chapter 4]]\\
