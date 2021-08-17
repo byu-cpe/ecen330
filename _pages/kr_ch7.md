@@ -12,30 +12,27 @@ title: "K & R Chapter 7 Study Questions"
   * (T or F) For printf(), the formatting argument G may generate the same results as the formatting argument f. 
   * (T or F) printf("%.*s", 5, "hello there\n"); prints out hello.  
  
-The program:
-
-```c
-int main() {
-  char array[20];
-  sprintf(array, "%s", "hello there!");
-}
+* The following program prints out hello there! when executed (T or F).
+    ```c
+    int main() {
+      char array[20];
+      sprintf(array, "%s", "hello there!");
+    }
 ```
 
-prints out hello there! when executed (T or F).
+* (T or F) sscanf() reads characters from standard input.
+* What does the following program print when executed and when you type 2 2 2 and press enter (or carriage return).
 
-  * (T or F) sscanf() reads characters from standard input.
-  * What does the following program print when executed and when you type 2 2 2 and press enter (or carriage return).
+    ```c
+    #include <stdio.h>
 
-```c
-#include <stdio.h>
+    int main() {
+      int month, day, year;
+      printf("%d\n", scanf("%d %d %d", &month, &day, &year));
+    }
+    ```
 
-int main() {
-  int month, day, year;
-  printf("%d\n", scanf("%d %d %d", &month, &day, &year));
-}
-```
-
-  * What does the following program print when executed? Why?
+* What does the following program print when executed? Why?
 ```c
 #include <stdio.h>
 #include <string.h>
@@ -48,7 +45,8 @@ int main() {
 }
 ```
 
-  * What does the following program print when executed? Why?
+
+* What does the following program print when executed? Why?
 ```c
 #include <stdio.h>
 #include <string.h>
