@@ -6,10 +6,6 @@ title: "K & R Chapter 2 Study Questions"
 
 This chapter discusses types, operators and expressions. For each question, make sure that you understand what is happening and the focus or concept associated with the question. The file that we used in class is available at the bottom of this page.
 
-Try to answer questions from the study list as you read each chapter. Some test questions are likely to be derived from these study questions.  You may find it helpful to compile and run code yourself.  This can be done:
-  * By running on the board (You can modify your lab1 program, or copy your lab1 folder to another directory and use that)
-  * By compiling and running in Linux (we have provided a [playground](https://github.com/byu-cpe/ecen330_student/tree/master/playground) directory where you can modify main.c, run `make` to compile, and then run using `./main`.)
-
 1. (T or F) The compiler will generate an error if an identifier starts with "_".
 
 2. (T or F) Variables named myVariable and MyVariable are the same variable.
