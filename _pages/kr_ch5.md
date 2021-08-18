@@ -526,16 +526,16 @@ The following figures are provided for in-class discussion.
 
 The following figure illustrates the relationship between addresses for 8-bit (char), 16-bit (short) and 32-bit (int) variables.
 
-<img src="{% link media/pointerdiscussionaddressanddata2.png %}" width="400">
+<img src="{% link media/pointerdiscussionaddressanddata2.png %}" width="400" alt="Diagram of memory layout">
 
 ----
 
 The next figure shows how variables may be stored in memory and relates pointers to their "pointed-to" location.
 
-<img src="{% link media/pointerdiscussionaddresses.jpg %}" width="600">
+<img src="{% link media/pointerdiscussionaddresses.jpg %}" width="600" alt="Diagram of memory layout">
 
 ----
 
 The next figure illustrates the before and after contents of memory after executing the body of the swap function.
 
-<img src="{% link media/pointerdiscussionswap3.png %}" width="700">
+<img src="{% link media/pointerdiscussionswap3.png %}" width="700" alt="Diagram of memory layout">
