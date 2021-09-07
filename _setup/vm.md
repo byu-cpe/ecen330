@@ -18,7 +18,7 @@ If you have about 12-15 GB of free space on your computer and about 4-8 GB RAM, 
 
 
 2. Download the the virtual-machine *image* from 
-[Box](https://byu.box.com/s/9j8e9sebi7ctrai66o33j94s8pofczjy).
+[Box](https://byu.box.com/s/59sltazrtru160jl4mkanr5on38c7w8n).
 You will likely need to authenticate with your BYU credentials. The file is in compressed form. Once downloaded, decompress this file. On most computers, double-clicking the compressed file will decompress it. If you are having trouble with the Box site, you can also try downloading it 
 [here](https://drive.google.com/file/d/12TpDPxKvO6OrB4WysSi_5Z3Sh4Gpd7xi/view?usp=sharing).
 
