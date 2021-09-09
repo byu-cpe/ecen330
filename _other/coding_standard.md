@@ -96,7 +96,7 @@ number: 1
 The TAs will apply the following method  when evaluating your source code. The goal is to get you in the habit of writing, readable, reusable, high-quality code. As such the TAs will be quite strict when grading your code.
   * In general, the coding standard counts toward 30% of your lab grade (some exceptions noted below).
   * Each lab has a set number of maximum points that represents how many infractions can be made before you earn 0% on the coding standard portion.
-  * You will lose a point for each infraction, not just each type of infraction; however, the maximum number of points you can lose for each type of violation is 5.  For example, if your code has 8 magic numbers, you will lose 5 points. 
+  * You will lose a point for each infraction, not just each type of infraction; however, the maximum number of points you can lose for each type of infraction is 5.  For example, if your code has 8 magic numbers, you will lose 5 points. 
   * For example, in Lab 4, if you lose 10 point, you will receive a coding standard score of 10/20, and thus 15%/30% on the coding standard portion of the lab.
  
 
