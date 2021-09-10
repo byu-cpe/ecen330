@@ -49,4 +49,4 @@ If you want to try using the GDB debugger integrated in VSCode (along with the e
 
 1. In the debugger panel, hit the green Play button.  You should now be paused on your code like so:
 
-<img src="{% link media/debugging.png %}">
+<img src="{% link media/debugging.png %}" alt="Debugging in VS Code">
