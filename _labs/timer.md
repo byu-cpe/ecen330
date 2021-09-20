@@ -68,7 +68,7 @@ You will complete this lab off in two milestones:
 
 The functions that accept a timerNumber argument operate on a single timer. The timer number must be: 0, 1, or 2. Anything else should generate an error message. The *intervalTimer_initAll()*, *intervalTimer_resetAll()*, and *intervalTimer_testAll()* operate on all three timers. *intervalTimer_getTotalDurationInSeconds()* reads the 64-bit value from the timer and returns the number of seconds that have transpired since the counter was last reset and started.
 
-*intervalTimer_test()* needs to see if the timers are working. In my code, I check things by:
+Implementing *intervalTimer_test()* and *intervalTimer_testAll()* is optional.  You can use them to write your own test code separate from the code provided in main.  I check things by:
   - I reset the counter and see if it is reset by reading it.
   - I start the counter and read it a couple of times to see if it is actually changing value.
   - I stop the counter and read it a couple of times to see that it is not changing.
