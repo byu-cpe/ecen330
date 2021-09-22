@@ -65,7 +65,7 @@ To run Lab 1 on the board (assuming you are in the *build* directory):
 
 
 ### Emulator 
-To run Lab 1 in the emulator (assuming you are in the ''build'' directory):
+To run Lab 1 in the emulator (assuming you are in the *build_emu* directory):
 
     ./lab1/lab1.elf
   

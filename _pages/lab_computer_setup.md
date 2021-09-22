@@ -23,7 +23,7 @@ You need to install a newer version of CMake:
 Install the following packages:
 
 
-    sudo apt install build-essential qt5-default clang-format gcc-arm-none-eabi python3-serial xterm libssl1.0-dev vim emacs zip 
+    sudo apt install build-essential qt5-default clang-format-6.0 gcc-arm-none-eabi python3-serial xterm libssl1.0-dev vim emacs zip 
 
 
 ## Other Software 
