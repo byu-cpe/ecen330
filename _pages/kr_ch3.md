@@ -16,25 +16,6 @@ int main() {
 }
 #endif
 
-#ifdef Q2
-#include <stdio.h>
-int main() {
-  int x;
-  x = 1;
-  x > 1; // Question: (T or F) This line of code contains a statement.
-  printf("%d\n\r", x);
-}
-#endif
-
-#ifdef Q3
-#include <stdio.h>
-// Question: How many statements does this program contain?
-int main() {
-  int x = 1, y = 2, z = 3;
-  printf("%d\n\r", x);
-}
-#endif
-
 #ifdef Q4
 // Question: (T or F) The two if-statements are equivalent.
 #include <stdio.h>
@@ -138,7 +119,7 @@ int main() {
 #endif
 
 #ifdef Q10
-// Question: How many times with this program print hi!?
+// Question: How many times will this program print hi!?
 #include <stdio.h>
 int main() {
   int i = 0;
