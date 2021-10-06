@@ -47,7 +47,8 @@ enum clockControl_st_t {
 	rate_timer_running_st,   // waiting for the rate-timer to expire to know when to perform the auto inc/dec.
 	rate_timer_expired_st,   // when the rate-timer expires, perform the inc/dec function.
 	add_second_to_clock_st   // add a second to the clock time and reset the ms counter.
-} currentState;
+};
+static enum clockControl_st_t currentState;
 
 void clockControl_init() {
   currentState = init_st;
