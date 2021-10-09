@@ -62,3 +62,6 @@ exclude:
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
+
+plugins:
+  - jekyll-sitemap

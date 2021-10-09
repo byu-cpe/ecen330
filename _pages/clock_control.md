@@ -8,16 +8,20 @@ title: "Clock Control"
 Here is [clockControl.h](https://github.com/byu-cpe/ecen330_student/blob/master/lab4/clockControl.h). 
 
 
-You will implement clock control in two phases based upon the state diagram that I provide below. You will convert this state diagram I provide using the procedures shown in the text. Implemented correctly, the state diagram will give you a working clock-display except that it won't keep time. You will add that functionality in the second phase.
+The requirements of the clockControl state machine are:
+1. To detect when a user taps on the LCD screen, wait the appropriate amount of time for the ADC to settle, and then call *clockDisplay_performIncDec()* so that the display code can read the touch location and process the touch.
+
+1. Alternatively, if the user continues to touch a region for at least 0.5 seconds, then the seconds, minutes, or hours field should begin auto-incrementing or auto-decrementing 10 times a second (again by calling *clockDisplay_performIncDec()*) until the user stops touching the screen.  
+
+1. Keep time, incrementing the seconds value each time one second of time has elapsed.  However, you should not start keeping time until the clock display has been touched at least once.
+
+
+The following state machine shows the implementation for the first two requirements above.  
+
 
 <img src="{% link media/lab4/clockstatemachine.jpg %}" width="800" alt="Clock control state machine diagram">
 
-The conversion of the state diagram in to 'C' code is very straightforward and relies on the procedures discussed in the book up through the chapter on synchronous state machines.
 
-Once you have successfully converted this state diagram into 'C' code, you can test it using the provided *main.c* (making sure to set the *#define* to Milestone 2). 
+Once you have it tested and working, you can modify it to add the functionality in requirement #3 above .Add this functionality to the original state-diagram and then implement it using the conversion process outlined in the text.
 
-Once you have debugged your state machine, you need to add the following functionality to the state-diagram to complete your clock:
-  - start time keeping by making the clock keep time, and
-  - don't start keeping time until the clock display has been touched at least once.
-
-Add this functionality to the original state-diagram and then implement it using the conversion process outlined in the text.  Be sure to follow the guidelines in [Coding and Debugging State Machines]({% link _other/coding_state_machines.md %}).
+Be sure to follow the guidelines in [Coding and Debugging State Machines]({% link _other/coding_state_machines.md %}).
