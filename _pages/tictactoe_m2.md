@@ -23,7 +23,7 @@ Watch the video above to see how your tic-tac-toe board should appear. Your boar
     - If you press BTN1, the test will terminate and print a message to that effect.
   - Suggestions for *ticTacToeDisplay_runTest()*:
     - While you could implement this behavior with a state machine, since this is test code, it's not required. You will probably find it easier to just use a loop with delay statements.
-    - Even though a state machine is not required, you still need to interact with teh touch screen correctly:
+    - Even though a state machine is not required, you still need to interact with the touch screen correctly:
       * First, wait for a touch using *display_isTouched()*.
       * Next, call *display_clearOldTouchData()*.
       * Then wait for at least 50ms for the analog-to-digital converters to settle (you can use the `utils_msDelay()` function).
