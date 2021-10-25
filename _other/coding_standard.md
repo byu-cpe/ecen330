@@ -29,7 +29,7 @@ number: 1
 ### 2. Files
   * **2.1** All ".h" files must contain declarations for all constant values, function prototypes, etc., that you want to "advertise" for use. All ".h" files must not contain executable code, only function declarations, #define, etc. This includes any definitions of any variables.
 
-  * **2.2** All ".h" files must have a corresponding ".c" with the same base name.
+  <!-- * **2.2** All ".h" files must have a corresponding ".c" with the same base name. -->
 
 
 ### 3. Naming
