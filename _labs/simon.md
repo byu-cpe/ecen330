@@ -99,7 +99,6 @@ We provide you with [simonControl.h](https://github.com/byu-cpe/ecen330_student/
   - You are not allowed to use *util_msDelay()* in any of your code. You must implement delays using counters in your state machines.
   - You can select a suitable delay for time-out and a speed for flashing the sequence.
   - If the user selects the incorrect color or you detect a time-out, just display the longest sequence number correctly achieved (allowing enough time for the user to read the message) and go back to the starting screen (see the video that demonstrates the simon game at the top of this page).
-  - Source code is only graded after you completed the entire lab so it is due along with the last milestone.
 
 ## Submission & Pass Off 
 Follow the [instructions on submitting source code]({% link _documentation/submission.md %}) to submit your code.

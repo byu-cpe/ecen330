@@ -96,8 +96,8 @@ Follow the [instructions on submitting source code]({% link _documentation/submi
 ### Grade Breakdown 
   * 30%: Milestone 1
   * 40%: Milestone 2
-    * -10% overall, if missing debug state printing
-    * -10% overall, if the isr invocation count differs from internal interrupt count by more than 1     
+    * -10% overall, if your code does not print the debug state messages when run.
+    * -10% overall, if the isr invocation count differs from internal interrupt count by more than 1.
     * -10% overall, if the clock is not very responsive, if it seems laggy, or if it flashes the display when updating the time.
   * 30%: Code quality (adherence to coding standard).
  

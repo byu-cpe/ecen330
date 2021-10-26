@@ -3,8 +3,13 @@ layout: lab
 toc: true
 title: "Lab 7: Whack-a-Mole"
 short_title: Whack-a-Mole
-number: 7
+number: 7-old
 ---
+
+# <span style="color:red"> Warning: Under Construction</span>
+
+<span style="color:red"> This lab is changing for Fall 2021.  Please stay tuned.</span>
+
 
 <iframe width="560" height="315" allow="fullscreen" src="https://www.youtube.com/embed/hEq2CnNf5V4"> </iframe>
 
