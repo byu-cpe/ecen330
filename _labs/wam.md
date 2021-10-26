@@ -3,7 +3,7 @@ layout: lab
 toc: true
 title: "Lab 7: Whack-a-Mole"
 short_title: Whack-a-Mole
-number: 7
+number: 7-old
 ---
 
 # <span style="color:red"> Warning: Under Construction</span>
