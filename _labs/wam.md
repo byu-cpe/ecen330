@@ -6,9 +6,11 @@ short_title: Whack-a-Mole
 number: 7-old
 ---
 
-# <span style="color:red"> Warning: Under Construction</span>
+# <span style="color:red"> Warning</span>
 
-<span style="color:red"> This lab is changing for Fall 2021.  Please stay tuned.</span>
+<span style="color:red"> 
+Please read through the [project page]({% link _labs/project.md %}) before starting this lab.  Completing this lab will only provide partial credit for the project.
+</span>
 
 
 <iframe width="560" height="315" allow="fullscreen" src="https://www.youtube.com/embed/hEq2CnNf5V4"> </iframe>
