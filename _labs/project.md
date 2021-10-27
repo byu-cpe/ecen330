@@ -45,6 +45,28 @@ You can optionally work in teams (up to size 3); however, the larger the team, t
 
 Create a *lab_project* directory in your repository and place **_all_** your code files there.
 
+## FAQs
+
+**Q: Can I use a custom piece of hardware, like a video game controller?**
+
+A: Yes, but obviously this makes grading more difficult.  In this case your project should have an option to use the I/O on the board (buttons, switches, touchscreen) instead.  This option should be the default when you submit your code so I can try out your project without the piece of hardware.  
+
+Then, in your Youtube video you should explain the optional hardware and the complexity that was involved in supporting it (so that you can get credit for that work).
+
+**Q: How should we share code between team members?**
+
+A: I suggest you create a private Github repository.  You can go to <https://github.com/byu-cpe/ecen330_student> and click *Use This Template* to create a private repository with all of the starter 330 code.  You would then want to put any necessary code (ie. buttons and switches drivers) into this repository.
+
+**Q: How do I know if my project is *difficult* enough?**
+
+A: Designing projects from scratch is difficult.  I think most people will probably try and implement too much, and find themselves running out of time to get it done on time. Pick a project that has some meaningful complexity (like timely user input in the Simon lab, or a smart computer player in the tic-tac-toe lab), but keep it fairly simple overall.
+
+**Q: Advice?**
+
+A: Make sure you submit something that compiles, runs, and does something meaningful.  Even if you don't get your entire project done in time.
+
+That means you should work incrementally, and save progress regularly.  Once you have something working, make it sure it works well, and then save a copy before moving on to add more functionality.  Git works well for this.
+
 ## Submission
 
 **Be careful to follow these instructions carefully.  If your code doesn't compile and run properly, you will lose points.**
