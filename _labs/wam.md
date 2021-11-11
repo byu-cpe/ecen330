@@ -3,8 +3,15 @@ layout: lab
 toc: true
 title: "Lab 7: Whack-a-Mole"
 short_title: Whack-a-Mole
-number: 7
+number: 7-old
 ---
+
+# <span style="color:red"> Warning</span>
+
+<span style="color:red"> 
+Please read through the [project page]({% link _labs/project.md %}) before starting this lab.  Completing this lab will only provide partial credit for the project.
+</span>
+
 
 <iframe width="560" height="315" allow="fullscreen" src="https://www.youtube.com/embed/hEq2CnNf5V4"> </iframe>
 
