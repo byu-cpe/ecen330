@@ -22,7 +22,7 @@ struct point makePoint(int x1, int y1) {
 }
 
 void printPoint(struct point p) {
-  printf("(%d, %d)\n\r", p.x, p.y);
+  printf("(%d, %d)\n", p.x, p.y);
 }
 
 // Question: What does this program print?
@@ -42,7 +42,7 @@ struct point {
 };
 
 void printPoint(struct point p) {
-  printf("(%d, %d)\n\r", p.x, p.y);
+  printf("(%d, %d)\n", p.x, p.y);
 }
 
 // Question: What does this program print?
@@ -66,7 +66,7 @@ struct point {
 };
 
 void printPoint(struct point p) {
-  printf("(%d, %d)\n\r", p.x, p.y);
+  printf("(%d, %d)\n", p.x, p.y);
 }
 
 // Question: What does this program print?
@@ -91,7 +91,7 @@ struct point {
 };
 
 void printPoint(struct point p) {
-  printf("(%d, %d)\n\r", p.x, p.y);
+  printf("(%d, %d)\n", p.x, p.y);
 }
 
 struct point modifyPoint(struct point* p) {
@@ -118,7 +118,7 @@ struct point {
 };
 
 void printPoint(struct point p) {
-  printf("(%d, %d)\n\r", p.x, p.y);
+  printf("(%d, %d)\n", p.x, p.y);
 }
 
 struct point modifyPoint(struct point* p) {
@@ -144,7 +144,7 @@ struct point {
 };
 
 void printPoint(struct point p) {
-  printf("(%d, %d)\n\r", p.x, p.y);
+  printf("(%d, %d)\n", p.x, p.y);
 }
 
 void modifyPoint(struct point* p) {
@@ -169,7 +169,7 @@ struct point {
 };
 
 void printPoint(struct point p) {
-  printf("(%d, %d)\n\r", p.x, p.y);
+  printf("(%d, %d)\n", p.x, p.y);
 }
 
 int main() {
@@ -191,7 +191,7 @@ struct point {
 };
 
 void printPoint(struct point p) {
-  printf("(%d, %d)\n\r", p.x, p.y);
+  printf("(%d, %d)\n", p.x, p.y);
 }
 
 int main() {

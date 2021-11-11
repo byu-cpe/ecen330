@@ -391,7 +391,7 @@ int fib(int x) {
 int main() {
   int inputValue = 10;
   for (int i=0; i<=inputValue; i++)
-    printf("fib(%d):%d\n\r", i, fib(i));
+    printf("fib(%d):%d\n", i, fib(i));
 }
 
 #endif
@@ -404,7 +404,7 @@ int main() {
 int main() {
   int i=0, j=0;
   int val = max(i++, j++);
-  printf("%d\n\r", val);
+  printf("%d\n", val);
 }
 
 #endif
@@ -417,7 +417,7 @@ int main() {
 int main() {
   int value = square(2-1);
   // Note: converts to 2 -1 * 2 - 1 -> 2 - (-1 * 2) - 1
-  printf("%d\n\r", value);
+  printf("%d\n", value);
 }
 
 #endif
@@ -425,7 +425,7 @@ int main() {
 #ifdef P17
 #include <stdio.h>
 int main() {
-  printf("%d\n\r", '0');
+  printf("%d\n", '0');
 }
 #endif
 
@@ -438,7 +438,7 @@ int my_variable = 5;
 int main() {
   int foo(int);
   int my_variable = 6;
-  printf("%d\n\r", foo(my_variable));
+  printf("%d\n", foo(my_variable));
 }
 
 int foo(int a) {

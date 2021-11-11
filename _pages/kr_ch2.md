@@ -50,7 +50,7 @@ This chapter discusses types, operators and expressions. For each question, make
     int main() {
         int i=9;
         int j = ((0 > 1) && (i=14));
-        printf("%d\n\r", i);
+        printf("%d\n", i);
     }
     ```
 
@@ -59,7 +59,7 @@ This chapter discusses types, operators and expressions. For each question, make
     int main() {
         int i=9;
         int j = ((0 > 1) || (i=14));
-        printf("%d\n\r", j);
+        printf("%d\n", j);
     }
     ```
 
@@ -71,7 +71,7 @@ This chapter discusses types, operators and expressions. For each question, make
     int main() {
         char val1 = -128;
         int val2 = val1;
-        printf("%d\n\r", val2);
+        printf("%d\n", val2);
     }
 ```
 
@@ -81,7 +81,7 @@ This chapter discusses types, operators and expressions. For each question, make
 
     int main() {
         int i = 0 < 1;
-        printf("%d\n\r", i);
+        printf("%d\n", i);
     }
     ```
 
@@ -91,7 +91,7 @@ This chapter discusses types, operators and expressions. For each question, make
     #include <ctype.h>
 
     int main() {
-        printf("%d\n\r", isdigit('1'));
+        printf("%d\n", isdigit('1'));
     }
     ```
 
@@ -102,7 +102,7 @@ This chapter discusses types, operators and expressions. For each question, make
 
     int main() {
         int n = 16;
-        printf("%d\n\r", sqrt(n));
+        printf("%d\n", sqrt(n));
     }
     ```
 
@@ -112,8 +112,8 @@ This chapter discusses types, operators and expressions. For each question, make
 
     int main() {
     int j = 4;
-        printf("%d\n\r", j++);
-        printf("%d\n\r", ++j);
+        printf("%d\n", j++);
+        printf("%d\n", ++j);
     }
     ```
 
@@ -123,7 +123,7 @@ This chapter discusses types, operators and expressions. For each question, make
     ```c
     #include <stdio.h>
     int main() {
-        printf("%d\n\r", 0xf0 | 0xf == 0xff);
+        printf("%d\n", 0xf0 | 0xf == 0xff);
     }
     ```
 
@@ -131,7 +131,7 @@ This chapter discusses types, operators and expressions. For each question, make
     ```c
     #include <stdio.h>
     int main() {
-        printf("%d\n\r", (0xf0 | 0xf) == 0xff);
+        printf("%d\n", (0xf0 | 0xf) == 0xff);
     }
     ```
 
@@ -141,7 +141,7 @@ This chapter discusses types, operators and expressions. For each question, make
     int main() {
         int i = 4;
         int x = 1;
-        printf("%d\n\r", x/i);
+        printf("%d\n", x/i);
     }
     ```
 
@@ -151,7 +151,7 @@ This chapter discusses types, operators and expressions. For each question, make
     int main() {
         int i = 4;
         double x = 1;
-        printf("%d\n\r", x/i);
+        printf("%d\n", x/i);
     }
     ```
 
@@ -161,7 +161,7 @@ This chapter discusses types, operators and expressions. For each question, make
     int main() {
         int i = 4;
         double x = 1;
-        printf("%f\n\r", x/i);
+        printf("%f\n", x/i);
     }
     ```
 
@@ -181,7 +181,7 @@ This chapter discusses types, operators and expressions. For each question, make
         char str[20] = "hello there!";
         char c = 'e';
         squeeze(str, c);
-        printf("%s\n\r", str);
+        printf("%s\n", str);
     }
     ```
 
@@ -197,7 +197,7 @@ This chapter discusses types, operators and expressions. For each question, make
     uint16_t x = 14;
     uint16_t y = 0;
     y = mysteryFunction(++x, x++);
-    printf("%d\n\r", y);
+    printf("%d\n", y);
     }
     ```
 
@@ -207,7 +207,7 @@ This chapter discusses types, operators and expressions. For each question, make
     #include <ctype.h>
 
     int main() {
-    printf("%d\n\r", isdigit('9'));
+    printf("%d\n", isdigit('9'));
     }
 
     ```
@@ -251,7 +251,7 @@ int main() {
 int main() {
   int i=9;
   int j = ((0 > 1) && (i=14));
-  printf("%d\n\r", i);
+  printf("%d\n", i);
 }
 #endif
 
@@ -260,7 +260,7 @@ int main() {
 int main() {
   int i=9;
   int j = ((0 > 1) || (i=14));
-  printf("%d\n\r", i);
+  printf("%d\n", i);
 }
 #endif
 
@@ -271,7 +271,7 @@ int main() {
 int main() {
   char val1 = -128;
   int val2 = val1;
-  printf("%d\n\r", val2);
+  printf("%d\n", val2);
 }
 #endif
 
@@ -280,14 +280,14 @@ int main() {
 // if, while, etc., need only return a non-zero value or 0.
 int main() {
   int i = 0 < 1;
-  printf("%d\n\r", i);
+  printf("%d\n", i);
 }
 #endif
 
 #ifdef Q15
 // Prints out 1 but need only print out a non-zero value.
 int main() {
-  printf("%d\n\r", isdigit('1'));
+  printf("%d\n", isdigit('1'));
 }
 #endif
 
@@ -299,7 +299,7 @@ int main() {
 // printf() doesn't cast it's arguments.
 int main() {
   int n = 16;
-  printf("%d\n\r", sqrt(n));  // double sqrt(double arg);
+  printf("%d\n", sqrt(n));  // double sqrt(double arg);
 }
 #endif
 
@@ -309,14 +309,14 @@ int main() {
 // second printf increments the value of j and then prints it (6).
 int main() {
   int j = 4;
-  printf("%d\n\r", j++);
-  printf("%d\n\r", ++j);
+  printf("%d\n", j++);
+  printf("%d\n", ++j);
 }
 #endif
 
 #ifdef Q19
 int main() {
-  printf("%d\n\r", 0xf0 | 0xf == 0xff);
+  printf("%d\n", 0xf0 | 0xf == 0xff);
 }
 #endif
 
@@ -324,14 +324,14 @@ int main() {
 // Precedence of the | and == operator are the same and so everything is evaluated from the right.
 // (0xf == 0xff) = 0, (0xf0 | 0) = 0xf0.
 int main() {
-  printf("%d\n\r", 0xf0 | 0xf == 0xff);
+  printf("%d\n", 0xf0 | 0xf == 0xff);
 }
 #endif
 
 #ifdef Q19B
 // The parenthesis fix the precedence.
 int main() {
-  printf("%d\n\r", (0xf0 | 0xf) == 0xff);
+  printf("%d\n", (0xf0 | 0xf) == 0xff);
 }
 #endif
 
@@ -339,7 +339,7 @@ int main() {
 int main() {
   int i = 4;
   int x = 1;
-  printf("%d\n\r", x/i);
+  printf("%d\n", x/i);
 }
 #endif
 
@@ -348,7 +348,7 @@ int main() {
 int main() {
   int i = 4;
   double x = 1;
-  printf("%d\n\r", x/i);
+  printf("%d\n", x/i);
 }
 #endif
 
@@ -356,7 +356,7 @@ int main() {
 int main() {
   int i = 4;
   double x = 1;
-  printf("%f\n\r", x/i);
+  printf("%f\n", x/i);
 }
 #endif
 
@@ -374,7 +374,7 @@ int main() {
   char str[20] = "hello there!";
   char c = 'e';
   squeeze(str, c);
-  printf("%s\n\r", str);
+  printf("%s\n", str);
 }
 #endif
 
@@ -387,20 +387,20 @@ int main() {
   unsigned a = 0x5A;
   unsigned result;
   result = getbits(a, 5, 4);
-  printf("result = %x\n\r", result);
+  printf("result = %x\n", result);
   result = getbits(a, 4, 2);
-  printf("result = %x\n\r", result);
+  printf("result = %x\n", result);
   result = getbits(a, 4, 4);
-  printf("result = %x\n\r", result);  
+  printf("result = %x\n", result);  
 }
 
 unsigned getbits(unsigned x, int p, int n) {
   if (PRINT_EXTRA_STUFF) {
-    printf("Extracting the %d-bit wide field starting from position %d from %08x\n\r", n, p, x);
-    printf("x: %08x\n\r", x);
-    printf("x: %08x (shifted right by %d)\n\r", x>>(p+1-n), p+1-n);
-    printf("uninverted bit-mask: %08x\n\r", (~0 << n));
-    printf("inverted bit-mask:   %08x\n\r", ~(~0 << n));
+    printf("Extracting the %d-bit wide field starting from position %d from %08x\n", n, p, x);
+    printf("x: %08x\n", x);
+    printf("x: %08x (shifted right by %d)\n", x>>(p+1-n), p+1-n);
+    printf("uninverted bit-mask: %08x\n", (~0 << n));
+    printf("inverted bit-mask:   %08x\n", ~(~0 << n));
   }
   return (x >> (p+1-n)) & ~(~0 << n);
 }
@@ -418,7 +418,7 @@ int main() {
   uint16_t x = 14;
   uint16_t y = 0;
   y = mysteryFunction(++x, x++);  // May be invoked with (15, 15) or (16, 14).
-  printf("%d\n\r", y);
+  printf("%d\n", y);
 }
 
 // What does this program print out?
@@ -434,7 +434,7 @@ int main() {
 #include <ctype.h>
 
 int main() {
-  printf("%d\n\r", isdigit('9'));
+  printf("%d\n", isdigit('9'));
 }
 #endif
 

@@ -11,7 +11,7 @@ title: "K & R Chapter 3 Study Questions"
 int main() {
   int val = 5;
   while (val)
-    printf("%d\n\r", val);
+    printf("%d\n", val);
   val--;
 }
 #endif
@@ -22,9 +22,9 @@ int main() {
 int main() {
   int x = 1;
   if (x != 0)
-    printf("%d\n\r", x);
+    printf("%d\n", x);
   if (x)
-    printf("%d\n\r", x);
+    printf("%d\n", x);
 }
 #endif
 
@@ -37,10 +37,10 @@ int main() {
   if (i >= 0) // Do nothing if i < 0.
     for (j = 0; j < i; j++)
       if (j == 10) {
-        printf("%d\n\r", j);
+        printf("%d\n", j);
         return i;
       } else
-        printf("did nothing.\n\r");
+        printf("did nothing.\n");
 }
 #endif
 
@@ -50,13 +50,13 @@ int main() {
 int main() {
   int x = 10;
   if (x > 0)
-    printf("1\n\r");
+    printf("1\n");
   else if (x > 1)
-    printf("2\n\r");
+    printf("2\n");
   else if (x > 2)
-    printf("3\n\r");
+    printf("3\n");
   else
-    printf("4\n\r");
+    printf("4\n");
 }
 #endif
 
@@ -67,15 +67,15 @@ int main() {
   int i = 2;
   switch (i) {
   case 1:
-    printf("1\n\r");
+    printf("1\n");
     break;
   case 2:
-    printf("1\n\r");
+    printf("1\n");
   case 3:
-    printf("1\n\r");
+    printf("1\n");
     break;
   case 4:
-    printf("1\n\r");
+    printf("1\n");
     break;
   }
 }
@@ -88,7 +88,7 @@ void p1() {
   int x;
   x = 0;
   while (x < 5) {
-    printf("looped\n\r");
+    printf("looped\n");
     x++;
   }
 }
@@ -96,7 +96,7 @@ void p1() {
 void p2() {
   int x;
   for (x = 0; x < 5; x++)
-    printf("looped\n\r");
+    printf("looped\n");
 }
 
 int main() {
@@ -111,7 +111,7 @@ int main() {
 int main() {
   int x = 0;
   for (;;) {
-    printf("%d\n\r", x++);
+    printf("%d\n", x++);
     if (x > 2)
       break;
   }
@@ -124,7 +124,7 @@ int main() {
 int main() {
   int i = 0;
   do
-    printf("hi!\n\r");
+    printf("hi!\n");
   while (i);
 }
 #endif
@@ -134,7 +134,7 @@ int main() {
 #include <stdio.h>
 int main() {
   while (1) {
-    printf("hi!\n\r");
+    printf("hi!\n");
     break;
   }
 }
@@ -145,7 +145,7 @@ int main() {
 #include <stdio.h>
 int main() {
   while (1) {
-    printf("hi!\n\r");
+    printf("hi!\n");
     continue;
   }
 }
@@ -159,7 +159,7 @@ int main() {
   for (i = 0; i < 10; i++) {
     if (i % 2)
       continue;
-    printf("hi!\n\r");
+    printf("hi!\n");
   }
 }
 #endif
@@ -172,7 +172,7 @@ int main() {
   for (i = 0; i < 10; i++) {
     if (i % 2)
       break;
-    printf("hi!\n\r");
+    printf("hi!\n");
   }
 }
 #endif 
