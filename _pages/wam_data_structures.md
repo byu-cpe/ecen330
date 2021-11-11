@@ -84,7 +84,7 @@ int main() {
     }
     // Verify that the assignments worked.
     for (uint16_t k=0; k<NUMBER_OF_POINTERS; k++) {
-        printf("Struct contents x:%d, y:%d\n\r", arrayOfPointers[k]->x, arrayOfPointers[k]->y);
+        printf("Struct contents x:%d, y:%d\n", arrayOfPointers[k]->x, arrayOfPointers[k]->y);
     }
     // When you are done, you must return the memory to the system or you will create a memory leak.
     // First deallocate all of the structs.
