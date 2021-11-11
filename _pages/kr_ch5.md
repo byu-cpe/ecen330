@@ -87,7 +87,7 @@ void swap(int a, int b) {
 int main() {
   int x = 10, y = 20;
   swap(x, y);
-  printf("%d\n\r", x);
+  printf("%d\n", x);
 }
 // Ans: 
 #endif
@@ -105,7 +105,7 @@ void swap(int *a, int *b) {
 int main() {
   int x = 10, y = 20;
   swap(x, y);
-  printf("%d\n\r", x);
+  printf("%d\n", x);
 }
 // Ans: 
 #endif
@@ -122,7 +122,7 @@ void swap(int *a, int *b) {
 int main() {
   int x = 10, y = 20;
   swap(&x, &y);
-  printf("%d\n\r", x);
+  printf("%d\n", x);
 }
 // Ans: 
 #endif
@@ -139,7 +139,7 @@ void swap(int *a, int *b) {
 int main() {
   int x = 10, y = 20;
   swap(&x, &y);
-  printf("%d\n\r", y);
+  printf("%d\n", y);
 }
 // Ans: 
 #endif
@@ -156,7 +156,7 @@ void swap(int *a, int *b) {
 int main() {
   int x = 10, y = 20;
   swap(&x, &y);
-  printf("%d\n\r", y);
+  printf("%d\n", y);
 }
 // Ans: 
 #endif
@@ -173,7 +173,7 @@ void swap(int *a, int *b) {
 int main() {
   int x = 10, y = 20;
   swap(&x, &y);
-  printf("%d\n\r", y);
+  printf("%d\n", y);
 }
 // Ans: 
 #endif
@@ -186,7 +186,7 @@ int main() {
 #include <stdio.h>
 #define SIZE 20
 int main() {
-  char str[SIZE] = "hi there!\n\r";
+  char str[SIZE] = "hi there!\n";
   char* strp = str;
 }
 // Ans: 
@@ -198,9 +198,9 @@ int main() {
 #include <stdio.h>
 #define SIZE 20
 int main() {
-  char str[SIZE] = "hi-there!\n\r";
+  char str[SIZE] = "hi-there!\n";
   char* strp = &str[8];
-  printf("%c\n\r", strp);
+  printf("%c\n", strp);
 }
 // Ans: 
 #endif
@@ -211,9 +211,9 @@ int main() {
 #include <stdio.h>
 #define SIZE 20
 int main() {
-  char str[SIZE] = "hi-there!\n\r";
+  char str[SIZE] = "hi-there!\n";
   char* strp = &str[7];
-  printf("%c\n\r", *(strp+1));
+  printf("%c\n", *(strp+1));
 }
 // Ans: 
 #endif
@@ -224,9 +224,9 @@ int main() {
 #include <stdio.h>
 #define SIZE 20
 int main() {
-  char str[SIZE] = "hi-there!\n\r";
+  char str[SIZE] = "hi-there!\n";
   char* strp = &str[1];
-  printf("%c\n\r", *(strp++));
+  printf("%c\n", *(strp++));
 }
 // Ans: 
 #endif
@@ -237,9 +237,9 @@ int main() {
 #include <stdio.h>
 #define SIZE 20
 int main() {
-  char str[SIZE] = "hi-there!\n\r";
+  char str[SIZE] = "hi-there!\n";
   char* strp = str;
-  printf("%c\n\r", *(++strp));
+  printf("%c\n", *(++strp));
 }
 // Ans: 
 #endif
@@ -250,9 +250,9 @@ int main() {
 #include <stdio.h>
 #define SIZE 20
 int main() {
-  char str[SIZE] = "hi-there!\n\r";
+  char str[SIZE] = "hi-there!\n";
   char* strp = str++;
-  printf("%c\n\r", *strp);
+  printf("%c\n", *strp);
 }
 // Ans: 
 #endif
@@ -266,9 +266,9 @@ void mystery(char a[]) {
 
 #define SIZE 20
 int main() {
-  char str[SIZE] = "hi-there!\n\r";
+  char str[SIZE] = "hi-there!\n";
   mystery(str);
-  printf("%c\n\r", str[1]); 
+  printf("%c\n", str[1]); 
 }
 // Ans: h, (b), i, none of these
 #endif
@@ -282,9 +282,9 @@ void mystery(char a[]) {
 
 #define SIZE 20
 int main() {
-  char str[SIZE] = "hi-there!\n\r";
+  char str[SIZE] = "hi-there!\n";
   mystery(str);
-  printf("%c\n\r", str[1]); 
+  printf("%c\n", str[1]); 
 }
 // Ans: 
 #endif
@@ -298,9 +298,9 @@ void mystery(char* a) {
 
 #define SIZE 20
 int main() {
-  char str[SIZE] = "hi-there!\n\r";
+  char str[SIZE] = "hi-there!\n";
   mystery(str);
-  printf("%c\n\r", str[1]); 
+  printf("%c\n", str[1]); 
 }
 // Ans: 
 #endif
@@ -314,9 +314,9 @@ void mystery(char a[]) {
 
 #define SIZE 20
 int main() {
-  char str[SIZE] = "hi-there!\n\r";
+  char str[SIZE] = "hi-there!\n";
   mystery(str);
-  printf("%c\n\r", str[1]); 
+  printf("%c\n", str[1]); 
 }
 // Ans: 
 #endif
@@ -335,7 +335,7 @@ int main() {
   char s1[SIZE] = "hello";
   char s2[SIZE] = "bye";
   swap(s1, s2);
-  printf("%s\n\r", s1);
+  printf("%s\n", s1);
 }
 // Ans: hello, bye, (none of these).
 // Note: You need a pointer to a pointer to handle this one.
@@ -360,7 +360,7 @@ int main() {
   char* s2p = s2;
   char** s2pp = &s2p;
   swap(s1pp, s2pp);
-  printf("%s\n\r", s2p);
+  printf("%s\n", s2p);
 }
 // Ans: 
 #endif
@@ -380,7 +380,7 @@ void swap(char** a, char** b) {
 int main() {
   char *s[10] = {"bye", "hello"};
   swap(s, s+1);
-  printf("%s\n\r", *s);
+  printf("%s\n", *s);
 }
 // Ans: 
 #endif
@@ -398,7 +398,7 @@ void swap(char** a, char** b) {
 int main() {
   char *s[10] = {"bye", "hello"};
   swap(s, s+1);
-  printf("%s\n\r", s[0]);
+  printf("%s\n", s[0]);
 }
 // Ans: 
 #endif
@@ -416,7 +416,7 @@ void swap(char** a, char** b) {
 int main() {
   char *s[10] = {"bye", "hello"};
   swap(s, s+1);
-  printf("%s\n\r", s+1);
+  printf("%s\n", s+1);
 }
 // Ans: 
 #endif
@@ -435,7 +435,7 @@ int main() {
   char *s[10] = {"bye", "hello"};
   swap(s, s+1);
   char* sp = *s;
-  printf("%s\n\r", ++sp);
+  printf("%s\n", ++sp);
 }
 // Ans: 
 #endif
@@ -454,7 +454,7 @@ int main() {
   char *s[10] = {"bye", "hello"};
   swap(s, s+1);
   char** t = s;
-  printf("%s\n\r", *(++t));
+  printf("%s\n", *(++t));
 }
 // Ans: 
 #endif
@@ -511,7 +511,7 @@ int main() {
 #include <stdio.h>
 int main() {
   int* x = 4;
-  printf("%d\n\r", ++x);
+  printf("%d\n", ++x);
 }
 // Ans:
 // Ans:
