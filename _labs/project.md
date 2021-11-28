@@ -81,5 +81,5 @@ zip my_project.zip ./*
 
 Notes:
   * The files should be *directly* in your zip file (ie, your zip file should **NOT** contain a directory of your files).
-  * You will need to modify your top-level CMakeLists.txt file to have a line *add_subdirectory(my_project)*, but you shouldn't submit the top-level CMakeLists.txt file.
+  * You will need to modify your top-level CMakeLists.txt file to have a line *add_subdirectory(lab_project)*, but you shouldn't submit the top-level CMakeLists.txt file.
   * Like previous labs, you can use the existing drivers (buttons_switches, intervalTimer) and don't need to submit them with your files.  
