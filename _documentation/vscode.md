@@ -1,17 +1,14 @@
 ---
 layout: page
 toc: false
-title: "VS Code Tips"
+title: "Coding/Debugging Tips"
 number: 6
 ---
 
-## Building from Within VS Code 
+## Warnings
 
-From within VSCode you can build your code as follows:
-  * To run `cmake` you can press F1 and select *Tasks: Run Task*, *cmake*.  
-  * To run `make` you can press F1 and select *Tasks: Run Task*, *make*, or *Tasks: Run Build Task*, or *Ctrl+Shift+B* (on Windows).
+**Your code should compile without warnings**. <ins> Do not waste your time debugging issues with your code if there are warnings when you compile.</ins>  Often fixing the warning will fix your bug.  *Every* warning can be fixed and removed.  If you don't know how to fix your warning, ask on the class message board.
 
-The tasks have been set up in the [tasks.json](https://github.com/byu-cpe/ecen330_student/blob/master/.vscode/tasks.json) file.  Consider adding a new task to this file that allows you to program *lab1.elf* to the board.
 
 
 ## Debugging from VS Code
@@ -50,3 +47,21 @@ If you want to try using the GDB debugger integrated in VSCode (along with the e
 1. In the debugger panel, hit the green Play button.  You should now be paused on your code like so:
 
 <img src="{% link media/debugging.png %}" alt="Debugging in VS Code">
+
+## Valgrind
+Valgrind is a very useful tool for finding runtime issues with your code.  This includes using uninitialized variables, referencing invalid pointers, and issues with malloc/free.  This is only useable on the emulator, and you should have debug symbols enabled (see step #2 above).
+
+Run valgrind on your program like this:
+
+        valgrind ./lab1/lab1.elf
+
+Look for the first error reported by valgrind and try and locate and fix the issue causing the error.  [This stack overflow post](https://stackoverflow.com/questions/5134891/how-do-i-use-valgrind-to-find-memory-leaks) has lots of tips if you want to read more.
+
+## Building from Within VS Code 
+
+From within VSCode you can build your code as follows:
+  * To run `cmake` you can press F1 and select *Tasks: Run Task*, *cmake*.  
+  * To run `make` you can press F1 and select *Tasks: Run Task*, *make*, or *Tasks: Run Build Task*, or *Ctrl+Shift+B* (on Windows).
+
+The tasks have been set up in the [tasks.json](https://github.com/byu-cpe/ecen330_student/blob/master/.vscode/tasks.json) file.  Consider adding a new task to this file that allows you to program *lab1.elf* to the board.
+
