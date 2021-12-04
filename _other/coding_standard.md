@@ -65,7 +65,7 @@ number: 1
 
 ### 7. Magic Numbers and Strings 
   * **7.1** All scalar constants must be `#define`, with one exception: 
-    * The constants **0** or **1** may be used anywhere in your code, except as standalone function arguments.  For example, `foo(0, 1)` is not permitted, while `foo(x+1, y+1)` is allowed.
+    * The constants **0** or **1** may be used anywhere in your code, except as standalone function arguments.  For example, `foo(0, 1)` is not permitted, while `foo(x+1, y+1)` is allowed.  You must still use `#define` for the constant **-1**.
 
   * **7.2** All strings used on your touchscreen must be `#define`. Debugging statements that are printed to the console do not need to be `#defined`.
 
