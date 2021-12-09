@@ -61,6 +61,10 @@ A: I suggest you create a private Github repository.  You can go to <https://git
 
 A: Designing projects from scratch is difficult.  I think most people will probably try and implement too much, and find themselves running out of time to get it done on time. Pick a project that has some meaningful complexity (like timely user input in the Simon lab, or a smart computer player in the tic-tac-toe lab), but keep it fairly simple overall.
 
+**Q: Can I use publicly available code (open source libraries, ECEN 390 sound driver code, etc) in my project?
+
+A: Yes, you can use existing code that you did not write.  In your youtube video be sure to mention any parts of code you didn't write yourself.
+
 **Q: Advice?**
 
 A: Make sure you submit something that compiles, runs, and does something meaningful.  Even if you don't get your entire project done in time.
