@@ -3,13 +3,13 @@ layout: lab
 toc: true
 title: "Lab 7: Whack-a-Mole"
 short_title: Whack-a-Mole
-number: 7-old
+number: 7-alt
 ---
 
 # <span style="color:red"> Warning</span>
 
 <span style="color:red"> 
-Please read through the [project page]({% link _labs/project.md %}) before starting this lab.  Completing this lab will only provide partial credit for the project.
+Please read through the [project page]({% link _labs/project.md %}) before starting this lab. Completing this lab will only provide partial credit for the project.
 </span>
 
 

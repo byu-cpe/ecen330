@@ -93,11 +93,9 @@ For each lab, you will follow the [instructions on submitting source code]({% li
 
 The TAs will compile your code and run the provided [main.c](https://github.com/byu-cpe/ecen330_student/blob/master/lab2/main.c) program, which will run both of your *runTest()* functions.  Do not modify main.c.
 
-
-
 ### Grade Breakdown 
-  * 30% Code quality and adherence to the coding standard. You are allowed 10 freebies for this lab.
   * 70% Pass off. If your code works well and shows no bugs, you should get the full 70%.
+  * 30% Code quality and adherence to the coding standard. You are allowed 10 freebies for this lab.
 
 ## Resources
 
