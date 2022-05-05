@@ -32,7 +32,7 @@ You will then modify the program to draw some graphics on the LCD screen as show
 
 Complete [Setup Step #1]({% link _setup/step_1.md %}) and [Setup Step #2]({% link _setup/step_2.md %}), linked to on the left-hand pane.  This will take some time, so start early.
 
-<ins>**Follow all steps carefully.  Make sure everything if working before proceeding.  If you get stuck during a setup step, DO NOT SKIP IT.  Ask for help on Piazza**</ins>.
+<ins>**Follow all steps carefully.  Make sure everything is working before proceeding.  If you get stuck during a setup step, DO NOT SKIP IT.  Ask for help on Piazza**</ins>.
 
 ### Compile and Run the Lab1 Code
 
