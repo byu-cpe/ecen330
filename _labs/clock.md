@@ -1,9 +1,9 @@
 ---
 layout: lab
 toc: true
-title: "Lab 4: Clock"
+title: "Lab 6: Clock"
 short_title: Clock
-number: 4
+number: 6
 ---
 
 ## Overview

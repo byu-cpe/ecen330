@@ -1,8 +1,8 @@
 ---
 layout: lab
 toc: true
-title: "Lab 2: Writing Driver Software for the Slide Switches and Push Buttons"
-short_title: Switches/Buttons Driver
+title: "Lab 2: GPIO Driver for the Switches and Buttons"
+short_title: GPIO Driver
 number: 2
 ---
 
