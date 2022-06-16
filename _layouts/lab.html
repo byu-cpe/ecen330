@@ -18,6 +18,10 @@ layout: default
         </div>
         {% endif %}
 
+        {% if site.show_construction_message %}
+        <h2 style="color:red">{{site.construction_message}}</h2>
+        {% endif %}
+
         {{ content }}
     </div>
 </article>
