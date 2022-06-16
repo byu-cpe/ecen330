@@ -38,8 +38,8 @@ Here is the organizational strategy that we will use:
 ## Milestones 
 
 You will complete this lab in four milestones:
-  * Milestone 1: Implement the *buttonHandler* state machine, *simonDisplay*, and *globals* code.
-  * Milestone 2: Implement the *flashSequence* state machine.
+  * Milestone 1: Implement the *buttonHandler* state machine and *simonDisplay* code.
+  * Milestone 2: Implement the *flashSequence* state machine and *globals* code.
   * Milestone 3: Implement the *verifySequence* state machine.
   * Milestone 4: Implement the top-level *simonControl* state machine so that you implement a Simon game with the the same behavior as shown in the demo video for the Simon game. 
 

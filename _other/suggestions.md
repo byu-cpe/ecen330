@@ -18,7 +18,7 @@ Here are a few suggestions that if followed should ease things a bit.
 
   - **Why do we use the C programming language instead of C++, Java, Python, etc?**
     - <https://hub.packtpub.com/why-does-the-c-programming-language-refuse-to-die/>
-  - **What is the best way to prepare for the quizzes which are closed-book?**
+  - **What is the best way to prepare for the quizzes?**
     - Read the associated chapter in K&R.
     - Carefully work through every question on the associated study-questions page.
     - Where programs are present in the study questions, don't try to memorize their output! Instead, study the programs, play with them, modify them, etc., until you completely *understand* what the programs do. One way to test your understanding would be to slightly modify the program and then to try and predict what the program will do, and then to compile/execute the modified program to see if its output agrees with your prediction.

@@ -11,5 +11,4 @@ Finally, simonDisplay also computes the region number based upon the map shown i
 
 I have provided the entire [simonDisplay.h](https://github.com/byu-cpe/ecen330_student/blob/master/lab6/simonDisplay.h) file. You must implement all of the functions as shown. Read the comments to understand what operations each function must perform. 
 
-There is no runTest program provided for simonDisplay.  You may want to write your own test code to verify your functions are working correctly.
-
+There is no provided test code for simonDisplay.  You may want to write your own test code to verify it is working correctly.

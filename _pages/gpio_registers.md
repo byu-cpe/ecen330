@@ -44,6 +44,8 @@ I have included an excerpt from the *xparameters.h* file that contains the neces
 #define XPAR_SLIDE_SWITCHES_IS_DUAL 0
 ```
 
+**Please note that this excerpt is only an example of what the *xparameters.h* file could contain. Your repository may likely have different values for the defined constants above. Best practice in your code would involve including *xparameters.h* and using the constants that are defined there.**
+
 For this lab, you only need to know the base address for the push buttons (*XPAR_PUSH_BUTTONS_BASEADDR*) and the slide switches (*XPAR_SLIDE_SWITCHES_BASEADDR*). You can ignore all of the other lines with #define. 
 
 Review the page about [header files]({% link _documentation/headers.md %}).  **Do not copy the code from xparameters.h into your C files. Follow the instructions about including header files and use the symbolic constant!**

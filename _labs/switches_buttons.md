@@ -79,7 +79,7 @@ The majority of your code for this lab will be placed in two files you create: *
   - You must implement the required functions for the buttons and switches drivers (see below).
   - *switches_runTest()* will illuminate the LEDs on the ZYBO board above the slide switches.  Make sure to *#include "[leds.h](https://github.com/byu-cpe/ecen330_student/blob/master/include/leds.h)"* to access the necessary LED helper functions. Use these functions to control the LEDs. *switches_runTest()* will run until all of the slide switches are slid up at which point it will terminate.
   - *buttons_runTest()* will use the LCD display to demonstrate that the buttons are working (see the video referenced below). *buttons_runTest()* will run until all of the push-buttons are pressed simultaneously, similar to switches. When the 4 push-buttons are simultaneously pressed, this function returns.
-  - In *buttons_test()* you must only draw the rectangle once for each button press and erase it once for each button release. It is OK if there is some button bouncing but continuously drawing or erasing a rectangle while in an infinite while-loop is not allowed. TAs will inspect your code to verify this. Also, continuously drawing rectangles at a high rate will often cause flashing on all but the fastest VMs.
+  - In *buttons_runTest()* you must only draw the rectangle once for each button press and erase it once for each button release. It is OK if there is some button bouncing but continuously drawing or erasing a rectangle while in an infinite while-loop is not allowed. TAs will inspect your code to verify this. Also, continuously drawing rectangles at a high rate will often cause flashing on all but the fastest VMs.
   - Write helper functions for accessing the GPIO registers.  These functions should NOT be declared in your .h files, but rather at the top of the appropriate .c file:
     * `buttons_readGpioRegister(int32_t offset)`,
     * `buttons_writeGpioRegister(int32_t offset, int32_t value)`, 
@@ -93,11 +93,9 @@ For each lab, you will follow the [instructions on submitting source code]({% li
 
 The TAs will compile your code and run the provided [main.c](https://github.com/byu-cpe/ecen330_student/blob/master/lab2/main.c) program, which will run both of your *runTest()* functions.  Do not modify main.c.
 
-
-
 ### Grade Breakdown 
-  * 30% Code quality and adherence to the coding standard. You are allowed 10 freebies for this lab.
   * 70% Pass off. If your code works well and shows no bugs, you should get the full 70%.
+  * 30% Code quality and adherence to the coding standard. You are allowed 10 freebies for this lab.
 
 ## Resources
 
