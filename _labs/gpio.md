@@ -53,17 +53,23 @@ In this lab you will write a driver for the GPIO (general purpose input/output) 
 
 ## Implementation 
 
-The switch test program will turn on LEDs corresponding to the switches that are in the UP position.  The test will end once all four switches are UP.
+### Requirements 
 
-The majority of your code for this lab will be placed in two files you create: *buttons.c*, *switches.c*. The "buttons" files will contain the code necessary to access the push-buttons while the "switches" will contain the code necessary to access the slide switches.  **These files must be placed in your ''drivers'' folder.**
+1. **Switches driver**.  Write a driver for the slide switches.  This driver will be located in *drivers/switches.c* and will implement the functions in [switches.h](https://github.com/byu-cpe/ecen330_student/blob/master/drivers/switches.h).  
 
-## Requirements 
-1. **Switches test application**. The switch test program will turn on LEDs corresponding to the switches that are in the UP position.  The test will end once all four switches are UP.
-1. **Buttons test application**. The button test program will draw colored squares to the LCD dependent on which button is pressed, as shown in the following video. The test will end when all four buttons are pressed simultaneously.  On the emulator, you can press multiple buttons at once using the SHIFT key.
+1. **Buttons driver**. Write a driver for the push buttons.  This driver will be located in *drivers/buttons.c* and will implement the functions in [buttons.h](https://github.com/byu-cpe/ecen330_student/blob/master/drivers/buttons.h).
+
+1. **Test applications**.  Create test functions for your two drivers.  The provided [main.c](https://github.com/byu-cpe/ecen330_student/blob/master/lab2/main.c) calls the `gpioTest_buttons()` and `gpioTest_switches()` functions.  Write both of these functions in `gpioTest.c`. 
+  * The switch test program is shown in a video above.  It turns on LEDs corresponding to the switches that are in the UP position.  The test will end once all four switches are UP.
+  * The button test program is also shown in a video above. It will draw colored squares to the LCD dependent on which button is pressed. The test will end when all four buttons are pressed simultaneously.  On the emulator, you can press multiple buttons at once using the SHIFT key.
+
+### Files
+1. Place your driver code in *buttons.c* and *switches.c*, located in the [drivers]() directory.
+1. Place your test application code in *gpioTest.c* in the [lab2_gpio]() directory. 
+1. Do not modify *main.c* and do not modify any *header files*.  You can write additional helper functions beyond those defined in the *.h* file, but the helper functions should be declared and defined in your *.c* files (remember to declare them static). 
 
 
-  - You must use the provided [.h files](https://github.com/byu-cpe/ecen330_student/tree/master/drivers) as is (these files are already in your repository). **No modifications are necessary or allowed.** Make sure you have reviewed the page on [including header files in your code]({% link _documentation/headers.md %}).
-  - You are provided a simple [main.c](https://github.com/byu-cpe/ecen330_student/blob/master/lab2/main.c) file that will test your buttons and switches code. **No modifications are necessary or allowed.**
+
   - You must follow the [coding standard]({% link _other/coding_standard.md %}).
   - You must implement the required functions for the buttons and switches drivers (see below).
   - *switches_runTest()* will illuminate the LEDs on the ZYBO board above the slide switches.  Make sure to *#include "[leds.h](https://github.com/byu-cpe/ecen330_student/blob/master/include/leds.h)"* to access the necessary LED helper functions. Use these functions to control the LEDs. *switches_runTest()* will run until all of the slide switches are slid up at which point it will terminate.
