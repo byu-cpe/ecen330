@@ -32,7 +32,7 @@ In this lab you will write a driver for the GPIO (general purpose input/output) 
 
 1. When using programmable processors such as microprocessors, etc., we access low-level hardware via registers. See the [GPIO and Registers page]({% link _documentation/gpio.md %}) to understand how you will access the GPIO hardware.
 
-1. **Terminology**. Learn about some new terminology:
+1. **Terminology**. Learn about some new terminology (reviewed in class):
   * [memory map](https://en.wikipedia.org/wiki/Memory_map)
   * [address bus](https://en.wikipedia.org/wiki/Address_bus)
   * data bus
@@ -42,13 +42,14 @@ In this lab you will write a driver for the GPIO (general purpose input/output) 
 1. **Review header files**. The [buttons.h](https://github.com/byu-cpe/ecen330_student/blob/master/drivers/buttons.h) and [switches.h](https://github.com/byu-cpe/ecen330_student/blob/master/drivers/switches.h) files which are provided in your repository.  These header files define the interface to your driver.
 
 1. **Compiling**.  In this lab you will first write driver code, and then write a test application.  
-  * The *driver* code will be re-used in later labs, so it will be compiled into a *library* that can be used by multiple applications. This library, called *buttons_switches*, will be located in the [drivers](https://github.com/byu-cpe/ecen330_student/tree/master/drivers) directory.  You are already given a [CMakeLists.txt](https://github.com/byu-cpe/ecen330_student/blob/master/drivers/CMakeLists.txt) file in this directory that will compile your *buttons.c* and *switches.c* code into the ''buttons_switches'' library.
+    * Read the page about [CMake files]({% link _documentation/cmake.md %}).
+    * The *driver* code will be re-used in later labs, so it will be compiled into a *library* that can be used by multiple applications. This library, called *buttons_switches*, will be located in the [drivers](https://github.com/byu-cpe/ecen330_student/tree/master/drivers) directory.  You are already given a [CMakeLists.txt](https://github.com/byu-cpe/ecen330_student/blob/master/drivers/CMakeLists.txt) file in this directory that will compile your *buttons.c* and *switches.c* code into the ''buttons_switches'' library.
 
     * The *application* code will be a simple test program to ensure your drivers are working correctly.  The test application will be placed in your [lab2](https://github.com/byu-cpe/ecen330_student/tree/master/lab2) directory, where you have already been provided a [CMakeLists.txt](https://github.com/byu-cpe/ecen330_student/blob/master/lab2/CMakeLists.txt) that will compile the Lab 2 executable.  You will see that it is almost the same as Lab 1 file, except that line 2 also includes the *buttons_switches* library.
 
     * The only changes you need to make for this lab is to instruct the top-level [CMakeLists.txt](https://github.com/byu-cpe/ecen330_student/blob/master/CMakeLists.txt) file to enter both of these directories and process those CMakeLists.txt files.  Add  `add_subdirectory(lab2)` and `add_subdirectory(drivers)` statements to the top-level CMakeLists.txt, after the `add_subdirectory(lab1)` statement.
 
-1. Read the page about [CMake files]({% link _documentation/cmake.md %}).
+
 
 
 ## Implementation 
@@ -60,41 +61,34 @@ In this lab you will write a driver for the GPIO (general purpose input/output) 
 1. **Buttons driver**. Write a driver for the push buttons.  This driver will be located in *drivers/buttons.c* and will implement the functions in [buttons.h](https://github.com/byu-cpe/ecen330_student/blob/master/drivers/buttons.h).
 
 1. **Test applications**.  Create test functions for your two drivers.  The provided [main.c](https://github.com/byu-cpe/ecen330_student/blob/master/lab2/main.c) calls the `gpioTest_buttons()` and `gpioTest_switches()` functions.  Write both of these functions in `gpioTest.c`. 
-  * The switch test program is shown in a video above.  It turns on LEDs corresponding to the switches that are in the UP position.  The test will end once all four switches are UP.
-  * The button test program is also shown in a video above. It will draw colored squares to the LCD dependent on which button is pressed. The test will end when all four buttons are pressed simultaneously.  On the emulator, you can press multiple buttons at once using the SHIFT key.
+  * **Switches test:** 
+        * The switch test program is shown in a video above.  It turns on LEDs corresponding to the switches that are in the UP position.  
+        * The test will end once all four switches are UP.
+  * **Buttons test:**
+        * The button test program is also shown in a video above. It will draw colored squares to the LCD dependent on which button is pressed. 
+        * The test will end when all four buttons are pressed simultaneously.  (On the emulator, you can press multiple buttons at once using the SHIFT key.)
+        * You must only draw the rectangle once for each button press and erase it once for each button release. It is okay if there is some button bouncing but continuously drawing or erasing rectangle in a loop is not allowed.
 
 ### Files
-1. Place your driver code in *buttons.c* and *switches.c*, located in the [drivers]() directory.
-1. Place your test application code in *gpioTest.c* in the [lab2_gpio]() directory. 
-1. Do not modify *main.c* and do not modify any *header files*.  You can write additional helper functions beyond those defined in the *.h* file, but the helper functions should be declared and defined in your *.c* files (remember to declare them static). 
+* Place your driver code in *buttons.c* and *switches.c*, located in the [drivers]() directory.
+* Place your test application code in *gpioTest.c* in the [lab2_gpio]() directory. 
+* Do not modify *main.c* and do not modify any *header files*.  You can write additional helper functions beyond those defined in the *.h* file, but the helper functions should be declared and defined in your *.c* files (remember to declare them static). 
 
+### Other Notes
+  - Remember to follow the [coding standard]({% link _other/coding_standard.md %}).
+  - You are provided a driver to control the LEDs. See [leds.h](https://github.com/byu-cpe/ecen330_student/blob/master/include/leds.h).  Include this header using `#include "leds.h"`. 
+  - You should write helper functions for accessing device registers.  For example, *buttons.c* and *switches.c* could both contain:
+      ```
+      readRegister(uint32_t offset);
+      writeRegister(uint32_t offset, uint32_t value);
+      ```
 
-
-  - You must follow the [coding standard]({% link _other/coding_standard.md %}).
-  - You must implement the required functions for the buttons and switches drivers (see below).
-  - *switches_runTest()* will illuminate the LEDs on the ZYBO board above the slide switches.  Make sure to *#include "[leds.h](https://github.com/byu-cpe/ecen330_student/blob/master/include/leds.h)"* to access the necessary LED helper functions. Use these functions to control the LEDs. *switches_runTest()* will run until all of the slide switches are slid up at which point it will terminate.
-  - *buttons_runTest()* will use the LCD display to demonstrate that the buttons are working (see the video referenced below). *buttons_runTest()* will run until all of the push-buttons are pressed simultaneously, similar to switches. When the 4 push-buttons are simultaneously pressed, this function returns.
-  - In *buttons_runTest()* you must only draw the rectangle once for each button press and erase it once for each button release. It is OK if there is some button bouncing but continuously drawing or erasing a rectangle while in an infinite while-loop is not allowed. TAs will inspect your code to verify this. Also, continuously drawing rectangles at a high rate will often cause flashing on all but the fastest VMs.
-  - Write helper functions for accessing the GPIO registers.  These functions should NOT be declared in your .h files, but rather at the top of the appropriate .c file:
-    * `buttons_readGpioRegister(int32_t offset)`,
-    * `buttons_writeGpioRegister(int32_t offset, int32_t value)`, 
-    * `switches_readGpioRegister(int32_t offset)`, 
-    * `switches_writeGpioRegister(int32_t offset, int32_t value)`.
-  - Watch the provided videos to see what your test functions should look like once implemented (see above). For the button-test note that the rectangles that are drawn on the display must not flicker during the test.
-
-##  Submission and Pass Off
+##  Submission
 
 For each lab, you will follow the [instructions on submitting source code]({% link _documentation/submission.md %}) to submit your code.
-
-The TAs will compile your code and run the provided [main.c](https://github.com/byu-cpe/ecen330_student/blob/master/lab2/main.c) program, which will run both of your *runTest()* functions.  Do not modify main.c.
 
 ### Grade Breakdown 
   * 70% Pass off. If your code works well and shows no bugs, you should get the full 70%.
   * 30% Code quality and adherence to the coding standard. You are allowed 10 freebies for this lab.
 
-## Resources
-
-  * [GPIO documentation]({% link media/lab2/ds744_axi_gpio.pdf %})
-  * [ZYBO Reference Manual]({% link media/lab1/zybo_rm_b_v6.pdf %})
-  * [ZYBO Board Schematics]({% link media/lab2/zybo_sch.pdf %})
 

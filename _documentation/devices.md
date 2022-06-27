@@ -6,6 +6,13 @@ number: 10
 indent: 0
 ---
 
+
+
+## Zybo Board
+  * [GPIO documentation]({% link media/lab2/ds744_axi_gpio.pdf %})
+  * [ZYBO Reference Manual]({% link media/lab1/zybo_rm_b_v6.pdf %})
+  * [ZYBO Board Schematics]({% link media/lab2/zybo_sch.pdf %})
+
 ## Devices
 
 

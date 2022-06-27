@@ -1,9 +1,9 @@
 ---
 layout: lab
 toc: true
-title: "Lab 7: Choose Your Own Project"
+title: "Lab 9: Choose Your Own Project"
 short_title: "Choose Your Own"
-number: 7
+number: 9
 ---
 
 ## Overview

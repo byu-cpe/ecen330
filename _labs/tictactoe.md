@@ -1,9 +1,9 @@
 ---
 layout: lab
 toc: true
-title: "Lab 5: Tic Tac Toe"
+title: "Lab 7: Tic Tac Toe"
 short_title: Tic Tac Toe
-number: 5
+number: 7
 ---
 
 <img src="{% link media/lab5/tictactoe.jpg %}" width="400" alt="Tic tac toe board on LCD">
