@@ -1,8 +1,20 @@
 ---
 layout: page
 toc: false
-title: "GPIO and Register-Based Access"
+title: "GPIO"
+number: 12
+indent: 1
 ---
+<img src="{% link media/lab2/zyboannotated.jpg %}" width="500" alt="Zybo schematic">
+
+and test driver software for the slide switches and push buttons that are on the 330 board. The schematic for these switches and push-buttons is shown on Page 22 of the [ZYBO reference manual]({% link media/lab1/zybo_rm_b_v6.pdf %}). The switches and push-buttons are items 9 and 13, respectively, shown in the photo of the Zybo board (Page 3 of the Zybo reference manual and duplicated below).
+
+### Schematic 
+The schematic for the switches is also shown below (Page 22 of Zybo reference manual).
+<img src="{% link media/lab2/zyboswitchbuttonschematic.png %}" width="500" alt="Zybo buttons and switches schematic">
+
+**Question:** What is the logic value of the pin attached to the push-button when the button is pushed? When it is released?
+
 
 As shown in the schematic, these buttons and slide switches are attached to pins on the ZYNQ chip that can be found in the center of the ZYBO board. OK, so far, so good, but how do we access them? The logic values at the pins of the ZYBO chip can be read using a piece of hardware (IP) that I programmed into the bit-stream that you will use in the class. This IP is called General-Purpose Input/Output (GPIO). The GPIO IP is described in the [GPIO documentation]({% link media/lab2/ds744_axi_gpio.pdf %}) that is provided by Xilinx.
 

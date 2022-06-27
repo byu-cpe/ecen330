@@ -2,7 +2,8 @@
 layout: page
 toc: false
 title: "LCD Graphics"
-number: 7
+number: 11
+indent: 1
 ---
 
   - [Graphics Library Documentation]({% link media/lab1/adafruit-gfx-graphics-library.pdf %})

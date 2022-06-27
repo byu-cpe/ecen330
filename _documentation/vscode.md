@@ -3,6 +3,7 @@ layout: page
 toc: false
 title: "Coding/Debugging Tips"
 number: 6
+indent: 1
 ---
 
 ## Warnings

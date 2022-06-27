@@ -2,7 +2,8 @@
 layout: page
 toc: false
 title: "Header Files"
-number: 3
+number: 4
+indent: 1
 ---
 
 In several cases you are instructed to include **header** files in your code, such as *leds.h*, *display.h*, *xparameters.h*, *xil_io.h*, *buttons.h*, *switches.h*, and more.
