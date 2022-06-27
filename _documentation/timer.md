@@ -5,6 +5,8 @@ title: "Interval Timer"
 number: 12
 indent: 1
 ---
+  * [Xilinx Timer Documentation]({% link media/lab3/axi_timer_ds764.pdf %})
+
 
 <img src="{% link media/lab3/axitimerblockdiagram2.jpg %}" width="600" alt="AXI Timer Block Diagram">
 
