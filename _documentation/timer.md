@@ -2,7 +2,11 @@
 layout: page
 toc: false
 title: "Interval Timer"
+number: 12
+indent: 1
 ---
+
+<img src="{% link media/lab3/axitimerblockdiagram2.jpg %}" width="600" alt="AXI Timer Block Diagram">
 
 The hardware timers that you will access are Xilinx AXI Timer (axi_timer) (v1.03a). Here's a block diagram of the AXI timer taken from the [Xilinx documentation]({% link media/lab3/axi_timer_ds764.pdf %}). Please refer to the documentation for functional details of the AXI timer.
 

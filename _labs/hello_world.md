@@ -26,20 +26,17 @@ You will then modify the program to draw some graphics on the LCD screen as show
   - Learn how to print to the terminal using `printf()`.
 
 ## Preliminary
-
-
-### Computer Setup
-
+1. **Computer setup:**
   * Complete [Setup Step #1]({% link _setup/step_1.md %})
   * Complete [Setup Step #2]({% link _setup/step_2.md %}).  
 
-This will take some time, so start early. <ins>**Follow all steps carefully.  Make sure everything is working before proceeding.  If you get stuck during a setup step, DO NOT SKIP IT.  Ask for help on Piazza**</ins>.
+    This will take some time, so start early. <ins>**Follow all steps carefully.  Make sure everything is working before proceeding.  If you get stuck during a setup step, DO NOT SKIP IT.  Ask for help on Piazza**</ins>.
 
-### Compile and Run the Lab1 Code
+1. **Compile and run the Lab 1 code:**
+  * Carefully read the entire page on [Compiling Code]({% link _documentation/compiling.md %}).  
+  * Follow the steps to compile the Lab1 code and run it on the board or emulator.
 
-  * Carefully read the entire page on [Compiling Code]({% link _documentation/compiling.md %}).  **Follow the steps to compile the Lab1 code and run it on the board or emulator.**
-
-### Required Reading
+1. **Required reading**:
   * [VS Code Tips]({% link _documentation/vscode.md %})
   * [LCD Graphics]({% link _documentation/graphics.md %})
 
@@ -55,7 +52,7 @@ This will take some time, so start early. <ins>**Follow all steps carefully.  Ma
 
 2. Modify *main.c* so that it shows the graphics from the picture above (two green lines, two red circles, two yellow triangles).  The sizes and locations of the shapes do no not need to match the picture above exactly, but it should be reasonably close.  
 
-### Files to Modify
+### Files
   * *main.c*: All code should be completed in this file.
 
 

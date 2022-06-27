@@ -7,36 +7,31 @@ number: 3
 ---
 ## Overview 
 
-Understanding time is essential in embedded systems. You generally want to know how much time certain code segments require for proper execution. There are lots of ways to infer how long it will take to execute some section of code but generally the most accurate way to determine execution time is to measure it.
+Measuring time and controlling period events are essential tasks in embedded systems.  This typically requires the use of hardware timer.  In this lab you will write a driver to control three identical hardware-based interval timers that are present on the hardware system.
 
-You will develop a software driver (including test code) that will communicate with three interval timers that I installed in the hardware configuration that you use for this class. Interval timers are essentially hardware counters that you can easily stop, start, and read. Because they are hardware-based counters, they don't interfere with your program or add to execution time while they are running. Interval timers can be very effective for measuring execution time for any part of your software. Do a nice job on this assignment. You will likely use these timers extensively in the remaining labs in this class and later in ECEn 390 when you implement your laser-tag game.
+Interval timers are essentially hardware counters that you can easily stop, start, and read.  The interval timers we will use in this lab have additional configuration features that allow them to count up or down, load values, run endlessly, and generate interrupts.  Because they are hardware-based counters, they don't interfere with your program or add to execution time while they are running.  Interval timers can be very effective for measuring execution time for any part of your software. 
+ 
+Do a nice job on this assignment. You will likely use these timers extensively in the remaining labs in this class and later in ECEn 390 when you implement your laser-tag game. 
 
-## Objectives 
-  - Gain experience working with commercial documentation.
-  - Write low-level code to communicate with the interval-timer hardware.
-  - Gain additional practice writing 'C' code.
-  - Write reusable code that will function as a tool in later lab assignments.
-  - Write test-code that tests your software implementation and that also documents how to use the interval timer driver.
-  - Learn how to follow the coding standard to write reusable code.
+### Objectives 
+  * Experience interacting with a commercial hardware timer, with multiple control and data registers.
+  * More experience working with commercial documentation.
+  * Practice writing high-quality 'C' code, following the coding standard.
 
 ## Preliminary 
 
-### Timer Hardware
+1. **Timer hardware:** Read over the page on [Timer hardware]({% link _documentation/timer.md %}).
 
-Read over the page on [Timer overview and detailed description of timer operation]({% link _pages/timer.md %}).
+1. **Building the code:** This lab you will only write driver code.  The test application code is provided to you.
+    * **Driver:** 
+        * This driver will be written in *intervalTimer.c*, which you must create yourself.  
+        * Since the Interval Timer driver will be used in later labs, *intervalTimer.c* should be placed in your *drivers* folder.
+        * Uncomment the two lines in the *drivers* [CMakeLists.txt](https://github.com/byu-cpe/ecen330_student/blob/master/drivers/CMakeLists.txt) file so that the *intervalTimer* library is built.  
 
-<img src="{% link media/lab3/axitimerblockdiagram2.jpg %}" width="600" alt="AXI Timer Block Diagram">
-
-### Building Lab 3 
-
-#### Driver Code 
-  * Most of this lab consists of writing a driver for the Interval Timer.  This driver will be written in *intervalTimer.c*, which you must create yourself.  You are provided with the [intervalTimer.h](https://github.com/byu-cpe/ecen330_student/blob/master/drivers/intervalTimer.h) file, which you must not change.
-  * Since the Interval Timer driver will be used in later labs, *intervalTimer.c* should be placed in your *drivers* folder.
-  * Uncomment the line in the *drivers* [CMakeLists.txt](https://github.com/byu-cpe/ecen330_student/blob/master/drivers/CMakeLists.txt) file so that the *intervalTimer* library is built.  
-
-#### Application Code 
-  * The application code, which will test your interval timer driver, is provided to you as [main.c](https://github.com/byu-cpe/ecen330_student/blob/master/lab3/main.c) in the *lab3* directory.  A [CMakeLists.txt](https://github.com/byu-cpe/ecen330_student/tree/master/lab3) file is also provided.
-  * Like last lab, you will need to update the top-level [CMakeLists.txt](https://github.com/byu-cpe/ecen330_student/blob/master/CMakeLists.txt) and add a `add_subdirectory(lab3)` statement.
+    * **Application Code:**
+        * The application code, which will test your interval timer driver, is provided to you as [main.c](https://github.com/byu-cpe/ecen330_student/blob/master/lab3/main.c) in the *lab3* directory.  
+        * A [CMakeLists.txt](https://github.com/byu-cpe/ecen330_student/tree/master/lab3) file is also provided.
+        * Like last lab, you will need to update the top-level [CMakeLists.txt](https://github.com/byu-cpe/ecen330_student/blob/master/CMakeLists.txt) and add a `add_subdirectory(lab3)` statement.
 
 
 
@@ -44,10 +39,18 @@ Read over the page on [Timer overview and detailed description of timer operatio
 
 You will complete this lab off in two milestones:
 
-### Milestone 1 
-  * Get the functions *intervalTimer_init()*, *intervalTimer_start()*, *intervalTimer_stop()*, and *intervalTimer_reset()* working for *timer_0* (you can ignore the *timer_1* and *timer_2* for this milestone). 
-  * Uncomment the line `#define RUN_PROGRAM MILESTONE_1` in *main.c* to test Milestone 1.
+### Milestone 1 Requirements 
 
+Implement the following features for *timer_0* (you can ignore the *timer_1* and *timer_2* for this milestone). You can uncomment the line `#define RUN_PROGRAM MILESTONE_1` in *main.c* to test Milestone 1, which will test the features in this order:
+
+  1. Implement the **count up** feature of the timer:
+      * *intervalTimer_initCountUp()* and *intervalTimer_load()*
+      * *intervalTimer_start()* and *intervalTimer_stop()*
+  1. Implement the ability to get the count up value in seconds:
+      * *intervalTimer_getTotalDurationInSeconds*
+  1. Implement the **count down** feature of the timer:
+      * *intervalTimer_initCountDown()*
+  
 
 *Note:* When you run Milestone 1, several messages will be printed.  One message will repeat "*timer_0 TCR0 should be changing at this point: 0*".  In the emulator, you may notice this 0 value doesn't change, despite the messages saying it should.  This is normal behavior for the emulator.  Later after "*wait for awhile...*", it will print "*timer_0 TCR0 value after wait:*", and by this point you should definitely see it change from 0 to a large value. 
 
@@ -72,6 +75,10 @@ Implementing *intervalTimer_test()* and *intervalTimer_testAll()* is optional.  
   - I reset the counter and see if it is reset by reading it.
   - I start the counter and read it a couple of times to see if it is actually changing value.
   - I stop the counter and read it a couple of times to see that it is not changing.
+
+### Files
+
+You are provided with the [intervalTimer.h](https://github.com/byu-cpe/ecen330_student/blob/master/drivers/intervalTimer.h) file, which you must not change.
 
 ### main.c 
 You are provided with a main.c.  Do not change it, except for uncommenting one of the below lines to run the chosen milestone.
@@ -98,7 +105,6 @@ The TAs will compile your code and run both milestones using the provided [main.
 ## Resources 
 
   * [Xilinx Timer Documentation]({% link media/lab3/axi_timer_ds764.pdf %})
-  * [Timer overview and detailed description of timer operation]({% link _pages/timer.md %})
 
 ## Suggestions 
   * The register access functions that you wrote for Lab 2 could be used here with little or no modification.
