@@ -19,7 +19,7 @@ The requirements of the clockControl state machine are:
 The following state machine shows the implementation for the first two requirements above.  
 
 
-<img src="{% link media/lab4/clockstatemachine.jpg %}" width="800" alt="Clock control state machine diagram">
+<img src="{% link media/clock/clockstatemachine.jpg %}" width="800" alt="Clock control state machine diagram">
 
 
 Once you have it tested and working, you can modify it to add the functionality in requirement #3 above .Add this functionality to the original state-diagram and then implement it using the conversion process outlined in the text.

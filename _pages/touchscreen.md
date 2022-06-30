@@ -31,5 +31,5 @@ To use the touch-screen do the following:
 
 The regions that you will use for the Clock lab are shown in the figure below. Thus the touch region is not limited to the triangle but is the entire rectangular region as shown below.
 
-<img src="{% link media/lab4/clocktouchscreenlayout.jpg %}" width="500" alt="Touch screen button layout for clock lab">
+<img src="{% link media/clock/clocktouchscreenlayout.jpg %}" width="500" alt="Touch screen button layout for clock lab">
 

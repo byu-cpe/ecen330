@@ -16,11 +16,18 @@ In this lab you will create a driver for an interrupt controller than receives i
 
 After your driver is complete, you will write a simple test application to verify your driver is working correctly.  This test application will initialize each timer to generate interrupts at different rates, and use each interrupt to blink an LED.
 
-<img src="{% link media/lab4/interrupt_test.gif %}" width="500">
+<img src="{% link media/interrupts/interrupt_test.gif %}" width="500">
+
+### Objectives
+
+* Gain experience using interrupts, and an interrupt controller.
+* Gain experience writing a driver for a more complex hardware module.
+* Learn about function pointers and callback functions.
 
 ## Preliminary
 
 1. Read about the [Interrupt Controller Hardware]({% link _documentation/intc.md %}).
+    * Make note of the section on initializing the ARM interrupt input.  You should call this code inside your `interrupts_init()` function.  
 
 1. **Building the code:** 
     * **Driver:** 
@@ -82,6 +89,13 @@ After your driver is complete, you will write a simple test application to verif
 * Take your time and be careful when creating `#defines` for register offsets and bit masks.  Spending a few extra minutes to get these 100% correct will save you lots of debugging time.
 
 * Make sure you understand the behavior of the various Interrupt Controller registers.  These registers have more complex behaviors than previous labs; however, you should find these behaviors quite helpful in completing your driver.  *Hint:* Most of your driver functions can be implemented by making a single register read/write.
+
+* The call to `armInterrupts_setupIntc` requires a function pointer to an ISR function that can be run when the ARM processor detects an interrupt.  This function should be a helper function inside your `interrupts.c` driver.  In this helper function you will determine which interrupt input(s) to the Interrupt Controller were responsible for the interrupt, and call the appropriate callback function (if there is one registered).  Here is an example prototype:
+
+    static void interrupts_isr() {
+        // For each interrupt input, check if it has an interrupt pending
+        // If so, check if there is a registered ISR and call it.
+    }
 
 ## Submission
 Follow the [instructions on submitting source code]({% link _documentation/submission.md %}) to submit your code.
