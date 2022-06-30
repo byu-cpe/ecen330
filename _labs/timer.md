@@ -81,7 +81,7 @@ You can uncomment the line `#define RUN_PROGRAM MILESTONE_2` in *main.c* to test
       writeRegister(uint8_t timerNumber, uint32_t offset, uint32_t value);
       ```
 
-## Submission & Pass Off 
+## Submission
 Follow the [instructions on submitting source code]({% link _documentation/submission.md %}) to submit your code.
 
 ### Grade Breakdown 
