@@ -26,8 +26,43 @@ After your driver is complete, you will write a simple test application to verif
 
 ## Preliminary
 
-1. Read about the [Interrupt Controller Hardware]({% link _documentation/intc.md %}).
+1. **Hardware**. Read about the [Interrupt Controller Hardware]({% link _documentation/intc.md %}).
     * Make note of the section on initializing the ARM interrupt input.  You should call this code inside your `interrupts_init()` function.  
+
+1. **Driver Interface**. Read through the interface for your driver, provided in [interrupts.h](https://github.com/byu-cpe/ecen330_student/blob/master/drivers/interrupts.h).
+
+
+
+    * **Function Pointers**.  Your interrupt controller driver will provide the ability for code to *register* a callback function that will be called when an interrupt is detected on a particular input.  This is done using the folling function defined in *interrupts.h*:
+
+            void interrupts_register(uint8_t irq, void (*fcn)());
+
+        To keep track of the callback function pointer registered for each *irq* input, you will need to use an array of function pointers. You can declare an array of function pointers (initialized to NULL) in your driver like this:
+
+            #define NUM_INTERRUPT_INPUTS 3
+
+            void (*isrFcnPtrs[NUM_INTERRUPT_INPUTS])() = {NULL};
+
+        Then, within the *interrupts_register()* function, you can save the provided function pointer into your array like this:
+
+            isrFcnPtrs[irq] = fcn;
+
+  
+
+    * **Interrupt Service Routine (ISR)**: The call to `armInterrupts_setupIntc` requires a function pointer to an ISR function that can be run when the ARM processor detects an interrupt.  This function should be a helper function inside your `interrupts.c` driver.  In this helper function you will determine which interrupt input(s) to the Interrupt Controller were responsible for the interrupt, and call the device-specific ISR callback function that was registered previously (if there is one registered).  Here is an example prototype:
+
+            static void interrupts_isr() {
+                // Loop through each interrupt input
+                for (each interrupt input, i) {
+                    
+                    // Check if it has an interrupt pending
+                    if (input has pending interrupt) {
+
+                        // Check if there is a registered ISR and call it.
+                        if (isrFcnPtrs[i])
+                            isrFcnPtrs[i]();
+            }}}
+
 
 1. **Building the code:** 
     * **Driver:** 
@@ -36,23 +71,6 @@ After your driver is complete, you will write a simple test application to verif
     * **Application Code:**
         * Your test application should be written in *lab4_interrupts/interrupt_test.c*.  For this lab, you will need to write your own CMakeLists.txt file, which you can base off of previous labs.
         * As usual, update the top-level [CMakeLists.txt](https://github.com/byu-cpe/ecen330_student/blob/master/CMakeLists.txt) and add a `add_subdirectory(lab4_interrupts)` statement.
-
-1. **Function Pointers**.  Your interrupt controller driver will provide the ability for code to *register* a callback function that will be called when an interrupt is detected on a particular input.  This will require keeping an array of function pointers.
-
-    You can declare an array of function pointers (initialized to NULL) like this:
-
-        #define NUM_INTERRUPT_INPUTS 3
-
-        void (*isrFcnPtrs[NUM_INTERRUPT_INPUTS])() = {NULL};
-
-    To make an entry in the array point to a function:
-
-        isrFcnPtrs[INTERRUPTS_TIMER_0_IRQ] = isr_function;
-
-    To call the `i`th function (assuming it is not NULL):
-
-        if (isrFcnPtrs[i])
-            isrFcnPtrs();
 
 ## Implementation
 
@@ -90,12 +108,6 @@ After your driver is complete, you will write a simple test application to verif
 
 * Make sure you understand the behavior of the various Interrupt Controller registers.  These registers have more complex behaviors than previous labs; however, you should find these behaviors quite helpful in completing your driver.  *Hint:* Most of your driver functions can be implemented by making a single register read/write.
 
-* The call to `armInterrupts_setupIntc` requires a function pointer to an ISR function that can be run when the ARM processor detects an interrupt.  This function should be a helper function inside your `interrupts.c` driver.  In this helper function you will determine which interrupt input(s) to the Interrupt Controller were responsible for the interrupt, and call the appropriate callback function (if there is one registered).  Here is an example prototype:
-
-    static void interrupts_isr() {
-        // For each interrupt input, check if it has an interrupt pending
-        // If so, check if there is a registered ISR and call it.
-    }
 
 ## Submission
 Follow the [instructions on submitting source code]({% link _documentation/submission.md %}) to submit your code.
