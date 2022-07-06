@@ -1,8 +1,12 @@
 ---
 layout: page
 toc: false
-title: "Using the Touch Screen"
+title: "Touchscreen Low-Level Driver"
+short_title: "Touchscreen"
+number: 14
+indent: 1
 ---
+
 
 Touch-screen coordinates are in the same space as the LCD coordinates to make the programming a lot easier. **Note that the rotation is automatically set for you in display_init(). Don't change it or the touch-display coordinates won't match the lcd screen coordinates.**
 

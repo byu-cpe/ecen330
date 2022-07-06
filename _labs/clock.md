@@ -56,7 +56,7 @@ This lab is comprised of several pieces that are described in further details on
 
 1. Implementing [clockDisplay.c]({% link _pages/clock_display.md %}).
 2. Implementing [clockControl.c]({% link _pages/clock_control.md %}).
-3. Working with the [touch screen]({% link _pages/touchscreen.md %}).
+3. Working with the [touch screen]().
 4. Making sure your code doesn't miss interrupts (described in Milestone 2 below).
 
 
