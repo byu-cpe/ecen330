@@ -1,9 +1,9 @@
 ---
 layout: lab
 toc: true
-title: "Lab X: Simon"
-short_title: Simon
-number: 9
+title: "Old Lab: Simon"
+# short_title: "Prev Lab: Simon"
+number: 5
 ---
 
 <iframe width="560" height="315" allow="fullscreen" src="https://www.youtube.com/embed/S8Ndaw5tfdo"> </iframe>
