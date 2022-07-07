@@ -6,7 +6,7 @@ number: 12
 indent: 1
 ---
 
-General Purpose I/O (GPIO) refers to pins on a processing chip that can be either input or output, and logic-high (0) or logic-low (1), but have no predefined purpose (as opposed to specialized pins that may implement specific protocols, such as RX/TX pins for a UART).  GPIO pins are appropriate for simple input and output devices such as switches, buttons, LEDs, etc.
+General Purpose I/O (GPIO) refers to pins on a chip that can be either input or output, and logic-high (0) or logic-low (1), but have no predefined purpose (as opposed to specialized pins that may implement specific protocols, such as RX/TX pins for a UART).  GPIO pins are appropriate for simple input and output devices such as switches, buttons, LEDs, etc.
 
 Often we want to control and observe these pins from our software code (reading input pins and setting output pins).  This requires a special piece of hardware called a *GPIO Controller* that interfaces between the processor bus and the actual pins.  This allows the processor to interface with the individual pins by reading and writing to specific addresses that belong to the GPIO Controller (See the [Address Map]({% link _documentation/devices.md %}#address-map) section for details about this).
 

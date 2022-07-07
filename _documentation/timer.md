@@ -6,40 +6,34 @@ number: 12
 indent: 1
 ---
 
-## Commerical Documentation
+## Documentation
   * [Xilinx Timer Documentation]({% link media/lab3/axi_timer_ds764.pdf %})
 
+### Diagram
+The hardware timers that you will access are Xilinx's AXI Timer. Here's a block diagram of the AXI timer taken from the data sheet. 
 
-The hardware timers that you will access are Xilinx AXI Timer (axi_timer) (v1.03a). Here's a block diagram of the AXI timer taken from the [Xilinx documentation]({% link media/lab3/axi_timer_ds764.pdf %}). Please refer to the documentation for functional details of the AXI timer.
+<img src="{% link media/lab3/axi_timer.png %}" width="800" alt="AXI Timer block diagram">
 
-<img src="{% link media/lab3/axitimerblockdiagram2.jpg %}" width="600" alt="AXI Timer block diagram">
-
-
-The ECEN 330 FPGA hardware system is configured with **THREE** of these timers, and they are named *timer_0*, *timer_1*, and *timer_2*, as shown below.
+The hardware system we will use contains **THREE** of these timers, and they are named *timer_0*, *timer_1*, and *timer_2*, as shown below.
 
 <img src="{% link media/lab3/threeintervaltimerdiagram.jpg %}" width="600" alt="Three interval timers on AXI bus">
 
-Here's an excerpt from the *xparameters.h* file with definitions related to these three timers. As you should recall from Lab 2, the base address is your main concern.
+The *xparameters.h* file contains information you need about the timers (in particular the base addresses and the clock frequency). 
 
 **NOTE: Do not copy the code below into your own code. Just include xparameters.h and use the defined values, e.g., XPAR_AXI_TIMER_2_BASEADDR.**
 
 ```
-/* Definitions for driver TMRCTR */
-#define XPAR_XTMRCTR_NUM_INSTANCES 3
-
 /* Definitions for peripheral AXI_TIMER_0 */
 #define XPAR_AXI_TIMER_0_DEVICE_ID 0
 #define XPAR_AXI_TIMER_0_BASEADDR 0x42800000
 #define XPAR_AXI_TIMER_0_HIGHADDR 0x4280FFFF
 #define XPAR_AXI_TIMER_0_CLOCK_FREQ_HZ 100000000
 
-
 /* Definitions for peripheral AXI_TIMER_1 */
 #define XPAR_AXI_TIMER_1_DEVICE_ID 1
 #define XPAR_AXI_TIMER_1_BASEADDR 0x42840000
 #define XPAR_AXI_TIMER_1_HIGHADDR 0x4284FFFF
 #define XPAR_AXI_TIMER_1_CLOCK_FREQ_HZ 100000000
-
 
 /* Definitions for peripheral AXI_TIMER_2 */
 #define XPAR_AXI_TIMER_2_DEVICE_ID 2
@@ -48,30 +42,25 @@ Here's an excerpt from the *xparameters.h* file with definitions related to thes
 #define XPAR_AXI_TIMER_2_CLOCK_FREQ_HZ 100000000
 ```
 
-## Resources 
-These timers are fully described in Xilinx's documentation. 
-
-  * [Xilinx Timer Documentation]({% link media/lab3/axi_timer_ds764.pdf %})
-
-If the highlighting does not appear, make sure to read at least the following pages: 1, 2-3 (through Characteristics), 4-5 (Characteristics), 7 (Figure 2), and 11-14 (Register Definitions).
-
 ## Overview of Timer Hardware 
 
-The timer hardware is pretty complex and provides lots of functionality. However, we will only use them in their simplest mode as interval timers. As such, you need to carefully study at least the highlighted sections of the Xilinx documentation.
+The timer hardware is pretty complex and provides lots of functionality. However, we will only be using a subset of the features provided.  As such, you need to carefully study at least the highlighted sections of the Xilinx documentation:
+  * Functional Description (we will only use **_generate mode_** in combination with **_cascade mode_**)
+  * Interrupts
+  * Register descriptions
 
-As discussed in the manual, the timer consists of two identical sections each containing a 32-bit counter and associated registers. The two counters can be cascaded to form a single 64-bit counter. This is referred to as cascade mode. In cascade mode, almost all of the control is done via a single control register (*TCSR0*) as the other control registers are mostly ignored in this mode. The counters can be configured to count up or down, you will configure them to count up. This makes the most sense for a simple timer.
+As discussed in the manual, the timer consists of two 32-bit counters.  Each counter has its own control/status register, that controls whether the counter is running, whether it is counting up or down, whether it auto-reloads, whether it generates an interrupt, etc.  The counter values cannot be set directly, but instead are set indirectly through a load register (loading enabled through the control/status register). 
 
-You will need to access the following registers in the timer hardware:
+The two counters can be cascaded to form a single 64-bit counter. This is referred to as cascade mode. In cascade mode, almost all of the control is done via a single control register (*TCSR0*) as the other control registers are mostly ignored in this mode. 
+
+You will be using the timers in both "count up" and "count down" modes.  Counting up is most useful for timing duration between events (such as timing how long it takes to run a function), while count down is useful for generating periodic interrupts each time the counter expires and auto-reloads.
 
 ### Register Descriptions
 
 Here are some basic descriptions of each hardware register (see the documentation for full details):
-  * *TCSR0*: Control/Status Register 0, used to control the cascaded 64-bit counter and to load values into Counter 0.
-  * *TCSR1*: Control/Status Register 1, used to load values into Counter 1.
-  * *TLR0*: Load Register 0, dictates the value loaded into Counter 0.  If you want to load a 0 into Counter 0 (i.e., reset Counter 0), then this register should have value 0.
-  * *TLR1*: Load Register 1, dictates the value loaded into Counter 1.  If you want to load a 0 into Counter 1 (i.e., reset Counter 1), then this register should have value 0.
-  * *TCR0*: Counter Register 0, you read this register to find out the current value of Counter 0.
-  * *TCR1*: Counter Register 1, you read this register to find out the current value of Counter 0.
+  * *TCSR0*/*TCSR1*: Control/Status Registers.  Used to change counter modes, start/stop the counter, enable/acknowledge interrupts, trigger loading the counter values from the load registers, etc.
+  * *TLR0* / *TLR1*: Load Registers, dictates the value loaded into counters.  These values are used when you trigger a load, or when the timer rolls over and you have auto-reload enabled.
+  * *TCR0*/*TCR1*: Counter Registers.  Read-only. You read these registers to find out the current value of counters.
 
 ### Operations
   - To initialize the counters, you should do the following:
