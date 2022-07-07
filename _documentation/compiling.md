@@ -2,7 +2,8 @@
 layout: page
 toc: false
 title: "Compiling and Running"
-number: 1
+number: 2
+indent: 1
 ---
 
 
@@ -15,7 +16,7 @@ Unfortunately, Makefiles can quickly become very complicated, even for fairly si
 
 ## The CMake Project File 
 
-We have given you a [CMakeLists.txt](https://github.com/byu-cpe/ecen330_student/blob/master/CMakeLists.txt) file that sets up the lab files to compile with CMake.  This file, which is described later, will be used to compile all of the labs in the course, and you will need to update it as you work through the labs.  It doesn't need to be modified for Lab 1.
+We have given you a [CMakeLists.txt](https://github.com/byu-cpe/ecen330_student/blob/main/CMakeLists.txt) file that sets up the lab files to compile with CMake.  This file, which is described later, will be used to compile all of the labs in the course, and you will need to update it as you work through the labs.  It doesn't need to be modified for Lab 1.
 
 ## Compiling Your Code 
 You can always follow the same steps to compile your labs.  Running this build process will always compile all of your lab programs.
@@ -24,7 +25,7 @@ You can always follow the same steps to compile your labs.  Running this build p
 
         cd build
 
-  * Run CMake, and point it to the directory where the primary [CMakeLists.txt](https://github.com/byu-cpe/ecen330_student/blob/master/CMakeLists.txt) file is located.  CMake will read this file and create a *Makefile* that can be used to compile your programs. 
+  * Run CMake, and point it to the directory where the primary [CMakeLists.txt](https://github.com/byu-cpe/ecen330_student/blob/main/CMakeLists.txt) file is located.  CMake will read this file and create a *Makefile* that can be used to compile your programs. 
   *(Remember that `..` means the parent directory in Linux).*
 
         cmake ..

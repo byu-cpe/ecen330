@@ -1,12 +1,16 @@
 ---
 layout: page
 toc: false
-title: "Using the Touch Screen"
+title: "Touchscreen Low-Level Driver"
+short_title: "Touchscreen"
+number: 14
+indent: 1
 ---
+
 
 Touch-screen coordinates are in the same space as the LCD coordinates to make the programming a lot easier. **Note that the rotation is automatically set for you in display_init(). Don't change it or the touch-display coordinates won't match the lcd screen coordinates.**
 
-There are only three functions in the [display.h](https://github.com/byu-cpe/ecen330_student/blob/master/include/display.h) file that are related to the touch-screen:
+There are only three functions in the [display.h](https://github.com/byu-cpe/ecen330_student/blob/main/include/display.h) file that are related to the touch-screen:
 
     bool display_isTouched(void);
 
@@ -31,5 +35,5 @@ To use the touch-screen do the following:
 
 The regions that you will use for the Clock lab are shown in the figure below. Thus the touch region is not limited to the triangle but is the entire rectangular region as shown below.
 
-<img src="{% link media/lab4/clocktouchscreenlayout.jpg %}" width="500" alt="Touch screen button layout for clock lab">
+<img src="{% link media/clock/clocktouchscreenlayout.jpg %}" width="500" alt="Touch screen button layout for clock lab">
 

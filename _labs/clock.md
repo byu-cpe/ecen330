@@ -1,9 +1,9 @@
 ---
 layout: lab
 toc: true
-title: "Lab 4: Clock"
+title: "Lab 6: Clock"
 short_title: Clock
-number: 4
+number: 6
 ---
 
 ## Overview
@@ -56,7 +56,7 @@ This lab is comprised of several pieces that are described in further details on
 
 1. Implementing [clockDisplay.c]({% link _pages/clock_display.md %}).
 2. Implementing [clockControl.c]({% link _pages/clock_control.md %}).
-3. Working with the [touch screen]({% link _pages/touchscreen.md %}).
+3. Working with the [touch screen]().
 4. Making sure your code doesn't miss interrupts (described in Milestone 2 below).
 
 
@@ -70,7 +70,7 @@ This lab is comprised of several pieces that are described in further details on
 
 ### Milestones 
 
-You will complete this lab in two milestones.  You are provided a [main.c](https://github.com/byu-cpe/ecen330_student/blob/master/lab4/main.c).  Do not change it, except to uncomment one of the below lines to run the chosen milestone:
+You will complete this lab in two milestones.  You are provided a [main.c](https://github.com/byu-cpe/ecen330_student/blob/main/lab4/main.c).  Do not change it, except to uncomment one of the below lines to run the chosen milestone:
 
     ////////////////////////////////////////////////////////////////////////////////
     // Uncomment one of the following lines to run Milestone 1 or 2      ///////////
@@ -85,7 +85,7 @@ You will complete this lab in two milestones.  You are provided a [main.c](https
 #### Milestone 2:
   * *clockControl.c*: You will completely implement this file as described above.  Be sure that your clock works correctly and that the increment/decrement functions work for setting time.
   * As a part of this milestone, you must follow the strategy discussed in [coding strategy/standard for state machines]({% link _other/coding_state_machines.md %})  to print out each state as it is entered.  Be sure that the printed output matches the state-machine behavior from the provided state diagram.
-  * Use your intervalTimer from last lab to measure how long your *tick()* function takes in the worst case (when you need to draw all digits).  Make sure it runs in less than the timer period ([config.h](https://github.com/byu-cpe/ecen330_student/blob/master/lab4/config.h) defines `#define CONFIG_TIMER_PERIOD 50.0E-3`).
+  * Use your intervalTimer from last lab to measure how long your *tick()* function takes in the worst case (when you need to draw all digits).  Make sure it runs in less than the timer period ([config.h](https://github.com/byu-cpe/ecen330_student/blob/main/lab4/config.h) defines `#define CONFIG_TIMER_PERIOD 50.0E-3`).
   * The provided main.c will run for 20 seconds, and then exit, reporting the number of interrupts that occurred and the number of interrupts serviced by your code.  Make sure you don't miss more than 1 interrupt (which may happen at the start of your program, even if your tick is short).  If you are missing interrupts, your *tick()* function probably runs too slow.
 
 ## Submission & Pass Off

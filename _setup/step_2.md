@@ -45,7 +45,7 @@ When you open the folder using VSCode, you should see a message indicating that 
 <img src="{% link media/setup/vscode_recommendations.png %}" alt="VS Code popup suggesting to install recommended packages">
 
 <ins>**Important:** You should always work on your code by opening the folder like explained above, instead of just individually opening your files in VSCode.</ins>It provides several benefits:
-  * It will load the configurations of VSCode that we have placed in the [.vscode](https://github.com/byu-cpe/ecen330_student/tree/master/.vscode) folder.
+  * It will load the configurations of VSCode that we have placed in the [.vscode](https://github.com/byu-cpe/ecen330_student/tree/main/.vscode) folder.
   * It makes it easier to manage your files using the folder browser on the left-hand side.
 
 [Return to Lab 1]({% link _labs/hello_world.md%}) and continue with the next steps.

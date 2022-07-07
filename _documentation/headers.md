@@ -2,7 +2,8 @@
 layout: page
 toc: false
 title: "Header Files"
-number: 3
+number: 4
+indent: 1
 ---
 
 In several cases you are instructed to include **header** files in your code, such as *leds.h*, *display.h*, *xparameters.h*, *xil_io.h*, *buttons.h*, *switches.h*, and more.
@@ -28,7 +29,7 @@ Why?
 
 We have already configured CMake to instruct it which folders in our code repository it should search for in order to find our header files.  This is referred to as an *Include Path*.
 
-If you look at the top-level [CMakeLists.txt](https://github.com/byu-cpe/ecen330_student/blob/master/CMakeLists.txt) file, you will see lines like so:
+If you look at the top-level [CMakeLists.txt](https://github.com/byu-cpe/ecen330_student/blob/main/CMakeLists.txt) file, you will see lines like so:
 
     include_directories(include)
     include_directories(drivers)

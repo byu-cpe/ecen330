@@ -233,3 +233,10 @@ pre {
 .navbar {
     background-color: $nav-color;
 }
+
+.list-group a.active {
+    text-decoration:none;
+    color: #495057;
+    border-color: $color3;
+    background-color: $color2 !important;
+}

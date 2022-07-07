@@ -4,7 +4,7 @@ toc: false
 title: "Clock Display"
 ---
 
-1. You must implement the following functions in *clockDisplay.c*. The [clockDisplay.h](https://github.com/byu-cpe/ecen330_student/blob/master/lab4/clockDisplay.h) file is provided in the repo.
+1. You must implement the following functions in *clockDisplay.c*. The [clockDisplay.h](https://github.com/byu-cpe/ecen330_student/blob/main/lab4/clockDisplay.h) file is provided in the repo.
 These are the only functions that you should "advertise" in the *clockDisplay.h* file. In your *clockDisplay.c* file you will implement these functions and other supporting functions.
 
 1. You must implement the clockDisplay code such that it only updates the characters that have changed on the screen. Doing so will eliminate annoying flashing artifacts and make things run more smoothly. You cannot get full credit if the screen flashes or if the TAs determine (by code inspection) that you are updating characters continuously even if they have not changed.
@@ -12,7 +12,7 @@ These are the only functions that you should "advertise" in the *clockDisplay.h*
 1. You must be able to resize the screen by changing the `#define CLOCKDISPLAY_TEXT_SIZE 6` statement in *clockDisplay.h*.  This define controls the *text-size* of the characters used to display the clock (see the *setTextSize()* function in the graphics library documentation. When you change the character size, you must reposition the display so that it is centered and such that the triangles serving as arrows are resized as well.  For example, if you change the text size to 4 and recompile the code, everything must be centered and properly rendered, as shown below. You will need to actually compute the positions for things based upon the chosen text-size. You do not need to resize the touch areas.
 You must be able to handle text sizes from 3 to 6.
 
-    <img src="{% link media/lab4/smallerclockphoto.jpg %}" width="300" alt="Small sized clock">
+    <img src="{% link media/clock/smallerclockphoto.jpg %}" width="300" alt="Small sized clock">
 
 1. For *Milestone 1*, you must implement a *clockDisplay_runTest()* function that tests the clockDisplay code by running through the following operations (with a suitable delay):
   * increment hours

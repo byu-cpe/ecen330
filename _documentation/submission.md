@@ -4,6 +4,7 @@ toc: false
 title: "Submitting Your Source Code to Learning Suite for Pass-Off"
 short_title: "Submitting Code"
 number: 5
+indent: 1
 ---
 
 You will turn in your source code to learning suite by submitting a single zip file for each lab.  **DO NOT** create the zip file on your own.  You must follow the steps below to use the provided program to create the zip file.  This ensures the correct files are submitted, and in a format that will work with the TA's grading system.
@@ -11,7 +12,6 @@ You will turn in your source code to learning suite by submitting a single zip f
 From the top-level directory, run:
 
     ./check_and_zip.py lab1
-
 
 For other labs, change `lab1` to the appropriate value.
 

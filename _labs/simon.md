@@ -1,9 +1,9 @@
 ---
 layout: lab
 toc: true
-title: "Lab 6: Simon"
+title: "Lab X: Simon"
 short_title: Simon
-number: 6
+number: 9
 ---
 
 <iframe width="560" height="315" allow="fullscreen" src="https://www.youtube.com/embed/S8Ndaw5tfdo"> </iframe>
@@ -91,7 +91,7 @@ This lab will be completed as several interacting modules.  Individual descripti
 
 *simonControl* provides the top-level control for the Simon Game and it coordinates the behavior of the other state machines to implement the Simon game. You can watch the video at the top of this page to see how things are supposed to work.
 
-We provide you with [simonControl.h](https://github.com/byu-cpe/ecen330_student/blob/master/lab6/simonControl.h). You must implement at least the *simonControl_init()*, *simonControl_tick()*, and *simonControl_enable()* functions so that the provided *simonMain.c* can compile, link, and operate properly.
+We provide you with [simonControl.h](https://github.com/byu-cpe/ecen330_student/blob/main/lab6/simonControl.h). You must implement at least the *simonControl_init()*, *simonControl_tick()*, and *simonControl_enable()* functions so that the provided *simonMain.c* can compile, link, and operate properly.
 
 ### Other Requirements
   - You must follow the coding standard.
