@@ -29,7 +29,7 @@ After your driver is complete, you will write a simple test application to verif
 1. **Hardware**. Read about the [Interrupt Controller Hardware]({% link _documentation/intc.md %}).
     * Make note of the section on initializing the ARM interrupt input.  You should call this code inside your `interrupts_init()` function.  
 
-1. **Driver Interface**. Read through the interface for your driver, provided in [interrupts.h](https://github.com/byu-cpe/ecen330_student/blob/master/drivers/interrupts.h).
+1. **Driver Interface**. Read through the interface for your driver, provided in [interrupts.h](https://github.com/byu-cpe/ecen330_student/blob/main/drivers/interrupts.h).
 
 
 
@@ -66,17 +66,17 @@ After your driver is complete, you will write a simple test application to verif
 
 1. **Building the code:** 
     * **Driver:** 
-        * This driver will be written in *drivers/interrupts.c*, which you must create yourself.  Uncomment the two lines in the *drivers* [CMakeLists.txt](https://github.com/byu-cpe/ecen330_student/blob/master/drivers/CMakeLists.txt) file so that the *interrupts* library is built.  
+        * This driver will be written in *drivers/interrupts.c*, which you must create yourself.  Uncomment the two lines in the *drivers* [CMakeLists.txt](https://github.com/byu-cpe/ecen330_student/blob/main/drivers/CMakeLists.txt) file so that the *interrupts* library is built.  
 
     * **Application Code:**
         * Your test application should be written in *lab4_interrupts/interrupt_test.c*.  For this lab, you will need to write your own CMakeLists.txt file, which you can base off of previous labs.
-        * As usual, update the top-level [CMakeLists.txt](https://github.com/byu-cpe/ecen330_student/blob/master/CMakeLists.txt) and add a `add_subdirectory(lab4_interrupts)` statement.
+        * As usual, update the top-level [CMakeLists.txt](https://github.com/byu-cpe/ecen330_student/blob/main/CMakeLists.txt) and add a `add_subdirectory(lab4_interrupts)` statement.
 
 ## Implementation
 
 ### Requirements
 
-1. Write a driver for the Interrupt Controller, implementing the functions defined in [interrupts.h](https://github.com/byu-cpe/ecen330_student/blob/master/drivers/interrupts.h).  See comments in this file for details on the behavior of each function.
+1. Write a driver for the Interrupt Controller, implementing the functions defined in [interrupts.h](https://github.com/byu-cpe/ecen330_student/blob/main/drivers/interrupts.h).  See comments in this file for details on the behavior of each function.
 
 1. Implement the *interrupt_test_run()* function, such that:
     * Each of the three interval timers are running in count-down mode, and generating an interrupt at 10Hz, 1Hz and 0.1Hz.

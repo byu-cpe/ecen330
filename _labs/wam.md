@@ -52,9 +52,9 @@ The controller is quite simple (my controller only has three states). The respon
 ### Source Code 
 
 Three files are provided: 
-  * [wamControl.h](https://github.com/byu-cpe/ecen330_student/blob/master/lab7/wamControl.h)
-  * [wamDisplay.h](https://github.com/byu-cpe/ecen330_student/blob/master/lab7/wamDisplay.h)
-  * [main.c](https://github.com/byu-cpe/ecen330_student/blob/master/lab7/main.c). 
+  * [wamControl.h](https://github.com/byu-cpe/ecen330_student/blob/main/lab7/wamControl.h)
+  * [wamDisplay.h](https://github.com/byu-cpe/ecen330_student/blob/main/lab7/wamDisplay.h)
+  * [main.c](https://github.com/byu-cpe/ecen330_student/blob/main/lab7/main.c). 
 
 **Note: Much of the functionality of the various functions is described in the commented code in the provided files. Carefully read these comments as it will save you a lot of time.**
 

@@ -10,7 +10,7 @@ indent: 1
 
 Touch-screen coordinates are in the same space as the LCD coordinates to make the programming a lot easier. **Note that the rotation is automatically set for you in display_init(). Don't change it or the touch-display coordinates won't match the lcd screen coordinates.**
 
-There are only three functions in the [display.h](https://github.com/byu-cpe/ecen330_student/blob/master/include/display.h) file that are related to the touch-screen:
+There are only three functions in the [display.h](https://github.com/byu-cpe/ecen330_student/blob/main/include/display.h) file that are related to the touch-screen:
 
     bool display_isTouched(void);
 

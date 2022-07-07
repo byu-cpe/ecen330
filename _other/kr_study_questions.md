@@ -13,7 +13,7 @@ Try to answer questions from the study list as you read each chapter. Some test 
 ## Running Code
 You may find it helpful to compile and run code yourself.  This can be done by:
   * Running on the board (You can modify your lab1 program, or copy your lab1 folder to another directory and use that)
-  * Compiling and running in Linux (we have provided a [playground](https://github.com/byu-cpe/ecen330_student/tree/master/playground) directory where you can modify main.c, run `make` to compile, and then run using `./main`.)
+  * Compiling and running in Linux (we have provided a [playground](https://github.com/byu-cpe/ecen330_student/tree/main/playground) directory where you can modify main.c, run `make` to compile, and then run using `./main`.)
   * Manually compile a file using gcc: `gcc studyQuestions.c`, and then run the produced executable: `./a.out`
 
 In some of the provide code files, you will see individual sections of code surrounded by preprocessor macros:

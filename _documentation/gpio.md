@@ -34,7 +34,7 @@ OK, the hardware seems straightforward enough but how do you access the GPIO har
 
 <img src="{% link media/lab2/gpioregisteroffsets.jpg %}" width="800" alt="GPIO register offsets">
 
-You can read and write the GPIO registers via the address that was assigned when I generated the bitstream. You find the base address for the GPIO IP block by looking it up in the *xparameters.h* file.  This file can be found at [zybo/xil_arm_toolchain/bsp/ps7_cortexa9_0/include/xparameters.h](https://github.com/byu-cpe/ecen330_student/blob/master/platforms/zybo/xil_arm_toolchain/bsp/ps7_cortexa9_0/include/xparameters.h).
+You can read and write the GPIO registers via the address that was assigned when I generated the bitstream. You find the base address for the GPIO IP block by looking it up in the *xparameters.h* file.  This file can be found at [zybo/xil_arm_toolchain/bsp/ps7_cortexa9_0/include/xparameters.h](https://github.com/byu-cpe/ecen330_student/blob/main/platforms/zybo/xil_arm_toolchain/bsp/ps7_cortexa9_0/include/xparameters.h).
 
 
 I have included an excerpt from the *xparameters.h* file that contains the necessary *#define* statements that tell us what the base addresses for the GPIO blocks are.
@@ -84,7 +84,7 @@ As previously mentioned, you must access two registers in the GPIO block. These 
 
 Note that you will also have to write a function that writes GPIO registers so that you can write the correct value to the *GPIO_TRI* register. I'll leave that to you :-D
 
-For the switches, try using two low-level Xilinx IO functions for accessing the registers contained in the GPIO IP. These functions are available if you add `#include "xil_io.h"` at the top of your program.   You can find *xil_io.h* at [zybo/xil_arm_toolchain/bsp/ps7_cortexa9_0/include/xil_io.h](https://github.com/byu-cpe/ecen330_student/blob/master/platforms/zybo/xil_arm_toolchain/bsp/ps7_cortexa9_0/include/xil_io.h). 
+For the switches, try using two low-level Xilinx IO functions for accessing the registers contained in the GPIO IP. These functions are available if you add `#include "xil_io.h"` at the top of your program.   You can find *xil_io.h* at [zybo/xil_arm_toolchain/bsp/ps7_cortexa9_0/include/xil_io.h](https://github.com/byu-cpe/ecen330_student/blob/main/platforms/zybo/xil_arm_toolchain/bsp/ps7_cortexa9_0/include/xil_io.h). 
 
 The functions that allow you to read and write to registers are included here for convenience:
 

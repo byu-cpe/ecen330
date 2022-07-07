@@ -10,7 +10,7 @@ The description of the control milestone is straightforward. You are to implemen
 ## Requirements
 
   - Upon completion of a game, pressing BTN0 should start another game.
-  - [ticTacToeControl.h](https://github.com/byu-cpe/ecen330_student/blob/master/lab5/ticTacToeControl.h) is provided to you.  It declares two functions, *ticTacToeControl_init()* and *ticTacToeControl_tick()*.  You should not modify this file.
+  - [ticTacToeControl.h](https://github.com/byu-cpe/ecen330_student/blob/main/lab5/ticTacToeControl.h) is provided to you.  It declares two functions, *ticTacToeControl_init()* and *ticTacToeControl_tick()*.  You should not modify this file.
   - You must create a *ticTacToeControl.c* file.
   - Use the same structure for the control as was required for the previous clock lab.  A good way to start would be to copy the state enum declaration from the clock lab and modify it with the state names you will use for this lab.
   - While much of the graphics will be done by *ticTacToeDisplay*, some graphics (such as as drawing and erasing the starting instructions) will be done by *ticTacToeControl*. 

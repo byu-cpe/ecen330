@@ -91,7 +91,7 @@ This lab will be completed as several interacting modules.  Individual descripti
 
 *simonControl* provides the top-level control for the Simon Game and it coordinates the behavior of the other state machines to implement the Simon game. You can watch the video at the top of this page to see how things are supposed to work.
 
-We provide you with [simonControl.h](https://github.com/byu-cpe/ecen330_student/blob/master/lab6/simonControl.h). You must implement at least the *simonControl_init()*, *simonControl_tick()*, and *simonControl_enable()* functions so that the provided *simonMain.c* can compile, link, and operate properly.
+We provide you with [simonControl.h](https://github.com/byu-cpe/ecen330_student/blob/main/lab6/simonControl.h). You must implement at least the *simonControl_init()*, *simonControl_tick()*, and *simonControl_enable()* functions so that the provided *simonMain.c* can compile, link, and operate properly.
 
 ### Other Requirements
   - You must follow the coding standard.

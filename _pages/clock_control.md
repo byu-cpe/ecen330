@@ -5,7 +5,7 @@ title: "Clock Control"
 ---
 
 
-Here is [clockControl.h](https://github.com/byu-cpe/ecen330_student/blob/master/lab4/clockControl.h). 
+Here is [clockControl.h](https://github.com/byu-cpe/ecen330_student/blob/main/lab4/clockControl.h). 
 
 
 The requirements of the clockControl state machine are:
