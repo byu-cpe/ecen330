@@ -16,6 +16,14 @@ indent: 0
 ## Devices
 
 
+## Address Map
+
+
+
+The base addresses 
+
+ You find the base address for the GPIO IP block by looking it up in the *xparameters.h* file.  This file can be found at [zybo/xil_arm_toolchain/bsp/ps7_cortexa9_0/include/xparameters.h](https://github.com/byu-cpe/ecen330_student/blob/main/platforms/zybo/xil_arm_toolchain/bsp/ps7_cortexa9_0/include/xparameters.h).
+
 ## Programming Stack
 
 We often refer to *stacks* when we talk about computing systems. A stack is a conceptual term that refers to multiple layers of software stacked one upon the other. See [Programming Stack] for more information on how this terminology applies to this lab.

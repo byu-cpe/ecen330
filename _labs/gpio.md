@@ -41,6 +41,8 @@ In this lab you will write a driver for the GPIO (general purpose input/output) 
 
 1. **Review header files**. The [buttons.h](https://github.com/byu-cpe/ecen330_student/blob/main/drivers/buttons.h) and [switches.h](https://github.com/byu-cpe/ecen330_student/blob/main/drivers/switches.h) files which are provided in your repository.  These header files define the interface to your driver.
 
+1. **Including header files**. Review the page about [header files]({% link _documentation/headers.md %}). 
+
 1. **Compiling**.  In this lab you will first write driver code, and then write a test application.  
     * Read the page about [CMake files]({% link _documentation/cmake.md %}).
     * The *driver* code will be re-used in later labs, so it will be compiled into a *library* that can be used by multiple applications. This library, called *buttons_switches*, will be located in the [drivers](https://github.com/byu-cpe/ecen330_student/tree/main/drivers) directory.  You are already given a [CMakeLists.txt](https://github.com/byu-cpe/ecen330_student/blob/main/drivers/CMakeLists.txt) file in this directory that will compile your *buttons.c* and *switches.c* code into the ''buttons_switches'' library.
@@ -79,8 +81,8 @@ In this lab you will write a driver for the GPIO (general purpose input/output) 
   - You are provided a driver to control the LEDs. See [leds.h](https://github.com/byu-cpe/ecen330_student/blob/main/include/leds.h).  Include this header using `#include "leds.h"`. 
   - You should write helper functions for accessing device registers.  For example, *buttons.c* and *switches.c* could both contain:
       ```
-      readRegister(uint32_t offset);
-      writeRegister(uint32_t offset, uint32_t value);
+      uint32_t readRegister(uint32_t offset);
+      void writeRegister(uint32_t offset, uint32_t value);
       ```
 
 ##  Submission

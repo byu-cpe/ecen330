@@ -26,7 +26,7 @@ You are given a test application shown below that will verify that your driver i
 
 1. **Hardware**. Read about the [touchscreen]({% link _documentation/touchscreen.md %}).
 
-1. **Driver Interface**. Read through the interface for your driver, provided in [touchscreen.h](https://github.com/byu-cpe/ecen330_student/blob/master/drivers/touchscreen.h).
+1. **Driver Interface**. Read through the interface for your driver, provided in [touchscreen.h](https://github.com/byu-cpe/ecen330_student/blob/main/drivers/touchscreen.h).
 
 1. **Touchscreen State Machine**.
 
@@ -40,16 +40,16 @@ You are given a test application shown below that will verify that your driver i
 
 1. **Building the code:** 
     * **Driver:** 
-        * This driver will be written in *drivers/touchscreen.c*, which you must create yourself.  Uncomment the two lines in the *drivers* [CMakeLists.txt](https://github.com/byu-cpe/ecen330_student/blob/master/drivers/CMakeLists.txt) file so that the *touchscreen* library is built.  
+        * This driver will be written in *drivers/touchscreen.c*, which you must create yourself.  Uncomment the two lines in the *drivers* [CMakeLists.txt](https://github.com/byu-cpe/ecen330_student/blob/main/drivers/CMakeLists.txt) file so that the *touchscreen* library is built.  
 
     * **Application Code:**
-        * You are provided with the test application.  Just update the top-level [CMakeLists.txt](https://github.com/byu-cpe/ecen330_student/blob/master/CMakeLists.txt) and add a `add_subdirectory(lab5_touchscreen)` statement.
+        * You are provided with the test application.  Just update the top-level [CMakeLists.txt](https://github.com/byu-cpe/ecen330_student/blob/main/CMakeLists.txt) and add a `add_subdirectory(lab5_touchscreen)` statement.
 
 ## Implementation
 
 ### Requirements
 
-1. Write a driver that uses a state machine to implement the functions defined in [touchscreen.h](https://github.com/byu-cpe/ecen330_student/blob/master/drivers/touchscreen.h).  See comments in this file for details on the behavior of each function.
+1. Write a driver that uses a state machine to implement the functions defined in [touchscreen.h](https://github.com/byu-cpe/ecen330_student/blob/main/drivers/touchscreen.h).  See comments in this file for details on the behavior of each function.
 
 1. Your state machine must include debug functionality to print out each state as it is entered, as discussed in [coding strategy/standard for state machines]({% link _other/coding_state_machines.md %}).  This must be enabled in your submitted code.
 
