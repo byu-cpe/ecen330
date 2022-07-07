@@ -1,9 +1,9 @@
 ---
 layout: lab
 toc: true
-title: "Lab 7: Whack-a-Mole"
-short_title: Whack-a-Mole
-number: 7-alt
+title: "Old Lab: Whack-a-Mole"
+# short_title: Whack-a-Mole
+number: 6
 ---
 
 # <span style="color:red"> Warning</span>

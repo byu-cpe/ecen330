@@ -33,7 +33,7 @@ You can optionally work in teams (up to size 3); however, the larger the team, t
  
  * **Project Difficulty & Creativity**: This grade component is based on whether you have chosen an interesting project of reasonable difficulty.  Your project does not need to be overly complex or large to receive full points.  Consider the existing labs (clock, tic-tac-toe, simon and whack-a-mole) when choosing the scope of your project.
 
-   **Note:** If you don't want to choose your own project, you can choose to do the provided [Whack-a-Mole]({% link _labs/wam.md %}) lab.  **However, if you do so, you will receive 20/30 in this category**.  This is not to suggest that your project should be twice as complex as Whack-a-mole! (In fact, Whack-a-mole is of sufficient complexity and difficulty).  However, we want to encourage you to design and make your own project, as you will likely learn more from this process.
+   **Note:** If you don't want to choose your own project, you can choose to do the provided [Whack-a-Mole]({% link _other/wam.md %}) lab.  **However, if you do so, you will receive 20/30 in this category**.  This is not to suggest that your project should be twice as complex as Whack-a-mole! (In fact, Whack-a-mole is of sufficient complexity and difficulty).  However, we want to encourage you to design and make your own project, as you will likely learn more from this process.
 
 * **Project Implementation:** This will evaluate the quality and correctness of your implementation.  For full points, your project should implement what you proposed, compile without errors or warnings, run correctly, and be responsive and be bug-free.
 
