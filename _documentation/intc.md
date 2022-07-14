@@ -15,6 +15,10 @@ The following shows the hardware components and wiring of the interrupt system t
 Here is the full documentation of the AXI Interrupt Controller hardware. Like the other hardware manuals, you should pay closest attention to the *Register Space* section.
   * [Xilinx AXI Interrupt Controller v4.1 Documentation]({% link media/interrupts/pg099-axi-intc.pdf %})
 
+## Base Address
+
+The AXI Interrupt Controller is located at the base address provided by `XPAR_AXI_INTC_0_BASEADDR` (make sure to `#include <xparamters.h> like in the previous lab).
+
 ## Behavior
 
 Many students often get confused about how interrupts work in this system, and make the assumption that the *Interrupt Controller* is basically an OR-gate that indicates if any interrupt input is active.  In reality, the interrupts system is more complicated, as each connection can be enabled/disabled at the sender or receiver end, and interrupts remain "active" until explicitly acknowledged.
