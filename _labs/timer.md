@@ -31,7 +31,7 @@ Do a nice job on this assignment. You will likely use these timers extensively i
     * **Application Code:**
         * The application code, which will test your interval timer driver, is provided to you as [main.c](https://github.com/byu-cpe/ecen330_student/blob/master/lab3/main.c) in the *lab3* directory.  
         * A [CMakeLists.txt](https://github.com/byu-cpe/ecen330_student/tree/master/lab3) file is also provided.
-        * Like last lab, you will need to update the top-level [CMakeLists.txt](https://github.com/byu-cpe/ecen330_student/blob/master/CMakeLists.txt) and add a `add_subdirectory(lab3)` statement.
+        * Like last lab, you will need to update the top-level [CMakeLists.txt](https://github.com/byu-cpe/ecen330_student/blob/master/CMakeLists.txt) and add a `add_subdirectory(lab3_timer)` statement.
 
 
 
