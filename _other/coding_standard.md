@@ -12,16 +12,15 @@ number: 1
 ## Coding Standard
 
 ### 1. General
+  * **1.1** You must write C-code (Not C++).
 
-  * **1.1** You must write C-code. No class definitions are allowed. If you need a data-structure, it must be something supported by "C", such as a ''struct''.
-
-  * **1.2** When compiled, your code must not cause the compiler to issue any warnings or errors.
+  * **1.2** Your code must compile without warnings.
 
   * **1.3** Your code, when submitted, must be in a finished form. You are allowed a total of 5 lines of "commented-out" code per file.
 
   * **1.4** Avoid using repetitive sections of copied and pasted code in your programs.
 
-  * **1.5** Busy loops (delays based on for-loops) are not allowed, except for test code.
+  * **1.5** Busy loops (delays based on for-loops) and delay statements are not allowed, except for test code.
 
   * **1.6** All code will be graded against the coding standard.
 
@@ -41,7 +40,7 @@ number: 1
 
 
 ### 4. Data Types
-  * **4.1** For integer variables, you must use the types contained in [stdint.h](http://en.wikibooks.org/wiki/C_Programming/C_Reference/stdint.h). There are two exceptions:
+  * **4.1** For integer variables, you must use the types contained in [stdint.h](https://en.wikibooks.org/wiki/C_Programming/C_Reference/stdint.h). There are two exceptions:
     - You may use *int* as the return type of *main()*.
     - You may use the standard integer types when interacting with C or OS library calls (ie: *char* when working with *strcpy()*, *int* when calling *open()*, etc.).
 
@@ -86,10 +85,6 @@ number: 1
   * **9.5** All variables in your state machine defined outside of a function must be defined using the *static* keyword.
 
   * **9.6** You must provide an *init* function (*base-name_init*) that is called before any of your provided functions can be called. This function must initialize the *currentState* and any other state variables.
-
-
-### 10. Warnings
-  * **10.1** Your code must compile without warnings.
 
 
 ## Grading Source Code

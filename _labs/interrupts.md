@@ -16,7 +16,7 @@ In this lab you will create a driver for an interrupt controller than receives i
 
 After your driver is complete, you will write a simple test application to verify your driver is working correctly.  This test application will initialize each timer to generate interrupts at different rates, and use each interrupt to blink an LED.
 
-<img src="{% link media/interrupts/interrupt_test.gif %}" width="500">
+<img src="{% link media/interrupts/interrupt_test.gif %}" width="500" alt="Interrupt test application">
 
 ### Objectives
 

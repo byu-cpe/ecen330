@@ -28,7 +28,7 @@ In this lab you will write a driver for the GPIO (general purpose input/output) 
 
 ## Preliminary 
 
-1. Read about the [Programming Stack]({% link _documentation/devices.md %}#programming_stack).
+1. Read about the [Programming Stack]({% link _documentation/devices.md %}#programming-stack).
 
 1. When using programmable processors such as microprocessors, etc., we access low-level hardware via registers. See the [GPIO and Registers page]({% link _documentation/gpio.md %}) to understand how you will access the GPIO hardware.
 
@@ -47,7 +47,7 @@ In this lab you will write a driver for the GPIO (general purpose input/output) 
     * Read the page about [CMake files]({% link _documentation/cmake.md %}).
     * The *driver* code will be re-used in later labs, so it will be compiled into a *library* that can be used by multiple applications. This library, called *buttons_switches*, will be located in the [drivers](https://github.com/byu-cpe/ecen330_student/tree/main/drivers) directory.  You are already given a [CMakeLists.txt](https://github.com/byu-cpe/ecen330_student/blob/main/drivers/CMakeLists.txt) file in this directory that will compile your *buttons.c* and *switches.c* code into the ''buttons_switches'' library.
 
-    * The *application* code will be a simple test program to ensure your drivers are working correctly.  The test application will be placed in your [lab2](https://github.com/byu-cpe/ecen330_student/tree/main/lab2) directory, where you have already been provided a [CMakeLists.txt](https://github.com/byu-cpe/ecen330_student/blob/main/lab2/CMakeLists.txt) that will compile the Lab 2 executable.  You will see that it is almost the same as Lab 1 file, except that line 2 also includes the *buttons_switches* library.
+    * The *application* code will be a simple test program to ensure your drivers are working correctly.  The test application will be placed in your [lab2](https://github.com/byu-cpe/ecen330_student/tree/main/lab2_gpio) directory, where you have already been provided a [CMakeLists.txt](https://github.com/byu-cpe/ecen330_student/blob/main/lab2_gpio/CMakeLists.txt) that will compile the Lab 2 executable.  You will see that it is almost the same as Lab 1 file, except that line 2 also includes the *buttons_switches* library.
 
     * The only changes you need to make for this lab is to instruct the top-level [CMakeLists.txt](https://github.com/byu-cpe/ecen330_student/blob/main/CMakeLists.txt) file to enter both of these directories and process those CMakeLists.txt files.  Add  `add_subdirectory(lab2_gpio)` and `add_subdirectory(drivers)` statements to the top-level CMakeLists.txt, after the `add_subdirectory(lab1_helloworld)` statement.
 
@@ -60,7 +60,7 @@ In this lab you will write a driver for the GPIO (general purpose input/output) 
 
 1. **Buttons driver**. Write a driver for the push buttons.  This driver will be located in *drivers/buttons.c* and will implement the functions in [buttons.h](https://github.com/byu-cpe/ecen330_student/blob/main/drivers/buttons.h).
 
-1. **Test applications**.  Create test functions for your two drivers.  The provided [main.c](https://github.com/byu-cpe/ecen330_student/blob/main/lab2/main.c) calls the `gpioTest_buttons()` and `gpioTest_switches()` functions.  Write both of these functions in `gpioTest.c`. 
+1. **Test applications**.  Create test functions for your two drivers.  The provided [main.c](https://github.com/byu-cpe/ecen330_student/blob/main/lab2_gpio/main.c) calls the `gpioTest_buttons()` and `gpioTest_switches()` functions.  Write both of these functions in `gpioTest.c`. 
   * **Switches test:** 
         * The switch test program is shown in a video above.  It turns on LEDs corresponding to the switches that are in the UP position.  
         * The test will end once all four switches are UP.

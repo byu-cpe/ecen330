@@ -8,7 +8,7 @@ indent: 1
 
 The following shows the hardware components and wiring of the interrupt system that you will use for the labs in this class.  Each of the three AXI Interval Timers has an interrupt output (irq) that is fed to one of the inputs of the AXI Interrupt controller as shown below.  The AXI Interrupt Controller aggregates these inputs into a single interrupt output (irq) that is send to the ARM Processor.
 
-<img src="{% link media/interrupts/interrupts.png %}" width="800">
+<img src="{% link media/interrupts/interrupts.png %}" width="800" alt="Interrupt connection diagram">
 
 ## Commerical Documentation
 
