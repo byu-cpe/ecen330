@@ -4,7 +4,7 @@ toc: false
 title: "Clock Display"
 ---
 
-1. You must implement the following functions in *clockDisplay.c*. The [clockDisplay.h](https://github.com/byu-cpe/ecen330_student/blob/main/lab4/clockDisplay.h) file is provided in the repo.
+1. You must implement the following functions in *clockDisplay.c*. The [clockDisplay.h](https://github.com/byu-cpe/ecen330_student/blob/main/lab6_clock/clockDisplay.h) file is provided in the repo.
 These are the only functions that you should "advertise" in the *clockDisplay.h* file. In your *clockDisplay.c* file you will implement these functions and other supporting functions.
 
 1. You must implement the clockDisplay code such that it only updates the characters that have changed on the screen. Doing so will eliminate annoying flashing artifacts and make things run more smoothly. You cannot get full credit if the screen flashes or if the TAs determine (by code inspection) that you are updating characters continuously even if they have not changed.
@@ -33,7 +33,7 @@ Since the *clockDisplay_performIncDec()* function reads the touched location, it
 
 ## Clock Display Helps 
 
-You can use the 'C' function [sprintf()](http://www.tutorialspoint.com/c_standard_library/c_function_sprintf.htm) to greatly reduce the amount of work for generating the display. *sprintf()* is just like *printf()* except that, instead of printing to a terminal window, it "prints" the characters to a *char* array. Here is what I suggest:
+You can use the 'C' function [sprintf()](https://www.tutorialspoint.com/c_standard_library/c_function_sprintf.htm) to greatly reduce the amount of work for generating the display. *sprintf()* is just like *printf()* except that, instead of printing to a terminal window, it "prints" the characters to a *char* array. Here is what I suggest:
   * Use three different integer variables to maintain the time as hours, minutes and seconds.
   * Use *sprintf()* to format these three variables into a time string (array of *char*). Study the formatting directives for *sprintf()*. For example, `%2hd` prints a decimal value (*h* indicates a short int) with a width of 2 with a leading space if the leading digit would be a 0. `%02hd` prints a decimal value but includes the leading 0. Think about how you might use these formatting strings together to format a time string. Combining these formatting strings with a couple of other things will completely format the clock string with no additional programming.
   * Keep two *char* arrays. One array is used to store the string containing the current time displayed on the LCD. The other string keeps track of the clock string that was written previously. Each time a change is made to the time either by keeping time, or by setting the time, compare the characters in the two *char* arrays. When you find a difference between the two arrays, erase the character(s) on the LCD display at that position and then redraw the new character(s). Redrawing is just drawing the previous character as background (*DISPLAY_BLACK* in this case). You then simply draw the new character in its place.

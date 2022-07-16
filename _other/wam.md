@@ -52,9 +52,9 @@ The controller is quite simple (my controller only has three states). The respon
 ### Source Code 
 
 Three files are provided: 
-  * [wamControl.h](https://github.com/byu-cpe/ecen330_student/blob/main/lab7/wamControl.h)
-  * [wamDisplay.h](https://github.com/byu-cpe/ecen330_student/blob/main/lab7/wamDisplay.h)
-  * [main.c](https://github.com/byu-cpe/ecen330_student/blob/main/lab7/main.c). 
+  * [wamControl.h](https://github.com/byu-cpe/ecen330_student/blob/main/lab7_wam/wamControl.h)
+  * [wamDisplay.h](https://github.com/byu-cpe/ecen330_student/blob/main/lab7_wam/wamDisplay.h)
+  * [main.c](https://github.com/byu-cpe/ecen330_student/blob/main/lab7_wam/main.c). 
 
 **Note: Much of the functionality of the various functions is described in the commented code in the provided files. Carefully read these comments as it will save you a lot of time.**
 
@@ -107,7 +107,7 @@ Follow the [instructions on submitting source code]({% link _documentation/submi
 
 ## Resources 
 The web has quite a bit of information on how to use *rand()* and pointers, including *malloc()* and *free()*. Here are a few curated links.
-  * <http://www.cplusplus.com/reference/cstdlib/rand/>
-  * <http://www.cplusplus.com/reference/cstdlib/malloc/> (Also check out the "See also" links at the bottom of the page.)
-  * <http://www.cplusplus.com/reference/cstdlib/free/>
-  * <http://en.cppreference.com/w/cpp/language/sizeof>
+  * <https://www.cplusplus.com/reference/cstdlib/rand/>
+  * <https://www.cplusplus.com/reference/cstdlib/malloc/> (Also check out the "See also" links at the bottom of the page.)
+  * <https://www.cplusplus.com/reference/cstdlib/free/>
+  * <https://en.cppreference.com/w/cpp/language/sizeof>

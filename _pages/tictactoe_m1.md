@@ -6,7 +6,7 @@ title: "Tic Tac Toe, Milestone 1: minimax"
 
 In this milestone you will implement the algorithm for the computer player. If you are successful, it will be impossible to beat the computer when you play against it. We will be using an algorithm called minimax (or something close, anyway). The algorithm is often used to create a computer-player in a two-player game such as Tic-Tac-Toe.
 
-  A very good description using minimax to implement a computer-player for Tic-Tac-Toe can be found <http://www.neverstopbuilding.com/minimax>. I also archived it as [PDF]({% link media/lab5/minimax.pdf %}).
+  A very good description using minimax to implement a computer-player for Tic-Tac-Toe can be found <https://www.neverstopbuilding.com/minimax>. I also archived it as [PDF]({% link media/lab5/minimax.pdf %}).
 
 I have annotated some of the figures and will discuss these in class.
 
@@ -159,11 +159,11 @@ final choice: (row: 1, column: 1)
   - You must provide the functions listed below via the .h file. You must use these data-structures, #define, etc., for the listed functions. Please implement helper functions in the .c file (not advertised in the .h file) to make your code modular and easier to read and to debug.
   - You must test your minimax algorithm by writing at least 10 additional test-boards (see provided test code below). The TA will check for this.
 
-[minimax.h](https://github.com/byu-cpe/ecen330_student/blob/main/lab5/minimax.h)
+[minimax.h](https://github.com/byu-cpe/ecen330_student/blob/main/lab5_ttt/minimax.h)
 
 ## Pass-Off 
 To pass the algorithm milestone, you need to demonstrate your minimax program providing the correct answer for several provided boards and **for 10 additional boards** that you must write. After adding your test boards to the provided test code, test your minimax program using the program shown below.
 
-  * [testBoards.c](https://github.com/byu-cpe/ecen330_student/blob/main/lab5/testBoards.c)
+  * [testBoards.c](https://github.com/byu-cpe/ecen330_student/blob/main/lab5_ttt/testBoards.c)
 
 **Note: if your minimax algorithm passes these tests, you may still have bugs in your code. These tests are not exhaustive. I strongly advise you to test your minimax code much more thoroughly. Otherwise, you will find that you game may not be unbeatable in the final milestone.**

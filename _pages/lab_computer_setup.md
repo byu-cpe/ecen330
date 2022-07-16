@@ -30,6 +30,6 @@ Install the following packages:
 
 Install other 3rd party software:
 
-  * [Google Chrome](http://google.com/chrome)
+  * [Google Chrome](https://google.com/chrome)
   * [VS Code](https://code.visualstudio.com/download)
 

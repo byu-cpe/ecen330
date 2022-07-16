@@ -15,7 +15,7 @@ To handle these timing requirements, you will implement your touchscreen driver 
 
 You are given a test application shown below that will verify that your driver is working correctly (*the yellow circles in the GIF below show when the mouse button is clicked and are not actually drawn in the test application*).
 
-<img src="{% link media/lab5/touchscreen.gif %}" width="500">
+<img src="{% link media/lab5/touchscreen.gif %}" width="500" alt="Touchscreen test application demo">
 
 ### Objectives
 * Gain experience writing a *high-level device driver* that requires meeting specific device timing requirements.
@@ -30,7 +30,7 @@ You are given a test application shown below that will verify that your driver i
 
 1. **Touchscreen State Machine**.
 
-    <img src="{% link media/lab5/touchscreen_sm.png %}" width="800">
+    <img src="{% link media/lab5/touchscreen_sm.png %}" width="800" alt="Touchscreen state machine diagram">
 
     * You can use the above diagram to implement your state machine.  You can follow this design exactly, or make changes if you like.
     * The *adc_timer* tracks the number of ticks elapsed since the user touched the screen, and is used to implement the delay required to allow the ADC to settle.

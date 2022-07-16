@@ -29,9 +29,9 @@ Do a nice job on this assignment. You will likely use these timers extensively i
         * Uncomment the two lines in the *drivers* [CMakeLists.txt](https://github.com/byu-cpe/ecen330_student/blob/main/drivers/CMakeLists.txt) file so that the *intervalTimer* library is built.  
 
     * **Application Code:**
-        * The application code, which will test your interval timer driver, is provided to you as [main.c](https://github.com/byu-cpe/ecen330_student/blob/main/lab3/main.c) in the *lab3* directory.  
-        * A [CMakeLists.txt](https://github.com/byu-cpe/ecen330_student/tree/main/lab3) file is also provided.
-        * Like last lab, you will need to update the top-level [CMakeLists.txt](https://github.com/byu-cpe/ecen330_student/blob/main/CMakeLists.txt) and add a `add_subdirectory(lab3)` statement.
+        * The application code, which will test your interval timer driver, is provided to you as [main.c](https://github.com/byu-cpe/ecen330_student/blob/main/lab3_timer/main.c) in the *lab3* directory.  
+        * A [CMakeLists.txt](https://github.com/byu-cpe/ecen330_student/blob/main/lab3_timer/CMakeLists.txt) file is also provided.
+        * Like last lab, you will need to update the top-level [CMakeLists.txt](https://github.com/byu-cpe/ecen330_student/blob/master/CMakeLists.txt) and add a `add_subdirectory(lab3_timer)` statement.
 
 
 
