@@ -26,10 +26,10 @@ Do a nice job on this assignment. You will likely use these timers extensively i
     * **Driver:** 
         * This driver will be written in *intervalTimer.c*, which you must create yourself.  
         * Since the Interval Timer driver will be used in later labs, *intervalTimer.c* should be placed in your *drivers* folder.
-        * Uncomment the two lines in the *drivers* [CMakeLists.txt](https://github.com/byu-cpe/ecen330_student/blob/master/drivers/CMakeLists.txt) file so that the *intervalTimer* library is built.  
+        * Uncomment the two lines in the *drivers* [CMakeLists.txt](https://github.com/byu-cpe/ecen330_student/blob/main/drivers/CMakeLists.txt) file so that the *intervalTimer* library is built.  
 
     * **Application Code:**
-        * The application code, which will test your interval timer driver, is provided to you as [main.c](https://github.com/byu-cpe/ecen330_student/blob/master/lab3/main.c) in the *lab3* directory.  
+        * The application code, which will test your interval timer driver, is provided to you as [main.c](https://github.com/byu-cpe/ecen330_student/blob/main/lab3/main.c) in the *lab3* directory.  
         * A [CMakeLists.txt](https://github.com/byu-cpe/ecen330_student/tree/master/lab3) file is also provided.
         * Like last lab, you will need to update the top-level [CMakeLists.txt](https://github.com/byu-cpe/ecen330_student/blob/master/CMakeLists.txt) and add a `add_subdirectory(lab3_timer)` statement.
 
@@ -69,7 +69,7 @@ You can uncomment the line `#define RUN_PROGRAM MILESTONE_2` in *main.c* to test
 
 ### Files
   - **Submitted files:** *drivers/intervalTimer.c*.
-  - You are provided [intervalTimer.h](https://github.com/byu-cpe/ecen330_student/blob/master/drivers/intervalTimer.h). This file is not submitted, so you should not change it.
+  - You are provided [intervalTimer.h](https://github.com/byu-cpe/ecen330_student/blob/main/drivers/intervalTimer.h). This file is not submitted, so you should not change it.
   - You are provided with *main.c*.  This file is not submitted, so you can change it for your own testing purposes, but you will be graded with the original file.
 
 ### Other Notes

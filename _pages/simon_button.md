@@ -10,8 +10,8 @@ The *buttonHandler* state machine and associated code abstract the "buttons" fro
 
 ## Implementation
 
-  * You are given the [buttonHandler.h](https://github.com/byu-cpe/ecen330_student/blob/master/lab6/buttonHandler.h) file.
-  * You are also given the test code for the *buttonHander*.  This is located in [bhTester.c](https://github.com/byu-cpe/ecen330_student/blob/master/lab6/bhTester.c).  You can see how the test operates by watching the video below.
+  * You are given the [buttonHandler.h](https://github.com/byu-cpe/ecen330_student/blob/main/lab6/buttonHandler.h) file.
+  * You are also given the test code for the *buttonHander*.  This is located in [bhTester.c](https://github.com/byu-cpe/ecen330_student/blob/main/lab6/bhTester.c).  You can see how the test operates by watching the video below.
 
 Interlocking behavior:
   * The state machine provides the the necessary *enable()* and *disable()* functions to perform interlocking. 

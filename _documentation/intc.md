@@ -10,7 +10,10 @@ The following shows the hardware components and wiring of the interrupt system t
 
 <img src="{% link media/interrupts/interrupts.png %}" width="800">
 
+## Commerical Documentation
 
+Here is the full documentation of the AXI Interrupt Controller hardware. Like the other hardware manuals, you should pay closest attention to the *Register Space* section.
+  * [Xilinx AXI Interrupt Controller v4.1 Documentation]({% link media/interrupts/pg099-axi-intc.pdf %})
 
 ## Behavior
 
@@ -56,7 +59,3 @@ Also, every time a timer interrupt occurs, there are <ins>two places where the i
 | Interrupt Controller  | Call `interrupts_ack()`. |
 
 
-## Documentation
-
-Here is the full documentation of the AXI Interrupt Controller hardware. Like the other hardware manuals, you should pay closest attention to the *Register Space* section.
-  * [Xilinx AXI Interrupt Controller v4.1 Documentation]({% link media/interrupts/pg099-axi-intc.pdf %})

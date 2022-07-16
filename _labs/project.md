@@ -31,7 +31,7 @@ In the a short proposal (1 page max), describe your idea and the features of the
 
 * **Creativity 5%**: Your idea doesn't need to be completely original or novel. Something that is fun and interacts with hardware would be great. If your idea is very similar to one of the existing labs, you will likely lose some points here.
 
-  Note: If you don't want to choose your own project, you can choose to do the provided [Whack-a-Mole]({% link _labs/wam.md %}) lab. **However, if you do so, you will not receive points in the creative category**. This is not to suggest that your project should be twice as complex as whack-a-mole! (In fact, whack-a-mole is of sufficient complexity and difficulty). We want to encourage you to design and make your own project, as you will likely learn more from this process.
+  Note: If you don't want to choose your own project, you can choose to do the provided [Whack-a-Mole]({% link _other/wam.md %}) lab. **However, if you do so, you will not receive points in the creative category**. This is not to suggest that your project should be twice as complex as whack-a-mole! (In fact, whack-a-mole is of sufficient complexity and difficulty). We want to encourage you to design and make your own project, as you will likely learn more from this process.
 
 ## Demo Video Guidance and Grading
 
