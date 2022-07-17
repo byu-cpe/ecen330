@@ -6,7 +6,7 @@ number: 13
 indent: 1
 ---
 
-## Interrupt Controller Class Notes
+## Class Notes
 
  {% pdf "{{ site.baseurl }}/media/interrupts/interrupt_controller.pdf %}
 
@@ -28,8 +28,8 @@ Based on the above, there are **four different things that need to be enabled** 
 |----------------|---------------|
 | Interval Timer *irq* output  | `intervalTimer_enableInterrupt()`. Called by your application code on each timer you want to use for interrupts. |
 | Interrupt Controller input line | `interrupts_irq_enable()`. Called by your application code for each timer you want to use for interrupts. |
-| Interrupt Controller *irq* output | Set both enable bits on the *Master Enable* register during `interrupts_init()` |
-| ARM Processor Input | Need to call the three `armInterrupts_*` functions listed above to initialize and enable the interrupt input, as well as register your ISR. This can be done within `interrupts_init()`. |
+| Interrupt Controller *irq* output | Set both enable bits on the *Master Enable* register during `interrupts_init()`. |
+| ARM Processor Input | Need to call the three functions (`armInterrupts_init()`, `armInterrupts_setupIntc(myIsr)`, and `armInterrupts_enable()`) to initialize and enable the interrupt input, as well as register your ISR. This should be done within `interrupts_init()`. |
 
 Also, every time a timer interrupt occurs, there are <ins>two places where the interrupt needs to be acknowledged</ins>, otherwise it will continue indefinitely!
 
