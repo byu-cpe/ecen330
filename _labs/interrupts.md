@@ -27,42 +27,9 @@ After your driver is complete, you will write a simple test application to verif
 ## Preliminary
 
 1. **Hardware**. Read about the [Interrupt Controller Hardware]({% link _documentation/intc.md %}).
-    * Make note of the section on initializing the ARM interrupt input.  You should call this code inside your `interrupts_init()` function.  
 
 1. **Driver Interface**. Read through the interface for your driver, provided in [interrupts.h](https://github.com/byu-cpe/ecen330_student/blob/main/drivers/interrupts.h).
-
-
-
-    * **Function Pointers**.  Your interrupt controller driver will provide the ability for code to *register* a callback function that will be called when an interrupt is detected on a particular input.  This is done using the folling function defined in *interrupts.h*:
-
-            void interrupts_register(uint8_t irq, void (*fcn)());
-
-        To keep track of the callback function pointer registered for each *irq* input, you will need to use an array of function pointers. You can declare an array of function pointers (initialized to NULL) in your driver like this:
-
-            #define NUM_INTERRUPT_INPUTS 3
-
-            void (*isrFcnPtrs[NUM_INTERRUPT_INPUTS])() = {NULL};
-
-        Then, within the *interrupts_register()* function, you can save the provided function pointer into your array like this:
-
-            isrFcnPtrs[irq] = fcn;
-
-  
-
-    * **Interrupt Service Routine (ISR)**: The call to `armInterrupts_setupIntc` requires a function pointer to an ISR function that can be run when the ARM processor detects an interrupt.  This function should be a helper function inside your `interrupts.c` driver.  In this helper function you will determine which interrupt input(s) to the Interrupt Controller were responsible for the interrupt, and call the device-specific ISR callback function that was registered previously (if there is one registered).  Here is an example prototype:
-
-            static void interrupts_isr() {
-                // Loop through each interrupt input
-                for (each interrupt input, i) {
-                    
-                    // Check if it has an interrupt pending
-                    if (input has pending interrupt) {
-
-                        // Check if there is a registered ISR and call it.
-                        if (isrFcnPtrs[i])
-                            isrFcnPtrs[i]();
-            }}}
-
+    * Although not specified in the *.h* file, your driver should have an ISR helper function that will run user-provided callback functions that were registered through `interrupts_register()`.
 
 1. **Building the code:** 
     * **Driver:** 
@@ -76,7 +43,7 @@ After your driver is complete, you will write a simple test application to verif
 
 ### Requirements
 
-1. Write a driver for the Interrupt Controller, implementing the functions defined in [interrupts.h](https://github.com/byu-cpe/ecen330_student/blob/main/drivers/interrupts.h).  See comments in this file for details on the behavior of each function.
+1. Write a driver for the Interrupt Controller, implementing the functions defined in [interrupts.h](https://github.com/byu-cpe/ecen330_student/blob/main/drivers/interrupts.h).  Consult the comments in this file for details on the behavior of each function, as well as the in-class discussion.
 
 1. Implement the *interrupt_test_run()* function, such that:
     * Each of the three interval timers are running in count-down mode, and generating an interrupt at 10Hz, 1Hz and 0.1Hz.
@@ -90,16 +57,20 @@ After your driver is complete, you will write a simple test application to verif
   - Do not change or create any other files.
 
 ### Other Notes
+* **Test Application Setup:** Your test application will need to set up multiple devices:
+    * Remember to call `interrupts_init()`, `leds_init()`, and each Interval Timer initialization function.
+    * Enable device interrupt lines (IRQ output from Timer and IRQ input to Interrupt Controller)
+    * Register callback functions for each timer with the interrupt handler (see next item).
 
-* **Interrupt handler functions:**  In your test application, you will have a separate interrupt service routine (ISR) for each of your three timers.  Within each of these ISR functions, you should:
+* **Interrupt handler functions:**  In your test application, you will have functions to handle the interrupt for each of your three timers.  Within each of these callback functions, you should:
     1. *(Optionally)* Print a message so you know the function is being called.
     1. Acknowledge both:
         * The interrupt output of the Interval Timer
-        * The interrupt input of the Interrupt Controller
-        
+        * The interrupt input of the Interrupt Controller        
         (Think about which one you should do first -- the order matters!)
     3. Flip the value of the appropriate LED.
-* Like the previous two drivers, it would be good to write helper functions for accessing device registers.  For example:\
+
+* Like the previous two drivers, it would be good to write helper functions for accessing device registers.  For example:
 
       readRegister(uint32_t offset);
       writeRegister(uint32_t offset, uint32_t value);
