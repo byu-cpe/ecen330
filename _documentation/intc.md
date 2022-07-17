@@ -6,9 +6,19 @@ number: 13
 indent: 1
 ---
 
-The following shows the hardware components and wiring of the interrupt system that you will use for the labs in this class.  Each of the three AXI Interval Timers has an interrupt output (irq) that is fed to one of the inputs of the AXI Interrupt controller as shown below.  The AXI Interrupt Controller aggregates these inputs into a single interrupt output (irq) that is send to the ARM Processor.
+The following shows the hardware components and wiring of the interrupt system that you will use for the labs in this class.  Each of the three AXI Interval Timers has an interrupt output (irq) that is fed to one of the inputs of the AXI Interrupt controller as shown below.  The AXI Interrupt Controller aggregates these inputs into a single interrupt output (irq) that is sent to the ARM Processor.
 
 <img src="{% link media/interrupts/interrupts.png %}" width="800" alt="Interrupt connection diagram">
+
+When the interrupt controller detects an interrupt at one of it's inputs (input signal goes from 0 to 1), it then triggers an interrupt on its output that then notifies the processor that an interrupt has occurred.  The processor then **immediately** pauses its execution and runs the **interrupt service routing (ISR)** function (also known as an *interrupt handler* function).  In order for this to happen, some setup is required: on the interrupt controller you must enable each appropriate input pin, as well as enable the global output.  The interrupt input of the processor must also be enabled. 
+
+When a processor interrupt does occur, and the ISR function is run, <ins>care must be taken to properly **handle** the interrupt</ins>.  Doing this correctly is essential, but is often confusing to new embedded systems programmers. If you first understand one key concept, then what needs to happen makes a lot more sense: **The hardware modules (timers, interrupt controller, etc.) can request an interrupt by raising their interrupt output, but they don't automatically know when the processor has responded to the interrupt.**  So, hardware modules (including the interrupt control and timers you will use) are typically designed to continue to send an interrupt output until the software notifies it that the interrupt has been handled.  So:
+  * In your ISR, you need to communicate with the interrupt controller hardware (via register writes) to acknowledge/clear the interrupt.  If you don't do this, then when you return from your ISR function, the processor will see that the interrupt controller is still sending an interrupt, and it will call your ISR function again!  Then you will have ended up in an endless loop and it will seem like your program has frozen.
+  * You also need to communicate with the timer hardware (using `intervalTimer_ackInterrupt`) to acknowledge/clear the interrupt it is generating.  Otherwise the Interrupt Controller hardware will 
+
+ The interrupt controller does not stop sending its interrupt output to the processor just because an interrupt was triggered.  The software must explicitly 
+
+When the processor detects an interrupt and runs your interrupt handler, you will need to 
 
 ## Commerical Documentation
 
