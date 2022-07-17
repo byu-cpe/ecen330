@@ -68,3 +68,4 @@ exclude:
 
 plugins:
   - jekyll-sitemap
+  - jekyll-pdf-embed
