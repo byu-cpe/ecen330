@@ -35,7 +35,7 @@ Also, every time a timer interrupt occurs, there are <ins>two places where the i
 
 | Needs Acknowledging | Code Location |
 |---------------------|---------------|
-| Interval Timer        | Call `intervalTimer_ackInterrupt()`. |
-| Interrupt Controller  | Call `interrupts_ack()`. |
+| Interval Timer        | Call `intervalTimer_ackInterrupt()` from application code. |
+| Interrupt Controller  | Acknowledge interrupt from within your ISR in your interrupt controller driver. |
 
 
