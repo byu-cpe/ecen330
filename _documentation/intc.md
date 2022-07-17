@@ -8,7 +8,7 @@ indent: 1
 
 ## Interrupt Controller Class Notes
 
- {% pdf "{{ site.url }}{{ site.baseurl }}/media/interrupts/interrupt_controller.pdf %}
+ {% pdf "{{ site.baseurl }}/media/interrupts/interrupt_controller.pdf %}
 
 
 ## Commercial Documentation
@@ -18,34 +18,9 @@ Here is the full documentation of the AXI Interrupt Controller hardware. Like th
 
 ## Base Address
 
-The AXI Interrupt Controller is located at the base address provided by `XPAR_AXI_INTC_0_BASEADDR` (make sure to `#include <xparamters.h> like in the previous lab).
+The AXI Interrupt Controller is located at the base address provided by `XPAR_AXI_INTC_0_BASEADDR` (make sure to `#include <xparamters.h>` like in the previous lab).
 
-## Behavior
-
-Many students often get confused about how interrupts work in this system, and make the assumption that the *Interrupt Controller* is basically an OR-gate that indicates if any interrupt input is active.  In reality, the interrupts system is more complicated, as each connection can be enabled/disabled at the sender or receiver end, and interrupts remain "active" until explicitly acknowledged.
-
-Here are some details that may help make this more clear:
-
-### AXI Interval Timer
-* Assuming it is configured in count-down mode with reload, the Interval Timer will raise its *irq* output every time the timer reaches 0 and reloads.
-* The **interrupt output option must be enabled** for the timer to generate interrupts (`intervalTimer_enableInterrupt()`).
-* The *irq* output will <ins>remain high/active until acknowledged</ins> by writing to the appropriate bit in the Control/Status register (`intervalTimer_ackInterrupt()`).
-
-### AXI Interrupt Controller
-* The **interrupt output option must be enabled** for the Interrupt Controller to generate interrupt outputs.  You should do this within the initialization of the Interrupt Controller (within `interrupts_init()`).
-* Each **interrupt input must be individually enabled**, otherwise interrupts on this input will be ignored (`interrupts_irq_enable()`).  
-* Assuming these are both enabled, then anytime an interrupt is detected on an input, the output *irq* will be activated.  The *irq* output <ins>will remain active until the received interrupt is acknowledged</ins> (`interrupts_ack()`), even if the incoming interrupt is no longer active.
-
-### ARM Processor
-* The **interrupt input on the ARM processor must be enabled** before the processor will respond to any interrupts.  This is done through the following: 
-
-        armInterrupts_init();
-        armInterrupts_setupIntc(myIsr);
-        armInterrupts_enable();
-
-    where *myIsr* is an Interrupt Service Routing (ISR) function that you want to be called whenever the ARM processor detects an interrupt.
-
-### Summary
+## Summary
 
 Based on the above, there are **four different things that need to be enabled** during setup before interrupts will begin working.  
 

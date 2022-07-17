@@ -33,23 +33,7 @@ After your driver is complete, you will write a simple test application to verif
 
 
 
-    * **Function Pointers**.  Your interrupt controller driver will provide the ability for code to *register* a callback function that will be called when an interrupt is detected on a particular input.  This is done using the folling function defined in *interrupts.h*:
-
-            void interrupts_register(uint8_t irq, void (*fcn)());
-
-        To keep track of the callback function pointer registered for each *irq* input, you will need to use an array of function pointers. You can declare an array of function pointers (initialized to NULL) in your driver like this:
-
-            #define NUM_INTERRUPT_INPUTS 3
-
-            void (*isrFcnPtrs[NUM_INTERRUPT_INPUTS])() = {NULL};
-
-        Then, within the *interrupts_register()* function, you can save the provided function pointer into your array like this:
-
-            isrFcnPtrs[irq] = fcn;
-
-  
-
-    * **Interrupt Service Routine (ISR)**: The call to `armInterrupts_setupIntc` requires a function pointer to an ISR function that can be run when the ARM processor detects an interrupt.  This function should be a helper function inside your `interrupts.c` driver.  In this helper function you will determine which interrupt input(s) to the Interrupt Controller were responsible for the interrupt, and call the device-specific ISR callback function that was registered previously (if there is one registered).  Here is an example prototype:
+1. **Interrupt Service Routine (ISR)**: The call to `armInterrupts_setupIntc` requires a function pointer to an ISR function that can be run when the ARM processor detects an interrupt.  This function should be a helper function inside your `interrupts.c` driver.  In this helper function you will determine which interrupt input(s) to the Interrupt Controller were responsible for the interrupt, and call the device-specific ISR callback function that was registered previously (if there is one registered).  Here is an example prototype:
 
             static void interrupts_isr() {
                 // Loop through each interrupt input
