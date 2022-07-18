@@ -13,7 +13,7 @@ From the top-level directory, run:
 
     ./check_and_zip.py lab1
 
-For other labs, change `lab1` to the appropriate value.
+For other labs, change `lab1` to the appropriate value: `lab2`, `lab3`, `lab4`, `lab5`, `lab6`, `lab7`, `lab8`.
 
 This program will:
   * Check out a fresh copy of the provided starter code repository.
