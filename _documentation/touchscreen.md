@@ -7,33 +7,43 @@ number: 14
 indent: 1
 ---
 
+You are provided with a low-level driver for accessing the touchscreen.  The functions are available as part of the display library:
 
-Touch-screen coordinates are in the same space as the LCD coordinates to make the programming a lot easier. **Note that the rotation is automatically set for you in display_init(). Don't change it or the touch-display coordinates won't match the lcd screen coordinates.**
+```
+#include "display.h"
+```
 
+## Programming Guide
 There are only three functions in the [display.h](https://github.com/byu-cpe/ecen330_student/blob/main/include/display.h) file that are related to the touch-screen:
 
+    // Returns whether the touchscreen display is currently being touched.
     bool display_isTouched(void);
 
-    // Returns the x-y coordinate point and the pressure (z).
+    // Returns the touched x-y coordinate point and the pressure (z).
     void display_getTouchedPoint(int16_t *x, int16_t *y, uint8_t *z);
     
     // Throws away all previous touch data.
     void display_clearOldTouchData();
 
 To use the touch-screen do the following: 
-  * You detect a touch on the the array calling the *display_isTouched()* function. 
-  * Once you have detected a touch, invoke *display_clearOldTouchData()* to clear all of the old data out of the touch-controller.
-  * Next, you wait about 40-50 ms for the Analog to Digital Converters (ADC) settle.
-  * After waiting 40-50 ms, invoke *display_getTouchedPoint()* to determine the coordinates of the touched region.
-  * Make sure to pass the **address** of the arguments to *display_getTouchedPoint()*. Otherwise the arguments cannot be updated by the function. Your code will look something like:
+  * You detect a touch by checking the `display_isTouched()` function. 
+  * Once you have detected a touch, invoke `display_clearOldTouchData()` to clear all of the old data out of the touch-controller.
+  * The touched location cannot be read instantaneously after the user touches the screen.  You must wait at least 50 ms for the Analog to Digital Converters (ADC) settle.  
+  * After waiting at least 50 ms, invoke `display_getTouchedPoint()` to determine the coordinates of the touched region.
+
+### Return Using Pointers
+Since the `display_getTouchedPoint()` needs to provide three values back to the caller, it cannot simply use the function return value.  Instead, the function takes three pointers to variables allocated by the *caller*, and will populate the values into these variables.
+
+This is a common approach used in C to return multiple values.
+
+Your code will look something like this (the `&` operator gets the pointer to/address of a variable):
 
         int16_t x, y;
         uint8_t z;
         display_getTouchedPoint(&x, &y, &z);
-        ...
 
+Even though you will ignore the `z` value, you must still provide a valid pointer.
 
-The regions that you will use for the Clock lab are shown in the figure below. Thus the touch region is not limited to the triangle but is the entire rectangular region as shown below.
-
-<img src="{% link media/clock/clocktouchscreenlayout.jpg %}" width="500" alt="Touch screen button layout for clock lab">
+## Coordinates
+Touch-screen coordinates are in the same space as the LCD coordinates to make the programming a lot easier. 
 
