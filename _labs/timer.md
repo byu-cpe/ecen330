@@ -4,6 +4,7 @@ toc: true
 title: "Lab 3: Interval Timer Driver"
 short_title: Timer Driver
 number: 3
+order: 3
 ---
 ## Overview 
 

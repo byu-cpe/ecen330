@@ -4,6 +4,7 @@ toc: true
 title: "Lab 2: GPIO Driver for the Switches and Buttons"
 short_title: GPIO Driver
 number: 2
+order: 2
 ---
 
 ## Overview 

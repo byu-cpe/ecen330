@@ -37,7 +37,6 @@ collections:
   labs:
     output: true
     permalink: /:collection/:name/
-    sort_by: number
   documentation:
     output: true
     permalink: /:collection/:name/

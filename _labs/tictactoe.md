@@ -4,6 +4,7 @@ toc: true
 title: "Lab 7: Tic Tac Toe"
 short_title: Tic Tac Toe
 number: 7
+order: 7
 ---
 
 <img src="{% link media/lab5/tictactoe.jpg %}" width="400" alt="Tic tac toe board on LCD">

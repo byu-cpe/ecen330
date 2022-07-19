@@ -4,6 +4,7 @@ toc: true
 title: "Lab 5: Touchscreen Driver"
 short_title: Touchscreen Driver
 number: 5
+order: 5
 ---
 
 ## Overview
