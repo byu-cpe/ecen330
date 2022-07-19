@@ -16,7 +16,7 @@ Watch the video above to see how your tic-tac-toe board should appear. Your boar
 
 
 ## Requirements 
-  * You are provided [ticTacToeDisplay.h](https://github.com/byu-cpe/ecen330_student/blob/main/lab5_ttt/ticTacToeDisplay.h). You will need to create *ticTacToeDisplay.c*, and implement the functions advertised in *ticTacToeDisplay.h*.
+  * You are provided [ticTacToeDisplay.h]({{iste.github.fileurl}}/lab5_ttt/ticTacToeDisplay.h). You will need to create *ticTacToeDisplay.c*, and implement the functions advertised in *ticTacToeDisplay.h*.
   - As described in the associated comments *ticTacToeDisplay_runTest()* does the following when invoked:
     - As you tap the screen in the empty areas between the lines, it will draw either an "X" or a "O" depending upon the position of SW0 (down is "X", up is "O").
     - If you press BTN0, it will clear the screen and redraw the lines.

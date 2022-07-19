@@ -14,7 +14,7 @@ You are provided with a low-level driver for accessing the touchscreen.  The fun
 ```
 
 ## Programming Guide
-There are only three functions in the [display.h](https://github.com/byu-cpe/ecen330_student/blob/main/include/display.h) file that are related to the touch-screen:
+There are only three functions in the [display.h]({{iste.github.fileurl}}/include/display.h) file that are related to the touch-screen:
 
     // Returns whether the touchscreen display is currently being touched.
     bool display_isTouched(void);
