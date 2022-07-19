@@ -40,28 +40,28 @@ In this lab you will write a driver for the GPIO (general purpose input/output) 
   * IP
   * Register
 
-1. **Review header files**. The [buttons.h]({{iste.github.fileurl}}/drivers/buttons.h) and [switches.h]({{iste.github.fileurl}}/drivers/switches.h) files which are provided in your repository.  These header files define the interface to your driver.
+1. **Review header files**. The [buttons.h]({{site.github.fileurl}}/drivers/buttons.h) and [switches.h]({{site.github.fileurl}}/drivers/switches.h) files which are provided in your repository.  These header files define the interface to your driver.
 
 1. **Including header files**. Review the page about [header files]({% link _documentation/headers.md %}). 
 
 1. **Compiling**.  In this lab you will first write driver code, and then write a test application.  
     * Read the page about [CMake files]({% link _documentation/cmake.md %}).
-    * The *driver* code will be re-used in later labs, so it will be compiled into a *library* that can be used by multiple applications. This library, called *buttons_switches*, will be located in the [drivers](https://github.com/byu-cpe/ecen330_student/tree/main/drivers) directory.  You are already given a [CMakeLists.txt]({{iste.github.fileurl}}/drivers/CMakeLists.txt) file in this directory that will compile your *buttons.c* and *switches.c* code into the ''buttons_switches'' library.
+    * The *driver* code will be re-used in later labs, so it will be compiled into a *library* that can be used by multiple applications. This library, called *buttons_switches*, will be located in the [drivers](https://github.com/byu-cpe/ecen330_student/tree/main/drivers) directory.  You are already given a [CMakeLists.txt]({{site.github.fileurl}}/drivers/CMakeLists.txt) file in this directory that will compile your *buttons.c* and *switches.c* code into the ''buttons_switches'' library.
 
-    * The *application* code will be a simple test program to ensure your drivers are working correctly.  The test application will be placed in your [lab2](https://github.com/byu-cpe/ecen330_student/tree/main/lab2_gpio) directory, where you have already been provided a [CMakeLists.txt]({{iste.github.fileurl}}/lab2_gpio/CMakeLists.txt) that will compile the Lab 2 executable.  You will see that it is almost the same as Lab 1 file, except that line 2 also includes the *buttons_switches* library.
+    * The *application* code will be a simple test program to ensure your drivers are working correctly.  The test application will be placed in your [lab2](https://github.com/byu-cpe/ecen330_student/tree/main/lab2_gpio) directory, where you have already been provided a [CMakeLists.txt]({{site.github.fileurl}}/lab2_gpio/CMakeLists.txt) that will compile the Lab 2 executable.  You will see that it is almost the same as Lab 1 file, except that line 2 also includes the *buttons_switches* library.
 
-    * The only changes you need to make for this lab is to instruct the top-level [CMakeLists.txt]({{iste.github.fileurl}}/CMakeLists.txt) file to enter both of these directories and process those CMakeLists.txt files.  Add  `add_subdirectory(lab2_gpio)` and `add_subdirectory(drivers)` statements to the top-level CMakeLists.txt, after the `add_subdirectory(lab1_helloworld)` statement.
+    * The only changes you need to make for this lab is to instruct the top-level [CMakeLists.txt]({{site.github.fileurl}}/CMakeLists.txt) file to enter both of these directories and process those CMakeLists.txt files.  Add  `add_subdirectory(lab2_gpio)` and `add_subdirectory(drivers)` statements to the top-level CMakeLists.txt, after the `add_subdirectory(lab1_helloworld)` statement.
 
 
 ## Implementation 
 
 ### Requirements 
 
-1. **Switches driver**.  Write a driver for the slide switches.  This driver will be located in *drivers/switches.c* and will implement the functions in [switches.h]({{iste.github.fileurl}}/drivers/switches.h).  
+1. **Switches driver**.  Write a driver for the slide switches.  This driver will be located in *drivers/switches.c* and will implement the functions in [switches.h]({{site.github.fileurl}}/drivers/switches.h).  
 
-1. **Buttons driver**. Write a driver for the push buttons.  This driver will be located in *drivers/buttons.c* and will implement the functions in [buttons.h]({{iste.github.fileurl}}/drivers/buttons.h).
+1. **Buttons driver**. Write a driver for the push buttons.  This driver will be located in *drivers/buttons.c* and will implement the functions in [buttons.h]({{site.github.fileurl}}/drivers/buttons.h).
 
-1. **Test applications**.  Create test functions for your two drivers.  The provided [main.c]({{iste.github.fileurl}}/lab2_gpio/main.c) calls the `gpioTest_buttons()` and `gpioTest_switches()` functions.  Write both of these functions in `gpioTest.c`. 
+1. **Test applications**.  Create test functions for your two drivers.  The provided [main.c]({{site.github.fileurl}}/lab2_gpio/main.c) calls the `gpioTest_buttons()` and `gpioTest_switches()` functions.  Write both of these functions in `gpioTest.c`. 
   * **Switches test:** 
         * The switch test program is shown in a video above.  It turns on LEDs corresponding to the switches that are in the UP position.  
         * The test will end once all four switches are UP.
@@ -77,7 +77,7 @@ In this lab you will write a driver for the GPIO (general purpose input/output) 
 
 ### Other Notes
   - Remember to follow the [coding standard]({% link _other/coding_standard.md %}).
-  - You are provided a driver to control the LEDs. See [leds.h]({{iste.github.fileurl}}/include/leds.h).  Include this header using `#include "leds.h"`. 
+  - You are provided a driver to control the LEDs. See [leds.h]({{site.github.fileurl}}/include/leds.h).  Include this header using `#include "leds.h"`. 
   - You should write helper functions for accessing device registers.  For example, *buttons.c* and *switches.c* could both contain:
       ```
       uint32_t readRegister(uint32_t offset);

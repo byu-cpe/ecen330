@@ -4,7 +4,7 @@ toc: false
 title: "Clock Display"
 ---
 
-1. You must implement the following functions in *clockDisplay.c*. The [clockDisplay.h]({{iste.github.fileurl}}/lab6_clock/clockDisplay.h) file is provided in the repo.
+1. You must implement the following functions in *clockDisplay.c*. The [clockDisplay.h]({{site.github.fileurl}}/lab6_clock/clockDisplay.h) file is provided in the repo.
 These are the only functions that you should "advertise" in the *clockDisplay.h* file. In your *clockDisplay.c* file you will implement these functions and other supporting functions.
 
 1. You must implement the clockDisplay code such that it only updates the characters that have changed on the screen. Doing so will eliminate annoying flashing artifacts and make things run more smoothly. You cannot get full credit if the screen flashes or if the TAs determine (by code inspection) that you are updating characters continuously even if they have not changed.

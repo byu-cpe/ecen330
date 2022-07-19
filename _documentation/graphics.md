@@ -10,7 +10,7 @@ indent: 1
   - [Graphics Library Documentation]({% link media/lab1/adafruit-gfx-graphics-library.pdf %})
     * This is a description of the graphics software that is available for use with the 330 board. This software was ported over from Adafruit (they sell the LCD panel that is mounted on the 330 board).
     * If you add the prefix "display_" to the function names described in this document, most (not quite all) of the functions are available for use with the ZYBO board, e.g., `drawLine()` becomes `display_drawLine()`.
-    * Take a look at [include/display.h]({{iste.github.fileurl}}/include/display.h). 
+    * Take a look at [include/display.h]({{site.github.fileurl}}/include/display.h). 
 
 ## Drawing Shapes
  * Filling screen: `display_fillScreen`

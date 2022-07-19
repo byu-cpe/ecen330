@@ -62,7 +62,7 @@ So for example, if the base address was 0x12340000, then the *GPIO_DATA* registe
 
 ### Base Addresses
 
-The configured base addresses for our system can be found in [xparameters.h]({{iste.github.fileurl}}/platforms/zybo/xil_arm_toolchain/bsp/ps7_cortexa9_0/include/xparameters.h).  This file contains some content similar to this:
+The configured base addresses for our system can be found in [xparameters.h]({{site.github.fileurl}}/platforms/zybo/xil_arm_toolchain/bsp/ps7_cortexa9_0/include/xparameters.h).  This file contains some content similar to this:
 
 ```
 /* Definitions for peripheral GPIO_PUSH_BUTTONS */
@@ -94,7 +94,7 @@ uint32_t Xil_In32(uint32_t Addr); // Returns the value at the address.
 void Xil_Out32(uint32_t Addr, uint32_t Value);  // Writes value to the address.
 ```
 
-Before using these functions you should `#include "xil_io.h"` at the top of your program.   You can find *xil_io.h* at [zybo/xil_arm_toolchain/bsp/ps7_cortexa9_0/include/xil_io.h]({{iste.github.fileurl}}/platforms/zybo/xil_arm_toolchain/bsp/ps7_cortexa9_0/include/xil_io.h). 
+Before using these functions you should `#include "xil_io.h"` at the top of your program.   You can find *xil_io.h* at [zybo/xil_arm_toolchain/bsp/ps7_cortexa9_0/include/xil_io.h]({{site.github.fileurl}}/platforms/zybo/xil_arm_toolchain/bsp/ps7_cortexa9_0/include/xil_io.h). 
 
 ### Helper functions
 

@@ -26,7 +26,7 @@ The arrows above and below the clock allow you to set the time.  They can be pre
 1. **Display vs. Control**: 
 This lab is designed such that code is separated into two major coding sections: display and control.  This design pattern works well for applications with graphics, and allows for [separation of concerns](https://en.wikipedia.org/wiki/Separation_of_concerns).
 
-    * **Display:** The display code is provided to you in [clockDisplay.h]({{iste.github.fileurl}}/lab6_clock/clockDisplay.h) and [clockDisplay.c]({{iste.github.fileurl}}/lab6_clock/clockDisplay.c).  Review these files.
+    * **Display:** The display code is provided to you in [clockDisplay.h]({{site.github.fileurl}}/lab6_clock/clockDisplay.h) and [clockDisplay.c]({{site.github.fileurl}}/lab6_clock/clockDisplay.c).  Review these files.
       * The display code is responsible for **storing the current clock value (hours, minutes, seconds).  It also is responsible for rendering the current time, as well as the triangle buttons, on the display**.
       * Functions are provided to indicate the display has been touched as a specific location (which causes the time to be updated accordingly), and to advance the time one second.
       * The display code has no *sense of time*, and only changes the time when instructed by the control code.  Thus, detecting long vs short presses of the buttons needs to be handled by the control code.
