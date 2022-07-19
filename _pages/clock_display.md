@@ -4,7 +4,7 @@ toc: false
 title: "Clock Display"
 ---
 
-1. You must implement the following functions in *clockDisplay.c*. The [clockDisplay.h](https://github.com/byu-cpe/ecen330_student/blob/main/lab6_clock/clockDisplay.h) file is provided in the repo.
+1. You must implement the following functions in *clockDisplay.c*. The [clockDisplay.h]({{site.github.fileurl}}/lab6_clock/clockDisplay.h) file is provided in the repo.
 These are the only functions that you should "advertise" in the *clockDisplay.h* file. In your *clockDisplay.c* file you will implement these functions and other supporting functions.
 
 1. You must implement the clockDisplay code such that it only updates the characters that have changed on the screen. Doing so will eliminate annoying flashing artifacts and make things run more smoothly. You cannot get full credit if the screen flashes or if the TAs determine (by code inspection) that you are updating characters continuously even if they have not changed.
@@ -38,3 +38,11 @@ You can use the 'C' function [sprintf()](https://www.tutorialspoint.com/c_standa
   * Use *sprintf()* to format these three variables into a time string (array of *char*). Study the formatting directives for *sprintf()*. For example, `%2hd` prints a decimal value (*h* indicates a short int) with a width of 2 with a leading space if the leading digit would be a 0. `%02hd` prints a decimal value but includes the leading 0. Think about how you might use these formatting strings together to format a time string. Combining these formatting strings with a couple of other things will completely format the clock string with no additional programming.
   * Keep two *char* arrays. One array is used to store the string containing the current time displayed on the LCD. The other string keeps track of the clock string that was written previously. Each time a change is made to the time either by keeping time, or by setting the time, compare the characters in the two *char* arrays. When you find a difference between the two arrays, erase the character(s) on the LCD display at that position and then redraw the new character(s). Redrawing is just drawing the previous character as background (*DISPLAY_BLACK* in this case). You then simply draw the new character in its place.
   * *DISPLAY_WIDTH* and *DISPLAY_HEIGHT* are defined in display.h to be the correct values for the TFT display.
+
+
+## Touch Regions
+
+The regions that you will use for the Clock lab are shown in the figure below. Thus the touch region is not limited to the triangle but is the entire rectangular region as shown below.
+
+<img src="{% link media/clock/clocktouchscreenlayout.jpg %}" width="500" alt="Touch screen button layout for clock lab">
+

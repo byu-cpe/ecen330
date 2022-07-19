@@ -4,6 +4,7 @@ toc: true
 title: "Lab 1: Hello World"
 short_title: Hello World
 number: 1
+order: 1
 ---
 
 ## Overview

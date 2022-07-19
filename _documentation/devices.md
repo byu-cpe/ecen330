@@ -22,7 +22,7 @@ indent: 0
 
 The base addresses 
 
- You find the base address for the GPIO IP block by looking it up in the *xparameters.h* file.  This file can be found at [zybo/xil_arm_toolchain/bsp/ps7_cortexa9_0/include/xparameters.h](https://github.com/byu-cpe/ecen330_student/blob/main/platforms/zybo/xil_arm_toolchain/bsp/ps7_cortexa9_0/include/xparameters.h).
+ You find the base address for the GPIO IP block by looking it up in the *xparameters.h* file.  This file can be found at [zybo/xil_arm_toolchain/bsp/ps7_cortexa9_0/include/xparameters.h]({{site.github.fileurl}}/platforms/zybo/xil_arm_toolchain/bsp/ps7_cortexa9_0/include/xparameters.h).
 
 ## Programming Stack
 

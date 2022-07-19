@@ -39,12 +39,15 @@
             {% endfor %}
         </div>
 
+        {% assign labs_sorted = site.labs | sort : "order" %}
         <div class="sidebar-heading">Labs</div>
         <div class="list-group list-group-flush">
-            {% for item in site.labs %}
+            {% for item in labs_sorted %}
             <a href="{% link {{ item.path }} %}"
                 class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
                 <span class="badge badge-pill badge-dark-grey">{{ item.number }}</span>
+                {% for i in (1..{{item.indent}}) %}&emsp;{% endfor %}
+
                 {{ item.short_title | default: item.title }}
 
             </a>

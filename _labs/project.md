@@ -4,6 +4,7 @@ toc: true
 title: "Lab 9: Choose Your Own Project"
 short_title: "Choose Your Own"
 number: 9
+order: 9
 ---
 
 ## Overview

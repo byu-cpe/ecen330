@@ -21,6 +21,7 @@ baseurl: "/ecen330"
 url: "https://byu-cpe.github.io"
 github:
   url: https://github.com/byu-cpe/ecen330
+  fileurl: https://github.com/byu-cpe/ecen330_student/blob/main
 
 show_construction_message: true
 construction_message: These lab pages are under construction and subject to change for the Fall 2022 semester.
@@ -37,7 +38,6 @@ collections:
   labs:
     output: true
     permalink: /:collection/:name/
-    sort_by: number
   documentation:
     output: true
     permalink: /:collection/:name/
