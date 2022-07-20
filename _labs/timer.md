@@ -30,15 +30,13 @@ Do a nice job on this assignment. You will likely use these timers extensively i
         * Uncomment the two lines in the *drivers* [CMakeLists.txt]({{site.github.fileurl}}/drivers/CMakeLists.txt) file so that the *intervalTimer* library is built.  
 
     * **Application Code:**
-        * The application code, which will test your interval timer driver, is provided to you as [main.c]({{site.github.fileurl}}/lab3_timer/main.c) in the *lab3* directory.  
+        * The application code contains two test programs in the *lab3* directory:
+          * Milestone 1 is tested using [main_m1.c]({{site.github.fileurl}}/lab3_timer/main_m1.c).
+          * Milestone 2 is tested using [main_m2.c]({{site.github.fileurl}}/lab3_timer/main_m2.c).
         * A [CMakeLists.txt]({{site.github.fileurl}}/lab3_timer/CMakeLists.txt) file is also provided.
         * Like last lab, you will need to update the top-level [CMakeLists.txt](https://github.com/byu-cpe/ecen330_student/blob/master/CMakeLists.txt) and add a `add_subdirectory(lab3_timer)` statement.
 
-
-
 ## Implementation
-
-
 
 ### Requirements 
 
@@ -46,7 +44,7 @@ You will complete this lab off in two milestones:
 
 #### Milestone 1
 
-Implement the following features for *timer_0* (you can ignore the *timer_1* and *timer_2* for this milestone). You can uncomment the line `#define RUN_PROGRAM MILESTONE_1` in *main.c* to test Milestone 1, which will test the features in this order:
+Implement the following features for *timer_0* (you can ignore the *timer_1* and *timer_2* for this milestone):
 
   1. Implement the **count up** feature of the timer:
       * *intervalTimer_initCountUp()* and *intervalTimer_load()*
@@ -64,8 +62,6 @@ Implement the following features for *timer_0* (you can ignore the *timer_1* and
       * *intervalTimer_ackInterrupt*
 
   1. Make sure all of your functions now work for all three timers.  
-
-You can uncomment the line `#define RUN_PROGRAM MILESTONE_2` in *main.c* to test Milestone 2.
 
 
 ### Files

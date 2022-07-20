@@ -2,6 +2,9 @@
 layout: page
 toc: false
 title: "Tic Tac Toe, Milestone 2: ticTacToeDisplay"
+short_title: "M2: Display"
+indent: 1
+order: 7.2
 ---
 
 

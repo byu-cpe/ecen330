@@ -14,7 +14,7 @@ In this lab you will use your touchscreen driver and interrupt driver to impleme
 
 You are provided with a *clockDisplay* module that handles all of the graphics, so you only need to design a state machine that controls the clock.  One interval timer will generate an interrupt at 1Hz, in order to run the clock, and another interval timer will generate interrupts more frequently to tick your control state machine and the touchscreen driver state machine.
 
-The arrows above and below the clock allow you to set the time.  They can be pressed quickly to increment or decrement the hours, minutes, or seconds by one.  Alternatively, if you hold down the arrows for over 0.5 seconds, the clock will enter a *fast-update* mode, and increment or decrement 10 times per second.  You have probably seen similar functionality in the clocks that you have used. 
+The arrows above and below the clock allow you to set the time.  They can be pressed to increment or decrement the hours, minutes, or seconds by one.  Alternatively, if you hold down the arrows for over 0.5 seconds, the clock will enter a *fast-update* mode, and increment or decrement 10 times per second.  You have probably seen similar functionality in the clocks that you have used. 
 
 ### Objectives 
   - Implement another state machine.
