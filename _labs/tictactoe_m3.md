@@ -2,6 +2,9 @@
 layout: page
 toc: false
 title: "Tic Tac Toe, Milestone 3: ticTacToeControl"
+short_title: "M3: Control"
+order: 7.3
+indent: 1
 ---
 <iframe width="560" height="315" allow="fullscreen" src="https://www.youtube.com/embed/eWaILq-u0jQ"> </iframe>
 
