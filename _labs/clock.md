@@ -53,7 +53,7 @@ This lab is designed such that code is separated into two major coding sections:
   * Wait for the user to hold down the button for 0.5s before starting the fast update rate.
   * During the fast update mode, update the values at a rate of 10Hz.
   
-### Files:
+### Files
   - **Submitted files:** *clockControl.c*.  You must create and implement all of your code there.
   - Do not change *main.c*, *clockDisplay.c/.h*, or any other provided files.  
   - Do not create other files.
