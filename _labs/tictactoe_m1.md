@@ -9,7 +9,10 @@ indent: 1
 
 In this milestone you will implement the algorithm for the computer player. If you are successful, it will be impossible to beat the computer when you play against it. We will be using an algorithm called minimax (or something close, anyway). The algorithm is often used to create a computer-player in a two-player game such as Tic-Tac-Toe.
 
-  A very good description using minimax to implement a computer-player for Tic-Tac-Toe can be found <https://www.neverstopbuilding.com/minimax>. I also archived it as [PDF]({% link media/lab5/minimax.pdf %}).
+## Preliminary
+
+### Minimax
+A very good description using minimax to implement a computer-player for Tic-Tac-Toe can be found <https://www.neverstopbuilding.com/minimax>. I also archived it as [PDF]({% link media/lab5/minimax.pdf %}).
 
 I have annotated some of the figures and will discuss these in class.
 
@@ -19,8 +22,13 @@ I have annotated some of the figures and will discuss these in class.
 
 <img src="{% link media/lab5/tictactoegametreenotes2.jpg %}" width="800" alt="minimax example diagram #2">
 
+## Class Notes
 
-## Tic-Tac-Toe Minimax Pseudocode 
+{% pdf "{{ site.baseurl }}/media/tictactoe/tictactoe.pdf %}
+
+<!-- [Class Notes]({% link media/tictactoe/tictactoe.pdf %}) -->
+
+## Minimax Pseudocode 
 
 Here is some pseudocode that describes the algorithm in more detail. This should be helpful after you have carefully studied how the algorithm works and you start writing 'C' code.
 
@@ -30,38 +38,46 @@ Notes:
   * You can store your moves and scores in two arrays: a moves array and a scores array. Use one index for both.
 
 ```c
-// current_player_is_x == true means X, current_player_is_x == false means O
-int minimax(board, bool current_player_is_x) {
-  if (game is over)   // Recursion base case, there has been a win or a draw.
-    // If game is over, you need to evaluate board based upon previous player/opponent.
-    return score(board, !current_player_is_x);  
+minimax_score_t minimax(board, bool is_Xs_turn) {
+
+  if (game is over)
+    // Recursion base case, there has been a win or a draw.
+    // Evaluate board based upon prev player's turn.
+    return computeBoardScore(board, !is_Xs_turn);
+
   // Otherwise, you need to recurse.
-  // This loop will generate all possible boards.
-  for all rows {
-    for all columns {
+  // This loop will generate all possible boards and call
+  // minimax recursively for every empty square
+  for (all rows) {
+    for (all columns) {
       if (board[row][column] == EMPTY_SQUARE) {
-        // Assign the square to 'X'or 'O'.
-        if (current_player_is_x) 
-          board[row][column] = X_SQUARE
-        else 
-          board[row][column] = O_SQUARE
-        score = minimax(board, !current_player_is_x)
-        add score to move-score table
-        add move to move-score table
-        // Undo the change to the board (return the square to empty) prior to next iteration of for-loops.
-        board[row][column] = EMPTY_SQUARE
+
+        // Simulate playing at this location
+        board[row][column] = current_player_is_x ? X_SQUARE : O_SQUARE;
+
+        // Recursively call minimax to get the best score, assuming player
+        // choses to play at this location.
+        score = minimax(board, !is_Xs_turn);
+
+        add score to move - score table;
+        add move to move - score table;
+
+        // Undo the change to the board
+        board[row][column] = EMPTY_SQUARE;
       }
     }
   }
-  // Once you get here, you have iterated over empty squares at this level. All of the scores have been computed
-  // in the move-score table for boards at this level. 
-  // Now you need to return the score depending upon whether you are computing min or max.
-  if (current_player_is_x) {
-    choice <= get the move with the highest score in the move-score table.
-    score <= highest score in the move-score table.
+
+  // Once you get here, you have iterated over empty squares at this level. All
+  // of the scores have been computed in the move-score table for boards at this
+  // level. Now you need to return the score depending upon whether you are
+  // computing min or max.
+  if (is_Xs_turn) {
+    choice = get the move with the highest score in the move - score table.;
+    score = highest score in the move - score table.;
   } else {
-    choice <= get the move with the lowest score in the move-score table.
-    score <= lowest score in the move-score table. 
+    choice = get the move with the lowest score in the move - score table.;
+    score <= lowest score in the move - score table.;
   }
   return score;
 }

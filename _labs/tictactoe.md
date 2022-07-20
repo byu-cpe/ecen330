@@ -45,8 +45,11 @@ See Milestone pages:
 
 
 ### Files
-  - **Submitted files:** *lab7_tictactoe/minimax.c*, *lab7_tictactoe/testBoards.c* and *lab7_tictactoe/ticTacToeControl.c*
-  - Do not modify any other files are create any other new files.
+  - **Submitted files:** 
+    * *lab7_tictactoe/minimax.c*
+    * *lab7_tictactoe/testBoards.c*
+    * *lab7_tictactoe/ticTacToeControl.c*
+  - Do not modify or create any other files.
 
 ## Submission & Pass Off
 Follow the [instructions on submitting source code]({% link _documentation/submission.md %}) to submit your code.
