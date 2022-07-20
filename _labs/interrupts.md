@@ -72,9 +72,10 @@ After your driver is complete, you will write a simple test application to verif
     3. Flip the value of the appropriate LED.
 
 * Like the previous two drivers, it would be good to write helper functions for accessing device registers.  For example:
-
-      static uint32_t readRegister(uint32_t offset);
-      static void writeRegister(uint32_t offset, uint32_t value);
+```c
+    static uint32_t readRegister(uint32_t offset);
+    static void writeRegister(uint32_t offset, uint32_t value);
+```
 
 * Take your time and be careful when creating `#defines` for register offsets and bit masks.  Spending a few extra minutes to get these 100% correct will save you lots of debugging time.
 
