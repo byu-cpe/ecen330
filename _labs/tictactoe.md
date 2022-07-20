@@ -41,7 +41,7 @@ You will implement and test the Display and Algorithm milestones separately. The
 ## Implementation 
 See Milestone pages:
   * [Milestone 1: minimax]({% link _labs/tictactoe_m1.md %})
-  * [Milestone 2: Control]({% link _labs/tictactoe_m3.md %})
+  * [Milestone 2: Control]({% link _labs/tictactoe_m2.md %})
 
 
 ### Files
