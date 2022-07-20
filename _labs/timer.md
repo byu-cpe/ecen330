@@ -73,9 +73,9 @@ Implement the following features for *timer_0* (you can ignore the *timer_1* and
   - Remember to follow the coding standard.
   - Make sure to use the Xilinx low-level access functions *Xil_In32()* and *Xil_Out32()* to access the registers in the timer hardware. These functions were discussed in a previous lab.
   - Like last lab, you should write helper functions for accessing device registers.  For example, you could use the following:
-      ```
-      readRegister(uint8_t timerNumber, uint32_t offset);
-      writeRegister(uint8_t timerNumber, uint32_t offset, uint32_t value);
+      ```c
+      static uint32_t readRegister(uint8_t timerNumber, uint32_t offset);
+      static void writeRegister(uint8_t timerNumber, uint32_t offset, uint32_t value);
       ```
 
 ## Submission

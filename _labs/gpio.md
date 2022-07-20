@@ -79,9 +79,9 @@ In this lab you will write a driver for the GPIO (general purpose input/output) 
   - Remember to follow the [coding standard]({% link _other/coding_standard.md %}).
   - You are provided a driver to control the LEDs. See [leds.h]({{site.github.fileurl}}/include/leds.h).  Include this header using `#include "leds.h"`. 
   - You should write helper functions for accessing device registers.  For example, *buttons.c* and *switches.c* could both contain:
-      ```
-      uint32_t readRegister(uint32_t offset);
-      void writeRegister(uint32_t offset, uint32_t value);
+      ```c
+      static uint32_t readRegister(uint32_t offset);
+      static void writeRegister(uint32_t offset, uint32_t value);
       ```
 
 ##  Submission
