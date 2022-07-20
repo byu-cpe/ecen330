@@ -36,7 +36,7 @@ This lab is designed such that code is separated into two major coding sections:
 
 1. **Review Code:** Review the provided:
     * [main.c]({{site.github.fileurl}}/lab6_clock/main.c)
-    * [main.c]({{site.github.fileurl}}/lab6_clock/main.c)
+    * [clockControl.h]({{site.github.fileurl}}/lab6_clock/clockControl.h)
 
 1. **State Machine Class Notes**.  We will discuss the touchscreen driver state machine in class using [these slides]({% link media/clock/clock.pdf %}).
 

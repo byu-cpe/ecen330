@@ -9,71 +9,88 @@ indent: 1
 
 In this milestone you will implement the algorithm for the computer player. If you are successful, it will be impossible to beat the computer when you play against it. We will be using an algorithm called minimax (or something close, anyway). The algorithm is often used to create a computer-player in a two-player game such as Tic-Tac-Toe.
 
-  A very good description using minimax to implement a computer-player for Tic-Tac-Toe can be found <https://www.neverstopbuilding.com/minimax>. I also archived it as [PDF]({% link media/lab5/minimax.pdf %}).
+## Preliminary
 
-I have annotated some of the figures and will discuss these in class.
+1. **Class Notes:**:  We will discuss the minimax algorithm in class using [these slides]({% link media/tictactoe/tictactoe.pdf %}).
 
-<img src="{% link media/lab5/tictactoegametreenotes1.jpg %}" width="800" alt="minimax example diagram #1">
+1. **Review Pseudocode:** Here is some pseudocode that describes the algorithm in more detail. This should be helpful after you have carefully studied how the algorithm works and you start writing 'C' code.
+  * *minimax* computes the optimal move (location and score), for a given board:
+    * The score is needed at each level of the recursion to fill in the *move*-*score* table, so it the return value of *minimax*.
+    * The location is only needed for the first invocation of *minimax*, so it is just stored in global variable, **choice**.  This will be overwritten at each level of the recursion, but when you finally complete the *minimax* function, the last value set in *choice* will be for the board you provided to *minimax*, which is the move location you want.
+  * Move can be implemented as a struct containing a row and a column (*tictactoe_location_t*)
+  * You can store your *move*-*score* table as two arrays: a moves array and a scores array. Use one index for both.
+      
+    ```c
+    minimax_score_t minimax(board, bool is_Xs_turn) {
 
----
+      if (game is over)
+        // Recursion base case, there has been a win or a draw.
+        // Evaluate board based upon prev player's turn.
+        return computeBoardScore(board, !is_Xs_turn);
 
-<img src="{% link media/lab5/tictactoegametreenotes2.jpg %}" width="800" alt="minimax example diagram #2">
+      // Otherwise, you need to recurse.
+      // This loop will generate all possible boards and call
+      // minimax recursively for every empty square
+      for (all rows) {
+        for (all columns) {
+          if (board[row][column] == EMPTY_SQUARE) {
 
+            // Simulate playing at this location
+            board[row][column] = current_player_is_x ? X_SQUARE : O_SQUARE;
 
-## Tic-Tac-Toe Minimax Pseudocode 
+            // Recursively call minimax to get the best score, assuming player
+            // choses to play at this location.
+            score = minimax(board, !is_Xs_turn);
 
-Here is some pseudocode that describes the algorithm in more detail. This should be helpful after you have carefully studied how the algorithm works and you start writing 'C' code.
+            add score to move - score table;
+            add move to move - score table;
 
-Notes: 
-  * For the pseudocode shown below, **choice** is a global variable that will hold the move computed by minimax. Minimax must return at least a score because that is how you build the move-score table recursively. However, minimax must also compute the move because it is associated with the score. So, when doing the max calculation for example, you find the index of the highest score in the list and then save the move associated with that score in **choice**. **choice** will be overwritten many times as minimax executes but that is OK. The only move you care about is the move associated with the max score at the first call of minimax. That will also be the last time that **choice** is written so it will contain the move you care about - the move associated with the highest score (assuming that you are 'X').
-  * move can be implemented as a struct containing a row and a column.
-  * You can store your moves and scores in two arrays: a moves array and a scores array. Use one index for both.
-
-```c
-// current_player_is_x == true means X, current_player_is_x == false means O
-int minimax(board, bool current_player_is_x) {
-  if (game is over)   // Recursion base case, there has been a win or a draw.
-    // If game is over, you need to evaluate board based upon previous player/opponent.
-    return score(board, !current_player_is_x);  
-  // Otherwise, you need to recurse.
-  // This loop will generate all possible boards.
-  for all rows {
-    for all columns {
-      if (board[row][column] == EMPTY_SQUARE) {
-        // Assign the square to 'X'or 'O'.
-        if (current_player_is_x) 
-          board[row][column] = X_SQUARE
-        else 
-          board[row][column] = O_SQUARE
-        score = minimax(board, !current_player_is_x)
-        add score to move-score table
-        add move to move-score table
-        // Undo the change to the board (return the square to empty) prior to next iteration of for-loops.
-        board[row][column] = EMPTY_SQUARE
+            // Undo the change to the board
+            board[row][column] = EMPTY_SQUARE;
+          }
+        }
       }
-    }
-  }
-  // Once you get here, you have iterated over empty squares at this level. All of the scores have been computed
-  // in the move-score table for boards at this level. 
-  // Now you need to return the score depending upon whether you are computing min or max.
-  if (current_player_is_x) {
-    choice <= get the move with the highest score in the move-score table.
-    score <= highest score in the move-score table.
-  } else {
-    choice <= get the move with the lowest score in the move-score table.
-    score <= lowest score in the move-score table. 
-  }
-  return score;
-}
-```
 
+      // Once you get here, you have iterated over empty squares at this level. All
+      // of the scores have been computed in the move-score table for boards at this
+      // level. Now you need to return the score depending upon whether you are
+      // computing min or max.
+      if (is_Xs_turn) {
+        choice = get the move with the highest score in the move - score table.;
+        score = highest score in the move - score table.;
+      } else {
+        choice = get the move with the lowest score in the move - score table.;
+        score <= lowest score in the move - score table.;
+      }
+      return score;
+    }
+    ```
+
+1. **Header files:** 
+  * Several helpful data types are provided in [ticTacToe.h]({{site.github.fileurl}}/lab7_tictactoe/ticTacToe.h)
+        - Note: Tic-Tac-Toe board rows are horizontal and columns are vertical (row = 0 is the top of the board, row = 2 is the bottom of the board, column = 0 is the far-left of the board, column = 2 is the far-right of the board).
+  * Review the provided [minimax.h]({{site.github.fileurl}}/lab7_tictactoe/minimax.h)
+
+1. **Test boards:** [testBoards.h]({{site.github.fileurl}}/lab7_tictactoe/testBoards.h) and [testBoards.c]({{site.github.fileurl}}/lab7_tictactoe/testBoards.c) provides code that creates five test board that you can use to test your minimax algorithm.
+ 
+## Implementation
+
+### Requirements 
+  - Implement the functions declared in *minimax.h* in your *minimax.c* file.
+  - Update *testBoards.c* by adding at least 10 additional unique test-boards (see provided test code below). 
+  - When the *lab7_m2.elf* executable is run, you should see the *Next Move* output for the five provided boards, and your (at least 10) additional boards.
+
+
+  
 ## Suggestions 
-  - I suggest that you develop your minimax algorithm on a regular computer. minimax doesn't rely on anything provided by the 330 board and you will be able to debug more quickly because you won't need to wait for downloads, etc. Once you get minimax working it is easy to bring it over to the emulator or the board.
+  - I suggest that you develop your minimax algorithm on a regular computer (or the emulator). minimax doesn't rely on any hardware or drivers for the 330 board and you will be able to debug more quickly because you won't need to wait for downloads, etc. Once you get minimax working it is easy to bring it over to the the board.
   - It is a good idea to have a printBoard routine that prints out a board. This is very useful when debugging.
   - I found it helpful to break down a winning board into row-based wins, column-based wins, and diagonal-based wins.
   - You can add a depth argument to minimax that can be helpful during debugging. You invoke minimax with a depth of 0 and have minimax print the depth variable when invoked and then incrementing the depth variable when recursing.
+  - **Even with several test boards, you may still have bugs in your code. I would advise you to create several tests with varied boards.  Otherwise, you will find that your game may not be unbeatable in the next milestone.**
 
-## Debugging Recursive Minimax 
+
+### Debugging Recursive Minimax 
 Often the best way to debug recursive programs is to print out an execution trace. Adding a "depth" argument that you increment at each invocation makes it much easier to follow program execution.
 
 A debug dump of my minimax program is shown below. The starting board is the same as the board we used in class and is the same one in the game-trees shown above. I have annotated the dump with the board-numbers used in the example shown above.
@@ -157,16 +174,4 @@ final choice: (row: 1, column: 1)
 
 ```
 
-## Requirements 
-  - You will write one file: *minimax.c*. *minimax.h* is provided, and must not be changed.
-  - You must provide the functions listed below via the .h file. You must use these data-structures, #define, etc., for the listed functions. Please implement helper functions in the .c file (not advertised in the .h file) to make your code modular and easier to read and to debug.
-  - You must test your minimax algorithm by writing at least 10 additional test-boards (see provided test code below). The TA will check for this.
 
-[minimax.h]({{site.github.fileurl}}/lab7_tictactoe/minimax.h)
-
-## Pass-Off 
-To pass the algorithm milestone, you need to demonstrate your minimax program providing the correct answer for several provided boards and **for 10 additional boards** that you must write. After adding your test boards to the provided test code, test your minimax program using the program shown below.
-
-  * [testBoards.c]({{site.github.fileurl}}/lab7_tictactoe/testBoards.c)
-
-**Note: if your minimax algorithm passes these tests, you may still have bugs in your code. These tests are not exhaustive. I strongly advise you to test your minimax code much more thoroughly. Otherwise, you will find that you game may not be unbeatable in the final milestone.**

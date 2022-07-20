@@ -1,43 +1,33 @@
 ---
 layout: page
 toc: false
-title: "Tic Tac Toe, Milestone 2: ticTacToeDisplay"
-short_title: "M2: Display"
-indent: 1
+title: "Tic Tac Toe, Milestone 2: ticTacToeControl"
+short_title: "M2: Control"
 order: 7.2
+indent: 1
 ---
+The description of the control milestone is straightforward. You are to implement the control of the game so it behaves just like tic-tac-toe demo video shown in the video below.
+
+<iframe width="560" height="315" allow="fullscreen" src="https://www.youtube.com/embed/eWaILq-u0jQ"> </iframe>
 
 
-<iframe width="560" height="315" allow="fullscreen" src="https://www.youtube.com/embed/b_2iwT8TDYc"> </iframe>
+## Preliminary
 
-Watch the video above to see how your tic-tac-toe board should appear. Your board should look similar. Note a couple of things:
-  - The board is comprised of four lines; two horizontal lines and two vertical lines. They are drawn at thirds of the screen (*display_width()/3*, *2*(display_width()/3)*, *display_height()/3*, *2*(display_height()/3)*).
-  - The "O" is drawn using display_drawCircle().
-  - The "X" is drawn using two display_drawLine()s.
-  - As always, you must only update the part of the board that is changing. This is pretty easy with Tic-Tac-Toe because there is no need to erase anything (until you clear the screen prior to starting a new game). The board squares are always empty until you draw either an "X" or a "O".
+  * You are provided with code to handle drawing the tic-tac-toe graphics:
+    * [ticTacToeDisplay.h]({{site.github.fileurl}}/lab7_tictactoe/ticTacToeDisplay.h) and [ticTacToeDisplay.c]({{site.github.fileurl}}/lab7_tictactoe/ticTacToeDisplay.c) 
+    * This provides functions to draw the board lines, draw and erase Xs and Os, and to translate a touchscreen point to a board grid location.
+ 
+  * [ticTacToeControl.h]({{site.github.fileurl}}/lab7_tictactoe/ticTacToeControl.h) is provided to you.  It declares two functions, *ticTacToeControl_init()* and *ticTacToeControl_tick()*.  You must create a *ticTacToeControl.c* file to implement this milestone.
 
+## Requirements
+  - Implement an unbeatable tic-tac-toe game, as shown in the video above.
+  - Upon completion of a game, pressing BTN0 should start another game.
+  - While much of the graphics will be done by *ticTacToeDisplay*, some graphics (such as as drawing and erasing the starting instructions) will be done by *ticTacToeControl*. 
+  - The provided *main.c* will run for 20 seconds, and then print the number of interrupts fired and handled.  Once again, make sure you are not missing more than one interrupt.
 
-
-## Requirements 
-  * You are provided [ticTacToeDisplay.h]({{site.github.fileurl}}/lab7_tictactoe/ticTacToeDisplay.h). You will need to create *ticTacToeDisplay.c*, and implement the functions advertised in *ticTacToeDisplay.h*.
-  - As described in the associated comments *ticTacToeDisplay_runTest()* does the following when invoked:
-    - As you tap the screen in the empty areas between the lines, it will draw either an "X" or a "O" depending upon the position of SW0 (down is "X", up is "O").
-    - If you press BTN0, it will clear the screen and redraw the lines.
-    - If you press BTN1, the test will terminate and print a message to that effect.
-  - Suggestions for *ticTacToeDisplay_runTest()*:
-    - While you could implement this behavior with a state machine, since this is test code, it's not required. You will probably find it easier to just use a loop with delay statements.
-    - Even though a state machine is not required, you still need to interact with the touch screen correctly:
-      * First, wait for a touch using *display_isTouched()*.
-      * Next, call *display_clearOldTouchData()*.
-      * Then wait for at least 50ms for the analog-to-digital converters to settle (you can use the `utils_msDelay()` function).
-      * Call *display_getTouchedPoint(int16_t *x, int16_t *y, uint8_t *z)* to get the touched coordinates.    
-    - You don't need to check if the square is unoccupied for this milestone. In other words, you can force an "X" and an "O" to occupy the same space and they can be drawn on top of each other. This is OK only for this milestone.
-  
-## Notes 
-  - Tic-Tac-Toe board rows are horizontal and columns are vertical.
-  - Both row and column must be between 0 and 2.
-  - row = 0 is the top of the board, row = 2 is the bottom of the board.
-  - column = 0 is the far-left of the board, column = 2 is the far-right of the board.
-  
-
-
+### Other Notes
+  * `display_fillScreen` takes a long time to run.  If you call it from within a tick of your state machine, you will likely miss interrupts.  Instead, you can call it once from your init function (since this is run before interrupts start), but after that point, you should erase individual items instead of clearing the screen.
+    * After instructions are displayed, erase them instead of filling the screen.
+    * At the end of a game, and when staring a new game, erase individual Xs and Os instead of filling the screen.
+  * You may want to use your intervalTimer to accurately measure how long operations take (such as calling your minimax on an empty board). This will help you solve the problem of missing interrupts.
+  * You must follow the coding standard, including the [Coding Standard for State Machines]({% link _other/coding_state_machines.md %}).  You don't need to include a debug print of your states, but you may find it helpful to do so.

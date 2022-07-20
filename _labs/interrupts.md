@@ -73,8 +73,8 @@ After your driver is complete, you will write a simple test application to verif
 
 * Like the previous two drivers, it would be good to write helper functions for accessing device registers.  For example:
 
-      readRegister(uint32_t offset);
-      writeRegister(uint32_t offset, uint32_t value);
+      static uint32_t readRegister(uint32_t offset);
+      static void writeRegister(uint32_t offset, uint32_t value);
 
 * Take your time and be careful when creating `#defines` for register offsets and bit masks.  Spending a few extra minutes to get these 100% correct will save you lots of debugging time.
 
