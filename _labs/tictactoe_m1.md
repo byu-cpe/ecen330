@@ -2,6 +2,9 @@
 layout: page
 toc: false
 title: "Tic Tac Toe, Milestone 1: minimax"
+short_title: "M1: Minimax"
+order: 7.1
+indent: 1
 ---
 
 In this milestone you will implement the algorithm for the computer player. If you are successful, it will be impossible to beat the computer when you play against it. We will be using an algorithm called minimax (or something close, anyway). The algorithm is often used to create a computer-player in a two-player game such as Tic-Tac-Toe.
