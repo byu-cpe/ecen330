@@ -9,7 +9,7 @@ indent: 1
 
 In this milestone you will implement the missile state machine in *missile.c*.  This state machine will be used for every missile object in the game.  Player missiles are shown in green and explode when reaching their destination.  Enemy missiles are red and explode when hitting an explosion (but this won't happen until next milestone).  A video of the test program is shown below:
 
-<img src="{% link media/missilecommand/m1.gif %}" width="600">
+<img src="{% link media/missilecommand/m1.gif %}" width="600" alt="Video of Milestone 1 test program">
 
 ## Preliminary
 

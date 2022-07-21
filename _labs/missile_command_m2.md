@@ -13,7 +13,7 @@ The provided test program is very simple, it will just repeatedly tick your game
 
 A video of the test program is shown below:
 
-<img src="{% link media/missilecommand/m2.gif %}" width="600">
+<img src="{% link media/missilecommand/m2.gif %}" width="600" alt="Video of Milestone 2 test program">
 
 ## Preliminary
 

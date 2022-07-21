@@ -11,7 +11,7 @@ In this milestone you will complete the Missile Command game.  You will add a st
 
 A video of the complete game is shown below:
 
-<img src="{% link media/missilecommand/m3.gif %}" width="600">
+<img src="{% link media/missilecommand/m3.gif %}" width="600" alt="Video of Milestone 3 test program">
 
 ## Preliminary
 

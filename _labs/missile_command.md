@@ -12,7 +12,7 @@ order: 8
 In this lab you will create a game similar to the popular Atari arcade game [Missile Command](https://en.wikipedia.org/wiki/Missile_Command). The game will be a bit simpler than the original: you will have unlimited missiles, enemy missiles won't split up, you don't have to worry about defending cities, and we won't track points or high scores.  Aside from these features, the main gameplay will be very similar to the original game.  You can click the touchscreen to launch missiles from your bases to intercept incoming enemy missiles and cause them to explode.  With clever timing you can cause chain reactions and eliminate several enemy missiles with a single shot.
 
 
-<img src="{% link media/missilecommand/m3.gif %}" width="600">
+<img src="{% link media/missilecommand/m3.gif %}" width="600" alt="Video of Milestone 3 test program">
 
 Designing such a game with many objects moving and interacting concurrently can be challenging.  To manage this complexity we will leverage the state machine design pattern.  In fact, every object (all missiles and the plane) will be managed by their own independent state machine, with *init* and *tick* functions.  
 
