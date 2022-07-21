@@ -22,5 +22,5 @@ In this milestone you will implement the missile state machine in *missile.c*.  
 - Implement the functions in *missile.h*
     * *missile_init_plane()* won't be used in this milestone, so you can implement it later if you like.
     * *missile_is_dead()*, *missile_is_exploding()*, and *missile_is_flying()* are very simple functions that can just return a boolean based on the the current state of the missile.  The Milestone 1 test program only uses *missile_is_dead()*, but you will likely find the other functions helpful in later milestones.
-- The test function should behave like the video above.
+- The test function should behave like the video above.  You can choose your own colors, but the player missiles and enemy missiles should be different colors.
 
