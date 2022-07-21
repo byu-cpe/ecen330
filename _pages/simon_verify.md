@@ -10,8 +10,8 @@ The *verifySequence* state machine operates as follows. First you enable the sta
 
 You check *verifySequence_complete()* to see if the state machine has finished its task of verifying the user-tapped color sequence. If this function returns true, the state machine has finished. Verify if an error occurred by calling both *verifySequence_isTimeOutError()* and *verifySequence_isUserInputError()*. If neither of these functions returns true, the user touched the correct sequence of colored squares. Invoke *verifySequence_disable()* to synchronize state-machine operation.
 
-  * You are given the [verifySequence.h]({{site.github.fileurl}}/lab6/verifySequence.h) file. 
-  * You are also given test code in [vsTester.c]({{site.github.fileurl}}/lab6/vsTester.c). You can see a demonstration of this test code by watching the video below.
+  * You are given the [verifySequence.h]({{site.github.fileurl}}/archive/lab_simon/verifySequence.h) file. 
+  * You are also given test code in [vsTester.c]({{site.github.fileurl}}/archive/lab_simon/vsTester.c). You can see a demonstration of this test code by watching the video below.
 
 ## vsTester Video 
 
