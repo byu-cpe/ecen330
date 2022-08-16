@@ -50,7 +50,7 @@ See Milestone pages:
     * *lab8_missilecommand/plane.c*
 
 ## Submission & Pass Off
-Follow the [instructions on submitting source code]({% link _documentation/submission.md %}) to submit your code.
+Follow the [instructions on submitting source code]({% link _documentation/submission.md %}) to submit your code. You will submit each milestone separately, but will receive a coding standard grade for only your final submission.
 
 
 ## Submission

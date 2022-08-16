@@ -52,7 +52,7 @@ See Milestone pages:
   - Do not modify or create any other files.
 
 ## Submission & Pass Off
-Follow the [instructions on submitting source code]({% link _documentation/submission.md %}) to submit your code.
+Follow the [instructions on submitting source code]({% link _documentation/submission.md %}) to submit your code.  You will submit each milestone separately, but will receive a coding standard grade for only your final submission.
 
 ### Grade Breakdown 
   * Milestone 1 (algorithm): 40%

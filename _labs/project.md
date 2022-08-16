@@ -11,48 +11,52 @@ order: 9
 
 For this lab you are encouraged to implement a project of your choice. Do something fun and interesting with your system. Here is how it works.
 
-1. Submit a short proposal (1 page is plenty) via Learning Suite. The proposal will be reviewed to make sure it is not too difficult or too easy. If you are working as a group, include the names of those in your group.
-1. Work on the proposed features individually or as a group.
-1. Submit a link to a short video (1-2 minutes) via Learning Suite demonstrating your project and all of its features. Make sure your video link is publicly viewable. Again, if you are working as a group, include the names of those in your group.
+## Group
+Choose whether you will do this project individually, or as a group. You can work in groups up to size 3; however, the larger the group, the more you are expected to accomplish. Take the "quiz" on Learning Suite to indicate whether you will work individually or as a group.  **Everyone needs to complete this quiz otherwise your project won't be graded**.
 
-## Requirements
+## Proposal (25%)
 
-1. Your project should run on the ECEN 330 ZYBO board.
-1. It should interact with hardware devices, such as GPIO (buttons/switches/LEDs), interval timer, touch screen, or custom hardware devices.
+Submit a short proposal (1 page max, less is fine, PDF format) via Learning Suite. The proposal will be reviewed to make sure it is not too difficult or too easy. Only one person in your group needs to submit this.
 
-You can optionally work in groups (up to size 3); however, the larger the group, the more you are expected to accomplish.
+In the proposal, describe your idea and the features of the project. Define the scope of your project, what you intend to implement. Outline any key challenges you foresee and risk mitigation strategies. You won't be graded on spelling, grammar or presentation. It just needs to be clear that you have spent some time thinking through your project idea. The grading rubric for your proposal is as follows:
 
-## Proposal Guidance and Grading
+* **Description 10%**: Clearly describe your idea, the features of the project, and the hardware devices involved.
 
-In the a short proposal (1 page max), describe your idea and the features of the project. Define the scope of your project, what you intend to implement. Outline any key challenges you foresee and risk mitigation strategies. You won't be graded on spelling, grammar or presentation. It just needs to be clear that you have spent some time thinking through your project idea. The grading rubric for your proposal is as follows:
-
-* **Description 20%**: Clearly describe your idea, the features of the project, and the hardware devices involved.
-
-* **Difficulty 15%**: This grade component is based on whether you have chosen a project of reasonable difficulty. Your project does not need to be overly complex or large to receive full points. Consider the existing labs (clock, tic-tac-toe, simon and whack-a-mole) when choosing the scope of your project.
+* **Difficulty 10%**: This grade component is based on whether you have chosen a project of reasonable difficulty. Your project does not need to be overly complex or large to receive full points. Consider the existing multi-week labs (missile command, tic-tac-toe) when choosing the scope of your project.
 
 * **Creativity 5%**: Your idea doesn't need to be completely original or novel. Something that is fun and interacts with hardware would be great. If your idea is very similar to one of the existing labs, you will likely lose some points here.
 
-  Note: If you don't want to choose your own project, you can choose to do the provided [Whack-a-Mole]({% link _other/wam.md %}) lab. **However, if you do so, you will not receive points in the creative category**. This is not to suggest that your project should be twice as complex as whack-a-mole! (In fact, whack-a-mole is of sufficient complexity and difficulty). We want to encourage you to design and make your own project, as you will likely learn more from this process.
+  Note: If you don't want to choose your own project, you can choose to do the provided [Whack-a-Mole]({% link _other/wam.md %}) or [Simon]({% link _other/simon.md %}) lab.  **However, if you do so, you will not receive points in the creative category**. 
 
-## Demo Video Guidance and Grading
 
-Create a short video (2 minutes max) demonstrating your project and major features, as well as mentioning any major issues or concessions made during your design process. Explain what you actually implemented and any open source software used. The video grading rubric follows:
+## Implementation (65%)
+<!-- Work on the proposed features individually or as a group.   -->
 
-* **Implementation 50%**: For full points, your project should implement what you proposed, run correctly, and be responsive. The focus here is on demonstrated function.
+1. Your project must compile and run on the ECEN 330 ZYBO board (Working only on the emulator isn't enough).
+1. It should interact with hardware devices, such as GPIO (buttons/switches/LEDs), interval timer, touch screen, or custom hardware devices.
 
-* **Quality 10%**: Ideally, the features demonstrated should be bug free. This category evaluates the quality and correctness of your implementation.
+Grade Breakdown:
+* **Implementation 50%**: For full points, your project should implement what you proposed, with the features and hardware discussed in your proposal.  It should be a complete and working program.
 
-**Note:** You will not be graded against the coding standard for this lab. Try not to be too sad about this. :-)
+* **Quality 15%**: Your program should run smoothly and be bug free. This category evaluates the quality and correctness of your implementation.
+
+  **Note:** You will not be graded against the coding standard for this lab. Try not to be too sad about this. :-)
+
+## Demo Video (10%)
+Create a short video (2 minutes max) demonstrating your project and major features, as well as mentioning any major issues or concessions made during your design process. Explain what you actually implemented and any open source software used. 
+
+Upload a link to your video (Youtube link, Google Drive link, Dropbox link, etc.) using the quiz on Learning Suite.  Make sure the link is public and works.
+
 
 ## FAQs
 
 **Q: What directory should I use to implement my project?**
 
-A: If you are designing your own project, make a new "lab" subdirectory in your cloned repository (e.g. lab7p) and place **_all_** your code files there. If you are going to implement whack-a-mole, use the existing lab7 directory.
+A: Use the "lab9_project" subdirectory in your cloned repository and place **_all_** your code files there. If you are using files from the Whack-a-mole or Simon labs, copy them all over to this directory.
 
 **Q: Can I use a custom piece of hardware, like a video game controller?**
 
-A: Yes, but make sure to show its functionality in your demo video. Explain the optional hardware and the complexity that was involved in supporting it (so you can get credit for your work).
+A: Yes, but make sure to show its functionality in your demo video. Explain the optional hardware and the complexity that was involved in supporting it (so you can get credit for your work).  Make sure the software still works somewhat without the hardware so that we can try it out without your custom hardware (example, if there's no game controller connected, use the buttons on the board).
 
 **Q: How should we share code between group members?**
 
@@ -60,7 +64,7 @@ A: I suggest you create a private GitHub repository. You can go to <https://gith
 
 **Q: How do I know if my project is *difficult* enough?**
 
-A: Designing projects from scratch is difficult. I think most people will probably try and implement too much, and find themselves running out of time to get it done on time. Pick a project that has some meaningful complexity (like timely user input in the Simon lab, or a smart computer player in the tic-tac-toe lab), but keep it fairly simple overall.
+A: Designing projects from scratch is difficult. I think most people will probably try and implement too much, and find themselves running out of time to get it done on time. Pick a project that has some meaningful complexity (like many objects in missile command, or a smart computer player in the tic-tac-toe lab), but keep it fairly simple overall.
 
 **Q: Can I use publicly available code (open source libraries, ECEN 390 sound driver code, etc.) in my project?**
 
