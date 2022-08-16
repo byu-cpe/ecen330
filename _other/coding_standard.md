@@ -48,10 +48,7 @@ number: 1
 ### 5. Comments
   * **5.1** Comments must be *meaningful*. Make sure that your code completely describes your intent. If your code is unclear or does not completely describe what is going on, comment accordingly.
 
-  * **5.2** Each function definition (not declaration), including *main()*, must have a comment header which includes:
-    - A description of the function (what it does, what has to happen first, etc.).
-    - A list of all of the arguments, their names, and meanings.
-    - A description of the return value and its meaning.
+  * **5.2** Each function definition (not declaration), including *main()*, must have a comment header (immediately before the definition) which describes the function purpose/behavior, the arguments, and the return value.
 
   * **5.3** Each time you create a new scope (when using `{}` braces), there must be a comment associated with it to describe what the code is doing. Loops and conditionals, for example, define a new scope.
     - For *if* statements, a comment preceding the *if* is sufficient; you aren't required to add additional comments for *else*/*else if* statements.
@@ -65,15 +62,15 @@ number: 1
 ### 7. Magic Numbers and Strings
   * **7.1** All scalar constants must be `#define`, with one exception:
     * The constants **0** or **1** may be used anywhere in your code, except as standalone function arguments. For example, `foo(0, 1)` is not permitted, while `foo(x+1, y+1)` is allowed. You must still use `#define` for the constant **-1**.
-
-  * **7.2** All strings used on your touchscreen must be `#define`. Debugging statements that are printed to the console do not need to be `#defined`.
+<!-- 
+  * **7.2** All strings used on your touchscreen must be `#define`. Debugging statements that are printed to the console do not need to be `#defined`. -->
 
 
 ### 8. Miscellaneous
   * **8.1** Use the `const` key word only if you are defining an array of constant values (e.g., `const uint8_t foo[LEN] = {1, 2};`)
 
 
-### 9. State Machines =====
+### 9. State Machines
   * **9.1** The state machine must use `switch` statements as taught by the textbook.
 
   * **9.2** State update must be before state action.
@@ -89,20 +86,22 @@ number: 1
 
 ## Grading Source Code
 The TAs will apply the following method when evaluating your source code. The goal is to get you in the habit of writing, readable, reusable, high-quality code. As such the TAs will be quite strict when grading your code.
-  * In general, the coding standard counts toward 30% of your lab grade (some exceptions noted below).
+  * In general, the coding standard counts toward 20% of your lab grade (some exceptions noted below).
   * Each lab has a set number of maximum points that represents how many infractions can be made before you earn 0% on the coding standard portion.
   * You will lose a point for each infraction, not just each type of infraction; however, the maximum number of points you can lose for each type of infraction is 5. For example, if your code has 8 magic numbers, you will lose 5 points.
-  * For example, in Lab 4, if you lose 6 points, you will receive a coding standard score of 24/30, and thus 80% on the coding standard portion of the lab.
+  * For example, in Lab 7, if you lose 6 points, you will receive a coding standard score of 14/20, and thus 70% on the coding standard portion of the lab.
 
 | Lab | Points | Notes on Lab |
 |-----|--------|--------------|
-| Lab1 | 30 | 20% of lab grade, first 20 infractions won't reduce your score |
-| Lab2 | 30 | 20% of lab grade, first 10 infractions won't reduce your score |
-| Lab3 | 30 | 20% of lab grade |
-| Lab4 | 30 | 20% of lab grade |
-| Lab5 | 30 | 20% of lab grade |
-| Lab6 | 30 | 20% of lab grade |
-| Lab7 | 30 | 20% of lab grade |
+| Lab1 | 15 | 20% of lab grade, first 20 infractions won't reduce your score |
+| Lab2 | 15 | 20% of lab grade, first 10 infractions won't reduce your score |
+| Lab3 | 15 | 20% of lab grade |
+| Lab4 | 15 | 20% of lab grade |
+| Lab5 | 15 | 20% of lab grade |
+| Lab6 | 15 | 20% of lab grade |
+| Lab7 | 20 | 20% of lab grade |
+| Lab8 | 25 | 20% of lab grade |
+
 
 <!--
   * For example, in Lab 4, if you lose 10 points, you will receive a coding standard score of 10/20, and thus 15%/30% on the coding standard portion of the lab.
