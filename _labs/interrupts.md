@@ -86,5 +86,5 @@ After your driver is complete, you will write a simple test application to verif
 Follow the [instructions on submitting source code]({% link _documentation/submission.md %}) to submit your code.
 
 ### Grade Breakdown 
-  * 70%: Driver and test application functionality.
-  * 30%: Coding standard
+  * 80%: Driver and test application functionality.
+  * 20%: Coding standard

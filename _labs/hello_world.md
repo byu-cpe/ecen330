@@ -62,8 +62,8 @@ You will then modify the program to draw some graphics on the LCD screen as show
 For every lab you will follow the same submission instructions, provided at the [Submitting Source Code]({% link _documentation/submission.md %}) page.
 
 ### Grade Breakdown
-  * 70% Pass off. Your code demonstrates correct functionality.
-  * 30% Coding standard. You are allowed 20 freebies for this lab.
+  * 80% Functionality. Your code demonstrates correct functionality.
+  * 20% Coding standard. You are allowed 20 freebies for this lab.
     * Read over the [coding standard]({% link _other/coding_standard.md %}), including the section at the bottom that discusses how your code is graded against the coding standard.
 
 <!--  * Pass-off (ie, correct functionality): 100%

@@ -3,7 +3,7 @@ layout: page
 toc: false
 title: "K&R Study Questions"
 indent: 0
-number: 0
+number: 1
 ---
 
 

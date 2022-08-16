@@ -89,7 +89,7 @@ In this lab you will write a driver for the GPIO (general purpose input/output) 
 For each lab, you will follow the [instructions on submitting source code]({% link _documentation/submission.md %}) to submit your code.
 
 ### Grade Breakdown 
-  * 70% Pass off. If your code works well and shows no bugs, you should get the full 70%.
-  * 30% Code quality and adherence to the coding standard. You are allowed 10 freebies for this lab.
+  * 80% Functionality. If your code works well and shows no bugs, you should get the full amount.
+  * 20% Code quality and adherence to the coding standard. You are allowed 10 freebies for this lab.
 
 
