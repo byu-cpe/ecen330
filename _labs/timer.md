@@ -82,6 +82,6 @@ Implement the following features for *timer_0* (you can ignore the *timer_1* and
 Follow the [instructions on submitting source code]({% link _documentation/submission.md %}) to submit your code.
 
 ### Grade Breakdown 
-  * 35%: Milestone 1
-  * 35%: Milestone 2
-  * 30%: Adherence to the coding standard
+  * 40%: Milestone 1
+  * 40%: Milestone 2
+  * 20%: Adherence to the coding standard
