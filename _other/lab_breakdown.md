@@ -3,7 +3,7 @@ layout: page
 toc: false
 title: Lab Grade Breakdown
 indent: 0
-number: 3
+number: 0
 ---
 
 

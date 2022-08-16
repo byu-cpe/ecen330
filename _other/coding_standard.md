@@ -96,13 +96,13 @@ The TAs will apply the following method when evaluating your source code. The go
 
 | Lab | Points | Notes on Lab |
 |-----|--------|--------------|
-| Lab1 | 30 | 30% of lab grade, first 20 infractions won't reduce your score |
-| Lab2 | 30 | 30% of lab grade, first 10 infractions won't reduce your score |
-| Lab3 | 30 | 30% of lab grade |
-| Lab4 | 30 | 30% of lab grade |
-| Lab5 | 30 | 30% of lab grade |
-| Lab6 | 30 | 30% of lab grade |
-| Lab7 | 30 | 30% of lab grade |
+| Lab1 | 30 | 20% of lab grade, first 20 infractions won't reduce your score |
+| Lab2 | 30 | 20% of lab grade, first 10 infractions won't reduce your score |
+| Lab3 | 30 | 20% of lab grade |
+| Lab4 | 30 | 20% of lab grade |
+| Lab5 | 30 | 20% of lab grade |
+| Lab6 | 30 | 20% of lab grade |
+| Lab7 | 30 | 20% of lab grade |
 
 <!--
   * For example, in Lab 4, if you lose 10 points, you will receive a coding standard score of 10/20, and thus 15%/30% on the coding standard portion of the lab.
