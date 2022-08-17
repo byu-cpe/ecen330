@@ -52,7 +52,7 @@ number: 1
 
   * **5.3** Each time you create a new scope (when using `{}` braces), there must be a comment associated with it to describe what the code is doing. Loops and conditionals, for example, define a new scope.
     - For *if* statements, a comment preceding the *if* is sufficient; you aren't required to add additional comments for *else*/*else if* statements.
-    - Scopes containing a single statement (ie, *if (x) y++;*) do not require a comment.
+    - Small scope blocks (3 lines or less) don't require a comment, just comment larger blocks.
 
 
 ### 6. Formatting
