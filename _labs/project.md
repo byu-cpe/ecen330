@@ -34,6 +34,7 @@ In the proposal, describe your idea and the features of the project. Define the 
 
 1. Your project must compile and run on the ECEN 330 ZYBO board (Working only on the emulator isn't enough).
 1. It should interact with hardware devices, such as GPIO (buttons/switches/LEDs), interval timer, touch screen, or custom hardware devices.
+1. **All new code should be placed in the `lab9_project` directory**.  You will need to create a *CMakeLists.txt* file to compile your executable.  <ins>Be sure your executable is named *lab9.elf*</ins>, otherwise the grader will not be able to locate it. You can use the hardware drivers from previous labs that you created in the *drivers* folder; however, they shouldn't be modified.
 
 Grade Breakdown:
 * **Implementation 50%**: For full points, your project should implement what you proposed, with the features and hardware discussed in your proposal.  It should be a complete and working program.
@@ -49,10 +50,6 @@ Upload a link to your video (Youtube link, Google Drive link, Dropbox link, etc.
 
 
 ## FAQs
-
-**Q: What directory should I use to implement my project?**
-
-A: Use the "lab9_project" subdirectory in your cloned repository and place **_all_** your code files there. If you are using files from the Whack-a-mole or Simon labs, copy them all over to this directory.
 
 **Q: Can I use a custom piece of hardware, like a video game controller?**
 

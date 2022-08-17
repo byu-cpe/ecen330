@@ -24,7 +24,7 @@ In some of the provide code files, you will see individual sections of code surr
 ```
 
 In this case, you will need to define `Q6` to compile that code.  You can do that using either of these techniques:
-  * `gcc -D Q6 ch2_studyQuestions.c`
+* `gcc -D Q6 ch2_studyQuestions.c`p
   * `make CFLAGS=-DQ6`
 
 ## C Programming
