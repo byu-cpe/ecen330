@@ -1,7 +1,7 @@
 ---
 layout: page
 toc: false
-title: "K&R Study Questions"
+title: "'C Programming' Study Questions"
 indent: 0
 number: 1
 ---
@@ -34,11 +34,11 @@ In this case, you will need to define `Q6` to compile that code.  You can do tha
 
 
 
-1. Overview
-  * https://en.wikibooks.org/wiki/C_Programming/Intro_exercise (includes, functions)
-  * https://en.wikibooks.org/wiki/C_Programming/Preliminaries (statements, blocks, scope, functions)
-  * https://en.wikibooks.org/wiki/C_Programming/Structure_and_style (whitespace)
-  * [K & R Chapter 1]({% link _pages/kr_ch1.md %})
+1. [Part 1: Overview]({% link _pages/c_part1.md %})
+  * <https://en.wikibooks.org/wiki/C_Programming/Intro_exercise>
+  * <https://en.wikibooks.org/wiki/C_Programming/Preliminaries>
+  * <https://en.wikibooks.org/wiki/C_Programming/Structure_and_style>
+
 * [K & R Chapter 4]({% link _pages/kr_ch4.md %})
   * Functions, scope, 
 
