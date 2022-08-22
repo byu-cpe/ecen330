@@ -1,7 +1,7 @@
 ---
 layout: page
 toc: false
-title: "C Programming: Part 1"
+title: "C Programming Part 1: Intro"
 ---
 
 ### <https://en.wikibooks.org/wiki/C_Programming/Intro_exercise>

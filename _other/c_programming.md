@@ -39,11 +39,12 @@ In this case, you will need to define `Q6` to compile that code.  You can do tha
   * <https://en.wikibooks.org/wiki/C_Programming/Preliminaries>
   * <https://en.wikibooks.org/wiki/C_Programming/Structure_and_style>
 
+2. [Part 2: Variables]({% link _pages/c_part2.md %})
+  * <https://en.wikibooks.org/wiki/C_Programming/Variables>
+
 * [K & R Chapter 4]({% link _pages/kr_ch4.md %})
   * Functions, scope, 
 
-2. Variables 
-  * https://en.wikibooks.org/wiki/C_Programming/Variables
 
 3. Printf
   * https://en.wikibooks.org/wiki/C_Programming/Simple_input_and_output
