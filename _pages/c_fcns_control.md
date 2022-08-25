@@ -1,19 +1,18 @@
-    ---
+---
 layout: page
 toc: false
-title: "C Programming Part 2: Variables"
+title: "C Programming Part 5: Functions and Control"
 ---
 
 ## Topics
+* TBD
 
 ## Class Slides
+* TBD
 
 ## Resources
-* <https://en.wikibooks.org/wiki/C_Programming/Variables>
+* <https://en.wikibooks.org/wiki/C_Programming/Procedures_and_functions>
+* <https://en.wikibooks.org/wiki/C_Programming/Program_flow_control>
 
 ## Study Questions
-- What are **variables**?
-- What is a variable's *type* and *size*?
-- What does it mean that C is **typed**?
-- Does an assignment statement return a value?
-- How do you use hex literals in C?
+* TBD

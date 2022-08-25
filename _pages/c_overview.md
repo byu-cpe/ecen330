@@ -5,8 +5,11 @@ title: "C Programming Part 1: Intro"
 ---
 
 ## Topics
+* Introduction to C
 
 ## Class Slides
+
+* TBD
 
 ## Resources
 * <https://en.wikibooks.org/wiki/C_Programming/Intro_exercise>
