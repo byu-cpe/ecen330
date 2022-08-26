@@ -6,9 +6,16 @@ indent: 0
 number: 1
 ---
 
-
-Try to answer questions from the study list as you read each chapter. Some test questions are likely to be derived from these study questions. 
-
+## Sections
+1. [Part 1: Overview]({% link _pages/c_overview.md %})
+1. [Part 2: Variables]({% link _pages/c_variables.md %})
+1. [Part 3: Printf and Data Representation]({% link _pages/c_printf.md %})
+1. [Part 4: Arrays, Strings, and Structs]({% link _pages/c_arrays_structs.md %})
+1. [Part 5: Functions and Control Flow]({% link _pages/c_fcns_control.md %})
+1. [Part 6: C Compilation]({% link _pages/c_compilation.md %})
+1. [Part 7: Pointers I]({% link _pages/c_pointers_i.md %})
+1. [Part 8: Pointers I]({% link _pages/c_pointers_ii.md %})
+1. [Part 9: Memory Layout, Stack and Heap]({% link _pages/c_stack_heap.md %})
 
 ## Running Code
 You may find it helpful to compile and run code yourself.  This can be done by:
@@ -26,49 +33,4 @@ In some of the provide code files, you will see individual sections of code surr
 In this case, you will need to define `Q6` to compile that code.  You can do that using either of these techniques:
 * `gcc -D Q6 ch2_studyQuestions.c`p
   * `make CFLAGS=-DQ6`
-
-## C Programming
-
-## Chapters
-  * Overview
-
-
-
-1. [Part 1: Overview]({% link _pages/c_part1.md %})
-  * <https://en.wikibooks.org/wiki/C_Programming/Intro_exercise>
-  * <https://en.wikibooks.org/wiki/C_Programming/Preliminaries>
-  * <https://en.wikibooks.org/wiki/C_Programming/Structure_and_style>
-
-2. [Part 2: Variables]({% link _pages/c_part2.md %})
-  * <https://en.wikibooks.org/wiki/C_Programming/Variables>
-
-* [K & R Chapter 4]({% link _pages/kr_ch4.md %})
-  * Functions, scope, 
-
-
-3. Printf
-  * https://en.wikibooks.org/wiki/C_Programming/Simple_input_and_output
-* [K & R Chapter 7]({% link _pages/kr_ch7.md %})
-  * I/O
-
-4. Operators https://en.wikibooks.org/wiki/C_Programming/Operators_and_type_casting
-* [K & R Chapter 2]({% link _pages/kr_ch2.md %})
-  * Types and operators
-
-5. Arrays/Strings https://en.wikibooks.org/wiki/C_Programming/Arrays_and_strings
-
-6. Control Flow: https://en.wikibooks.org/wiki/C_Programming/Program_flow_control
-* [K & R Chapter 3]({% link _pages/kr_ch3.md %})
-  * Control flow
-
-7. Structs/Enums: https://en.wikibooks.org/wiki/C_Programming/Advanced_data_types
-* [K & R Chapter 6]({% link _pages/kr_ch6.md %})
-  * Structures
-
-8. Pointers: https://en.wikibooks.org/wiki/C_Programming/Pointers_and_arrays
-* [K & R Chapter 5]({% link _pages/kr_ch5.md %})
-  * Pointers
-
-
-
 
