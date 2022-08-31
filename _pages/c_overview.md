@@ -32,5 +32,5 @@ title: "C Programming Part 1: Intro"
 - What is the "C Standard Library"?
 
 - What are the two kinds of comments in C?
-- Instead of manually formatting your code, you should always use an autoformatter.  The most popular C formatter is `clang-format`.  When writing your lab code, you shouldn't need to call this program directly, rather if you have things configured correctly, it should automatically run every time you save your code.  **Make sure you have this set up and working**.
+<!-- - Instead of manually formatting your code, you should always use an autoformatter.  The most popular C formatter is `clang-format`.  When writing your lab code, you shouldn't need to call this program directly, rather if you have things configured correctly, it should automatically run every time you save your code.  **Make sure you have this set up and working**. -->
 

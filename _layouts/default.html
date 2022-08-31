@@ -37,6 +37,10 @@
       </nav>
 
       <div class="container">
+        {% if page.under_construction %}
+        <h2 style="color:red">Under construction</h2>
+        {% endif %}
+
         {{ content }}
       </div>
     </div>
