@@ -2,7 +2,9 @@
 layout: page
 toc: false
 title: "C Programming Part 2: Variables"
+under_construction: true
 ---
+
 
 ## Topics
 * Declaring, Initializing, and Assigning Variables

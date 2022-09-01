@@ -2,6 +2,7 @@
 layout: page
 toc: false
 title: "C Programming Part 3: printf and data representation"
+under_construction: true
 ---
 
 ## Topics

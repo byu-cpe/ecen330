@@ -14,7 +14,7 @@ number: 1
 1. [Part 5: Functions and Control Flow]({% link _pages/c_fcns_control.md %})
 1. [Part 6: C Compilation]({% link _pages/c_compilation.md %})
 1. [Part 7: Pointers I]({% link _pages/c_pointers_i.md %})
-1. [Part 8: Pointers I]({% link _pages/c_pointers_ii.md %})
+1. [Part 8: Pointers II]({% link _pages/c_pointers_ii.md %})
 1. [Part 9: Memory Layout, Stack and Heap]({% link _pages/c_stack_heap.md %})
 
 ## Running Code

@@ -2,6 +2,7 @@
 layout: page
 toc: false
 title: "C Programming Part 7: Pointers I"
+under_construction: true
 ---
 
 ## Topics
