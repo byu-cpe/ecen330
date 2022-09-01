@@ -17,6 +17,7 @@ In order to compile programs for the emulator, you need several packages. Run th
 sudo apt update
 sudo apt install build-essential qt5-default clang-format-6.0 zip python3-pip x11-apps
 ```
+*Note:* If you are using Ubuntu 22, replace `qt5-default` with `qtbase5-dev`.
 
 If you want to compile programs to run on the board, you will need the ARM GCC compiler, the Python serial library, and the openocd programmer.  If you are only using the emulator you can skip this step.
 ```
