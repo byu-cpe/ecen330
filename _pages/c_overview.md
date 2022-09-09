@@ -8,8 +8,7 @@ title: "C Programming Part 1: Intro"
 * Introduction to C
 
 ## Class Slides
-
-* TBD
+* [Slides]({% link media/c/C_part1.pdf %})
 
 ## Resources
 * <https://en.wikibooks.org/wiki/C_Programming/Intro_exercise>
