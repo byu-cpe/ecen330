@@ -57,11 +57,11 @@ In this lab you will write a driver for the GPIO (general purpose input/output) 
 
 ### Requirements 
 
-1. **Switches driver**.  Write a driver for the slide switches.  This driver will be located in *drivers/switches.c* and will implement the functions in [switches.h]({{site.github.fileurl}}/drivers/switches.h).  
+1. **Switches driver**.  Write a driver for the slide switches.  This driver will be located in *drivers/switches.c* (you will need to create this file) and will implement the functions in [switches.h]({{site.github.fileurl}}/drivers/switches.h).  
 
-1. **Buttons driver**. Write a driver for the push buttons.  This driver will be located in *drivers/buttons.c* and will implement the functions in [buttons.h]({{site.github.fileurl}}/drivers/buttons.h).
+1. **Buttons driver**. Write a driver for the push buttons.  This driver will be located in *drivers/buttons.c* (you will need to create this file) and will implement the functions in [buttons.h]({{site.github.fileurl}}/drivers/buttons.h).
 
-1. **Test applications**.  Create test functions for your two drivers.  The provided [main.c]({{site.github.fileurl}}/lab2_gpio/main.c) calls the `gpioTest_buttons()` and `gpioTest_switches()` functions.  Write both of these functions in `gpioTest.c`. 
+1. **Test applications**.  Create test functions for your two drivers.  The provided [main.c]({{site.github.fileurl}}/lab2_gpio/main.c) calls the `gpioTest_buttons()` and `gpioTest_switches()` functions.  Write both of these functions in *lab2_gpio/gpioTest.c* (you will need to create this file). 
   * **Switches test:** 
         * The switch test program is shown in a video above.  It turns on LEDs corresponding to the switches that are in the UP position.  
         * The test will end once all four switches are UP.
