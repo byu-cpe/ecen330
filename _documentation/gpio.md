@@ -15,6 +15,8 @@ In your lab, you will write a simple *driver* for the GPIO Controller, which wil
 
 <!-- and test driver software for the slide switches and push buttons that are on the 330 board.  -->
 
+## Class Slides
+  * [Slides]({% link media/gpio/lab_gpio.pdf %})
 
 ## Schematic 
 The schematic showing how the GPIO pins are connected to the buttons and switches on the printed circuit board (PCB) is shown on Page 22 of the [ZYBO reference manual]({% link media/lab1/zybo_rm_b_v6.pdf %}), and included here:
