@@ -103,11 +103,11 @@ Before using these functions you should `#include "xil_io.h"` at the top of your
 Rather than calling these register access functions throughout your driver code, you should instead create helper functions. Here is an example of helper functions to use for the buttons driver:
 
 ```
-uint32_t readRegister(uint32_t offset) {
+static uint32_t readRegister(uint32_t offset) {
    return Xil_In32(XPAR_PUSH_BUTTONS_BASEADDR + offset);
 }
 
-void writeRegister(uint32_t offset, uint32_t value) {
+static void writeRegister(uint32_t offset, uint32_t value) {
    Xil_Out32(XPAR_PUSH_BUTTONS_BASEADDR + offset, val);
 }
 ```
