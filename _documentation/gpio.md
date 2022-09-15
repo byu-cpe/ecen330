@@ -107,7 +107,7 @@ static uint32_t readRegister(uint32_t offset) {
 }
 
 static void writeRegister(uint32_t offset, uint32_t value) {
-   Xil_Out32(XPAR_PUSH_BUTTONS_BASEADDR + offset, val);
+   Xil_Out32(XPAR_PUSH_BUTTONS_BASEADDR + offset, value);
 }
 ```
 
