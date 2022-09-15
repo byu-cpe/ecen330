@@ -7,16 +7,19 @@ indent: 1
 ---
 
 ## Documentation
-  * [Xilinx Timer Documentation]({% link media/lab3/axi_timer_ds764.pdf %})
+  * [Xilinx Timer Documentation]({% link media/timer/axi_timer_ds764.pdf %})
+
+## Class Slides
+  * [Slides]({% link media/timer/lab_timer.pdf %})
 
 ### Diagram
 The hardware timers that you will access are Xilinx's AXI Timer. Here's a block diagram of the AXI timer taken from the data sheet. 
 
-<img src="{% link media/lab3/axi_timer.png %}" width="800" alt="AXI Timer block diagram">
+<img src="{% link media/timer/axi_timer.png %}" width="800" alt="AXI Timer block diagram">
 
 The hardware system we will use contains **THREE** of these timers, and they are named *timer_0*, *timer_1*, and *timer_2*, as shown below.
 
-<img src="{% link media/lab3/threeintervaltimerdiagram.jpg %}" width="600" alt="Three interval timers on AXI bus">
+<img src="{% link media/timer/threeintervaltimerdiagram.jpg %}" width="600" alt="Three interval timers on AXI bus">
 
 The *xparameters.h* file contains information you need about the timers (in particular the base addresses and the clock frequency). 
 

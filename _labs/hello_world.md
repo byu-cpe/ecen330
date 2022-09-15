@@ -12,12 +12,12 @@ This lab will show you how to compile and run a simple program on the Zybo board
 
 You will be given a program that prints "Hello World" to the console, as well as on the LCD screen as shown below:
 
-<img src="{% link media/lab1/helloworld.jpg %}" alt="LCD screen showing 'Hello World' text">
+<img src="{% link media/helloworld/helloworld.jpg %}" alt="LCD screen showing 'Hello World' text">
 
 
 You will then modify the program to draw some graphics on the LCD screen as shown here:
 
-<img src="{% link media/lab1/shapes.jpg %}" alt="LCD screen showing arrangement of four shapes">
+<img src="{% link media/helloworld/shapes.jpg %}" alt="LCD screen showing arrangement of four shapes">
 
 
 ### Objectives
@@ -71,9 +71,7 @@ For every lab you will follow the same submission instructions, provided at the 
     * You will still receive a coding standard grade out of 30 points, so that you can get feedback on your adherence to the coding standard; however, it won't affect your grade.-->
 
 
-<!-- ## Resources -->
 
-  <!-- - [ZYBO Board Documentation]({% link media/lab1/zybo_rm_b_v6.pdf %}) The ZYBO board is commercially available from digilentinc.com. -->
   
 ## Suggestions
  - Carefully read **every word** of the lab description. These lab descriptions have been refined over many years based upon student feedback. In most cases, the answers to your questions are usually present in the lab description. It is good practice to become very skilled at reading documentation as you will find that there are no TAs in industry. In general, students who read the lab description very carefully **before coding anything** complete the lab much more quickly than those who tend to scan the description and jump directly to coding. That said, if something is still unclear after you carefully read the lab description, let me know and I will try to fix it. I value student feedback.
@@ -83,5 +81,5 @@ For every lab you will follow the same submission instructions, provided at the 
   <!-- - The sizes of the triangles and circles don't need to match my picture exactly, but they should be reasonably close. -->
   - If you are having problems programming the board, ensure that the programming jumper is set correctly. I went through all of the boards in the shop and I think that I set all of them, but double-check this if you are having problems programming the board. The jumper needs to placed over the rightmost two pins as shown in the picture below.
 
-<img src="{% link media/lab1/jumper_setting.jpg %}" alt="Jumper settings for Zybo board">
+<img src="{% link media/documentation/jumper_setting.jpg %}" alt="Jumper settings for Zybo board">
 

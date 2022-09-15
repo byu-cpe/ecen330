@@ -11,15 +11,16 @@ General Purpose I/O (GPIO) refers to pins on a chip that can be either input or 
 Often we want to control and observe these pins from our software code (reading input pins and setting output pins).  This requires a special piece of hardware called a *GPIO Controller* that interfaces between the processor bus and the actual pins.  This allows the processor to interface with the individual pins by reading and writing to specific addresses that belong to the GPIO Controller (See the [Address Map]({% link _documentation/devices.md %}#address-map) section for details about this).
 
 In your lab, you will write a simple *driver* for the GPIO Controller, which will abstract away the hardware access and provide simple software functions to read the state of the buttons and switches. 
-<!-- <img src="{% link media/lab2/zyboannotated.jpg %}" width="500" alt="Zybo schematic"> -->
 
 <!-- and test driver software for the slide switches and push buttons that are on the 330 board.  -->
 
+## Class Slides
+  * [Slides]({% link media/gpio/lab_gpio.pdf %})
 
 ## Schematic 
-The schematic showing how the GPIO pins are connected to the buttons and switches on the printed circuit board (PCB) is shown on Page 22 of the [ZYBO reference manual]({% link media/lab1/zybo_rm_b_v6.pdf %}), and included here:
+The schematic showing how the GPIO pins are connected to the buttons and switches on the printed circuit board (PCB) is shown on Page 22 of the [ZYBO reference manual]({% link media/documentation/zybo_rm_b_v6.pdf %}), and included here:
 
-<img src="{% link media/lab2/zyboswitchbuttonschematic.png %}" width="500" alt="Zybo buttons and switches schematic">
+<img src="{% link media/gpio/zyboswitchbuttonschematic.png %}" width="500" alt="Zybo buttons and switches schematic">
 
 As shown in the schematic, these buttons and slide switches are attached to pins on the Zynq processing chip (mounted on the center of the PCB). 
 
@@ -28,11 +29,11 @@ As shown in the schematic, these buttons and slide switches are attached to pins
 ## GPIO Controller
 <!-- OK, so far, so good, but how do we access them?  -->
 
-A GPIO controller provides an interface between the processor running software and GPIO pins.  On our Zynq processing chip, this hardware is called the *AXI GPIO*, and is described in [this data sheet]({% link media/lab2/ds744_axi_gpio.pdf %}).
+A GPIO controller provides an interface between the processor running software and GPIO pins.  On our Zynq processing chip, this hardware is called the *AXI GPIO*, and is described in [this data sheet]({% link media/gpio/ds744_axi_gpio.pdf %}).
 
 I have included the schematic from page 3 of the data sheet below:
 
-<img src="{% link media/lab2/gpioschematicannotated.jpg %}" width="600" alt="GPIO Schematic, annotated">
+<img src="{% link media/gpio/gpioschematicannotated.jpg %}" width="600" alt="GPIO Schematic, annotated">
 
 This shows one pin (one bit) of the GPIO connection.  The circuit is replicated for each pin of the GPIO controller (so one of these circuits for each slide switch and each push button).  There is a separate GPIO controller for the push-buttons and a separate GPIO block for the slide switches. Both GPIO blocks are 4-bits wide because there are 4 push-buttons and 4 slide-switches. 
 
@@ -50,11 +51,11 @@ For example, if I read the *GPI_DATA* register and receive the hexadecimal value
 ### Accessing Registers from Software
 OK, the hardware seems straightforward enough but how do you access the GPIO hardware from software? As you can see in the schematic shown above, three registers are shown (*GPIO_TRI*, *GPIO_DATA*, and *READ_REG_IN*). However, there are only two actual registers that you can access: *GPIO_TRI* and *GPIO_DATA*. *GPIO_DATA* does double duty; when you write it, the value appears at the output (this would be useful for turning on an LED). When you read it, you are reading the value of the switch or button. The Xilinx schematic is a little confusing in this regard. For purposes of this lab, you will only read the *GPIO_DATA* register. A larger picture that shows how the ARM core, the GPIO block, and the switches are organized is shown below.
 
-<img src="{% link media/lab2/zynqgpiobuttonblockdiagram.jpg %}" width="800" alt="GPIO Block Diagram">
+<img src="{% link media/gpio/zynqgpiobuttonblockdiagram.jpg %}" width="800" alt="GPIO Block Diagram">
 
 The documentation for the *AXI GPIO* contains a specific section that discusses the registers available to the processor.  This critical information is commonly found in datasheets for hardware devices, and provides you with the information you need to interface between software and hardware, and write a device driver.  A summarizing table from this section is included here:
 
-<img src="{% link media/lab2/gpioregisteroffsets.jpg %}" width="800" alt="GPIO register offsets">
+<img src="{% link media/gpio/gpioregisteroffsets.jpg %}" width="800" alt="GPIO register offsets">
 
 The table shows the addresses in the [Address Map]({% link _documentation/devices.md %}#address-map) that correspond to each registers.  However, because the Zynq processing chip we are using is a *reconfigurable device* (FPGA), the addresses are not fixed and can be chosen by the user when the system is designed.  As such, the addresses are not listed as absolute addresses, but rather as offsets from a chosen *base address*.
 
