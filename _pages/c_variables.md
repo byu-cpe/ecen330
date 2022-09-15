@@ -13,6 +13,7 @@ under_construction: true
 * `<stdint.h>` types
 * Magic numbers: `const` and `#define`
 * `static`, `extern` and `volatile` modifiers
+* `enum` data type.
 
 ## Class Slides
 * TBD
@@ -25,7 +26,6 @@ under_construction: true
 - What is a variable's *type* and *size*?
 - What does it mean that C is **typed**?
 - Does an assignment statement return a value?
-- What characters can you use in your variable names?
 - How do you use hex literals in C?
 - What is the `char` datatype used for?
 - Can you use the `char` datatype to store integers?

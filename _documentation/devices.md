@@ -9,9 +9,9 @@ indent: 0
 
 
 ## Zybo Board
-  * [GPIO documentation]({% link media/lab2/ds744_axi_gpio.pdf %})
-  * [ZYBO Reference Manual]({% link media/lab1/zybo_rm_b_v6.pdf %})
-  * [ZYBO Board Schematics]({% link media/lab2/zybo_sch.pdf %})
+  * [GPIO documentation]({% link media/gpio/ds744_axi_gpio.pdf %})
+  * [ZYBO Reference Manual]({% link media/documentation/zybo_rm_b_v6.pdf %})
+  * [ZYBO Board Schematics]({% link media/documentation/zybo_sch.pdf %})
 
 ## Devices
 
@@ -30,5 +30,5 @@ We often refer to *stacks* when we talk about computing systems. A stack is a co
 
 Applications on embedded systems are developed in layers like a cake. We commonly refer to this as the program stack. Layers are used to hide detail and to make a project more manageable and maintainable. The **device** layer typically consists of board-level physical components such as switches, LEDs, USB ports, HDMI in and out ports, etc. For FPGA-based systems like ZYNQ, **hardware** that communicates with these devices is often placed in the FPGA fabric (the instructors have already done that for this class). Low-level **driver** software hides low-level details from the top layer, the **application**.
 
-<img src="{% link media/lab2/embeddedprogramstack.png %}" width="800" alt="Embedded programming stack">
+<img src="{% link media/gpio/embeddedprogramstack.png %}" width="800" alt="Embedded programming stack">
 
