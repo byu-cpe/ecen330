@@ -93,7 +93,7 @@ The TAs will apply the following method when evaluating your source code. The go
 
 | Lab | Points | Notes on Lab |
 |-----|--------|--------------|
-| Lab1 | 15 | 20% of lab grade, first 20 infractions won't reduce your score |
+| Lab1 | 10 | 20% of lab grade, first 20 infractions won't reduce your score |
 | Lab2 | 15 | 20% of lab grade, first 10 infractions won't reduce your score |
 | Lab3 | 15 | 20% of lab grade |
 | Lab4 | 15 | 20% of lab grade |
