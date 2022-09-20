@@ -9,7 +9,7 @@ number: 1
 ## Sections
 1. [Part 1: Overview]({% link _pages/c_overview.md %})
 1. [Part 2: Variables]({% link _pages/c_variables.md %})
-1. [Part 3: Printf and Data Representation]({% link _pages/c_printf.md %})
+1. [Part 3: I/O and Operators]({% link _pages/c_io_operators.md %})
 1. [Part 4: Arrays, Strings, and Structs]({% link _pages/c_arrays_structs.md %})
 1. [Part 5: Functions and Control Flow]({% link _pages/c_fcns_control.md %})
 1. [Part 6: C Compilation]({% link _pages/c_compilation.md %})
