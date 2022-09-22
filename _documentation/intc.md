@@ -8,7 +8,7 @@ indent: 1
 
 ## Class Notes
 
- {% pdf "{{ site.baseurl }}/media/interrupts/interrupt_controller.pdf %}
+ {% pdf "{{ site.baseurl }}/media/interrupts/lab_interrupts.pdf %}
 
 
 ## Commercial Documentation
