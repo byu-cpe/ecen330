@@ -21,9 +21,11 @@ After your driver is complete, you will write a simple test application to verif
 
 ### Objectives
 
-* Gain experience using interrupts, and an interrupt controller.
-* Gain experience writing a driver for a more complex hardware module.
-* Learn about function pointers and callback functions.
+* Learn about interrupts in embedded systems, and the role of interrupt controllers.
+* Gain more experience interacting with hardware devices from software. 
+* Learn how to write more complex device drivers, including using function pointers to implement callback functions.
+* Learn how to set up periodic interrupts and write interrupt handling code for simple applications.
+
 
 ## Preliminary
 
