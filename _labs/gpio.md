@@ -18,8 +18,9 @@ In this lab you will write a driver for the GPIO (general purpose input/output) 
 
 
 ### Objectives 
-  - Gain experience writing driver code that interacts with hardware.
-  - Gain experience with commercial documentation.
+  - Learn about how software interfaces with hardware devices.
+  - Gain experience writing driver code that interacts with hardware registers.
+  - Gain experience reading and understanding commercial documentation.
   <!-- - Understand how the GPIO IP block functions and write low-level code to communicate with it (instead of using the functions provided by *xgpio.h*). -->
   <!-- - Learn how to write low-level software to interface with buttons and switches. -->
   <!-- - Write reusable code that you may use in later labs. -->

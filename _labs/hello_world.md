@@ -21,7 +21,7 @@ You will then modify the program to draw some graphics on the LCD screen as show
 
 
 ### Objectives
-  - Learn how to compile and run programs on the 330 board/emulator.
+  - Learn how to compile and run programs on the 330 board.
   - Introduce the CMake build system, and the Visual Studio Code editor.
   - Become familiar with the graphics routines that are available for use with the LCD display.
   - Learn how to print to the terminal using `printf()`.

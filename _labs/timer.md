@@ -15,9 +15,9 @@ Interval timers are essentially hardware counters that you can easily stop, star
 Do a nice job on this assignment. You will likely use these timers extensively in the remaining labs in this class and later in ECEn 390 when you implement your laser-tag game. 
 
 ### Objectives 
-  * Experience interacting with a commercial hardware timer, with multiple control and data registers.
+  * Gain experience interacting with a commercial hardware timer, with multiple control and data registers.
   * More experience working with commercial documentation.
-  * Practice writing high-quality 'C' code, following the coding standard.
+  * Practice writing high-quality, reusable 'C' code, following the coding standard.
 
 ## Preliminary 
 

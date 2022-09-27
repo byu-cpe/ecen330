@@ -17,9 +17,10 @@ In this lab you will create a game similar to the popular Atari arcade game [Mis
 Designing such a game with many objects moving and interacting concurrently can be challenging.  To manage this complexity we will leverage the state machine design pattern.  In fact, every object (all missiles and the plane) will be managed by their own independent state machine, with *init* and *tick* functions.  
 
 ### Objectives
-* Learn how to create a complex game using state machines to track several different objects.
+* Learn how to create a complex application that requires concurrent programming to complete several parallel tasks.  This will be done using the state machine programming pattern.
 * Use optimization techniques to ensure you don't miss any interrupts.
-* Make a fun and challenging game!
+* Gain the necessary experience to prepare you for making your own application in the next lab.
+* Have fun and make a challenging game!
 
 ## Preliminary
 

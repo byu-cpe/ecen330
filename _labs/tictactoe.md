@@ -22,9 +22,9 @@ The algorithm is not that complex but recursive algorithms can be a challenge to
 You will implement and test the Display and Algorithm milestones separately. The Control milestone will bring everything together to implement the entire game.
 
 ### Objectives 
-  - Implement a recursive algorithm and use it to create an unbeatable game of tic-tac-toe.
+  - Implement a complex recursive algorithm and use it to create an unbeatable game of tic-tac-toe.
   - Practice developing and debugging your own state machines.
-  - Practice structs, arrays and more complex C code.
+  - Gain experience using structs, arrays and more complex C code.
 
 ## Preliminary 
 

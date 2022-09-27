@@ -19,8 +19,9 @@ You are given a test application shown below that will verify that your driver i
 <img src="{% link media/lab5/touchscreen.gif %}" width="500" alt="Touchscreen test application demo">
 
 ### Objectives
-* Gain experience writing a *high-level device driver* that requires meeting specific device timing requirements.
-* Gain experience writing a state machine.
+* Gain experience writing a *high-level device driver* that utilizes existing low-level routines. 
+* Write embedded systems code that requires meeting specific device timing requirements.
+* Write your first software state machine.
 
 
 ## Preliminary
