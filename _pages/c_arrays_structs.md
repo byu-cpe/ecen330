@@ -10,7 +10,7 @@ title: "C Programming Part 4: Arrays & Structs"
 - Structs
 
 ## Class Slides
-- TBD
+- [Slides]({% link media/c/C_part4.pdf %})
 
 ## Resources
 * <https://en.wikibooks.org/wiki/C_Programming/Arrays_and_strings>
