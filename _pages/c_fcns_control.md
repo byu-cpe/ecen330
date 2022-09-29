@@ -11,7 +11,7 @@ title: "C Programming Part 5: Functions and Control"
 * Boolean expressions
 
 ## Class Slides
-* TBD
+* [Slides]({% link media/c/C_part5.pdf %})
 
 ## Resources
 * <https://en.wikibooks.org/wiki/C_Programming/Procedures_and_functions>
