@@ -2,7 +2,6 @@
 layout: page
 toc: false
 title: "C Programming Part 6: Compilation"
-under_construction: true
 ---
 
 ## Topics
