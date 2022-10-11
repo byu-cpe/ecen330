@@ -10,7 +10,7 @@ order: 6
 ## Overview
 
 In this lab you will use your touchscreen driver and interrupt driver to implement a clock, shown in the video below:
-<iframe width="560" height="315" allow="fullscreen" src="https://www.youtube.com/embed/s8tV_iznYRU"> </iframe>
+<img src="{% link media/clock/clock.gif %}" width="600" alt="Video of Clock program">
 
 You are provided with a *clockDisplay* module that handles all of the graphics, so you only need to design a state machine that controls the clock.  One interval timer will generate an interrupt at 1Hz, in order to run the clock, and another interval timer will generate interrupts more frequently to tick your control state machine and the touchscreen driver state machine.
 
@@ -52,6 +52,7 @@ This lab is designed such that code is separated into two major coding sections:
 1. Follow the video behavior and description at the top of the page.  In particular:
   * Wait for the user to hold down the button for 0.5s before starting the fast update rate.
   * During the fast update mode, update the values at a rate of 10Hz.
+  * In the video above, the clock does not increment each second while in fast update mode.  However, this behavior is optional.  It's fine if the clock continues to advance each second in fast update mode.
   
 ### Files
   - **Submitted files:** *clockControl.c*.  You must create and implement all of your code there.
