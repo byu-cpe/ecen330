@@ -172,7 +172,7 @@ int main() {
       printf("\t%.8g\n", pop());
       break;
     default:
-      printf("error: unknown commadn %s\n", s);
+      printf("error: unknown command %s\n", s);
       break;
     }
   }
