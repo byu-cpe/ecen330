@@ -12,9 +12,7 @@ under_construction: true
 * GCC
 
 ## Class Slides
-
-## Resources
-* TBD
+- [Slides]({% link media/c/C_part6.pdf %})
 
 ## Study Questions
 - TBD
