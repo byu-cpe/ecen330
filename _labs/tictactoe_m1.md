@@ -78,7 +78,7 @@ In this milestone you will implement the algorithm for the computer player. If y
 ### Requirements 
   - Implement the functions declared in *minimax.h* in your *minimax.c* file.
   - Update *testBoards.c* by adding at least 10 additional unique test-boards (see provided test code below). 
-  - When the *lab7_m2.elf* executable is run, you should see the *Next Move* output for the five provided boards, and your (at least 10) additional boards.
+  - When the *lab7_m1.elf* executable is run, you should see the *Next Move* output for the five provided boards, and your (at least 10) additional boards.
 
 
   
