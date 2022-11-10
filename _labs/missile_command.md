@@ -58,7 +58,6 @@ Follow the [instructions on submitting source code]({% link _documentation/submi
 
 ### Grade Breakdown 
   * Milestone 1: 25%
-    * -10% overall, if you don't create and print the output of the 10 extra test boards.
   * Milestone 2: 25%
     * -10% overall, if you miss more than 1 interrupt
   * Milestone 3: 30%
