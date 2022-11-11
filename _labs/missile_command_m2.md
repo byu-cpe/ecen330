@@ -44,5 +44,3 @@ A video of the test program is shown below:
 - Implement the game control logic in *gameControl.c*.
 - The test program should behave like the video above.
 
-### Other Notes
-* *gameControl_init()* takes a `bool milestone3` argument.  This is used to detect whether Milestone 2 or Milestone 3 is being run.  This allows you to disable the Milestone 3 features when testing Milestone 2.  It is not a requirement that you do this; it's fine if your Milestone 2 program contains the full game behavior.

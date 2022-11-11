@@ -32,3 +32,18 @@ A video of the complete game is shown below:
 ### Requirements
 - Implement the functions in *plane.h*
 - The final test program should behave like the video above.
+
+### Other Notes
+* You may notice that once you add calls to your *plane.c* functions in your *gameControl*, your Milestone 2 will no longer compile as you probably didn't configure *plane.c* to be compiled for your Milestone 2 executable.  You have a couple options:
+    1. You could change Milestone 2 to also compile plane.c.  This works fine if you've already zipped up and submitted Milestone 2.  However, if you haven't yet zipped up your Milestone 2 submission this will be an issue.  Your *plane.c* file won't be submitted as part of Milestone 2, so you need to make sure your *Milestone 2* code compiles without it. 
+    2. Alternatively, if you want your Milestone 2 code to continue to work without plane.c compiled into it, you can add macros to only call the plane functions when Milestone 3 is compiled.  In your gameControl.c you would call plane functions like this:
+        ```c
+        #ifdef LAB8_M3
+            plane_init(plane_missile);
+        #endif
+        ```
+
+        And then to define `LAB8_M3` when Milestone 3 is compiled, you could add this to your *CMakeLists.txt*:
+        ```
+        target_compile_definitions(lab8_m3.elf PUBLIC LAB8_M3)
+        ```
