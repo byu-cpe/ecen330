@@ -53,7 +53,7 @@ Your submitted project will be graded against two main criteria:
   **Note:** You will not be graded against the coding standard for this lab. Try not to be too sad about this. :-)
 
 #### Submission
-**All code should be placed in the `lab9_project` directory**.  You will need to create a *CMakeLists.txt* file to compile your executable.  <ins>Be sure your executable is named *lab9.elf*</ins>, otherwise the grader will not be able to locate it. You can use the hardware drivers from previous labs that you created in the *drivers* folder; however, they shouldn't be modified.
+**All code should be placed in the `lab9_project` directory**.  You will need to create a *CMakeLists.txt* file to compile your executable.  <ins>Be sure your executable is named *lab9.elf*</ins>, otherwise the grader will not be able to locate it. You can use the hardware drivers from previous labs that you created in the *drivers* folder; however, they shouldn't be modified.  Like the previous labs, use `./check_and_zip.py lab9` to zip up your project submission.
 
 
 ### Demo Video 
