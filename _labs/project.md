@@ -11,42 +11,55 @@ order: 9
 
 For this lab you are encouraged to implement a project of your choice. Do something fun and interesting with your system. Here is how it works.
 
-## Group
-Choose whether you will do this project individually, or as a group. You can work in groups up to size 3; however, the larger the group, the more you are expected to accomplish. Take the "quiz" on Learning Suite to indicate whether you will work individually or as a group.  **Everyone needs to complete this quiz otherwise your project won't be graded**.
+### Group
+Choose whether you will do this project individually, or as a group. You can work in groups up to size 3; however, the larger the group, the more you are expected to accomplish.  When you complete the proposal you will be able to indicate your group.  
 
-## Proposal (25%)
+## Requirements
 
-Submit a short proposal (1 page max, less is fine, PDF format) via Learning Suite. The proposal will be reviewed to make sure it is not too difficult or too easy. Only one person in your group needs to submit this.
-
-In the proposal, describe your idea and the features of the project. Define the scope of your project, what you intend to implement. Outline any key challenges you foresee and risk mitigation strategies. You won't be graded on spelling, grammar or presentation. It just needs to be clear that you have spent some time thinking through your project idea. The grading rubric for your proposal is as follows:
-
-* **Description 10%**: Clearly describe your idea, the features of the project, and the hardware devices involved.
-
-* **Difficulty 10%**: This grade component is based on whether you have chosen a project of reasonable difficulty. Your project does not need to be overly complex or large to receive full points. Consider the existing multi-week labs (missile command, tic-tac-toe) when choosing the scope of your project.
-
-* **Creativity 5%**: Your idea doesn't need to be completely original or novel. Something that is fun and interacts with hardware would be great. If your idea is very similar to one of the existing labs, you will likely lose some points here.
-
-  Note: If you don't want to choose your own project, you can choose to do the provided [Whack-a-Mole]({% link _other/wam.md %}) or [Simon]({% link _other/simon.md %}) lab.  **However, if you do so, you will not receive points in the creative category**. 
+1. Your project must run on the ECEN 330 board.  
+1. It should interact with hardware devices, such as GPIO (buttons/switches/LEDs), interval timer, interrupt controller, touch screen, or custom hardware devices.
+1. Create a project that has some complexity, but is not too large in scope.  For example, your project might be sized similar to the tic-tac-toe or missile command lab, and contain similar complexity.
 
 
-## Implementation (65%)
-<!-- Work on the proposed features individually or as a group.   -->
+## Deliverables
 
-1. Your project must compile and run on the ECEN 330 ZYBO board (Working only on the emulator isn't enough).
-1. It should interact with hardware devices, such as GPIO (buttons/switches/LEDs), interval timer, touch screen, or custom hardware devices.
-1. **All new code should be placed in the `lab9_project` directory**.  You will need to create a *CMakeLists.txt* file to compile your executable.  <ins>Be sure your executable is named *lab9.elf*</ins>, otherwise the grader will not be able to locate it. You can use the hardware drivers from previous labs that you created in the *drivers* folder; however, they shouldn't be modified.
+| Category  | Percentage |
+|-----------|------------|
+| Proposal  | 15%   
+| Project Implementation   | 70%
+| Demo Video                     | 15%
 
-Grade Breakdown:
-* **Implementation 50%**: For full points, your project should implement what you proposed, with the features and hardware discussed in your proposal.  It should be a complete and working program.
+### Proposal
 
-* **Quality 15%**: Your program should run smoothly and be bug free. This category evaluates the quality and correctness of your implementation.
+In LearningSuite, complete the *Lab 9: Proposal*. 
+
+In the proposal, describe your idea and the features of the project. Define the scope of your project, what you intend to implement. Outline any key challenges you foresee and risk mitigation strategies. You won't be graded on spelling, grammar or presentation. It just needs to be clear that you have spent some time thinking through your project idea. 
+
+ **If you are working in a group, ALL group members must complete the quiz.** You can enter the exact same text for each questions, except for the questions asking about your individual responsibilities within the group.
+
+### Project Implementation
+Your submitted project will be graded against two main criteria:
+
+* **Project Difficulty & Creativity (25 points)**:  Your project does not need to be overly complex or large to receive full points. Consider the existing multi-week labs (missile command, tic-tac-toe) when choosing the scope of your project.  Your idea doesn't need to be completely original or novel. Something that is fun and interacts with hardware would be great. If your idea is very similar to one of the existing labs, you will likely lose some points here.
+
+  Note: If you don't want to choose your own project, you can choose to do the provided [Whack-a-Mole]({% link _other/wam.md %}) or [Simon]({% link _other/simon.md %}) lab.  **However, if you do so, you will receive a maximum of 25/30 in this category.**
+
+* **Project Functionality (45 points):**  You will be graded in this category based on the following criteria:
+  1. Your project must compile and run on the ECEN 330 ZYBO board (Working only on the emulator isn't enough).
+  1. It should interact with hardware devices, such as GPIO (buttons/switches/LEDs), interval timer, touch screen, or custom hardware devices.
+  1. The project is a complete and working implementation and reasonably completes what you planned out in your proposal.
+  1. Your program should run smoothly and be bug free.
 
   **Note:** You will not be graded against the coding standard for this lab. Try not to be too sad about this. :-)
 
-## Demo Video (10%)
+#### Submission
+**All code should be placed in the `lab9_project` directory**.  You will need to create a *CMakeLists.txt* file to compile your executable.  <ins>Be sure your executable is named *lab9.elf*</ins>, otherwise the grader will not be able to locate it. You can use the hardware drivers from previous labs that you created in the *drivers* folder; however, they shouldn't be modified.
+
+
+### Demo Video 
 Create a short video (2 minutes max) demonstrating your project and major features, as well as mentioning any major issues or concessions made during your design process. Explain what you actually implemented and any open source software used. 
 
-Upload a link to your video (Youtube link, Google Drive link, Dropbox link, etc.) using the quiz on Learning Suite.  Make sure the link is public and works.
+Upload a link to your video (Youtube link, Google Drive link, Dropbox link, etc.) using the quiz on Learning Suite.  Make sure the link is public and works.  Only one group member needs to submit the link.
 
 
 ## FAQs
