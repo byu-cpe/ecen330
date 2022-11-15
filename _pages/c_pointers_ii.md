@@ -388,3 +388,5 @@ int main() {
     // @1: ?, @2: ?, @3: ?, @4: ?, @5: ?, @6: ?
 
     ```
+
+1. Write a function that takes an array, and updates two pointers from the caller function to point to the smallest and largest integers in the array.  Create a test program that calls this function and prints the smallest and largest values.
