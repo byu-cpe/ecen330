@@ -301,6 +301,16 @@ title: "C Programming Part 7: Pointers I"
     }
     ```
 
+1. What will this program print? Is the result implementation-independent?
+    ```c
+    #include <stdio.h>
+    
+    int main() {
+      int* x = 4;
+      printf("%d\n", ++x);
+    }
+    ```
+
 1. Write a function that takes an array of *int*s (*nums*) and returns a pointer to the largest element. Create a test program that calls the function and prints out the largest value.
 1. Write a function that takes a string (*str*) and int (*i*), and prints the string from location *i* to the end. 
 1. Write a function that takes a string (*str*) and a pointer to a location in the string (*p*), and prints everything up to, but not including the character pointed to by *p*.  Create a test program that calls this function.
