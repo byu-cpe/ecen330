@@ -10,7 +10,7 @@ title: "C Programming Part 8: Pointers II"
 * Pointers to structs
 
 ## Class Slides
-* TBD
+* [Slides]({% link media/c/C_part8.pdf %})
 
 ## Resources
 * <https://en.wikibooks.org/wiki/C_Programming/Pointers_and_arrays>
