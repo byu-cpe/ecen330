@@ -388,5 +388,6 @@ int main() {
     // @1: ?, @2: ?, @3: ?, @4: ?, @5: ?, @6: ?
 
     ```
+1. Write a function that takes an array of strings (*array*), as well as a string to search for (*find_me*), and returns a bool indicating whether the string was found in the array of strings.  If it is found, a pointer in the caller code should be updated to point to it.  Create a test program.
 
 1. Write a function that takes an array, and updates two pointers from the caller function to point to the smallest and largest integers in the array.  Create a test program that calls this function and prints the smallest and largest values.
