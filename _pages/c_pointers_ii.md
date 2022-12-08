@@ -10,7 +10,7 @@ title: "C Programming Part 8: Pointers II"
 * Pointers to structs
 
 ## Class Slides
-* TBD
+* [Slides]({% link media/c/C_part8.pdf %})
 
 ## Resources
 * <https://en.wikibooks.org/wiki/C_Programming/Pointers_and_arrays>
@@ -48,18 +48,36 @@ int main() {
     int main() {
       char s1[SIZE] = "bye";
       char* s1p = s1;
-      char** s1pp = &s1p;
       char s2[SIZE] = "hello";
       char* s2p = s2;
-      char** s2pp = &s2p;
-      swap(s1pp, s2pp);
+      swap(&s1p, &s2p);
       printf("%s\n", s2p);
+    }
+    ```
+
+1. What does this program print?
+    ```c
+    #include <stdio.h>
+    void swap(char** a, char** b) {
+      char* tmp;
+      tmp = *a;
+      *a = *b;
+      *b = tmp;
+    }
+
+    #define SIZE 20
+    int main() {
+      char * s1 = "bye";
+      char * s2 = "hello";
+      swap(&s1, &s2);
+      printf("%s\n", s2);
     }
     ```
 
 1. What does this program print? *Note that the swap() function is identical in the next five questions.*
     ```c
     #include <stdio.h>
+
     void swap(char** a, char** b) {
       char* tmp;
       tmp = *a;
@@ -77,6 +95,7 @@ int main() {
 1. What does this program print?
     ```c
     #include <stdio.h>
+    
     void swap(char** a, char** b) {
       char* tmp;
       tmp = *a;
@@ -388,3 +407,6 @@ int main() {
     // @1: ?, @2: ?, @3: ?, @4: ?, @5: ?, @6: ?
 
     ```
+1. Write a function that takes an array of strings (*array*), as well as a string to search for (*find_me*), and returns a bool indicating whether the string was found in the array of strings.  If it is found, a pointer in the caller code should be updated to point to it.  Create a test program.
+
+1. Write a function that takes an array, and updates two pointers from the caller function to point to the smallest and largest integers in the array.  Create a test program that calls this function and prints the smallest and largest values.
