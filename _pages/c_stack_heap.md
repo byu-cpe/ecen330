@@ -12,7 +12,7 @@ under_construction: true
 * `malloc` and `free`
 
 ## Class Slides
-* TBD
+* [Slides]({% link media/c/C_part9.pdf %})
 
 ## Resources
 * TBD
