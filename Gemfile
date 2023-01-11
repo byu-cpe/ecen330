@@ -33,4 +33,5 @@ gem "jekyll-sitemap"
 gem 'rake'
 gem 'html-proofer'
 gem "jekyll-pdf-embed"
+gem 'jekyll-sass-converter', "~> 2.0"
 
