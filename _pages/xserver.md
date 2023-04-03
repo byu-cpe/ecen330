@@ -30,12 +30,12 @@ Anytime you want to run Linux graphical programs (such as the emulator) from Win
 
 ### Firewall
 If the above instructions still aren't working, it's possible that Windows Firewall is blocking the X-server.  To fix this, run the Windows *Incoming Connections* troubleshooter. 
-      - Open Windows Settings (Win + I)
-      - Click *Update & Security*
-      - Click *Troubleshoot* in the left-hand pane.
-      - Click the *Additional Troubleshooters* link.
-      - Click the *Incoming Connections* troubleshooter (If you have trouble finding this there are some pictures to help here [[https://www.howto-connect.com/troubleshoot-incoming-connection-windows-10/]]).
-      - When the troubleshooter runs, it will hopefully provide you with an option titled *Allow other computers to connect to VcXsrv windows xserver".  Select that and click Next.  You will then need to click *Try these repairs as an administrator'', and then *Apply this fix*.  Then *Close*.  
+  - Open Windows Settings (Win + I)
+  - Click *Update & Security*
+  - Click *Troubleshoot* in the left-hand pane.
+  - Click the *Additional Troubleshooters* link.
+  - Click the *Incoming Connections* troubleshooter (If you have trouble finding this there are some pictures to help here [[https://www.howto-connect.com/troubleshoot-incoming-connection-windows-10/]]).
+  - When the troubleshooter runs, it will hopefully provide you with an option titled *Allow other computers to connect to VcXsrv windows xserver".  Select that and click Next.  You will then need to click *Try these repairs as an administrator'', and then *Apply this fix*.  Then *Close*.  
 
 ## macOS Install 
 
