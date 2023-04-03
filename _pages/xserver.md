@@ -8,7 +8,7 @@ number: 3
 
 Anytime you want to run Linux graphical programs (such as the emulator) from Windows or Mac, you need an *X Window Server* running on your local machine. 
 
-## Windows Install 
+## WSL on Windows Install 
 
   - Install an X Windows server.  There are many, but I suggest you download and install [VcXsrv Windows X Server](https://sourceforge.net/projects/vcxsrv/).
 
