@@ -11,9 +11,16 @@ Anytime you want to run Linux graphical programs (such as the emulator) from Win
 ## Windows Install 
 
   - Install an X Windows server.  There are many, but I suggest you download and install [VcXsrv Windows X Server](https://sourceforge.net/projects/vcxsrv/).
-  - Run this in your WSL terminal: **This needs to be run on your local machine terminal.  Do NOT run this code after connecting to a remote machine.**     
+
+  - [Check your WSL version](https://learn.microsoft.com/en-us/windows/wsl/install#check-which-version-of-wsl-you-are-running) to see if you have version 1 or 2 installed.
+  - Edit your `.bashrc` file and add the follwing line (depending on your WSL version)
+    - *WSL Version 1*
   
-        echo "export DISPLAY=localhost:0.0" >> ~/.bashrc 
+        `export DISPLAY=localhost:0.0`
+
+    - *WSL Version 2*
+
+        `export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0`
 
   - Restart your terminal.
   - To run the X server, find *XLaunch* in your start menu and run it. (Press Windows key and type *XLaunch*).
@@ -21,11 +28,8 @@ Anytime you want to run Linux graphical programs (such as the emulator) from Win
   - You can test that your X server is working by running `xeyes`.  If the X server is running correctly, this will create a pop-up window with a set of animated eyes that follow your mouse cursor.  (You may need to install *xeyes* using the command `sudo apt install x11-apps`).
   - When running, the XServer will display in your Windows system tray.  If you restart your computer, or close the XServer, you will need to run *XLaunch* again.
 
-### WSL2 
-If you happen to be running WSL version 2 (unlikely unless you specifically upgraded to this version), you will need to do a few extra things.  
-  - Change the last line of your *~/.bashrc* file to: `export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0`
-  - When you run *XLaunch*, make sure to check the *Disable access control* box.
-  - If it still doesn't work, it could be a firewall issue.  To fix this, run the Windows *Incoming Connections* troubleshooter. 
+### Firewall
+If the above instructions still aren't working, it's possible that Windows Firewall is blocking the X-server.  To fix this, run the Windows *Incoming Connections* troubleshooter. 
       - Open Windows Settings (Win + I)
       - Click *Update & Security*
       - Click *Troubleshoot* in the left-hand pane.
