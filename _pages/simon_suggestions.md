@@ -5,9 +5,9 @@ title: "Simon Suggestions"
 ---
 
 ## Generating Random Sequences 
-If you include *stdlib.h* you have access to two functions that help to generate random sequences. The first function *srand(seed)* allows you to provide a *seed* value for the random number generator. Each time you call *rand()*, it will return an integer that is part of a pseudorandom sequence. However, each time you start your program from scratch, *rand()* will return the same sequence of integers. If, each time you run the program, you start out by invoking *srand(seed)* with a different seed value, the sequence will be different each time you run the program. So, how do you generate random seed values? In my Simon game I am incrementing a counter while waiting for the user to touch the screen. Once the user touches the screen, I take the counter value and use that as the seed value for *srand()*.
+If you include *stdlib.h*, you have access to two functions that help to generate random sequences. The first function *srand(seed)* allows you to provide a *seed* value for the random number generator. Each time you call *rand()*, it will return an integer that is part of a pseudorandom sequence. However, each time you start your program from scratch, *rand()* will return the same sequence of integers. If, each time you run the program, you start out by invoking *srand(seed)* with a different seed value, the sequence will be different each time you run the program. So, how do you generate random seed values? In my Simon game I am incrementing a counter while waiting for the user to touch the screen. Once the user touches the screen, I take the counter value and use that as the seed value for *srand()*.
 
-Review this [link](https://www.cplusplus.com/reference/cstdlib/srand/) for a more detailed explanation of and another example of how to use *srand()* and *rand()*.
+Review this [link](https://www.cplusplus.com/reference/cstdlib/srand/) for more detail and an example of how to use *srand()* and *rand()*.
 
 
 ## Using Function Pointers to Time the Duration of Individual Ticks 

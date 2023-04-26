@@ -92,9 +92,9 @@ Follow the [instructions on submitting source code]({% link _documentation/submi
 
 ### Grade Breakdown 
 
-  * 35%: Milestone 1
-  * 35%: Milestone 2 
-  * 30%: Code quality (adherence to coding standard)
+  * 40%: Milestone 1
+  * 40%: Milestone 2 
+  * 20%: Code quality (adherence to coding standard)
 
 
 ## Videos 

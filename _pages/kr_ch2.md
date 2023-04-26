@@ -18,7 +18,7 @@ This chapter discusses types, operators and expressions. For each question, make
 
 6. What is the minimum value for a short for the ARM processor used in this class? (see note above). 
 
-7. What is the maximum value for uint16_t?(see table at [[https://en.wikibooks.org/wiki/C_Programming/C_Reference/stdint.h]]). 
+7. What is the maximum value for uint16_t? (see table of [exact-width integer types](https://en.wikibooks.org/wiki/C_Programming/stdint.h#Exact-width_integer_types)).
 
 8. (T or F) `'\a'` is a string literal.
 

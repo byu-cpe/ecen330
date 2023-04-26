@@ -14,7 +14,7 @@ The *buttonHandler* state machine and associated code abstract the "buttons" fro
   * You are also given the test code for the *buttonHander*.  This is located in [bhTester.c]({{site.github.fileurl}}/archive/lab_simon/bhTester.c).  You can see how the test operates by watching the video below.
 
 Interlocking behavior:
-  * The state machine provides the the necessary *enable()* and *disable()* functions to perform interlocking. 
+  * The state machine provides the necessary *enable()* and *disable()* functions to perform interlocking. 
   * During normal usage, you would call *buttonHandler_enable()* to start the state machine. Next you would continuously check to see if a button was touched and then released by calling *buttonHandler_releaseDetected()*. 
   * If *buttonHandler_releaseDetected()* returns true, you would invoke *buttonHandler_getRegionNumber()* to find out what region/color was touched. * You would call *buttonHandler_disable()* to stop the state machine and allow it to return to its initial state. This process would begin again by calling *buttonHandler_enable()*.
 

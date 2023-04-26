@@ -41,7 +41,7 @@ You will complete this lab in four milestones:
   * Milestone 1: Implement the *buttonHandler* state machine and *simonDisplay* code.
   * Milestone 2: Implement the *flashSequence* state machine and *globals* code.
   * Milestone 3: Implement the *verifySequence* state machine.
-  * Milestone 4: Implement the top-level *simonControl* state machine so that you implement a Simon game with the the same behavior as shown in the demo video for the Simon game. 
+  * Milestone 4: Implement the top-level *simonControl* state machine so that you implement a Simon game with the same behavior as shown in the demo video for the Simon game. 
 
 Once again you are provided a *main.c* with code that can be uncommented to run the chosen milestone.  Aside from uncommenting one of these lines, do not change *main.c*.
 
@@ -91,7 +91,7 @@ This lab will be completed as several interacting modules.  Individual descripti
 
 *simonControl* provides the top-level control for the Simon Game and it coordinates the behavior of the other state machines to implement the Simon game. You can watch the video at the top of this page to see how things are supposed to work.
 
-We provide you with [simonControl.h]({{site.github.fileurl}}/archive/lab_simon/simonControl.h). You must implement at least the *simonControl_init()*, *simonControl_tick()*, and *simonControl_enable()* functions so that the provided *simonMain.c* can compile, link, and operate properly.
+We provide you with [simonControl.h]({{site.github.fileurl}}/archive/lab_simon/simonControl.h). You must implement at least the *simonControl_init()*, *simonControl_tick()*, and *simonControl_enable()* functions so that the provided simon *main.c* can compile, link, and operate properly.
 
 ### Other Requirements
   - You must follow the coding standard.
@@ -107,9 +107,8 @@ Follow the [instructions on submitting source code]({% link _documentation/submi
 ### Grade breakdown
 
   * 10%: Milestone 1
-  * 10%: Milestone 2
-  * 10%: Milestone 3
+  * 15%: Milestone 2
+  * 15%: Milestone 3
   * 40%: Milestone 4
     * -10% overall, if game play is not smooth, correct, responsive. To receive the entire 10% your game must work correctly with no observable bugs. Your game should be responsive and be fun to play.
-  * 30%: Code Quality (adhering to the coding standard)
- 
+  * 20%: Code Quality (adhering to the coding standard)

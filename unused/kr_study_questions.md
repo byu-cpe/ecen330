@@ -16,7 +16,7 @@ You may find it helpful to compile and run code yourself.  This can be done by:
   * Compiling and running in Linux (we have provided a [playground](https://github.com/byu-cpe/ecen330_student/tree/main/playground) directory where you can modify main.c, run `make` to compile, and then run using `./main`.)
   * Manually compile a file using gcc: `gcc studyQuestions.c`, and then run the produced executable: `./a.out`
 
-In some of the provide code files, you will see individual sections of code surrounded by preprocessor macros:
+In some of the provided code files, you will see individual sections of code surrounded by preprocessor macros:
 ```
 #ifdef Q6
 ...
