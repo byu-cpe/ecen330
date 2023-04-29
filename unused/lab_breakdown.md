@@ -7,6 +7,10 @@ number: 1
 ---
 
 
+<!--
+Suggestion: Move grade breakdown to the course learning management system, e.g. Learning Suite, since it is often instructor and semester/term specific.
+-->
+
 40% of your total grade comes from the labs.  The follow shows the breakdown of this percentage:
 
 | Lab | Percentage of 40% Lab Grade | Breakdown |

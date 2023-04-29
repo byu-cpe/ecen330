@@ -81,7 +81,11 @@ number: 1
 
   * **9.6** You must provide an *init* function (*base-name_init*) that is called before any of your provided functions can be called. This function must initialize the *currentState* and any other state variables.
 
+<!--
+Suggestion: Move grading methods to the course learning management system, e.g. Learning Suite, since they are often instructor and semester/term specific.
+-->
 
+<!--
 ## Grading Source Code
 The TAs will apply the following method when evaluating your source code. The goal is to get you in the habit of writing, readable, reusable, high-quality code. As such the TAs will be quite strict when grading your code.
   * In general, the coding standard counts toward 20% of your lab grade (some exceptions noted below).
@@ -99,7 +103,7 @@ The TAs will apply the following method when evaluating your source code. The go
 | Lab6 | 15 | 20% of lab grade |
 | Lab7 | 20 | 20% of lab grade |
 | Lab8 | 25 | 20% of lab grade |
-
+-->
 
 <!--
   * For example, in Lab 4, if you lose 10 points, you will receive a coding standard score of 10/20, and thus 15%/30% on the coding standard portion of the lab.
