@@ -79,7 +79,7 @@ For every lab you will follow the same submission instructions, provided at the 
  
   <!-- - I strongly advise against a "trial and error" approach when writing the code to draw the lines, circles and triangles. It takes up to a minute each time you build your code and download to the board and this adds up quickly, time-wise. A better approach is to draw a picture of the display and to determine the actual coordinates before writing any code. -->
   <!-- - The sizes of the triangles and circles don't need to match my picture exactly, but they should be reasonably close. -->
-  - If you are having problems programming the board, ensure that the programming jumper is set correctly. I went through all of the boards in the shop and I think that I set all of them, but double-check this if you are having problems programming the board. The jumper needs to placed over the rightmost two pins as shown in the picture below.
+  - If you are having problems programming the board, ensure that the programming jumper is set correctly. I went through all of the boards in the shop and I think that I set all of them, but double-check this if you are having problems programming the board. The jumper needs to be placed over the rightmost two pins as shown in the picture below.
 
 <img src="{% link media/documentation/jumper_setting.jpg %}" alt="Jumper settings for Zybo board">
 
