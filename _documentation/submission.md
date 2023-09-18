@@ -7,7 +7,7 @@ number: 5
 indent: 1
 ---
 
-You will turn in your source code to learning suite by submitting a single zip file for each lab.  **DO NOT** create the zip file on your own.  You must follow the steps below to use the provided program to create the zip file.  This ensures the correct files are submitted, and in a format that will work with the TA's grading system.
+As discussed in class, you must confirm with a TA that your meets the homework objectives. **If you do not pass off with a TA in person, you will not get credit for the lab.** After passing off your project with a TA **in person**, you will turn in your source code to learning suite by submitting a single zip file for each lab. **DO NOT** create the zip file on your own.  You must follow the steps below to use the provided program to create the zip file.  This ensures the correct files are submitted, and in a format that will work with the TA's grading system.
 
 From the top-level directory, run:
 
