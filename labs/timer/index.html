@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<title>
+    
+    Lab 3: Interval Timer Driver • ECEN 330
+    
+</title>
+
+<!-- Bootstrap core CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+<!-- Custom styles for this template -->
+<link rel="stylesheet" href=/ecen330/css/main.css>
+
+<!-- <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet"> -->
+<!-- <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet"> -->
+<link rel="stylesheet" href="https://use.typekit.net/jcn6ybb.css">
+
+<!-- <link rel="icon" type="image/png" sizes="96x96" href=/ecen330/icon/favicon-96x96.png>
+<link rel="icon" type="image/png" sizes="32x32" href=/ecen330/icon/favicon-32x32.png>
+<link rel="icon" type="image/png" sizes="16x16" href=/ecen330/icon/favicon-16x16.png> -->
+
+<script src="https://kit.fontawesome.com/d794f0229e.js" crossorigin="anonymous"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script type="text/javascript">
+    $(function () {
+        console.log("hi there");
+        // this will get the full URL at the address bar
+        var url = window.location.href;
+        console.log(url);
+
+        // passes on every "a" tag
+        $(".list-group a").each(function () {
+            console.log(this)
+            // checks if its the same on the address bar
+            if (url == (this.href)) {
+                $(this).addClass("active");
+            }
+        });
+    });        
+</script>
+
+</head>
+
+<body>
+  <div class="d-flex" id="wrapper">
+    <div class="border-right sidebar-color" id="sidebar-wrapper">
+    <div class="sidebar-sticky">
+        <div class="sidebar-heading-big">
+            <a href="/ecen330/">
+                ECEN 330</a>
+        </div>
+        <div class="list-group list-group-flush sidebar-color">
+
+            
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <!-- <a href="https://slack.com/app_redirect?team=T01J887F8MU&channel=C01JF1N6TH8"
+                class="list-item-normal list-group-item list-group-item-action sidebar-item" target="_blank"><i
+                    class="fa fa-question-circle"></i>
+                Slack</a> -->
+
+        </div>
+
+        <div class="sidebar-heading">Setup</div>
+        <div class="list-group list-group-flush">
+            
+            <a href="/ecen330/setup/step-1/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Setup Step #1
+
+            </a>
+            
+            <a href="/ecen330/setup/linux/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                Home Setup: Linux
+
+            </a>
+            
+            <a href="/ecen330/setup/vm/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                Home Setup: VM
+
+            </a>
+            
+            <a href="/ecen330/setup/step-2/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Setup Step #2
+
+            </a>
+            
+        </div>
+
+        
+        <div class="sidebar-heading">Labs</div>
+        <div class="list-group list-group-flush">
+            
+            <a href="/ecen330/labs/hello-world/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">1</span>
+                
+
+                Hello World
+
+            </a>
+            
+            <a href="/ecen330/labs/gpio/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">2</span>
+                
+
+                GPIO Driver
+
+            </a>
+            
+            <a href="/ecen330/labs/timer/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">3</span>
+                
+
+                Timer Driver
+
+            </a>
+            
+            <a href="/ecen330/labs/interrupts/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">4</span>
+                
+
+                Interrupt Driver
+
+            </a>
+            
+            <a href="/ecen330/labs/touchscreen/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">5</span>
+                
+
+                Touchscreen Driver
+
+            </a>
+            
+            <a href="/ecen330/labs/clock/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">6</span>
+                
+
+                Clock
+
+            </a>
+            
+            <a href="/ecen330/labs/tictactoe/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">7</span>
+                
+
+                Tic Tac Toe
+
+            </a>
+            
+            <a href="/ecen330/labs/tictactoe-m1/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey"></span>
+                &emsp;
+
+                M1: Minimax
+
+            </a>
+            
+            <a href="/ecen330/labs/tictactoe-m2/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey"></span>
+                &emsp;
+
+                M2: Control
+
+            </a>
+            
+            <a href="/ecen330/labs/missile-command/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">8</span>
+                
+
+                Missile Command
+
+            </a>
+            
+            <a href="/ecen330/labs/missile-command-m1/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey"></span>
+                &emsp;
+
+                M1: Missiles
+
+            </a>
+            
+            <a href="/ecen330/labs/missile-command-m2/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey"></span>
+                &emsp;
+
+                M2: Game Control
+
+            </a>
+            
+            <a href="/ecen330/labs/missile-command-m3/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey"></span>
+                &emsp;
+
+                M3: Plane & Stats
+
+            </a>
+            
+            <a href="/ecen330/labs/project/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">9</span>
+                
+
+                Choose Your Own
+
+            </a>
+            
+        </div>
+
+        <div class="sidebar-heading">Documentation</div>
+        <div class="list-group list-group-flush">
+            
+            <a href="/ecen330/documentation/development-tools/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Development Tools
+
+            </a>
+            
+            <a href="/ecen330/documentation/compiling/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                Compiling and Running
+
+            </a>
+            
+            <a href="/ecen330/documentation/cmake/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                CMake
+
+            </a>
+            
+            <a href="/ecen330/documentation/headers/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                Header Files
+
+            </a>
+            
+            <a href="/ecen330/documentation/submission/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                Submitting Code
+
+            </a>
+            
+            <a href="/ecen330/documentation/vscode/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                Coding/Debugging Tips
+
+            </a>
+            
+            <a href="/ecen330/documentation/devices/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                System Platform
+
+            </a>
+            
+            <a href="/ecen330/documentation/graphics/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                LCD Graphics
+
+            </a>
+            
+            <a href="/ecen330/documentation/gpio/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                GPIO
+
+            </a>
+            
+            <a href="/ecen330/documentation/timer/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                Interval Timer
+
+            </a>
+            
+            <a href="/ecen330/documentation/intc/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                Interrupt Controller
+
+            </a>
+            
+            <a href="/ecen330/documentation/touchscreen/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                Touchscreen
+
+            </a>
+            
+        </div>
+
+        <div class="sidebar-heading">Other</div>
+        <div class="list-group list-group-flush">
+            
+            <a href="/ecen330/other/c-programming/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                'C Programming' Study Questions
+
+            </a>
+            
+            <a href="/ecen330/other/coding-standard/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Coding Standard
+
+            </a>
+            
+            <a href="/ecen330/other/coding-state-machines/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Coding State Machines
+
+            </a>
+            
+            <a href="/ecen330/other/suggestions/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Suggestions
+
+            </a>
+            
+            <a href="/ecen330/other/simon/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Old Lab: Simon
+
+            </a>
+            
+            <a href="/ecen330/other/wam/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Old Lab: Whack-a-Mole
+
+            </a>
+            
+        </div>
+    </div>
+</div>
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+
+      <nav class="navbar sticky-top navbar-expand-lg border-bottom">
+        <button class="btn btn-brand" id="menu-toggle">
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <a href="" class="navbar-brand mb-0 h1 page-title-bar text-center mx-auto" id="page-title-bar"></a>
+
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link btn btn-brand suggest-edits" target="_blank" rel="noopener noreferrer"
+              href="https://piazza.com/byu/fall2023/ecen330"><i class="far fa-question-circle"></i> Piazza</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link btn btn-brand suggest-edits" target="_blank" rel="noopener noreferrer"
+              href="https://github.com/byu-cpe/ecen330/issues/new?labels=website&title=Updates to Lab 3: Interval Timer Driver page"><i
+                class="fab fa-github"></i> Suggest
+              Edits</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="container">
+        
+
+        <article class="page lab">
+    <h1 class="page-title" id="page-title">
+        Lab 3: Interval Timer Driver
+        
+    </h1>
+
+    <div class="page-content">
+        
+        <div class="lab-toc col-md-6 col-lg-5 bg-light">
+            <h4>Table of Contents</h4>
+            <ul>
+  <li><a href="#overview">Overview</a>
+    <ul>
+      <li><a href="#objectives">Objectives</a></li>
+    </ul>
+  </li>
+  <li><a href="#preliminary">Preliminary</a></li>
+  <li><a href="#implementation">Implementation</a>
+    <ul>
+      <li><a href="#requirements">Requirements</a>
+        <ul>
+          <li><a href="#milestone-1">Milestone 1</a></li>
+          <li><a href="#milestone-2">Milestone 2</a></li>
+        </ul>
+      </li>
+      <li><a href="#files">Files</a></li>
+      <li><a href="#other-notes">Other Notes</a></li>
+    </ul>
+  </li>
+  <li><a href="#submission">Submission</a>
+    <ul>
+      <li><a href="#grade-breakdown">Grade Breakdown</a></li>
+    </ul>
+  </li>
+</ul>
+
+        </div>
+        
+
+        
+
+        <h2 id="overview">Overview</h2>
+
+<p>Measuring time and controlling period events are essential tasks in embedded systems.  This typically requires the use of hardware timer.  In this lab you will write a driver to control three identical hardware-based interval timers that are present on the hardware system.</p>
+
+<p>Interval timers are essentially hardware counters that you can easily stop, start, and read.  The interval timers we will use in this lab have additional configuration features that allow them to count up or down, load values, run endlessly, and generate interrupts.  Because they are hardware-based counters, they don’t interfere with your program or add to execution time while they are running.  Interval timers can be very effective for measuring execution time for any part of your software.</p>
+
+<p>Do a nice job on this assignment. You will likely use these timers extensively in the remaining labs in this class and later in ECEn 390 when you implement your laser-tag game.</p>
+
+<h3 id="objectives">Objectives</h3>
+<ul>
+  <li>Gain experience interacting with a commercial hardware timer, with multiple control and data registers.</li>
+  <li>More experience working with commercial documentation.</li>
+  <li>Practice writing high-quality, reusable ‘C’ code, following the coding standard.</li>
+</ul>
+
+<h2 id="preliminary">Preliminary</h2>
+
+<ol>
+  <li>
+    <p><strong>Timer hardware:</strong> Read over the page on <a href="/ecen330/documentation/timer/">Timer hardware</a>.</p>
+  </li>
+  <li>
+    <p><strong>Building the code:</strong> This lab you will only write driver code.  The test application code is provided to you.</p>
+    <ul>
+      <li><strong>Driver:</strong>
+        <ul>
+          <li>This driver will be written in <em>intervalTimer.c</em>, which you must create yourself.</li>
+          <li>Since the Interval Timer driver will be used in later labs, <em>intervalTimer.c</em> should be placed in your <em>drivers</em> folder.</li>
+          <li>Uncomment the two lines in the <em>drivers</em> <a href="https://github.com/byu-cpe/ecen330_student/blob/main/drivers/CMakeLists.txt">CMakeLists.txt</a> file so that the <em>intervalTimer</em> library is built.</li>
+        </ul>
+      </li>
+      <li><strong>Application Code:</strong>
+        <ul>
+          <li>The application code contains two test programs in the <em>lab3</em> directory:
+            <ul>
+              <li>Milestone 1 is tested using <a href="https://github.com/byu-cpe/ecen330_student/blob/main/lab3_timer/main_m1.c">main_m1.c</a>.</li>
+              <li>Milestone 2 is tested using <a href="https://github.com/byu-cpe/ecen330_student/blob/main/lab3_timer/main_m2.c">main_m2.c</a>.</li>
+            </ul>
+          </li>
+          <li>A <a href="https://github.com/byu-cpe/ecen330_student/blob/main/lab3_timer/CMakeLists.txt">CMakeLists.txt</a> file is also provided.</li>
+          <li>Like last lab, you will need to update the top-level <a href="https://github.com/byu-cpe/ecen330_student/blob/master/CMakeLists.txt">CMakeLists.txt</a> and add a <code class="language-plaintext highlighter-rouge">add_subdirectory(lab3_timer)</code> statement.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ol>
+
+<h2 id="implementation">Implementation</h2>
+
+<h3 id="requirements">Requirements</h3>
+
+<p>You will complete this lab off in two milestones:</p>
+
+<h4 id="milestone-1">Milestone 1</h4>
+
+<p>Implement the following features for <em>timer_0</em> (you can ignore the <em>timer_1</em> and <em>timer_2</em> for this milestone):</p>
+
+<ol>
+  <li>Implement the <strong>count up</strong> feature of the timer:
+    <ul>
+      <li><em>intervalTimer_initCountUp()</em> and <em>intervalTimer_load()</em></li>
+      <li><em>intervalTimer_start()</em> and <em>intervalTimer_stop()</em></li>
+    </ul>
+  </li>
+  <li>Implement the ability to get the count up value in seconds:
+    <ul>
+      <li><em>intervalTimer_getTotalDurationInSeconds</em></li>
+    </ul>
+  </li>
+  <li>Implement the <strong>count down</strong> feature of the timer:
+    <ul>
+      <li><em>intervalTimer_initCountDown()</em></li>
+    </ul>
+  </li>
+</ol>
+
+<p><em>Note:</em> When you run Milestone 1, several messages will be printed.  One message will repeat “<em>timer_0 TCR0 should be changing at this point: 0</em>”.  In the emulator, you may notice this 0 value doesn’t change, despite the messages saying it should.  This is normal behavior for the emulator.  Later after “<em>wait for awhile…</em>”, it will print “<em>timer_0 TCR0 value after wait:</em>”, and by this point you should definitely see it change from 0 to a large value.</p>
+
+<h4 id="milestone-2">Milestone 2</h4>
+<ol>
+  <li>Implement the functions to enable and disable interrupt output, and to acknowledge an interrupt:
+    <ul>
+      <li><em>intervalTimer_enableInterrupt</em> and <em>intervalTimer_disableInterrupt</em></li>
+      <li><em>intervalTimer_ackInterrupt</em></li>
+    </ul>
+  </li>
+  <li>Make sure all of your functions now work for all three timers.</li>
+</ol>
+
+<h3 id="files">Files</h3>
+<ul>
+  <li><strong>Submitted files:</strong> <em>drivers/intervalTimer.c</em>.</li>
+  <li>You are provided <a href="https://github.com/byu-cpe/ecen330_student/blob/main/drivers/intervalTimer.h">intervalTimer.h</a>. This file is not submitted, so you should not change it.</li>
+  <li>You are provided with <em>main.c</em>.  This file is not submitted, so you can change it for your own testing purposes, but you will be graded with the original file.</li>
+</ul>
+
+<h3 id="other-notes">Other Notes</h3>
+<ul>
+  <li>Remember to follow the coding standard.</li>
+  <li>Make sure to use the Xilinx low-level access functions <em>Xil_In32()</em> and <em>Xil_Out32()</em> to access the registers in the timer hardware. These functions were discussed in a previous lab.</li>
+  <li>Like last lab, you should write helper functions for accessing device registers.  For example, you could use the following:
+    <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="k">static</span> <span class="kt">uint32_t</span> <span class="nf">readRegister</span><span class="p">(</span><span class="kt">uint8_t</span> <span class="n">timerNumber</span><span class="p">,</span> <span class="kt">uint32_t</span> <span class="n">offset</span><span class="p">);</span>
+  <span class="k">static</span> <span class="kt">void</span> <span class="nf">writeRegister</span><span class="p">(</span><span class="kt">uint8_t</span> <span class="n">timerNumber</span><span class="p">,</span> <span class="kt">uint32_t</span> <span class="n">offset</span><span class="p">,</span> <span class="kt">uint32_t</span> <span class="n">value</span><span class="p">);</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h2 id="submission">Submission</h2>
+<p>Follow the <a href="/ecen330/documentation/submission/">instructions on submitting source code</a> to submit your code.</p>
+
+<h3 id="grade-breakdown">Grade Breakdown</h3>
+<ul>
+  <li>40%: Milestone 1</li>
+  <li>40%: Milestone 2</li>
+  <li>20%: Adherence to the coding standard</li>
+</ul>
+
+    </div>
+</article>
+      </div>
+    </div>
+    <!-- /#page-content-wrapper -->
+
+  </div>
+  <!-- /#wrapper -->
+
+  <!-- Bootstrap core JavaScript -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+<script src=/ecen330/js/jquery.visible.min.js></script>
+
+<!-- Menu Toggle Script -->
+<script>
+    $("#menu-toggle").click(function (e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+
+    var prevVisible = $('#page-title').visible();
+
+    $(window).scroll(function () {
+        currentVisible = $('#page-title').visible()
+        if (prevVisible && !currentVisible) {
+            console.log("Do something!");
+            $("#page-title-bar").html($('#page-title').text());
+        }
+
+        if (!prevVisible && currentVisible) {
+            $("#page-title-bar").html("")
+        }
+
+        prevVisible = currentVisible;
+    });
+
+</script>
+
+</body>
+
+</html>

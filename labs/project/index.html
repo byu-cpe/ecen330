@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<title>
+    
+    Lab 9: Choose Your Own Project • ECEN 330
+    
+</title>
+
+<!-- Bootstrap core CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+<!-- Custom styles for this template -->
+<link rel="stylesheet" href=/ecen330/css/main.css>
+
+<!-- <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet"> -->
+<!-- <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet"> -->
+<link rel="stylesheet" href="https://use.typekit.net/jcn6ybb.css">
+
+<!-- <link rel="icon" type="image/png" sizes="96x96" href=/ecen330/icon/favicon-96x96.png>
+<link rel="icon" type="image/png" sizes="32x32" href=/ecen330/icon/favicon-32x32.png>
+<link rel="icon" type="image/png" sizes="16x16" href=/ecen330/icon/favicon-16x16.png> -->
+
+<script src="https://kit.fontawesome.com/d794f0229e.js" crossorigin="anonymous"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script type="text/javascript">
+    $(function () {
+        console.log("hi there");
+        // this will get the full URL at the address bar
+        var url = window.location.href;
+        console.log(url);
+
+        // passes on every "a" tag
+        $(".list-group a").each(function () {
+            console.log(this)
+            // checks if its the same on the address bar
+            if (url == (this.href)) {
+                $(this).addClass("active");
+            }
+        });
+    });        
+</script>
+
+</head>
+
+<body>
+  <div class="d-flex" id="wrapper">
+    <div class="border-right sidebar-color" id="sidebar-wrapper">
+    <div class="sidebar-sticky">
+        <div class="sidebar-heading-big">
+            <a href="/ecen330/">
+                ECEN 330</a>
+        </div>
+        <div class="list-group list-group-flush sidebar-color">
+
+            
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <!-- <a href="https://slack.com/app_redirect?team=T01J887F8MU&channel=C01JF1N6TH8"
+                class="list-item-normal list-group-item list-group-item-action sidebar-item" target="_blank"><i
+                    class="fa fa-question-circle"></i>
+                Slack</a> -->
+
+        </div>
+
+        <div class="sidebar-heading">Setup</div>
+        <div class="list-group list-group-flush">
+            
+            <a href="/ecen330/setup/step-1/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Setup Step #1
+
+            </a>
+            
+            <a href="/ecen330/setup/linux/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                Home Setup: Linux
+
+            </a>
+            
+            <a href="/ecen330/setup/vm/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                Home Setup: VM
+
+            </a>
+            
+            <a href="/ecen330/setup/step-2/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Setup Step #2
+
+            </a>
+            
+        </div>
+
+        
+        <div class="sidebar-heading">Labs</div>
+        <div class="list-group list-group-flush">
+            
+            <a href="/ecen330/labs/hello-world/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">1</span>
+                
+
+                Hello World
+
+            </a>
+            
+            <a href="/ecen330/labs/gpio/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">2</span>
+                
+
+                GPIO Driver
+
+            </a>
+            
+            <a href="/ecen330/labs/timer/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">3</span>
+                
+
+                Timer Driver
+
+            </a>
+            
+            <a href="/ecen330/labs/interrupts/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">4</span>
+                
+
+                Interrupt Driver
+
+            </a>
+            
+            <a href="/ecen330/labs/touchscreen/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">5</span>
+                
+
+                Touchscreen Driver
+
+            </a>
+            
+            <a href="/ecen330/labs/clock/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">6</span>
+                
+
+                Clock
+
+            </a>
+            
+            <a href="/ecen330/labs/tictactoe/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">7</span>
+                
+
+                Tic Tac Toe
+
+            </a>
+            
+            <a href="/ecen330/labs/tictactoe-m1/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey"></span>
+                &emsp;
+
+                M1: Minimax
+
+            </a>
+            
+            <a href="/ecen330/labs/tictactoe-m2/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey"></span>
+                &emsp;
+
+                M2: Control
+
+            </a>
+            
+            <a href="/ecen330/labs/missile-command/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">8</span>
+                
+
+                Missile Command
+
+            </a>
+            
+            <a href="/ecen330/labs/missile-command-m1/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey"></span>
+                &emsp;
+
+                M1: Missiles
+
+            </a>
+            
+            <a href="/ecen330/labs/missile-command-m2/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey"></span>
+                &emsp;
+
+                M2: Game Control
+
+            </a>
+            
+            <a href="/ecen330/labs/missile-command-m3/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey"></span>
+                &emsp;
+
+                M3: Plane & Stats
+
+            </a>
+            
+            <a href="/ecen330/labs/project/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">9</span>
+                
+
+                Choose Your Own
+
+            </a>
+            
+        </div>
+
+        <div class="sidebar-heading">Documentation</div>
+        <div class="list-group list-group-flush">
+            
+            <a href="/ecen330/documentation/development-tools/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Development Tools
+
+            </a>
+            
+            <a href="/ecen330/documentation/compiling/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                Compiling and Running
+
+            </a>
+            
+            <a href="/ecen330/documentation/cmake/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                CMake
+
+            </a>
+            
+            <a href="/ecen330/documentation/headers/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                Header Files
+
+            </a>
+            
+            <a href="/ecen330/documentation/submission/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                Submitting Code
+
+            </a>
+            
+            <a href="/ecen330/documentation/vscode/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                Coding/Debugging Tips
+
+            </a>
+            
+            <a href="/ecen330/documentation/devices/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                System Platform
+
+            </a>
+            
+            <a href="/ecen330/documentation/graphics/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                LCD Graphics
+
+            </a>
+            
+            <a href="/ecen330/documentation/gpio/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                GPIO
+
+            </a>
+            
+            <a href="/ecen330/documentation/timer/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                Interval Timer
+
+            </a>
+            
+            <a href="/ecen330/documentation/intc/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                Interrupt Controller
+
+            </a>
+            
+            <a href="/ecen330/documentation/touchscreen/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                Touchscreen
+
+            </a>
+            
+        </div>
+
+        <div class="sidebar-heading">Other</div>
+        <div class="list-group list-group-flush">
+            
+            <a href="/ecen330/other/c-programming/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                'C Programming' Study Questions
+
+            </a>
+            
+            <a href="/ecen330/other/coding-standard/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Coding Standard
+
+            </a>
+            
+            <a href="/ecen330/other/coding-state-machines/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Coding State Machines
+
+            </a>
+            
+            <a href="/ecen330/other/suggestions/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Suggestions
+
+            </a>
+            
+            <a href="/ecen330/other/simon/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Old Lab: Simon
+
+            </a>
+            
+            <a href="/ecen330/other/wam/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Old Lab: Whack-a-Mole
+
+            </a>
+            
+        </div>
+    </div>
+</div>
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+
+      <nav class="navbar sticky-top navbar-expand-lg border-bottom">
+        <button class="btn btn-brand" id="menu-toggle">
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <a href="" class="navbar-brand mb-0 h1 page-title-bar text-center mx-auto" id="page-title-bar"></a>
+
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link btn btn-brand suggest-edits" target="_blank" rel="noopener noreferrer"
+              href="https://piazza.com/byu/fall2023/ecen330"><i class="far fa-question-circle"></i> Piazza</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link btn btn-brand suggest-edits" target="_blank" rel="noopener noreferrer"
+              href="https://github.com/byu-cpe/ecen330/issues/new?labels=website&title=Updates to Lab 9: Choose Your Own Project page"><i
+                class="fab fa-github"></i> Suggest
+              Edits</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="container">
+        
+
+        <article class="page lab">
+    <h1 class="page-title" id="page-title">
+        Lab 9: Choose Your Own Project
+        
+    </h1>
+
+    <div class="page-content">
+        
+        <div class="lab-toc col-md-6 col-lg-5 bg-light">
+            <h4>Table of Contents</h4>
+            <ul>
+  <li><a href="#overview">Overview</a>
+    <ul>
+      <li><a href="#group">Group</a></li>
+    </ul>
+  </li>
+  <li><a href="#requirements">Requirements</a></li>
+  <li><a href="#deliverables">Deliverables</a>
+    <ul>
+      <li><a href="#proposal">Proposal</a></li>
+      <li><a href="#project-implementation">Project Implementation</a>
+        <ul>
+          <li><a href="#submission">Submission</a></li>
+        </ul>
+      </li>
+      <li><a href="#demo-video">Demo Video</a></li>
+    </ul>
+  </li>
+  <li><a href="#faqs">FAQs</a></li>
+</ul>
+
+        </div>
+        
+
+        
+
+        <h2 id="overview">Overview</h2>
+
+<p>For this lab you are encouraged to implement a project of your choice. Do something fun and interesting with your system. Here is how it works.</p>
+
+<h3 id="group">Group</h3>
+<p>Choose whether you will do this project individually, or as a group. You can work in groups up to size 3; however, the larger the group, the more you are expected to accomplish. When you complete the proposal you will be able to indicate your group.</p>
+
+<h2 id="requirements">Requirements</h2>
+
+<ol>
+  <li>Your project must run on the ECEN 330 board.</li>
+  <li>It should interact with hardware devices, such as GPIO (buttons/switches/LEDs), interval timer, interrupt controller, touch screen, or custom hardware devices.</li>
+  <li>Create a project that has some complexity, but is not too large in scope. For example, your project might be sized similar to the tic-tac-toe or missile command lab, and contain similar complexity.</li>
+</ol>
+
+<h2 id="deliverables">Deliverables</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Category</th>
+      <th>Percentage</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Proposal</td>
+      <td>15%</td>
+    </tr>
+    <tr>
+      <td>Project Implementation</td>
+      <td>70%</td>
+    </tr>
+    <tr>
+      <td>Demo Video</td>
+      <td>15%</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="proposal">Proposal</h3>
+
+<p>In Learning Suite, complete the <em>Lab 9: Proposal</em>.</p>
+
+<p>In the proposal (1 page max), describe your idea and the features of the project. Define the scope of your project, what you intend to implement, and any hardware devices involved. Outline any key challenges you foresee and risk mitigation strategies. You won’t be graded on spelling, grammar or presentation. It just needs to be clear that you have spent some time thinking through your project idea.</p>
+
+<p><strong>If you are working in a group, ALL group members must submit a copy of the proposal.</strong> For group proposals, list the names of the group members and their individual responsibilities within the group.</p>
+
+<h3 id="project-implementation">Project Implementation</h3>
+<p>Your submitted project will be graded against two main criteria:</p>
+
+<ul>
+  <li>
+    <p><strong>Project Difficulty &amp; Creativity (25 points)</strong>: Your project does not need to be overly complex or large to receive full points. Consider the existing multi-week labs (missile command, tic-tac-toe) when choosing the scope of your project. Your idea doesn’t need to be completely original or novel. Something that is fun and interacts with hardware would be great. If your idea is very similar to one of the existing labs, you will likely lose some points here.</p>
+
+    <p>Note: If you don’t want to choose your own project, you can choose to do the provided <a href="/ecen330/other/wam/">Whack-a-Mole</a> or <a href="/ecen330/other/simon/">Simon</a> lab. <strong>However, if you do so, you will receive a maximum of 20/25 in this category.</strong></p>
+  </li>
+  <li>
+    <p><strong>Project Functionality (45 points):</strong> You will be graded in this category based on the following criteria:</p>
+    <ol>
+      <li>Your project must compile and run on the ECEN 330 ZYBO board (Working only on the emulator isn’t enough).</li>
+      <li>It should interact with hardware devices, such as GPIO (buttons/switches/LEDs), interval timer, touch screen, or custom hardware devices.</li>
+      <li>The project is a complete and working implementation and reasonably completes what you planned out in your proposal.</li>
+      <li>Your program should run smoothly and be bug free.</li>
+    </ol>
+
+    <p><strong>Note:</strong> You will not be graded against the coding standard for this lab. Try not to be too sad about this. :-)</p>
+  </li>
+</ul>
+
+<h4 id="submission">Submission</h4>
+<p><strong>All code should be placed in the <code class="language-plaintext highlighter-rouge">lab9_project</code> directory</strong>. You will need to create a <em>CMakeLists.txt</em> file to compile your executable. <ins>Be sure your executable is named <em>lab9.elf</em></ins>, otherwise the grader will not be able to locate it. You can use the hardware drivers from previous labs that you created in the <em>drivers</em> folder; however, they shouldn’t be modified. Like the previous labs, use <code class="language-plaintext highlighter-rouge">./check_and_zip.py lab9</code> to zip up your project submission.</p>
+
+<h3 id="demo-video">Demo Video</h3>
+<p>Create a short video (2 minutes max) demonstrating your project and major features, as well as mentioning any major issues or concessions made during your design process. Explain what you actually implemented and any open source software used.</p>
+
+<p>Complete this assignment by submitting a <em>link</em> to your video (uploaded to YouTube, Google Drive, Box, etc.). Please use the assignment Submission Notes to paste the <em>link</em> to your video in Learning Suite. Do not submit a video file directly (.mov .mp4) to Learning Suite. Make sure your video <em>link</em> is shareable and viewable by anyone with the link.</p>
+
+<h2 id="faqs">FAQs</h2>
+
+<p><strong>Q: Can I use a custom piece of hardware, like a video game controller?</strong></p>
+
+<p>A: Yes, but make sure to show its functionality in your demo video. Explain the optional hardware and the complexity that was involved in supporting it (so you can get credit for your work). Make sure the software still works somewhat without the hardware so that we can try it out without your custom hardware (for example, if there’s no game controller connected, use the buttons on the board).</p>
+
+<p><strong>Q: How should we share code between group members?</strong></p>
+
+<p>A: I suggest you create a private GitHub repository. You can go to <a href="https://github.com/byu-cpe/ecen330_student">https://github.com/byu-cpe/ecen330_student</a> and click <em>Use This Template</em> to create a private repository with all of the starter 330 code. Then copy over any of the driver modules (e.g. buttons, switches) you implemented into this repository.</p>
+
+<p><strong>Q: How do I know if my project is <em>difficult</em> enough?</strong></p>
+
+<p>A: Designing projects from scratch is difficult. I think most people will probably try and implement too much, and find themselves running out of time to get it done on time. Pick a project that has some meaningful complexity (like many objects in missile command, or a smart computer player in the tic-tac-toe lab), but keep it fairly simple overall.</p>
+
+<p><strong>Q: Can I use publicly available code (open source libraries, ECEN 390 sound driver code, etc.) in my project?</strong></p>
+
+<p>A: Yes, you can use existing code that you did not write. In your demo video, be sure to mention any parts of code you didn’t write yourself.</p>
+
+<p><strong>Q: Advice?</strong></p>
+
+<p>A: Make sure your project runs and does something meaningful, even if you don’t get your entire project done in time.</p>
+
+<p>That means you should work incrementally, and save progress regularly. Once you have something working, make sure it works well, and then save a copy before moving on to add more functionality. Git works well for this.</p>
+
+<p><strong>Q: If we’re using the Whack-a-Mole or Simon lab, how should we structure our lab proposal?</strong></p>
+
+<p>A: The proposal can be short:</p>
+<ol>
+  <li>State simply your intention to implement the Whack-A-Mole or Simon game following the lab requirements and then describe any deviations you plan to make.</li>
+  <li>Describe how you will approach the project. Will you use the milestones as described in the lab or will you structure it differently? You are free to implement the game as you see fit within the project directory.</li>
+  <li>Outline any key challenges you foresee and risk mitigation strategies.</li>
+</ol>
+
+    </div>
+</article>
+      </div>
+    </div>
+    <!-- /#page-content-wrapper -->
+
+  </div>
+  <!-- /#wrapper -->
+
+  <!-- Bootstrap core JavaScript -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+<script src=/ecen330/js/jquery.visible.min.js></script>
+
+<!-- Menu Toggle Script -->
+<script>
+    $("#menu-toggle").click(function (e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+
+    var prevVisible = $('#page-title').visible();
+
+    $(window).scroll(function () {
+        currentVisible = $('#page-title').visible()
+        if (prevVisible && !currentVisible) {
+            console.log("Do something!");
+            $("#page-title-bar").html($('#page-title').text());
+        }
+
+        if (!prevVisible && currentVisible) {
+            $("#page-title-bar").html("")
+        }
+
+        prevVisible = currentVisible;
+    });
+
+</script>
+
+</body>
+
+</html>

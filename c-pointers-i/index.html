@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<title>
+    
+    C Programming Part 7: Pointers I • ECEN 330
+    
+</title>
+
+<!-- Bootstrap core CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+<!-- Custom styles for this template -->
+<link rel="stylesheet" href=/ecen330/css/main.css>
+
+<!-- <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet"> -->
+<!-- <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet"> -->
+<link rel="stylesheet" href="https://use.typekit.net/jcn6ybb.css">
+
+<!-- <link rel="icon" type="image/png" sizes="96x96" href=/ecen330/icon/favicon-96x96.png>
+<link rel="icon" type="image/png" sizes="32x32" href=/ecen330/icon/favicon-32x32.png>
+<link rel="icon" type="image/png" sizes="16x16" href=/ecen330/icon/favicon-16x16.png> -->
+
+<script src="https://kit.fontawesome.com/d794f0229e.js" crossorigin="anonymous"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script type="text/javascript">
+    $(function () {
+        console.log("hi there");
+        // this will get the full URL at the address bar
+        var url = window.location.href;
+        console.log(url);
+
+        // passes on every "a" tag
+        $(".list-group a").each(function () {
+            console.log(this)
+            // checks if its the same on the address bar
+            if (url == (this.href)) {
+                $(this).addClass("active");
+            }
+        });
+    });        
+</script>
+
+</head>
+
+<body>
+  <div class="d-flex" id="wrapper">
+    <div class="border-right sidebar-color" id="sidebar-wrapper">
+    <div class="sidebar-sticky">
+        <div class="sidebar-heading-big">
+            <a href="/ecen330/">
+                ECEN 330</a>
+        </div>
+        <div class="list-group list-group-flush sidebar-color">
+
+            
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <!-- <a href="https://slack.com/app_redirect?team=T01J887F8MU&channel=C01JF1N6TH8"
+                class="list-item-normal list-group-item list-group-item-action sidebar-item" target="_blank"><i
+                    class="fa fa-question-circle"></i>
+                Slack</a> -->
+
+        </div>
+
+        <div class="sidebar-heading">Setup</div>
+        <div class="list-group list-group-flush">
+            
+            <a href="/ecen330/setup/step-1/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Setup Step #1
+
+            </a>
+            
+            <a href="/ecen330/setup/linux/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                Home Setup: Linux
+
+            </a>
+            
+            <a href="/ecen330/setup/vm/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                Home Setup: VM
+
+            </a>
+            
+            <a href="/ecen330/setup/step-2/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Setup Step #2
+
+            </a>
+            
+        </div>
+
+        
+        <div class="sidebar-heading">Labs</div>
+        <div class="list-group list-group-flush">
+            
+            <a href="/ecen330/labs/hello-world/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">1</span>
+                
+
+                Hello World
+
+            </a>
+            
+            <a href="/ecen330/labs/gpio/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">2</span>
+                
+
+                GPIO Driver
+
+            </a>
+            
+            <a href="/ecen330/labs/timer/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">3</span>
+                
+
+                Timer Driver
+
+            </a>
+            
+            <a href="/ecen330/labs/interrupts/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">4</span>
+                
+
+                Interrupt Driver
+
+            </a>
+            
+            <a href="/ecen330/labs/touchscreen/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">5</span>
+                
+
+                Touchscreen Driver
+
+            </a>
+            
+            <a href="/ecen330/labs/clock/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">6</span>
+                
+
+                Clock
+
+            </a>
+            
+            <a href="/ecen330/labs/tictactoe/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">7</span>
+                
+
+                Tic Tac Toe
+
+            </a>
+            
+            <a href="/ecen330/labs/tictactoe-m1/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey"></span>
+                &emsp;
+
+                M1: Minimax
+
+            </a>
+            
+            <a href="/ecen330/labs/tictactoe-m2/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey"></span>
+                &emsp;
+
+                M2: Control
+
+            </a>
+            
+            <a href="/ecen330/labs/missile-command/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">8</span>
+                
+
+                Missile Command
+
+            </a>
+            
+            <a href="/ecen330/labs/missile-command-m1/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey"></span>
+                &emsp;
+
+                M1: Missiles
+
+            </a>
+            
+            <a href="/ecen330/labs/missile-command-m2/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey"></span>
+                &emsp;
+
+                M2: Game Control
+
+            </a>
+            
+            <a href="/ecen330/labs/missile-command-m3/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey"></span>
+                &emsp;
+
+                M3: Plane & Stats
+
+            </a>
+            
+            <a href="/ecen330/labs/project/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">9</span>
+                
+
+                Choose Your Own
+
+            </a>
+            
+        </div>
+
+        <div class="sidebar-heading">Documentation</div>
+        <div class="list-group list-group-flush">
+            
+            <a href="/ecen330/documentation/development-tools/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Development Tools
+
+            </a>
+            
+            <a href="/ecen330/documentation/compiling/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                Compiling and Running
+
+            </a>
+            
+            <a href="/ecen330/documentation/cmake/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                CMake
+
+            </a>
+            
+            <a href="/ecen330/documentation/headers/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                Header Files
+
+            </a>
+            
+            <a href="/ecen330/documentation/submission/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                Submitting Code
+
+            </a>
+            
+            <a href="/ecen330/documentation/vscode/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                Coding/Debugging Tips
+
+            </a>
+            
+            <a href="/ecen330/documentation/devices/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                System Platform
+
+            </a>
+            
+            <a href="/ecen330/documentation/graphics/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                LCD Graphics
+
+            </a>
+            
+            <a href="/ecen330/documentation/gpio/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                GPIO
+
+            </a>
+            
+            <a href="/ecen330/documentation/timer/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                Interval Timer
+
+            </a>
+            
+            <a href="/ecen330/documentation/intc/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                Interrupt Controller
+
+            </a>
+            
+            <a href="/ecen330/documentation/touchscreen/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                Touchscreen
+
+            </a>
+            
+        </div>
+
+        <div class="sidebar-heading">Other</div>
+        <div class="list-group list-group-flush">
+            
+            <a href="/ecen330/other/c-programming/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                'C Programming' Study Questions
+
+            </a>
+            
+            <a href="/ecen330/other/coding-standard/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Coding Standard
+
+            </a>
+            
+            <a href="/ecen330/other/coding-state-machines/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Coding State Machines
+
+            </a>
+            
+            <a href="/ecen330/other/suggestions/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Suggestions
+
+            </a>
+            
+            <a href="/ecen330/other/simon/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Old Lab: Simon
+
+            </a>
+            
+            <a href="/ecen330/other/wam/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Old Lab: Whack-a-Mole
+
+            </a>
+            
+        </div>
+    </div>
+</div>
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+
+      <nav class="navbar sticky-top navbar-expand-lg border-bottom">
+        <button class="btn btn-brand" id="menu-toggle">
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <a href="" class="navbar-brand mb-0 h1 page-title-bar text-center mx-auto" id="page-title-bar"></a>
+
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link btn btn-brand suggest-edits" target="_blank" rel="noopener noreferrer"
+              href="https://piazza.com/byu/fall2023/ecen330"><i class="far fa-question-circle"></i> Piazza</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link btn btn-brand suggest-edits" target="_blank" rel="noopener noreferrer"
+              href="https://github.com/byu-cpe/ecen330/issues/new?labels=website&title=Updates to C Programming Part 7: Pointers I page"><i
+                class="fab fa-github"></i> Suggest
+              Edits</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="container">
+        
+
+        <article class="page">
+  <h1 class="page-title" id="page-title">
+    
+    C Programming Part 7: Pointers I
+  </h1>
+
+  <div class="page-content">
+    
+
+    <h2 id="topics">Topics</h2>
+<ul>
+  <li>Basic pointer operations</li>
+  <li>Pointers to Arrays</li>
+</ul>
+
+<h2 id="class-slides">Class Slides</h2>
+
+<ul>
+  <li><a href="/ecen330/media/c/C_part7.pdf">Slides</a></li>
+</ul>
+
+<h2 id="resources">Resources</h2>
+<ul>
+  <li><a href="https://en.wikibooks.org/wiki/C_Programming/Pointers_and_arrays">https://en.wikibooks.org/wiki/C_Programming/Pointers_and_arrays</a></li>
+</ul>
+
+<h2 id="study-questions">Study Questions</h2>
+
+<ol>
+  <li>What value with the program print?
+    <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kt">int</span> <span class="n">x</span><span class="o">=</span><span class="mi">4</span><span class="p">;</span>
+  <span class="kt">int</span> <span class="o">*</span><span class="n">y</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">x</span><span class="p">;</span>
+  <span class="n">y</span><span class="o">++</span><span class="p">;</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="o">*</span><span class="n">y</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+  </li>
+  <li>What value with the program print?
+    <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span> <span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+   <span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+   <span class="kt">int</span> <span class="n">y</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">x</span><span class="p">;</span>
+   <span class="n">y</span><span class="o">++</span><span class="p">;</span>
+   <span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">y</span><span class="o">++</span><span class="p">);</span>
+ <span class="p">}</span>
+</code></pre></div>    </div>
+  </li>
+  <li>What value will the program print?
+    <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="cp">#include</span>  <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span> <span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+   <span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+   <span class="kt">int</span><span class="o">*</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+   <span class="n">y</span><span class="o">++</span><span class="p">;</span>
+   <span class="n">y</span><span class="o">++</span><span class="p">;</span>
+   <span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">y</span><span class="o">++</span><span class="p">);</span>
+ <span class="p">}</span>
+</code></pre></div>    </div>
+  </li>
+  <li>What value will the program print?
+    <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span> <span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+   <span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+   <span class="kt">int</span><span class="o">*</span> <span class="n">y</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">x</span><span class="p">;</span>
+   <span class="p">(</span><span class="o">*</span><span class="n">y</span><span class="p">)</span><span class="o">++</span><span class="p">;</span>
+   <span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">y</span><span class="p">);</span>
+ <span class="p">}</span>
+</code></pre></div>    </div>
+  </li>
+  <li>What value will the program print?
+    <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span> <span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+   <span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+   <span class="kt">int</span><span class="o">*</span> <span class="n">y</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">x</span><span class="p">;</span>
+   <span class="p">(</span><span class="o">*</span><span class="n">y</span><span class="p">)</span><span class="o">++</span><span class="p">;</span>
+   <span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="o">*</span><span class="n">y</span><span class="o">++</span><span class="p">);</span>
+ <span class="p">}</span>
+</code></pre></div>    </div>
+  </li>
+  <li><em>The following programs are variations on the swap() program. See how the various changes to the code impact the results</em>. What will this program print?
+    <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span>
+ <span class="kt">void</span> <span class="nf">swap</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>
+   <span class="kt">int</span> <span class="n">temp</span> <span class="o">=</span> <span class="n">a</span><span class="p">;</span>
+   <span class="n">a</span> <span class="o">=</span> <span class="n">b</span><span class="p">;</span>
+   <span class="n">b</span> <span class="o">=</span> <span class="n">temp</span><span class="p">;</span>
+ <span class="p">}</span>
+
+ <span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+   <span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">20</span><span class="p">;</span>
+   <span class="n">swap</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">);</span>
+   <span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">x</span><span class="p">);</span>
+ <span class="p">}</span>
+</code></pre></div>    </div>
+  </li>
+  <li>What will this program print?
+    <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="c1"> </span><span class="cp">
+</span>
+ <span class="kt">void</span> <span class="nf">swap</span><span class="p">(</span><span class="kt">int</span> <span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="o">*</span><span class="n">b</span><span class="p">)</span> <span class="p">{</span>
+   <span class="kt">int</span> <span class="n">temp</span> <span class="o">=</span> <span class="n">a</span><span class="p">;</span>
+   <span class="n">a</span> <span class="o">=</span> <span class="n">b</span><span class="p">;</span>
+   <span class="n">b</span> <span class="o">=</span> <span class="n">temp</span><span class="p">;</span>
+ <span class="p">}</span>
+
+ <span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+   <span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">20</span><span class="p">;</span>
+   <span class="n">swap</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">);</span>
+   <span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">x</span><span class="p">);</span>
+ <span class="p">}</span>
+</code></pre></div>    </div>
+  </li>
+  <li>What will this program print?
+    <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span>
+ <span class="kt">void</span> <span class="nf">swap</span><span class="p">(</span><span class="kt">int</span> <span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="o">*</span><span class="n">b</span><span class="p">)</span> <span class="p">{</span>
+   <span class="kt">int</span> <span class="n">temp</span> <span class="o">=</span> <span class="n">a</span><span class="p">;</span>
+   <span class="o">*</span><span class="n">a</span> <span class="o">=</span> <span class="n">b</span><span class="p">;</span>
+   <span class="n">b</span> <span class="o">=</span> <span class="n">temp</span><span class="p">;</span>
+ <span class="p">}</span>
+
+ <span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+   <span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">20</span><span class="p">;</span>
+   <span class="n">swap</span><span class="p">(</span><span class="o">&amp;</span><span class="n">x</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">y</span><span class="p">);</span>
+   <span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">x</span><span class="p">);</span>
+ <span class="p">}</span>
+</code></pre></div>    </div>
+  </li>
+  <li>What will this program print (note that it is printing y)?
+    <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span>
+ <span class="kt">void</span> <span class="nf">swap</span><span class="p">(</span><span class="kt">int</span> <span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="o">*</span><span class="n">b</span><span class="p">)</span> <span class="p">{</span>
+   <span class="kt">int</span><span class="o">*</span> <span class="n">temp</span> <span class="o">=</span> <span class="n">a</span><span class="p">;</span>
+   <span class="o">*</span><span class="n">a</span> <span class="o">=</span> <span class="o">*</span><span class="n">b</span><span class="p">;</span>
+   <span class="o">*</span><span class="n">b</span> <span class="o">=</span> <span class="n">temp</span><span class="p">;</span>
+ <span class="p">}</span>
+
+ <span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+   <span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">20</span><span class="p">;</span>
+   <span class="n">swap</span><span class="p">(</span><span class="o">&amp;</span><span class="n">x</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">y</span><span class="p">);</span>
+   <span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">y</span><span class="p">);</span>
+ <span class="p">}</span>
+</code></pre></div>    </div>
+  </li>
+  <li>What will this program print (note that it is printing y)?
+    <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span>
+ <span class="kt">void</span> <span class="nf">swap</span><span class="p">(</span><span class="kt">int</span> <span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="o">*</span><span class="n">b</span><span class="p">)</span> <span class="p">{</span>
+   <span class="kt">int</span> <span class="n">temp</span> <span class="o">=</span> <span class="n">a</span><span class="p">;</span>
+   <span class="o">*</span><span class="n">a</span> <span class="o">=</span> <span class="o">*</span><span class="n">b</span><span class="p">;</span>
+   <span class="o">*</span><span class="n">b</span> <span class="o">=</span> <span class="n">temp</span><span class="p">;</span>
+ <span class="p">}</span>
+
+ <span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+   <span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">20</span><span class="p">;</span>
+   <span class="n">swap</span><span class="p">(</span><span class="o">&amp;</span><span class="n">x</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">y</span><span class="p">);</span>
+   <span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">y</span><span class="p">);</span>
+ <span class="p">}</span>
+</code></pre></div>    </div>
+  </li>
+  <li>What will this program print (note that it is printing y)?
+    <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span>
+ <span class="kt">void</span> <span class="nf">swap</span><span class="p">(</span><span class="kt">int</span> <span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="o">*</span><span class="n">b</span><span class="p">)</span> <span class="p">{</span>
+   <span class="kt">int</span> <span class="n">temp</span> <span class="o">=</span> <span class="o">*</span><span class="n">a</span><span class="p">;</span>
+   <span class="o">*</span><span class="n">a</span> <span class="o">=</span> <span class="o">*</span><span class="n">b</span><span class="p">;</span>
+   <span class="o">*</span><span class="n">b</span> <span class="o">=</span> <span class="n">temp</span><span class="p">;</span>
+ <span class="p">}</span>
+
+ <span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+   <span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">20</span><span class="p">;</span>
+   <span class="n">swap</span><span class="p">(</span><span class="o">&amp;</span><span class="n">x</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">y</span><span class="p">);</span>
+   <span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">y</span><span class="p">);</span>
+ <span class="p">}</span>
+</code></pre></div>    </div>
+  </li>
+  <li>(T or F) The program below will generate an error or warning when compiled.
+    <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span> <span class="cp">#define SIZE 20
+</span> <span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+   <span class="kt">char</span> <span class="n">str</span><span class="p">[</span><span class="n">SIZE</span><span class="p">]</span> <span class="o">=</span> <span class="s">"hi there!</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
+   <span class="kt">char</span><span class="o">*</span> <span class="n">strp</span> <span class="o">=</span> <span class="n">str</span><span class="p">;</span>
+ <span class="p">}</span>
+</code></pre></div>    </div>
+  </li>
+  <li>What will this program print?
+    <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+#define SIZE 20
+</span><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kt">char</span> <span class="n">str</span><span class="p">[</span><span class="n">SIZE</span><span class="p">]</span> <span class="o">=</span> <span class="s">"hi-there!</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
+  <span class="kt">char</span><span class="o">*</span> <span class="n">strp</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">str</span><span class="p">[</span><span class="mi">8</span><span class="p">];</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">"%c</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">strp</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+  </li>
+  <li>What will this program print?
+    <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span> <span class="cp">#define SIZE 20
+</span> <span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+   <span class="kt">char</span> <span class="n">str</span><span class="p">[</span><span class="n">SIZE</span><span class="p">]</span> <span class="o">=</span> <span class="s">"hi-there!</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
+   <span class="kt">char</span><span class="o">*</span> <span class="n">strp</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">str</span><span class="p">[</span><span class="mi">7</span><span class="p">];</span>
+   <span class="n">printf</span><span class="p">(</span><span class="s">"%c</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="o">*</span><span class="p">(</span><span class="n">strp</span><span class="o">+</span><span class="mi">1</span><span class="p">));</span>
+ <span class="p">}</span>
+</code></pre></div>    </div>
+  </li>
+  <li>What will this program print?
+    <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span> <span class="cp">#define SIZE 20
+</span> <span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+   <span class="kt">char</span> <span class="n">str</span><span class="p">[</span><span class="n">SIZE</span><span class="p">]</span> <span class="o">=</span> <span class="s">"hi-there!</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
+   <span class="kt">char</span><span class="o">*</span> <span class="n">strp</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">str</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
+   <span class="n">printf</span><span class="p">(</span><span class="s">"%c</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="o">*</span><span class="p">(</span><span class="n">strp</span><span class="o">++</span><span class="p">));</span>
+ <span class="p">}</span>
+</code></pre></div>    </div>
+  </li>
+  <li>What will this program print?
+    <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span> <span class="cp">#define SIZE 20
+</span> <span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+   <span class="kt">char</span> <span class="n">str</span><span class="p">[</span><span class="n">SIZE</span><span class="p">]</span> <span class="o">=</span> <span class="s">"hi-there!</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
+   <span class="kt">char</span><span class="o">*</span> <span class="n">strp</span> <span class="o">=</span> <span class="n">str</span><span class="p">;</span>
+   <span class="n">printf</span><span class="p">(</span><span class="s">"%c</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="o">*</span><span class="p">(</span><span class="o">++</span><span class="n">strp</span><span class="p">));</span>
+ <span class="p">}</span>
+</code></pre></div>    </div>
+  </li>
+  <li>(T or F) This program will compile correctly.
+    <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span> <span class="cp">#define SIZE 20
+</span> <span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+   <span class="kt">char</span> <span class="n">str</span><span class="p">[</span><span class="n">SIZE</span><span class="p">]</span> <span class="o">=</span> <span class="s">"hi-there!</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
+   <span class="kt">char</span><span class="o">*</span> <span class="n">strp</span> <span class="o">=</span> <span class="n">str</span><span class="o">++</span><span class="p">;</span>
+   <span class="n">printf</span><span class="p">(</span><span class="s">"%c</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="o">*</span><span class="n">strp</span><span class="p">);</span>
+ <span class="p">}</span>
+</code></pre></div>    </div>
+  </li>
+  <li>What does this program print?
+    <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span>
+ <span class="kt">void</span> <span class="nf">mystery</span><span class="p">(</span><span class="kt">char</span> <span class="n">a</span><span class="p">[])</span> <span class="p">{</span>
+   <span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="sc">'b'</span><span class="p">;</span>
+ <span class="p">}</span>
+
+ <span class="cp">#define SIZE 20
+</span> <span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+   <span class="kt">char</span> <span class="n">str</span><span class="p">[</span><span class="n">SIZE</span><span class="p">]</span> <span class="o">=</span> <span class="s">"hi-there!</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
+   <span class="n">mystery</span><span class="p">(</span><span class="n">str</span><span class="p">);</span>
+   <span class="n">printf</span><span class="p">(</span><span class="s">"%c</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">str</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span> 
+ <span class="p">}</span>
+</code></pre></div>    </div>
+  </li>
+  <li>What does this program print?
+    <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span> <span class="kt">void</span> <span class="nf">mystery</span><span class="p">(</span><span class="kt">char</span> <span class="n">a</span><span class="p">[])</span> <span class="p">{</span>
+   <span class="o">*</span><span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="o">=</span> <span class="sc">'b'</span><span class="p">;</span>
+ <span class="p">}</span>
+
+ <span class="cp">#define SIZE 20
+</span> <span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+   <span class="kt">char</span> <span class="n">str</span><span class="p">[</span><span class="n">SIZE</span><span class="p">]</span> <span class="o">=</span> <span class="s">"hi-there!</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
+   <span class="n">mystery</span><span class="p">(</span><span class="n">str</span><span class="p">);</span>
+   <span class="n">printf</span><span class="p">(</span><span class="s">"%c</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">str</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span> 
+ <span class="p">}</span>
+</code></pre></div>    </div>
+  </li>
+  <li>What does this program print?
+    <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span> <span class="kt">void</span> <span class="nf">mystery</span><span class="p">(</span><span class="kt">char</span><span class="o">*</span> <span class="n">a</span><span class="p">)</span> <span class="p">{</span>
+   <span class="o">*</span><span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="o">=</span> <span class="sc">'b'</span><span class="p">;</span>
+ <span class="p">}</span>
+
+ <span class="cp">#define SIZE 20
+</span> <span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+   <span class="kt">char</span> <span class="n">str</span><span class="p">[</span><span class="n">SIZE</span><span class="p">]</span> <span class="o">=</span> <span class="s">"hi-there!</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
+   <span class="n">mystery</span><span class="p">(</span><span class="n">str</span><span class="p">);</span>
+   <span class="n">printf</span><span class="p">(</span><span class="s">"%c</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">str</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span> 
+ <span class="p">}</span>
+</code></pre></div>    </div>
+  </li>
+  <li>What does this program print?
+    <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span> <span class="kt">void</span> <span class="nf">mystery</span><span class="p">(</span><span class="kt">char</span> <span class="n">a</span><span class="p">[])</span> <span class="p">{</span>
+   <span class="o">*</span><span class="p">(</span><span class="n">a</span><span class="o">++</span><span class="p">)</span> <span class="o">=</span> <span class="sc">'b'</span><span class="p">;</span>
+ <span class="p">}</span>
+    
+ <span class="cp">#define SIZE 20
+</span> <span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+   <span class="kt">char</span> <span class="n">str</span><span class="p">[</span><span class="n">SIZE</span><span class="p">]</span> <span class="o">=</span> <span class="s">"hi-there!</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
+   <span class="n">mystery</span><span class="p">(</span><span class="n">str</span><span class="p">);</span>
+   <span class="n">printf</span><span class="p">(</span><span class="s">"%c</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">str</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span> 
+ <span class="p">}</span>
+</code></pre></div>    </div>
+  </li>
+  <li>What will this program print? Is the result implementation-independent?
+    <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span>    
+ <span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+   <span class="kt">int</span><span class="o">*</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+   <span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="o">++</span><span class="n">x</span><span class="p">);</span>
+ <span class="p">}</span>
+</code></pre></div>    </div>
+  </li>
+  <li>Write a function that takes an array of <em>int</em>s (<em>nums</em>) and returns a pointer to the largest element. Create a test program that calls the function and prints out the largest value.</li>
+  <li>Write a function that takes a string (<em>str</em>) and int (<em>i</em>), and prints the string from location <em>i</em> to the end.</li>
+  <li>Write a function that takes a string (<em>str</em>) and a pointer to a location in the string (<em>p</em>), and prints everything up to, but not including the character pointed to by <em>p</em>.  Create a test program that calls this function.</li>
+  <li>Write a function that increments an <em>int</em> from the caller function.  Create a test program that calls this function and prints the modified int before and after calling the function.</li>
+  <li>Write a function <em>swap</em> that swaps two <em>char</em> variables from the caller function.  Create a test program that calls this function and prints the chars before and after calling <em>swap</em>.</li>
+  <li>Write a function <em>reverse</em> that uses your <em>swap</em> function from the previous question to reverse the direction of the string.  Create a test program that prints a string before and after using the <em>reverse</em> function.</li>
+  <li>Write a function <em>replicate</em> that takes a string and prints it out twice consecuitively to a provided location.  Create a test program that prints the new string.</li>
+</ol>
+
+  </div>
+</article>
+      </div>
+    </div>
+    <!-- /#page-content-wrapper -->
+
+  </div>
+  <!-- /#wrapper -->
+
+  <!-- Bootstrap core JavaScript -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+<script src=/ecen330/js/jquery.visible.min.js></script>
+
+<!-- Menu Toggle Script -->
+<script>
+    $("#menu-toggle").click(function (e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+
+    var prevVisible = $('#page-title').visible();
+
+    $(window).scroll(function () {
+        currentVisible = $('#page-title').visible()
+        if (prevVisible && !currentVisible) {
+            console.log("Do something!");
+            $("#page-title-bar").html($('#page-title').text());
+        }
+
+        if (!prevVisible && currentVisible) {
+            $("#page-title-bar").html("")
+        }
+
+        prevVisible = currentVisible;
+    });
+
+</script>
+
+</body>
+
+</html>

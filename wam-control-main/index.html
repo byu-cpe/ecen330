@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<title>
+    
+    Whack-a-Mole: Control and Main • ECEN 330
+    
+</title>
+
+<!-- Bootstrap core CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+<!-- Custom styles for this template -->
+<link rel="stylesheet" href=/ecen330/css/main.css>
+
+<!-- <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet"> -->
+<!-- <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet"> -->
+<link rel="stylesheet" href="https://use.typekit.net/jcn6ybb.css">
+
+<!-- <link rel="icon" type="image/png" sizes="96x96" href=/ecen330/icon/favicon-96x96.png>
+<link rel="icon" type="image/png" sizes="32x32" href=/ecen330/icon/favicon-32x32.png>
+<link rel="icon" type="image/png" sizes="16x16" href=/ecen330/icon/favicon-16x16.png> -->
+
+<script src="https://kit.fontawesome.com/d794f0229e.js" crossorigin="anonymous"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script type="text/javascript">
+    $(function () {
+        console.log("hi there");
+        // this will get the full URL at the address bar
+        var url = window.location.href;
+        console.log(url);
+
+        // passes on every "a" tag
+        $(".list-group a").each(function () {
+            console.log(this)
+            // checks if its the same on the address bar
+            if (url == (this.href)) {
+                $(this).addClass("active");
+            }
+        });
+    });        
+</script>
+
+</head>
+
+<body>
+  <div class="d-flex" id="wrapper">
+    <div class="border-right sidebar-color" id="sidebar-wrapper">
+    <div class="sidebar-sticky">
+        <div class="sidebar-heading-big">
+            <a href="/ecen330/">
+                ECEN 330</a>
+        </div>
+        <div class="list-group list-group-flush sidebar-color">
+
+            
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <!-- <a href="https://slack.com/app_redirect?team=T01J887F8MU&channel=C01JF1N6TH8"
+                class="list-item-normal list-group-item list-group-item-action sidebar-item" target="_blank"><i
+                    class="fa fa-question-circle"></i>
+                Slack</a> -->
+
+        </div>
+
+        <div class="sidebar-heading">Setup</div>
+        <div class="list-group list-group-flush">
+            
+            <a href="/ecen330/setup/step-1/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Setup Step #1
+
+            </a>
+            
+            <a href="/ecen330/setup/linux/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                Home Setup: Linux
+
+            </a>
+            
+            <a href="/ecen330/setup/vm/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                Home Setup: VM
+
+            </a>
+            
+            <a href="/ecen330/setup/step-2/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Setup Step #2
+
+            </a>
+            
+        </div>
+
+        
+        <div class="sidebar-heading">Labs</div>
+        <div class="list-group list-group-flush">
+            
+            <a href="/ecen330/labs/hello-world/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">1</span>
+                
+
+                Hello World
+
+            </a>
+            
+            <a href="/ecen330/labs/gpio/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">2</span>
+                
+
+                GPIO Driver
+
+            </a>
+            
+            <a href="/ecen330/labs/timer/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">3</span>
+                
+
+                Timer Driver
+
+            </a>
+            
+            <a href="/ecen330/labs/interrupts/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">4</span>
+                
+
+                Interrupt Driver
+
+            </a>
+            
+            <a href="/ecen330/labs/touchscreen/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">5</span>
+                
+
+                Touchscreen Driver
+
+            </a>
+            
+            <a href="/ecen330/labs/clock/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">6</span>
+                
+
+                Clock
+
+            </a>
+            
+            <a href="/ecen330/labs/tictactoe/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">7</span>
+                
+
+                Tic Tac Toe
+
+            </a>
+            
+            <a href="/ecen330/labs/tictactoe-m1/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey"></span>
+                &emsp;
+
+                M1: Minimax
+
+            </a>
+            
+            <a href="/ecen330/labs/tictactoe-m2/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey"></span>
+                &emsp;
+
+                M2: Control
+
+            </a>
+            
+            <a href="/ecen330/labs/missile-command/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">8</span>
+                
+
+                Missile Command
+
+            </a>
+            
+            <a href="/ecen330/labs/missile-command-m1/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey"></span>
+                &emsp;
+
+                M1: Missiles
+
+            </a>
+            
+            <a href="/ecen330/labs/missile-command-m2/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey"></span>
+                &emsp;
+
+                M2: Game Control
+
+            </a>
+            
+            <a href="/ecen330/labs/missile-command-m3/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey"></span>
+                &emsp;
+
+                M3: Plane & Stats
+
+            </a>
+            
+            <a href="/ecen330/labs/project/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">9</span>
+                
+
+                Choose Your Own
+
+            </a>
+            
+        </div>
+
+        <div class="sidebar-heading">Documentation</div>
+        <div class="list-group list-group-flush">
+            
+            <a href="/ecen330/documentation/development-tools/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Development Tools
+
+            </a>
+            
+            <a href="/ecen330/documentation/compiling/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                Compiling and Running
+
+            </a>
+            
+            <a href="/ecen330/documentation/cmake/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                CMake
+
+            </a>
+            
+            <a href="/ecen330/documentation/headers/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                Header Files
+
+            </a>
+            
+            <a href="/ecen330/documentation/submission/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                Submitting Code
+
+            </a>
+            
+            <a href="/ecen330/documentation/vscode/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                Coding/Debugging Tips
+
+            </a>
+            
+            <a href="/ecen330/documentation/devices/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                System Platform
+
+            </a>
+            
+            <a href="/ecen330/documentation/graphics/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                LCD Graphics
+
+            </a>
+            
+            <a href="/ecen330/documentation/gpio/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                GPIO
+
+            </a>
+            
+            <a href="/ecen330/documentation/timer/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                Interval Timer
+
+            </a>
+            
+            <a href="/ecen330/documentation/intc/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                Interrupt Controller
+
+            </a>
+            
+            <a href="/ecen330/documentation/touchscreen/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                Touchscreen
+
+            </a>
+            
+        </div>
+
+        <div class="sidebar-heading">Other</div>
+        <div class="list-group list-group-flush">
+            
+            <a href="/ecen330/other/c-programming/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                'C Programming' Study Questions
+
+            </a>
+            
+            <a href="/ecen330/other/coding-standard/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Coding Standard
+
+            </a>
+            
+            <a href="/ecen330/other/coding-state-machines/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Coding State Machines
+
+            </a>
+            
+            <a href="/ecen330/other/suggestions/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Suggestions
+
+            </a>
+            
+            <a href="/ecen330/other/simon/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Old Lab: Simon
+
+            </a>
+            
+            <a href="/ecen330/other/wam/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Old Lab: Whack-a-Mole
+
+            </a>
+            
+        </div>
+    </div>
+</div>
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+
+      <nav class="navbar sticky-top navbar-expand-lg border-bottom">
+        <button class="btn btn-brand" id="menu-toggle">
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <a href="" class="navbar-brand mb-0 h1 page-title-bar text-center mx-auto" id="page-title-bar"></a>
+
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link btn btn-brand suggest-edits" target="_blank" rel="noopener noreferrer"
+              href="https://piazza.com/byu/fall2023/ecen330"><i class="far fa-question-circle"></i> Piazza</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link btn btn-brand suggest-edits" target="_blank" rel="noopener noreferrer"
+              href="https://github.com/byu-cpe/ecen330/issues/new?labels=website&title=Updates to Whack-a-Mole: Control and Main page"><i
+                class="fab fa-github"></i> Suggest
+              Edits</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="container">
+        
+
+        <article class="page">
+  <h1 class="page-title" id="page-title">
+    
+    Whack-a-Mole: Control and Main
+  </h1>
+
+  <div class="page-content">
+    
+
+    <h2 id="wamcontrol">wamControl</h2>
+
+<p>The controller is relatively simple for this lab. It does four things:</p>
+<ul>
+  <li>calls wamDisplay_updateAllMoleTickCounts() on every tick,</li>
+  <li>waits for the user to touch the screen,</li>
+  <li>waits for the touch analog-to-digital converters (ADC) to settle, and</li>
+  <li>sends the coordinates of the touch to <em>wamDisplay</em> by calling the <em>wamDisplay_whackMole()</em>, passing the origin of the touch as the argument to the function.</li>
+</ul>
+
+<p>In addition, while waiting for the user to touch or while waiting for the touch ADC to settle, it calls <em>wamDisplay_updateAllMoleTickCounts()</em> to update the mole tick counts, as well as activating moles whenever the number of active moles falls below the minimum allowed. That’s about it.</p>
+
+<p>As you may have noted, the controller has no notion of how many moles are active, how many moles may be visible, or where the moles are located on the screen. It’s primary job is to pass the coordinates of touches to <em>wamDisplay</em> routines to be processed. This makes it much easier to develop the display code so it can be very flexible. As the controller knows nothing about the positions of the moles, for example, the controller does not have to be changed when the mole count is changed from 9 to 6, for example. In either case the controller simply sends touch coordinates to the display software. The display software attempts to “whack” the mole with the given coordinates. If the coordinates are over a mole that is awake, the display software erases the mole and increments the hit count in the score screen. Otherwise, the display software increments the miss value in the score screen.</p>
+
+<h3 id="handling-initialization">Handling Initialization</h3>
+
+<p>The function <em>wamControl_init()</em> initializes the state machine as if it was starting for the first time. Use this to initialize the controller state machine before starting the game and when restarting the game when the game is interrupted by pressing one of the push-buttons. There are also a number of other functions associated with the controller state machine as can be seen in <em>wan_control.h</em> file (see below).</p>
+
+<h2 id="main">Main</h2>
+
+<p><em>main.c</em> is provided in its entirety to you. Do not modify it, except to uncomment the appropriate line to enable a milestone:</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">////////////////////////////////////////////////////////////////////////////////</span>
+<span class="c1">// Uncomment one of the following lines to run Milestone 1 or 2    /////////////</span>
+<span class="c1">////////////////////////////////////////////////////////////////////////////////</span>
+<span class="c1">// #define RUN_PROGRAM MILESTONE_1</span>
+<span class="c1">// #define RUN_PROGRAM MILESTONE_2</span>
+</code></pre></div></div>
+
+
+  </div>
+</article>
+      </div>
+    </div>
+    <!-- /#page-content-wrapper -->
+
+  </div>
+  <!-- /#wrapper -->
+
+  <!-- Bootstrap core JavaScript -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+<script src=/ecen330/js/jquery.visible.min.js></script>
+
+<!-- Menu Toggle Script -->
+<script>
+    $("#menu-toggle").click(function (e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+
+    var prevVisible = $('#page-title').visible();
+
+    $(window).scroll(function () {
+        currentVisible = $('#page-title').visible()
+        if (prevVisible && !currentVisible) {
+            console.log("Do something!");
+            $("#page-title-bar").html($('#page-title').text());
+        }
+
+        if (!prevVisible && currentVisible) {
+            $("#page-title-bar").html("")
+        }
+
+        prevVisible = currentVisible;
+    });
+
+</script>
+
+</body>
+
+</html>

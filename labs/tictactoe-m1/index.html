@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<title>
+    
+    Tic Tac Toe, Milestone 1: minimax • ECEN 330
+    
+</title>
+
+<!-- Bootstrap core CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+<!-- Custom styles for this template -->
+<link rel="stylesheet" href=/ecen330/css/main.css>
+
+<!-- <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet"> -->
+<!-- <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet"> -->
+<link rel="stylesheet" href="https://use.typekit.net/jcn6ybb.css">
+
+<!-- <link rel="icon" type="image/png" sizes="96x96" href=/ecen330/icon/favicon-96x96.png>
+<link rel="icon" type="image/png" sizes="32x32" href=/ecen330/icon/favicon-32x32.png>
+<link rel="icon" type="image/png" sizes="16x16" href=/ecen330/icon/favicon-16x16.png> -->
+
+<script src="https://kit.fontawesome.com/d794f0229e.js" crossorigin="anonymous"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script type="text/javascript">
+    $(function () {
+        console.log("hi there");
+        // this will get the full URL at the address bar
+        var url = window.location.href;
+        console.log(url);
+
+        // passes on every "a" tag
+        $(".list-group a").each(function () {
+            console.log(this)
+            // checks if its the same on the address bar
+            if (url == (this.href)) {
+                $(this).addClass("active");
+            }
+        });
+    });        
+</script>
+
+</head>
+
+<body>
+  <div class="d-flex" id="wrapper">
+    <div class="border-right sidebar-color" id="sidebar-wrapper">
+    <div class="sidebar-sticky">
+        <div class="sidebar-heading-big">
+            <a href="/ecen330/">
+                ECEN 330</a>
+        </div>
+        <div class="list-group list-group-flush sidebar-color">
+
+            
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <!-- <a href="https://slack.com/app_redirect?team=T01J887F8MU&channel=C01JF1N6TH8"
+                class="list-item-normal list-group-item list-group-item-action sidebar-item" target="_blank"><i
+                    class="fa fa-question-circle"></i>
+                Slack</a> -->
+
+        </div>
+
+        <div class="sidebar-heading">Setup</div>
+        <div class="list-group list-group-flush">
+            
+            <a href="/ecen330/setup/step-1/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Setup Step #1
+
+            </a>
+            
+            <a href="/ecen330/setup/linux/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                Home Setup: Linux
+
+            </a>
+            
+            <a href="/ecen330/setup/vm/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                Home Setup: VM
+
+            </a>
+            
+            <a href="/ecen330/setup/step-2/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Setup Step #2
+
+            </a>
+            
+        </div>
+
+        
+        <div class="sidebar-heading">Labs</div>
+        <div class="list-group list-group-flush">
+            
+            <a href="/ecen330/labs/hello-world/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">1</span>
+                
+
+                Hello World
+
+            </a>
+            
+            <a href="/ecen330/labs/gpio/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">2</span>
+                
+
+                GPIO Driver
+
+            </a>
+            
+            <a href="/ecen330/labs/timer/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">3</span>
+                
+
+                Timer Driver
+
+            </a>
+            
+            <a href="/ecen330/labs/interrupts/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">4</span>
+                
+
+                Interrupt Driver
+
+            </a>
+            
+            <a href="/ecen330/labs/touchscreen/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">5</span>
+                
+
+                Touchscreen Driver
+
+            </a>
+            
+            <a href="/ecen330/labs/clock/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">6</span>
+                
+
+                Clock
+
+            </a>
+            
+            <a href="/ecen330/labs/tictactoe/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">7</span>
+                
+
+                Tic Tac Toe
+
+            </a>
+            
+            <a href="/ecen330/labs/tictactoe-m1/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey"></span>
+                &emsp;
+
+                M1: Minimax
+
+            </a>
+            
+            <a href="/ecen330/labs/tictactoe-m2/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey"></span>
+                &emsp;
+
+                M2: Control
+
+            </a>
+            
+            <a href="/ecen330/labs/missile-command/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">8</span>
+                
+
+                Missile Command
+
+            </a>
+            
+            <a href="/ecen330/labs/missile-command-m1/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey"></span>
+                &emsp;
+
+                M1: Missiles
+
+            </a>
+            
+            <a href="/ecen330/labs/missile-command-m2/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey"></span>
+                &emsp;
+
+                M2: Game Control
+
+            </a>
+            
+            <a href="/ecen330/labs/missile-command-m3/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey"></span>
+                &emsp;
+
+                M3: Plane & Stats
+
+            </a>
+            
+            <a href="/ecen330/labs/project/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">9</span>
+                
+
+                Choose Your Own
+
+            </a>
+            
+        </div>
+
+        <div class="sidebar-heading">Documentation</div>
+        <div class="list-group list-group-flush">
+            
+            <a href="/ecen330/documentation/development-tools/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Development Tools
+
+            </a>
+            
+            <a href="/ecen330/documentation/compiling/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                Compiling and Running
+
+            </a>
+            
+            <a href="/ecen330/documentation/cmake/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                CMake
+
+            </a>
+            
+            <a href="/ecen330/documentation/headers/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                Header Files
+
+            </a>
+            
+            <a href="/ecen330/documentation/submission/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                Submitting Code
+
+            </a>
+            
+            <a href="/ecen330/documentation/vscode/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                Coding/Debugging Tips
+
+            </a>
+            
+            <a href="/ecen330/documentation/devices/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                System Platform
+
+            </a>
+            
+            <a href="/ecen330/documentation/graphics/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                LCD Graphics
+
+            </a>
+            
+            <a href="/ecen330/documentation/gpio/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                GPIO
+
+            </a>
+            
+            <a href="/ecen330/documentation/timer/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                Interval Timer
+
+            </a>
+            
+            <a href="/ecen330/documentation/intc/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                Interrupt Controller
+
+            </a>
+            
+            <a href="/ecen330/documentation/touchscreen/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                Touchscreen
+
+            </a>
+            
+        </div>
+
+        <div class="sidebar-heading">Other</div>
+        <div class="list-group list-group-flush">
+            
+            <a href="/ecen330/other/c-programming/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                'C Programming' Study Questions
+
+            </a>
+            
+            <a href="/ecen330/other/coding-standard/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Coding Standard
+
+            </a>
+            
+            <a href="/ecen330/other/coding-state-machines/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Coding State Machines
+
+            </a>
+            
+            <a href="/ecen330/other/suggestions/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Suggestions
+
+            </a>
+            
+            <a href="/ecen330/other/simon/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Old Lab: Simon
+
+            </a>
+            
+            <a href="/ecen330/other/wam/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Old Lab: Whack-a-Mole
+
+            </a>
+            
+        </div>
+    </div>
+</div>
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+
+      <nav class="navbar sticky-top navbar-expand-lg border-bottom">
+        <button class="btn btn-brand" id="menu-toggle">
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <a href="" class="navbar-brand mb-0 h1 page-title-bar text-center mx-auto" id="page-title-bar"></a>
+
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link btn btn-brand suggest-edits" target="_blank" rel="noopener noreferrer"
+              href="https://piazza.com/byu/fall2023/ecen330"><i class="far fa-question-circle"></i> Piazza</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link btn btn-brand suggest-edits" target="_blank" rel="noopener noreferrer"
+              href="https://github.com/byu-cpe/ecen330/issues/new?labels=website&title=Updates to Tic Tac Toe, Milestone 1: minimax page"><i
+                class="fab fa-github"></i> Suggest
+              Edits</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="container">
+        
+
+        <article class="page">
+  <h1 class="page-title" id="page-title">
+    
+    Tic Tac Toe, Milestone 1: minimax
+  </h1>
+
+  <div class="page-content">
+    
+
+    <p>In this milestone you will implement the algorithm for the computer player. If you are successful, it will be impossible to beat the computer when you play against it. We will be using an algorithm called minimax (or something close, anyway). The algorithm is often used to create a computer-player in a two-player game such as Tic-Tac-Toe.</p>
+
+<h2 id="preliminary">Preliminary</h2>
+
+<ol>
+  <li>
+    <p><strong>Class Notes:</strong>:  We will discuss the minimax algorithm in class using <a href="/ecen330/media/tictactoe/tictactoe.pdf">these slides</a>.</p>
+  </li>
+  <li><strong>Review Pseudocode:</strong> Here is some pseudocode that describes the algorithm in more detail. This should be helpful after you have carefully studied how the algorithm works and you start writing ‘C’ code.
+    <ul>
+      <li><em>minimax</em> computes the optimal move (location and score), for a given board:</li>
+    </ul>
+    <ul>
+      <li>The score is needed at each level of the recursion to fill in the <em>move</em>-<em>score</em> table, so it the return value of <em>minimax</em>.</li>
+      <li>The location is only needed for the first invocation of <em>minimax</em>, so it is just stored in global variable, <strong>choice</strong>.  This will be overwritten at each level of the recursion, but when you finally complete the <em>minimax</em> function, the last value set in <em>choice</em> will be for the board you provided to <em>minimax</em>, which is the move location you want.
+      * Move can be implemented as a struct containing a row and a column (<em>tictactoe_location_t</em>)
+      * You can store your <em>move</em>-<em>score</em> table as two arrays: a moves array and a scores array. Use one index for both.</li>
+    </ul>
+
+    <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="n">minimax_score_t</span> <span class="nf">minimax</span><span class="p">(</span><span class="n">board</span><span class="p">,</span> <span class="n">bool</span> <span class="n">is_Xs_turn</span><span class="p">)</span> <span class="p">{</span>
+
+   <span class="k">if</span> <span class="p">(</span><span class="n">game</span> <span class="n">is</span> <span class="n">over</span><span class="p">)</span>
+     <span class="c1">// Recursion base case, there has been a win or a draw.</span>
+     <span class="c1">// Evaluate board based upon prev player's turn.</span>
+     <span class="k">return</span> <span class="n">computeBoardScore</span><span class="p">(</span><span class="n">board</span><span class="p">,</span> <span class="o">!</span><span class="n">is_Xs_turn</span><span class="p">);</span>
+
+   <span class="c1">// Otherwise, you need to recurse.</span>
+   <span class="c1">// This loop will generate all possible boards and call</span>
+   <span class="c1">// minimax recursively for every empty square</span>
+   <span class="k">for</span> <span class="p">(</span><span class="n">all</span> <span class="n">rows</span><span class="p">)</span> <span class="p">{</span>
+     <span class="k">for</span> <span class="p">(</span><span class="n">all</span> <span class="n">columns</span><span class="p">)</span> <span class="p">{</span>
+       <span class="k">if</span> <span class="p">(</span><span class="n">board</span><span class="p">[</span><span class="n">row</span><span class="p">][</span><span class="n">column</span><span class="p">]</span> <span class="o">==</span> <span class="n">EMPTY_SQUARE</span><span class="p">)</span> <span class="p">{</span>
+
+         <span class="c1">// Simulate playing at this location</span>
+         <span class="n">board</span><span class="p">[</span><span class="n">row</span><span class="p">][</span><span class="n">column</span><span class="p">]</span> <span class="o">=</span> <span class="n">current_player_is_x</span> <span class="o">?</span> <span class="n">X_SQUARE</span> <span class="o">:</span> <span class="n">O_SQUARE</span><span class="p">;</span>
+
+         <span class="c1">// Recursively call minimax to get the best score, assuming player</span>
+         <span class="c1">// choses to play at this location.</span>
+         <span class="n">score</span> <span class="o">=</span> <span class="n">minimax</span><span class="p">(</span><span class="n">board</span><span class="p">,</span> <span class="o">!</span><span class="n">is_Xs_turn</span><span class="p">);</span>
+
+         <span class="n">add</span> <span class="n">score</span> <span class="n">to</span> <span class="n">move</span> <span class="o">-</span> <span class="n">score</span> <span class="n">table</span><span class="p">;</span>
+         <span class="n">add</span> <span class="n">move</span> <span class="n">to</span> <span class="n">move</span> <span class="o">-</span> <span class="n">score</span> <span class="n">table</span><span class="p">;</span>
+
+         <span class="c1">// Undo the change to the board</span>
+         <span class="n">board</span><span class="p">[</span><span class="n">row</span><span class="p">][</span><span class="n">column</span><span class="p">]</span> <span class="o">=</span> <span class="n">EMPTY_SQUARE</span><span class="p">;</span>
+       <span class="p">}</span>
+     <span class="p">}</span>
+   <span class="p">}</span>
+
+   <span class="c1">// Once you get here, you have iterated over empty squares at this level. All</span>
+   <span class="c1">// of the scores have been computed in the move-score table for boards at this</span>
+   <span class="c1">// level. Now you need to return the score depending upon whether you are</span>
+   <span class="c1">// computing min or max.</span>
+   <span class="k">if</span> <span class="p">(</span><span class="n">is_Xs_turn</span><span class="p">)</span> <span class="p">{</span>
+     <span class="n">choice</span> <span class="o">=</span> <span class="n">get</span> <span class="n">the</span> <span class="n">move</span> <span class="n">with</span> <span class="n">the</span> <span class="n">highest</span> <span class="n">score</span> <span class="n">in</span> <span class="n">the</span> <span class="n">move</span> <span class="o">-</span> <span class="n">score</span> <span class="n">table</span><span class="p">.;</span>
+     <span class="n">score</span> <span class="o">=</span> <span class="n">highest</span> <span class="n">score</span> <span class="n">in</span> <span class="n">the</span> <span class="n">move</span> <span class="o">-</span> <span class="n">score</span> <span class="n">table</span><span class="p">.;</span>
+   <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+     <span class="n">choice</span> <span class="o">=</span> <span class="n">get</span> <span class="n">the</span> <span class="n">move</span> <span class="n">with</span> <span class="n">the</span> <span class="n">lowest</span> <span class="n">score</span> <span class="n">in</span> <span class="n">the</span> <span class="n">move</span> <span class="o">-</span> <span class="n">score</span> <span class="n">table</span><span class="p">.;</span>
+     <span class="n">score</span> <span class="o">&lt;=</span> <span class="n">lowest</span> <span class="n">score</span> <span class="n">in</span> <span class="n">the</span> <span class="n">move</span> <span class="o">-</span> <span class="n">score</span> <span class="n">table</span><span class="p">.;</span>
+   <span class="p">}</span>
+   <span class="k">return</span> <span class="n">score</span><span class="p">;</span>
+ <span class="p">}</span>
+</code></pre></div>    </div>
+  </li>
+  <li><strong>Header files:</strong>
+    <ul>
+      <li>Several helpful data types are provided in <a href="https://github.com/byu-cpe/ecen330_student/blob/main/lab7_tictactoe/ticTacToe.h">ticTacToe.h</a>
+        <ul>
+          <li>Note: Tic-Tac-Toe board rows are horizontal and columns are vertical (row = 0 is the top of the board, row = 2 is the bottom of the board, column = 0 is the far-left of the board, column = 2 is the far-right of the board).</li>
+        </ul>
+      </li>
+      <li>Review the provided <a href="https://github.com/byu-cpe/ecen330_student/blob/main/lab7_tictactoe/minimax.h">minimax.h</a></li>
+    </ul>
+  </li>
+  <li><strong>Test boards:</strong> <a href="https://github.com/byu-cpe/ecen330_student/blob/main/lab7_tictactoe/testBoards.h">testBoards.h</a> and <a href="https://github.com/byu-cpe/ecen330_student/blob/main/lab7_tictactoe/testBoards.c">testBoards.c</a> provides code that creates five test board that you can use to test your minimax algorithm.</li>
+</ol>
+
+<h2 id="implementation">Implementation</h2>
+
+<h3 id="requirements">Requirements</h3>
+<ul>
+  <li>Implement the functions declared in <em>minimax.h</em> in your <em>minimax.c</em> file.</li>
+  <li>Update <em>testBoards.c</em> by adding at least 10 additional unique test-boards (see provided test code below).</li>
+  <li>When the <em>lab7_m1.elf</em> executable is run, you should see the <em>Next Move</em> output for the five provided boards, and your (at least 10) additional boards.</li>
+</ul>
+
+<h2 id="suggestions">Suggestions</h2>
+<ul>
+  <li>I suggest that you develop your minimax algorithm on a regular computer (or the emulator). minimax doesn’t rely on any hardware or drivers for the 330 board and you will be able to debug more quickly because you won’t need to wait for downloads, etc. Once you get minimax working it is easy to bring it over to the the board.</li>
+  <li>It is a good idea to have a printBoard routine that prints out a board. This is very useful when debugging.</li>
+  <li>I found it helpful to break down a winning board into row-based wins, column-based wins, and diagonal-based wins.</li>
+  <li>You can add a depth argument to minimax that can be helpful during debugging. You invoke minimax with a depth of 0 and have minimax print the depth variable when invoked and then incrementing the depth variable when recursing.</li>
+  <li><strong>Even with several test boards, you may still have bugs in your code. I would advise you to create several tests with varied boards.  Otherwise, you will find that your game may not be unbeatable in the next milestone.</strong></li>
+</ul>
+
+<h3 id="debugging-recursive-minimax">Debugging Recursive Minimax</h3>
+<p>Often the best way to debug recursive programs is to print out an execution trace. Adding a “depth” argument that you increment at each invocation makes it much easier to follow program execution.</p>
+
+<p>A debug dump of my minimax program is shown below. The starting board is the same as the board we used in class and is the same one in the game-trees shown above. I have annotated the dump with the board-numbers used in the example shown above.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Invoking minimax @ depth = 0
+**Board 1**
+0 X
+X  
+X00
+adding player @ (0, 1)
+
+Invoking minimax @ depth = 1
+**Board 3**
+0XX
+X  
+X00
+adding opponent @ (1, 1)
+
+Invoking minimax @ depth = 2
+**Board 5**
+0XX
+X0 
+X00
+opponent wins, returning score: -10
+adding opponent @ (1, 2)
+
+Invoking minimax @ depth = 2
+**Board 6**
+0XX
+X 0
+X00
+adding player @ (1, 1)
+
+Invoking minimax @ depth = 3
+**Board 9**
+0XX
+XX0
+X00
+player wins, returning score: 10
+adding player @ (1, 1)
+
+Invoking minimax @ depth = 1
+**Board 2**
+0 X
+XX 
+X00
+player wins, returning score: 10
+adding player @ (1, 2)
+
+Invoking minimax @ depth = 1
+**Board 4**
+0 X
+X X
+X00
+adding opponent @ (0, 1)
+
+Invoking minimax @ depth = 2
+-- Starting board -- **Board 8**
+00X
+X X
+X00
+adding player @ (1, 1)
+
+Invoking minimax @ depth = 3
+**Board 10**
+00X
+XXX
+X00
+player wins, returning score: 10
+adding opponent @ (1, 1)
+
+Invoking minimax @ depth = 2
+**Board 7**
+0 X
+X0X
+X00
+opponent wins, returning score: -10
+final score: 10
+final choice: (row: 1, column: 1)
+
+</code></pre></div></div>
+
+
+  </div>
+</article>
+      </div>
+    </div>
+    <!-- /#page-content-wrapper -->
+
+  </div>
+  <!-- /#wrapper -->
+
+  <!-- Bootstrap core JavaScript -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+<script src=/ecen330/js/jquery.visible.min.js></script>
+
+<!-- Menu Toggle Script -->
+<script>
+    $("#menu-toggle").click(function (e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+
+    var prevVisible = $('#page-title').visible();
+
+    $(window).scroll(function () {
+        currentVisible = $('#page-title').visible()
+        if (prevVisible && !currentVisible) {
+            console.log("Do something!");
+            $("#page-title-bar").html($('#page-title').text());
+        }
+
+        if (!prevVisible && currentVisible) {
+            $("#page-title-bar").html("")
+        }
+
+        prevVisible = currentVisible;
+    });
+
+</script>
+
+</body>
+
+</html>

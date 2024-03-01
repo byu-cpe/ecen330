@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<title>
+    
+    K &amp; R Chapter 4 Study Questions • ECEN 330
+    
+</title>
+
+<!-- Bootstrap core CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+<!-- Custom styles for this template -->
+<link rel="stylesheet" href=/ecen330/css/main.css>
+
+<!-- <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet"> -->
+<!-- <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet"> -->
+<link rel="stylesheet" href="https://use.typekit.net/jcn6ybb.css">
+
+<!-- <link rel="icon" type="image/png" sizes="96x96" href=/ecen330/icon/favicon-96x96.png>
+<link rel="icon" type="image/png" sizes="32x32" href=/ecen330/icon/favicon-32x32.png>
+<link rel="icon" type="image/png" sizes="16x16" href=/ecen330/icon/favicon-16x16.png> -->
+
+<script src="https://kit.fontawesome.com/d794f0229e.js" crossorigin="anonymous"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script type="text/javascript">
+    $(function () {
+        console.log("hi there");
+        // this will get the full URL at the address bar
+        var url = window.location.href;
+        console.log(url);
+
+        // passes on every "a" tag
+        $(".list-group a").each(function () {
+            console.log(this)
+            // checks if its the same on the address bar
+            if (url == (this.href)) {
+                $(this).addClass("active");
+            }
+        });
+    });        
+</script>
+
+</head>
+
+<body>
+  <div class="d-flex" id="wrapper">
+    <div class="border-right sidebar-color" id="sidebar-wrapper">
+    <div class="sidebar-sticky">
+        <div class="sidebar-heading-big">
+            <a href="/ecen330/">
+                ECEN 330</a>
+        </div>
+        <div class="list-group list-group-flush sidebar-color">
+
+            
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <!-- <a href="https://slack.com/app_redirect?team=T01J887F8MU&channel=C01JF1N6TH8"
+                class="list-item-normal list-group-item list-group-item-action sidebar-item" target="_blank"><i
+                    class="fa fa-question-circle"></i>
+                Slack</a> -->
+
+        </div>
+
+        <div class="sidebar-heading">Setup</div>
+        <div class="list-group list-group-flush">
+            
+            <a href="/ecen330/setup/step-1/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Setup Step #1
+
+            </a>
+            
+            <a href="/ecen330/setup/linux/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                Home Setup: Linux
+
+            </a>
+            
+            <a href="/ecen330/setup/vm/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                Home Setup: VM
+
+            </a>
+            
+            <a href="/ecen330/setup/step-2/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Setup Step #2
+
+            </a>
+            
+        </div>
+
+        
+        <div class="sidebar-heading">Labs</div>
+        <div class="list-group list-group-flush">
+            
+            <a href="/ecen330/labs/hello-world/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">1</span>
+                
+
+                Hello World
+
+            </a>
+            
+            <a href="/ecen330/labs/gpio/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">2</span>
+                
+
+                GPIO Driver
+
+            </a>
+            
+            <a href="/ecen330/labs/timer/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">3</span>
+                
+
+                Timer Driver
+
+            </a>
+            
+            <a href="/ecen330/labs/interrupts/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">4</span>
+                
+
+                Interrupt Driver
+
+            </a>
+            
+            <a href="/ecen330/labs/touchscreen/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">5</span>
+                
+
+                Touchscreen Driver
+
+            </a>
+            
+            <a href="/ecen330/labs/clock/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">6</span>
+                
+
+                Clock
+
+            </a>
+            
+            <a href="/ecen330/labs/tictactoe/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">7</span>
+                
+
+                Tic Tac Toe
+
+            </a>
+            
+            <a href="/ecen330/labs/tictactoe-m1/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey"></span>
+                &emsp;
+
+                M1: Minimax
+
+            </a>
+            
+            <a href="/ecen330/labs/tictactoe-m2/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey"></span>
+                &emsp;
+
+                M2: Control
+
+            </a>
+            
+            <a href="/ecen330/labs/missile-command/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">8</span>
+                
+
+                Missile Command
+
+            </a>
+            
+            <a href="/ecen330/labs/missile-command-m1/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey"></span>
+                &emsp;
+
+                M1: Missiles
+
+            </a>
+            
+            <a href="/ecen330/labs/missile-command-m2/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey"></span>
+                &emsp;
+
+                M2: Game Control
+
+            </a>
+            
+            <a href="/ecen330/labs/missile-command-m3/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey"></span>
+                &emsp;
+
+                M3: Plane & Stats
+
+            </a>
+            
+            <a href="/ecen330/labs/project/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">9</span>
+                
+
+                Choose Your Own
+
+            </a>
+            
+        </div>
+
+        <div class="sidebar-heading">Documentation</div>
+        <div class="list-group list-group-flush">
+            
+            <a href="/ecen330/documentation/development-tools/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Development Tools
+
+            </a>
+            
+            <a href="/ecen330/documentation/compiling/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                Compiling and Running
+
+            </a>
+            
+            <a href="/ecen330/documentation/cmake/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                CMake
+
+            </a>
+            
+            <a href="/ecen330/documentation/headers/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                Header Files
+
+            </a>
+            
+            <a href="/ecen330/documentation/submission/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                Submitting Code
+
+            </a>
+            
+            <a href="/ecen330/documentation/vscode/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                Coding/Debugging Tips
+
+            </a>
+            
+            <a href="/ecen330/documentation/devices/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                System Platform
+
+            </a>
+            
+            <a href="/ecen330/documentation/graphics/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                LCD Graphics
+
+            </a>
+            
+            <a href="/ecen330/documentation/gpio/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                GPIO
+
+            </a>
+            
+            <a href="/ecen330/documentation/timer/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                Interval Timer
+
+            </a>
+            
+            <a href="/ecen330/documentation/intc/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                Interrupt Controller
+
+            </a>
+            
+            <a href="/ecen330/documentation/touchscreen/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                Touchscreen
+
+            </a>
+            
+        </div>
+
+        <div class="sidebar-heading">Other</div>
+        <div class="list-group list-group-flush">
+            
+            <a href="/ecen330/other/c-programming/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                'C Programming' Study Questions
+
+            </a>
+            
+            <a href="/ecen330/other/coding-standard/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Coding Standard
+
+            </a>
+            
+            <a href="/ecen330/other/coding-state-machines/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Coding State Machines
+
+            </a>
+            
+            <a href="/ecen330/other/suggestions/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Suggestions
+
+            </a>
+            
+            <a href="/ecen330/other/simon/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Old Lab: Simon
+
+            </a>
+            
+            <a href="/ecen330/other/wam/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Old Lab: Whack-a-Mole
+
+            </a>
+            
+        </div>
+    </div>
+</div>
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+
+      <nav class="navbar sticky-top navbar-expand-lg border-bottom">
+        <button class="btn btn-brand" id="menu-toggle">
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <a href="" class="navbar-brand mb-0 h1 page-title-bar text-center mx-auto" id="page-title-bar"></a>
+
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link btn btn-brand suggest-edits" target="_blank" rel="noopener noreferrer"
+              href="https://piazza.com/byu/fall2023/ecen330"><i class="far fa-question-circle"></i> Piazza</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link btn btn-brand suggest-edits" target="_blank" rel="noopener noreferrer"
+              href="https://github.com/byu-cpe/ecen330/issues/new?labels=website&title=Updates to K & R Chapter 4 Study Questions page"><i
+                class="fab fa-github"></i> Suggest
+              Edits</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="container">
+        
+
+        <article class="page">
+  <h1 class="page-title" id="page-title">
+    
+    K & R Chapter 4 Study Questions
+  </h1>
+
+  <div class="page-content">
+    
+
+    <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cm">/*********************** General Comments *********************/</span>
+<span class="c1">// 1. To compile individual programs (P1, for example) on the linux command-line:</span>
+<span class="c1">// gcc -D P1 ch4_studyQuestions.c</span>
+
+<span class="c1">// Many of the programs come directly from Chapter 4 of K&amp;R.</span>
+
+<span class="cp">#ifdef P1
+</span><span class="c1">// K&amp;R, Ch4, pg. 71</span>
+<span class="c1">// Note: renamed getline() to my_getline to avoid naming conflict with stdio.h</span>
+<span class="c1">// Topic: General control question.</span>
+<span class="c1">// Question: (T or F) In my_getline(): When getchar() returns a '\n', the '\n' is always copied to s.</span>
+
+<span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+#define MAXLINE 1000  </span><span class="cm">/* maximum input line length */</span><span class="cp">
+</span>
+<span class="kt">int</span> <span class="nf">my_getline</span><span class="p">(</span><span class="kt">char</span> <span class="n">line</span><span class="p">[],</span> <span class="kt">int</span> <span class="n">max</span><span class="p">);</span>
+<span class="kt">int</span> <span class="nf">strindex</span><span class="p">(</span><span class="kt">char</span> <span class="n">source</span><span class="p">[],</span> <span class="kt">char</span> <span class="n">searchfor</span><span class="p">[]);</span>
+
+<span class="kt">char</span> <span class="n">pattern</span><span class="p">[]</span> <span class="o">=</span> <span class="s">"ould"</span><span class="p">;</span>  <span class="cm">/* pattern to search for */</span>
+
+<span class="cm">/* find all lines matching pattern */</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kt">char</span> <span class="n">line</span><span class="p">[</span><span class="n">MAXLINE</span><span class="p">];</span>
+  <span class="kt">int</span> <span class="n">found</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+  <span class="k">while</span> <span class="p">(</span><span class="n">my_getline</span><span class="p">(</span><span class="n">line</span><span class="p">,</span> <span class="n">MAXLINE</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">strindex</span><span class="p">(</span><span class="n">line</span><span class="p">,</span> <span class="n">pattern</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">printf</span><span class="p">(</span><span class="s">"%s"</span><span class="p">,</span> <span class="n">line</span><span class="p">);</span>
+      <span class="n">found</span><span class="o">++</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="k">return</span> <span class="n">found</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="cp">#endif
+</span>
+<span class="c1">// Need getline for multiple questions.</span>
+<span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span><span class="cm">/* getline: get line into s, return length */</span>
+<span class="kt">int</span> <span class="nf">my_getline</span><span class="p">(</span><span class="kt">char</span> <span class="n">s</span><span class="p">[],</span> <span class="kt">int</span> <span class="n">lim</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kt">int</span> <span class="n">c</span><span class="p">,</span> <span class="n">i</span><span class="p">;</span>
+
+  <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="k">while</span> <span class="p">(</span><span class="o">--</span><span class="n">lim</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="n">c</span><span class="o">=</span><span class="n">getchar</span><span class="p">())</span> <span class="o">!=</span> <span class="n">EOF</span> <span class="o">&amp;&amp;</span> <span class="n">c</span> <span class="o">!=</span> <span class="sc">'\n'</span><span class="p">)</span>
+    <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="o">++</span><span class="p">]</span> <span class="o">=</span> <span class="n">c</span><span class="p">;</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">c</span> <span class="o">==</span> <span class="sc">'\n'</span><span class="p">)</span>
+    <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="o">++</span><span class="p">]</span> <span class="o">=</span> <span class="n">c</span><span class="p">;</span>
+  <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="sc">'\0'</span><span class="p">;</span>
+  <span class="k">return</span> <span class="n">i</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="cp">#ifdef P1
+</span><span class="cm">/* strindex: return index of t in s, -1 in none */</span>
+<span class="kt">int</span> <span class="nf">strindex</span><span class="p">(</span> <span class="kt">char</span> <span class="n">s</span><span class="p">[],</span> <span class="kt">char</span> <span class="n">t</span><span class="p">[])</span> <span class="p">{</span>
+  <span class="kt">int</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">k</span><span class="p">;</span>
+
+  <span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">!=</span> <span class="sc">'\0'</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">for</span> <span class="p">(</span><span class="n">j</span><span class="o">=</span><span class="n">i</span><span class="p">,</span> <span class="n">k</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">t</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="o">!=</span><span class="sc">'\0'</span> <span class="o">&amp;&amp;</span> <span class="n">s</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">==</span><span class="n">t</span><span class="p">[</span><span class="n">k</span><span class="p">];</span> <span class="n">j</span><span class="o">++</span><span class="p">,</span> <span class="n">k</span><span class="o">++</span><span class="p">)</span>
+      <span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">k</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="n">t</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">==</span> <span class="sc">'\0'</span><span class="p">)</span>
+      <span class="k">return</span> <span class="n">i</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="cp">#endif
+</span>
+<span class="cp">#ifdef P2
+#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span><span class="c1">// Topic: What is the default return type for functions without a declared prototype.</span>
+<span class="c1">// Question: Looking just at the main function below, what does the compiler assume is the</span>
+<span class="c1">// return type within main()</span>
+<span class="c1">// when the return type for atof() if the line "double atof(char[]);" is deleted?</span>
+<span class="c1">// NOTE: If you delete the "double atof(... line, the C++ compiler generates an error, not a warning.</span>
+<span class="c1">// Carefully read Chapter 4 so you understand what the default return type is for functions.</span>
+<span class="cp">#define MAXLINE 100
+</span><span class="cm">/* rudimentary calculator */</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kt">double</span> <span class="n">sum</span><span class="p">;</span>
+  <span class="kt">double</span> <span class="n">atof</span><span class="p">(</span><span class="kt">char</span><span class="p">[]);</span>
+  <span class="kt">char</span> <span class="n">line</span><span class="p">[</span><span class="n">MAXLINE</span><span class="p">];</span>
+  <span class="kt">int</span> <span class="n">my_getline</span><span class="p">(</span><span class="kt">char</span> <span class="n">line</span><span class="p">[],</span> <span class="kt">int</span> <span class="n">max</span><span class="p">);</span>
+
+  <span class="n">sum</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="k">while</span> <span class="p">(</span><span class="n">my_getline</span><span class="p">(</span><span class="n">line</span><span class="p">,</span> <span class="n">MAXLINE</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">"</span><span class="se">\t</span><span class="s">%g</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">sum</span> <span class="o">+=</span> <span class="n">atof</span><span class="p">(</span><span class="n">line</span><span class="p">));</span>
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// Note: Program from Ch 4 of K&amp;R, pgs. 71-72.</span>
+<span class="c1">// Topic: How are characters encoded?</span>
+<span class="c1">// Question: (T or F) '0' is equivalent to '\0'</span>
+
+<span class="c1">// Question: What value does this expression return: 1000 - '0'?</span>
+
+<span class="c1">// Question: What value does this expression return: '1' - '0'?</span>
+
+<span class="c1">// Topic: General</span>
+<span class="c1">// Question: (T or F) for-loop A terminates immediately when the input contains '.'</span>
+
+<span class="c1">// Question: If  return-statement C was modified to "return sign * val;", and the number 003.05 was typed in, the program would print:</span>
+
+<span class="cp">#include</span> <span class="cpf">&lt;ctype.h&gt;</span><span class="cp">
+</span>
+<span class="cm">/* atof: convert string s to double */</span>
+<span class="kt">double</span> <span class="nf">atof</span><span class="p">(</span><span class="kt">char</span> <span class="n">s</span><span class="p">[])</span> <span class="p">{</span>
+  <span class="kt">double</span> <span class="n">val</span><span class="p">,</span> <span class="n">power</span><span class="p">;</span>
+  <span class="kt">int</span> <span class="n">i</span><span class="p">,</span> <span class="n">sign</span><span class="p">;</span>
+
+  <span class="k">for</span> <span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">isspace</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>  <span class="cm">/* skip white space */</span>
+    <span class="p">;</span>
+  <span class="n">sign</span> <span class="o">=</span> <span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="sc">'-'</span><span class="p">)</span> <span class="o">?</span> <span class="o">-</span><span class="mi">1</span> <span class="o">:</span> <span class="mi">1</span><span class="p">;</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="sc">'+'</span> <span class="o">||</span> <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="sc">'-'</span><span class="p">)</span>
+    <span class="n">i</span><span class="o">++</span><span class="p">;</span>
+  <span class="k">for</span> <span class="p">(</span><span class="n">val</span> <span class="o">=</span> <span class="mi">0</span><span class="p">.</span><span class="mi">0</span><span class="p">;</span> <span class="n">isdigit</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>  <span class="c1">// for-loop A</span>
+    <span class="n">val</span> <span class="o">=</span> <span class="mi">10</span><span class="p">.</span><span class="mi">0</span> <span class="o">*</span> <span class="n">val</span> <span class="o">+</span> <span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-</span> <span class="sc">'0'</span><span class="p">);</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="sc">'.'</span><span class="p">)</span>
+    <span class="n">i</span><span class="o">++</span><span class="p">;</span>
+  <span class="k">for</span> <span class="p">(</span><span class="n">power</span> <span class="o">=</span> <span class="mi">1</span><span class="p">.</span><span class="mi">0</span><span class="p">;</span> <span class="n">isdigit</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>  <span class="c1">// for-loop B</span>
+    <span class="n">val</span> <span class="o">=</span> <span class="mi">10</span><span class="p">.</span><span class="mi">0</span> <span class="o">*</span> <span class="n">val</span> <span class="o">+</span> <span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-</span> <span class="sc">'0'</span><span class="p">);</span>
+    <span class="n">power</span> <span class="o">*=</span> <span class="mi">10</span><span class="p">.</span><span class="mi">0</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="n">sign</span> <span class="o">*</span> <span class="n">val</span> <span class="o">/</span> <span class="n">power</span><span class="p">;</span>  <span class="c1">// Return Statement C</span>
+<span class="p">}</span>
+<span class="cp">#endif
+</span>
+<span class="cp">#ifdef P3
+</span>
+<span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp">
+#define MAXOP 100   // max size of operand or operator.
+#define NUMBER '0'  // Signal that a number was found.
+</span><span class="kt">int</span> <span class="nf">getop</span><span class="p">(</span><span class="kt">char</span><span class="p">[]);</span>
+<span class="kt">void</span> <span class="nf">push</span><span class="p">(</span><span class="kt">double</span><span class="p">);</span>
+<span class="kt">double</span> <span class="nf">pop</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+
+<span class="c1">// Reverse Polish calculator</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kt">int</span> <span class="n">type</span><span class="p">;</span>
+  <span class="kt">double</span> <span class="n">op2</span><span class="p">;</span>
+  <span class="kt">char</span> <span class="n">s</span><span class="p">[</span><span class="n">MAXOP</span><span class="p">];</span>
+
+  <span class="k">while</span> <span class="p">((</span><span class="n">type</span> <span class="o">=</span> <span class="n">getop</span><span class="p">(</span><span class="n">s</span><span class="p">))</span> <span class="o">!=</span> <span class="n">EOF</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">switch</span> <span class="p">(</span><span class="n">type</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">case</span> <span class="n">NUMBER</span><span class="p">:</span>
+      <span class="n">push</span><span class="p">(</span><span class="n">atof</span><span class="p">(</span><span class="n">s</span><span class="p">));</span>
+      <span class="k">break</span><span class="p">;</span>
+    <span class="k">case</span> <span class="sc">'+'</span><span class="p">:</span>
+      <span class="n">push</span><span class="p">(</span><span class="n">pop</span><span class="p">()</span> <span class="o">+</span> <span class="n">pop</span><span class="p">());</span>
+      <span class="k">break</span><span class="p">;</span>
+    <span class="k">case</span> <span class="sc">'*'</span><span class="p">:</span>
+      <span class="n">push</span><span class="p">(</span><span class="n">pop</span><span class="p">()</span> <span class="o">*</span> <span class="n">pop</span><span class="p">());</span>
+      <span class="k">break</span><span class="p">;</span>
+    <span class="k">case</span> <span class="sc">'-'</span><span class="p">:</span>
+      <span class="c1">// push(pop() - pop() is WRONG. pop() on left-hand-side of - could be either the first or second pop</span>
+      <span class="c1">// because C does not enforce the order that arguments are evaluated.</span>
+      <span class="n">op2</span> <span class="o">=</span> <span class="n">pop</span><span class="p">();</span>
+      <span class="n">push</span><span class="p">(</span><span class="n">pop</span><span class="p">()</span> <span class="o">-</span> <span class="n">op2</span><span class="p">);</span>
+      <span class="k">break</span><span class="p">;</span>
+    <span class="k">case</span> <span class="sc">'/'</span><span class="p">:</span>
+      <span class="n">op2</span> <span class="o">=</span> <span class="n">pop</span><span class="p">();</span>
+      <span class="k">if</span> <span class="p">(</span><span class="n">op2</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">.</span><span class="mi">0</span><span class="p">)</span>
+	<span class="n">push</span><span class="p">(</span><span class="n">pop</span><span class="p">()</span> <span class="o">/</span> <span class="n">op2</span><span class="p">);</span>
+      <span class="k">else</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"error: zero divisor</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+      <span class="k">break</span><span class="p">;</span>
+    <span class="k">case</span> <span class="sc">'\n'</span><span class="p">:</span>
+      <span class="n">printf</span><span class="p">(</span><span class="s">"</span><span class="se">\t</span><span class="s">%.8g</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">pop</span><span class="p">());</span>
+      <span class="k">break</span><span class="p">;</span>
+    <span class="nl">default:</span>
+      <span class="n">printf</span><span class="p">(</span><span class="s">"error: unknown command %s</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">s</span><span class="p">);</span>
+      <span class="k">break</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="cp">#define MAXVAL 100 // maximum depth of stack.
+</span>
+<span class="kt">int</span> <span class="n">sp</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="kt">double</span> <span class="n">val</span><span class="p">[</span><span class="n">MAXVAL</span><span class="p">];</span>
+<span class="c1">// push: push f onto value stack.</span>
+<span class="kt">void</span> <span class="nf">push</span><span class="p">(</span><span class="kt">double</span> <span class="n">f</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">sp</span> <span class="o">&lt;</span> <span class="n">MAXVAL</span><span class="p">)</span>
+    <span class="n">val</span><span class="p">[</span><span class="n">sp</span><span class="o">++</span><span class="p">]</span> <span class="o">=</span> <span class="n">f</span><span class="p">;</span>
+  <span class="k">else</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">"error: stack full, can't push %g</span><span class="se">\n</span><span class="s">."</span><span class="p">,</span> <span class="n">f</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="c1">// pop: pop and return top value from stack</span>
+<span class="kt">double</span> <span class="nf">pop</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">sp</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">val</span><span class="p">[</span><span class="o">--</span><span class="n">sp</span><span class="p">];</span>
+  <span class="k">else</span> <span class="p">{</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">"error: stsack empty</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">.</span><span class="mi">0</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="cp">#include</span> <span class="cpf">&lt;ctype.h&gt;</span><span class="cp">
+</span><span class="kt">int</span> <span class="nf">getch</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+<span class="kt">void</span> <span class="nf">ungetch</span><span class="p">(</span><span class="kt">int</span><span class="p">);</span>
+
+<span class="c1">// getop: get next operator of numeric operand.</span>
+<span class="kt">int</span> <span class="nf">getop</span><span class="p">(</span><span class="kt">char</span> <span class="n">s</span><span class="p">[])</span> <span class="p">{</span>
+  <span class="kt">int</span> <span class="n">i</span><span class="p">,</span> <span class="n">c</span><span class="p">;</span>
+  <span class="c1">// Question: (T or F) The sole purpose of the statement below is to skip over spaces and tabs.</span>
+  <span class="k">while</span> <span class="p">((</span><span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">c</span> <span class="o">=</span> <span class="n">getch</span><span class="p">())</span> <span class="o">==</span> <span class="sc">' '</span> <span class="o">||</span> <span class="n">c</span> <span class="o">==</span> <span class="sc">'\t'</span><span class="p">)</span>
+    <span class="p">;</span>
+  <span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="sc">'\0'</span><span class="p">;</span>
+  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">isdigit</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="n">c</span> <span class="o">!=</span> <span class="sc">'.'</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">c</span><span class="p">;</span>  <span class="c1">// not a number.</span>
+  <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">isdigit</span><span class="p">(</span><span class="n">c</span><span class="p">))</span>  <span class="c1">// collect integer part.</span>
+    <span class="k">while</span> <span class="p">(</span><span class="n">isdigit</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="o">++</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">c</span> <span class="o">=</span> <span class="n">getch</span><span class="p">()))</span>
+      <span class="p">;</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">c</span> <span class="o">==</span> <span class="sc">'.'</span><span class="p">)</span> <span class="c1">// collect fractional part.</span>
+    <span class="k">while</span> <span class="p">(</span><span class="n">isdigit</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="o">++</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">c</span> <span class="o">=</span> <span class="n">getch</span><span class="p">()))</span>
+      <span class="p">;</span>
+  <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="sc">'\0'</span><span class="p">;</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">c</span> <span class="o">!=</span> <span class="n">EOF</span><span class="p">)</span>
+    <span class="n">ungetch</span><span class="p">(</span><span class="n">c</span><span class="p">);</span>
+  <span class="k">return</span> <span class="n">NUMBER</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="cp">#define BUFSIZE 100
+</span><span class="kt">char</span> <span class="n">buf</span><span class="p">[</span><span class="n">BUFSIZE</span><span class="p">];</span>
+<span class="kt">int</span> <span class="n">bufp</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>  <span class="c1">// next free position in buf.</span>
+
+<span class="kt">int</span> <span class="nf">getch</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">(</span><span class="n">bufp</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="o">?</span> <span class="n">buf</span><span class="p">[</span><span class="o">--</span><span class="n">bufp</span><span class="p">]</span> <span class="o">:</span> <span class="n">getchar</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">ungetch</span><span class="p">(</span><span class="kt">int</span> <span class="n">c</span><span class="p">)</span> <span class="p">{</span>  <span class="c1">// push character back on input.</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">bufp</span> <span class="o">&gt;=</span> <span class="n">BUFSIZE</span><span class="p">)</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">"ungetch: too many characters.</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+  <span class="k">else</span>
+    <span class="n">buf</span><span class="p">[</span><span class="n">bufp</span><span class="o">++</span><span class="p">]</span> <span class="o">=</span> <span class="n">c</span><span class="p">;</span>
+<span class="p">}</span>
+  
+<span class="cp">#endif
+</span>
+<span class="c1">// Topic: Scope.</span>
+<span class="c1">// Question: (T or F) The scope of a name is the part of the program within whch the name can be used.</span>
+
+<span class="c1">// Topics: variable scope, initialization of variables, external linkage.</span>
+<span class="c1">// For the questions that use P4 - P12, study the differences to see what</span>
+<span class="c1">// causes compilation errors.</span>
+
+<span class="cp">#ifdef P4
+</span><span class="c1">// Question (T or F) The program below will compile without error.</span>
+<span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">my_variable</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="kt">int</span> <span class="n">my_variable</span><span class="p">;</span>
+
+<span class="cp">#endif
+</span>
+<span class="cp">#ifdef P5
+</span><span class="c1">// Question (T or F) The program below will compile without error.</span>
+<span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span><span class="kt">int</span> <span class="n">my_variable</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">my_variable</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="kt">int</span> <span class="n">my_variable</span><span class="p">;</span>
+
+<span class="cp">#endif
+</span>
+<span class="cp">#ifdef P6
+</span><span class="c1">// Question (T or F) The program below will compile without error.</span>
+<span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span><span class="kt">int</span> <span class="n">my_variable</span><span class="o">=</span><span class="mi">4</span><span class="p">;</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">my_variable</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="kt">int</span> <span class="n">my_variable</span><span class="o">=</span><span class="mi">5</span><span class="p">;</span>
+
+<span class="c1">// Error: ch4_studyQuestions.c:278:5: error: redefinition of 'my_variable'</span>
+<span class="cp">#endif
+</span>
+<span class="cp">#ifdef P7
+</span><span class="c1">// Question (T or F) The program below will compile without error.</span>
+
+<span class="c1">// in my_variable is a declaration, int my_variable=5 is a definition.</span>
+<span class="c1">// illegal for g++: ch4_studyQuestions.c:292:5: error: redefinition of 'my_variable'</span>
+<span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span><span class="kt">int</span> <span class="n">my_variable</span><span class="p">;</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">my_variable</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="kt">int</span> <span class="n">my_variable</span><span class="o">=</span><span class="mi">5</span><span class="p">;</span>
+<span class="cp">#endif
+</span>
+<span class="cp">#ifdef P8
+</span><span class="c1">// Question (T or F) The program below will compile without error.</span>
+
+<span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span><span class="kt">int</span> <span class="n">my_variable</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kt">int</span> <span class="n">my_variable</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">my_variable</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="cp">#endif
+</span>
+<span class="cp">#ifdef P9
+</span><span class="c1">// Question (T or F) The program below will compile without error.</span>
+
+<span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span><span class="kt">int</span> <span class="n">my_variable</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">static</span> <span class="kt">int</span> <span class="n">my_variable</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">my_variable</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="cp">#endif
+</span>
+<span class="cp">#ifdef P10
+</span><span class="c1">// Question (T or F) The program below will compile without error.</span>
+
+<span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span><span class="k">static</span> <span class="kt">int</span> <span class="n">my_variable</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">static</span> <span class="kt">int</span> <span class="n">my_variable</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">my_variable</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="cp">#endif
+</span>
+<span class="cp">#ifdef P11
+</span><span class="c1">// Question (T or F) The program below will compile without error.</span>
+
+<span class="c1">// Note: variables cannot be seen outside of the block where they are declared.</span>
+<span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span><span class="kt">int</span> <span class="n">my_variable</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kt">int</span> <span class="n">my_variable</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span> <span class="p">{</span>
+    <span class="kt">int</span> <span class="n">my_variable</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">my_variable</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="cp">#endif
+</span>
+<span class="cp">#ifdef P12
+</span><span class="c1">// Topic: scope.</span>
+<span class="c1">// Question How many compilation errors will this program generate?</span>
+
+<span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span><span class="kt">double</span> <span class="nf">foo</span> <span class="p">()</span> <span class="p">{</span><span class="k">return</span> <span class="mi">2</span><span class="p">;}</span>
+<span class="kt">double</span> <span class="n">my_variable</span> <span class="o">=</span> <span class="mi">4</span> <span class="o">*</span> <span class="mi">3</span> <span class="o">/</span> <span class="n">foo</span><span class="p">();</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kt">double</span> <span class="n">my_variable</span> <span class="o">=</span> <span class="mi">4</span> <span class="o">*</span> <span class="mi">3</span> <span class="o">/</span> <span class="n">foo</span><span class="p">();</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">"%f</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">my_variable</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="cp">#endif
+</span>
+<span class="cp">#ifdef P13
+#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span><span class="c1">// Recursive printd</span>
+<span class="kt">void</span> <span class="nf">printd</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">putchar</span><span class="p">(</span><span class="sc">'-'</span><span class="p">);</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="o">-</span> <span class="n">n</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">/</span> <span class="mi">10</span><span class="p">)</span>
+    <span class="n">printd</span><span class="p">(</span><span class="n">n</span> <span class="o">/</span> <span class="mi">10</span><span class="p">);</span>
+  <span class="n">putchar</span> <span class="p">(</span><span class="n">n</span> <span class="o">%</span> <span class="mi">10</span> <span class="o">+</span> <span class="sc">'0'</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+  <span class="n">printd</span><span class="p">(</span><span class="mi">1234</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="cp">#endif
+</span>
+<span class="cp">#ifdef P14
+#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span>
+<span class="kt">int</span> <span class="nf">fib</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
+
+    <span class="k">return</span> <span class="n">fib</span><span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">+</span><span class="n">fib</span><span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="mi">2</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kt">int</span> <span class="n">inputValue</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;=</span><span class="n">inputValue</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">"fib(%d):%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">fib</span><span class="p">(</span><span class="n">i</span><span class="p">));</span>
+<span class="p">}</span>
+
+<span class="cp">#endif
+</span>
+<span class="cp">#ifdef P15
+</span><span class="c1">// Topic: Writing and using macros.</span>
+<span class="c1">// Question: What value will this program print?</span>
+
+<span class="cp">#define max(A, B) ((A) &gt; (B) ? (A) : (B))
+</span><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">j</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+  <span class="kt">int</span> <span class="n">val</span> <span class="o">=</span> <span class="n">max</span><span class="p">(</span><span class="n">i</span><span class="o">++</span><span class="p">,</span> <span class="n">j</span><span class="o">++</span><span class="p">);</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">val</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="cp">#endif
+</span>
+<span class="cp">#ifdef P16
+</span><span class="c1">// Topic: Writing and using macros.</span>
+<span class="c1">// Question: What value will this program print?</span>
+<span class="cp">#define square(x) x * x
+#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kt">int</span> <span class="n">value</span> <span class="o">=</span> <span class="n">square</span><span class="p">(</span><span class="mi">2</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span>
+  <span class="c1">// Note: converts to 2 -1 * 2 - 1 -&gt; 2 - (-1 * 2) - 1</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">value</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="cp">#endif
+</span>
+<span class="cp">#ifdef P17
+#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="sc">'0'</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="cp">#endif
+</span>
+<span class="cp">#ifdef P18
+</span><span class="c1">// Topic: Using the extern keyword.</span>
+<span class="c1">// Question: What will this program print?</span>
+<span class="c1">// Ans: </span>
+<span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span><span class="kt">int</span> <span class="n">my_variable</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kt">int</span> <span class="n">foo</span><span class="p">(</span><span class="kt">int</span><span class="p">);</span>
+  <span class="kt">int</span> <span class="n">my_variable</span> <span class="o">=</span> <span class="mi">6</span><span class="p">;</span>
+  <span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">foo</span><span class="p">(</span><span class="n">my_variable</span><span class="p">));</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">foo</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">extern</span> <span class="kt">int</span> <span class="n">my_variable</span><span class="p">;</span>
+  <span class="k">return</span> <span class="n">my_variable</span> <span class="o">+</span> <span class="n">a</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="cp">#endif
+</span>
+</code></pre></div></div>
+
+  </div>
+</article>
+      </div>
+    </div>
+    <!-- /#page-content-wrapper -->
+
+  </div>
+  <!-- /#wrapper -->
+
+  <!-- Bootstrap core JavaScript -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+<script src=/ecen330/js/jquery.visible.min.js></script>
+
+<!-- Menu Toggle Script -->
+<script>
+    $("#menu-toggle").click(function (e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+
+    var prevVisible = $('#page-title').visible();
+
+    $(window).scroll(function () {
+        currentVisible = $('#page-title').visible()
+        if (prevVisible && !currentVisible) {
+            console.log("Do something!");
+            $("#page-title-bar").html($('#page-title').text());
+        }
+
+        if (!prevVisible && currentVisible) {
+            $("#page-title-bar").html("")
+        }
+
+        prevVisible = currentVisible;
+    });
+
+</script>
+
+</body>
+
+</html>

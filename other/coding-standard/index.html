@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<title>
+    
+    ECEN 330 Coding Standard • ECEN 330
+    
+</title>
+
+<!-- Bootstrap core CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+<!-- Custom styles for this template -->
+<link rel="stylesheet" href=/ecen330/css/main.css>
+
+<!-- <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet"> -->
+<!-- <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet"> -->
+<link rel="stylesheet" href="https://use.typekit.net/jcn6ybb.css">
+
+<!-- <link rel="icon" type="image/png" sizes="96x96" href=/ecen330/icon/favicon-96x96.png>
+<link rel="icon" type="image/png" sizes="32x32" href=/ecen330/icon/favicon-32x32.png>
+<link rel="icon" type="image/png" sizes="16x16" href=/ecen330/icon/favicon-16x16.png> -->
+
+<script src="https://kit.fontawesome.com/d794f0229e.js" crossorigin="anonymous"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script type="text/javascript">
+    $(function () {
+        console.log("hi there");
+        // this will get the full URL at the address bar
+        var url = window.location.href;
+        console.log(url);
+
+        // passes on every "a" tag
+        $(".list-group a").each(function () {
+            console.log(this)
+            // checks if its the same on the address bar
+            if (url == (this.href)) {
+                $(this).addClass("active");
+            }
+        });
+    });        
+</script>
+
+</head>
+
+<body>
+  <div class="d-flex" id="wrapper">
+    <div class="border-right sidebar-color" id="sidebar-wrapper">
+    <div class="sidebar-sticky">
+        <div class="sidebar-heading-big">
+            <a href="/ecen330/">
+                ECEN 330</a>
+        </div>
+        <div class="list-group list-group-flush sidebar-color">
+
+            
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <!-- <a href="https://slack.com/app_redirect?team=T01J887F8MU&channel=C01JF1N6TH8"
+                class="list-item-normal list-group-item list-group-item-action sidebar-item" target="_blank"><i
+                    class="fa fa-question-circle"></i>
+                Slack</a> -->
+
+        </div>
+
+        <div class="sidebar-heading">Setup</div>
+        <div class="list-group list-group-flush">
+            
+            <a href="/ecen330/setup/step-1/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Setup Step #1
+
+            </a>
+            
+            <a href="/ecen330/setup/linux/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                Home Setup: Linux
+
+            </a>
+            
+            <a href="/ecen330/setup/vm/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                Home Setup: VM
+
+            </a>
+            
+            <a href="/ecen330/setup/step-2/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Setup Step #2
+
+            </a>
+            
+        </div>
+
+        
+        <div class="sidebar-heading">Labs</div>
+        <div class="list-group list-group-flush">
+            
+            <a href="/ecen330/labs/hello-world/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">1</span>
+                
+
+                Hello World
+
+            </a>
+            
+            <a href="/ecen330/labs/gpio/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">2</span>
+                
+
+                GPIO Driver
+
+            </a>
+            
+            <a href="/ecen330/labs/timer/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">3</span>
+                
+
+                Timer Driver
+
+            </a>
+            
+            <a href="/ecen330/labs/interrupts/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">4</span>
+                
+
+                Interrupt Driver
+
+            </a>
+            
+            <a href="/ecen330/labs/touchscreen/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">5</span>
+                
+
+                Touchscreen Driver
+
+            </a>
+            
+            <a href="/ecen330/labs/clock/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">6</span>
+                
+
+                Clock
+
+            </a>
+            
+            <a href="/ecen330/labs/tictactoe/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">7</span>
+                
+
+                Tic Tac Toe
+
+            </a>
+            
+            <a href="/ecen330/labs/tictactoe-m1/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey"></span>
+                &emsp;
+
+                M1: Minimax
+
+            </a>
+            
+            <a href="/ecen330/labs/tictactoe-m2/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey"></span>
+                &emsp;
+
+                M2: Control
+
+            </a>
+            
+            <a href="/ecen330/labs/missile-command/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">8</span>
+                
+
+                Missile Command
+
+            </a>
+            
+            <a href="/ecen330/labs/missile-command-m1/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey"></span>
+                &emsp;
+
+                M1: Missiles
+
+            </a>
+            
+            <a href="/ecen330/labs/missile-command-m2/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey"></span>
+                &emsp;
+
+                M2: Game Control
+
+            </a>
+            
+            <a href="/ecen330/labs/missile-command-m3/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey"></span>
+                &emsp;
+
+                M3: Plane & Stats
+
+            </a>
+            
+            <a href="/ecen330/labs/project/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">9</span>
+                
+
+                Choose Your Own
+
+            </a>
+            
+        </div>
+
+        <div class="sidebar-heading">Documentation</div>
+        <div class="list-group list-group-flush">
+            
+            <a href="/ecen330/documentation/development-tools/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Development Tools
+
+            </a>
+            
+            <a href="/ecen330/documentation/compiling/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                Compiling and Running
+
+            </a>
+            
+            <a href="/ecen330/documentation/cmake/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                CMake
+
+            </a>
+            
+            <a href="/ecen330/documentation/headers/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                Header Files
+
+            </a>
+            
+            <a href="/ecen330/documentation/submission/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                Submitting Code
+
+            </a>
+            
+            <a href="/ecen330/documentation/vscode/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                Coding/Debugging Tips
+
+            </a>
+            
+            <a href="/ecen330/documentation/devices/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                System Platform
+
+            </a>
+            
+            <a href="/ecen330/documentation/graphics/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                LCD Graphics
+
+            </a>
+            
+            <a href="/ecen330/documentation/gpio/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                GPIO
+
+            </a>
+            
+            <a href="/ecen330/documentation/timer/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                Interval Timer
+
+            </a>
+            
+            <a href="/ecen330/documentation/intc/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                Interrupt Controller
+
+            </a>
+            
+            <a href="/ecen330/documentation/touchscreen/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                Touchscreen
+
+            </a>
+            
+        </div>
+
+        <div class="sidebar-heading">Other</div>
+        <div class="list-group list-group-flush">
+            
+            <a href="/ecen330/other/c-programming/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                'C Programming' Study Questions
+
+            </a>
+            
+            <a href="/ecen330/other/coding-standard/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Coding Standard
+
+            </a>
+            
+            <a href="/ecen330/other/coding-state-machines/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Coding State Machines
+
+            </a>
+            
+            <a href="/ecen330/other/suggestions/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Suggestions
+
+            </a>
+            
+            <a href="/ecen330/other/simon/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Old Lab: Simon
+
+            </a>
+            
+            <a href="/ecen330/other/wam/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Old Lab: Whack-a-Mole
+
+            </a>
+            
+        </div>
+    </div>
+</div>
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+
+      <nav class="navbar sticky-top navbar-expand-lg border-bottom">
+        <button class="btn btn-brand" id="menu-toggle">
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <a href="" class="navbar-brand mb-0 h1 page-title-bar text-center mx-auto" id="page-title-bar"></a>
+
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link btn btn-brand suggest-edits" target="_blank" rel="noopener noreferrer"
+              href="https://piazza.com/byu/fall2023/ecen330"><i class="far fa-question-circle"></i> Piazza</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link btn btn-brand suggest-edits" target="_blank" rel="noopener noreferrer"
+              href="https://github.com/byu-cpe/ecen330/issues/new?labels=website&title=Updates to ECEN 330 Coding Standard page"><i
+                class="fab fa-github"></i> Suggest
+              Edits</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="container">
+        
+
+        <article class="page">
+  <h1 class="page-title" id="page-title">
+    
+    ECEN 330 Coding Standard
+  </h1>
+
+  <div class="page-content">
+    
+
+    <h2 id="coding-standard">Coding Standard</h2>
+
+<h3 id="1-general">1. General</h3>
+<ul>
+  <li>
+    <p><strong>1.1</strong> You must write C-code (Not C++).</p>
+  </li>
+  <li>
+    <p><strong>1.2</strong> Your code must compile without warnings.</p>
+  </li>
+  <li>
+    <p><strong>1.3</strong> Your code, when submitted, must be in a finished form. You are allowed a total of 5 lines of “commented-out” code per file.</p>
+  </li>
+  <li>
+    <p><strong>1.4</strong> Avoid using repetitive sections of copied and pasted code in your programs.</p>
+  </li>
+  <li>
+    <p><strong>1.5</strong> Busy loops (delays based on for-loops) and delay statements are not allowed, except for test code.</p>
+  </li>
+  <li>
+    <p><strong>1.6</strong> All code will be graded against the coding standard.</p>
+  </li>
+</ul>
+
+<h3 id="2-files">2. Files</h3>
+<ul>
+  <li>
+    <p><strong>2.1</strong> All “.h” files must contain declarations for all constant values, function prototypes, etc., that you want to “advertise” for use. All “.h” files must not contain executable code, only function declarations, #define, etc. This includes any definitions of any variables.</p>
+  </li>
+  <li>
+    <p><strong>2.2</strong> All “.c” files must have a corresponding “.h” with the same base name, except for “main.c”.</p>
+  </li>
+</ul>
+
+<h3 id="3-naming">3. Naming</h3>
+<ul>
+  <li>
+    <p><strong>3.1</strong> All function names and constant values contained in “.h” files must be prefixed by the base-name of the file + underscore (e.g., ‘‘buttons_read()’’, ‘‘#define BUTTONS_BTN0_MASK 0x1’’). Function names and constant values that are used only within .c files do not need to be prefixed by the base-name of the file.</p>
+  </li>
+  <li>
+    <p><strong>3.2</strong> All ‘‘#define’’ names must be all uppercase letters.</p>
+  </li>
+  <li>
+    <p><strong>3.3</strong> All names (including <code class="language-plaintext highlighter-rouge">#define</code>) must be <em>meaningful</em>. For example, <code class="language-plaintext highlighter-rouge">#define TEN 10</code> is unacceptable.</p>
+  </li>
+</ul>
+
+<h3 id="4-data-types">4. Data Types</h3>
+<ul>
+  <li><strong>4.1</strong> For integer variables, you must use the types contained in <a href="https://en.wikibooks.org/wiki/C_Programming/C_Reference/stdint.h">stdint.h</a>. There are two exceptions:
+    <ul>
+      <li>You may use <em>int</em> as the return type of <em>main()</em>.</li>
+      <li>You may use the standard integer types when interacting with C or OS library calls (ie: <em>char</em> when working with <em>strcpy()</em>, <em>int</em> when calling <em>open()</em>, etc.).</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="5-comments">5. Comments</h3>
+<ul>
+  <li>
+    <p><strong>5.1</strong> Comments must be <em>meaningful</em>. Make sure that your code completely describes your intent. If your code is unclear or does not completely describe what is going on, comment accordingly.</p>
+  </li>
+  <li>
+    <p><strong>5.2</strong> Each function definition (not declaration), including <em>main()</em>, must have a comment header (immediately before the definition) which describes the function purpose/behavior, the arguments, and the return value.</p>
+  </li>
+  <li>
+    <p><strong>5.3</strong> Each time you create a new scope (when using <code class="language-plaintext highlighter-rouge">{}</code> braces), there must be a comment associated with it to describe what the code is doing. Loops and conditionals, for example, define a new scope.</p>
+    <ul>
+      <li>For <em>if</em> statements, a comment preceding the <em>if</em> is sufficient; you aren’t required to add additional comments for <em>else</em>/<em>else if</em> statements.</li>
+      <li>Small scope blocks (3 lines or less) don’t require a comment, just comment larger blocks.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="6-formatting">6. Formatting</h3>
+<ul>
+  <li><strong>6.1</strong> You must use the <code class="language-plaintext highlighter-rouge">clang-format</code> code formatter on your code. The formatter will ensure that all indention is consistent throughout your code.</li>
+</ul>
+
+<h3 id="7-magic-numbers-and-strings">7. Magic Numbers and Strings</h3>
+<ul>
+  <li><strong>7.1</strong> All scalar constants must be <code class="language-plaintext highlighter-rouge">#define</code>, with one exception:
+    <ul>
+      <li>The constants <strong>0</strong> or <strong>1</strong> may be used anywhere in your code. You must still use <code class="language-plaintext highlighter-rouge">#define</code> for the constant <strong>-1</strong>.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="8-miscellaneous">8. Miscellaneous</h3>
+<ul>
+  <li><strong>8.1</strong> Use the <code class="language-plaintext highlighter-rouge">const</code> key word only if you are defining an array of constant values (e.g., <code class="language-plaintext highlighter-rouge">const uint8_t foo[LEN] = {1, 2};</code>)</li>
+</ul>
+
+<h3 id="9-state-machines">9. State Machines</h3>
+<ul>
+  <li>
+    <p><strong>9.1</strong> The state machine must use <code class="language-plaintext highlighter-rouge">switch</code> statements as taught by the textbook.</p>
+  </li>
+  <li>
+    <p><strong>9.2</strong> State update must be before state action.</p>
+  </li>
+  <li>
+    <p><strong>9.3</strong> The state names used in the <em>enum</em> must be the same as those used in your state diagrams.</p>
+  </li>
+  <li>
+    <p><strong>9.4</strong> Each state machine must be placed in its own file. One state machine must be contained entirely in a single file.</p>
+  </li>
+  <li>
+    <p><strong>9.5</strong> All variables in your state machine defined outside of a function must be defined using the <em>static</em> keyword.</p>
+  </li>
+  <li>
+    <p><strong>9.6</strong> You must provide an <em>init</em> function (<em>base-name_init</em>) that is called before any of your provided functions can be called. This function must initialize the <em>currentState</em> and any other state variables.</p>
+  </li>
+</ul>
+
+<!--
+Suggestion: Move grading methods to the course learning management system, e.g. Learning Suite, since they are often instructor and semester/term specific.
+-->
+
+<!--
+## Grading Source Code
+The TAs will apply the following method when evaluating your source code. The goal is to get you in the habit of writing, readable, reusable, high-quality code. As such the TAs will be quite strict when grading your code.
+  * In general, the coding standard counts toward 20% of your lab grade (some exceptions noted below).
+  * Each lab has a set number of maximum points that represents how many infractions can be made before you earn 0% on the coding standard portion.
+  * You will lose a point for each infraction, not just each type of infraction; however, the maximum number of points you can lose for each type of infraction is 5. For example, if your code has 8 magic numbers, you will lose 5 points.
+  * For example, in Lab 7, if you lose 6 points, you will receive a coding standard score of 14/20, and thus 70% on the coding standard portion of the lab.
+
+| Lab | Points | Notes on Lab |
+|-----|--------|--------------|
+| Lab1 | 10 | 20% of lab grade, first 20 infractions won't reduce your score |
+| Lab2 | 15 | 20% of lab grade, first 10 infractions won't reduce your score |
+| Lab3 | 15 | 20% of lab grade |
+| Lab4 | 15 | 20% of lab grade |
+| Lab5 | 15 | 20% of lab grade |
+| Lab6 | 15 | 20% of lab grade |
+| Lab7 | 20 | 20% of lab grade |
+| Lab8 | 25 | 20% of lab grade |
+-->
+
+<!--
+  * For example, in Lab 4, if you lose 10 points, you will receive a coding standard score of 10/20, and thus 15%/30% on the coding standard portion of the lab.
+
+| Lab | Points | Notes on Lab |
+|-----|--------|--------------|
+| Lab1 | 10 | Feedback given, but worth 0% of lab grade |
+| Lab2 | 10 | 30% of lab grade, first 10 infractions won't reduce your score |
+| Lab3 | 10 | 30% of lab grade |
+| Lab4 | 20 | 30% of lab grade |
+| Lab5 | 20 | 30% of lab grade |
+| Lab6 | 30 | 30% of lab grade |
+| Lab7 | 20 | 30% of lab grade |
+-->
+
+  </div>
+</article>
+      </div>
+    </div>
+    <!-- /#page-content-wrapper -->
+
+  </div>
+  <!-- /#wrapper -->
+
+  <!-- Bootstrap core JavaScript -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+<script src=/ecen330/js/jquery.visible.min.js></script>
+
+<!-- Menu Toggle Script -->
+<script>
+    $("#menu-toggle").click(function (e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+
+    var prevVisible = $('#page-title').visible();
+
+    $(window).scroll(function () {
+        currentVisible = $('#page-title').visible()
+        if (prevVisible && !currentVisible) {
+            console.log("Do something!");
+            $("#page-title-bar").html($('#page-title').text());
+        }
+
+        if (!prevVisible && currentVisible) {
+            $("#page-title-bar").html("")
+        }
+
+        prevVisible = currentVisible;
+    });
+
+</script>
+
+</body>
+
+</html>

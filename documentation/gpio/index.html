@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<title>
+    
+    GPIO • ECEN 330
+    
+</title>
+
+<!-- Bootstrap core CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+<!-- Custom styles for this template -->
+<link rel="stylesheet" href=/ecen330/css/main.css>
+
+<!-- <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet"> -->
+<!-- <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet"> -->
+<link rel="stylesheet" href="https://use.typekit.net/jcn6ybb.css">
+
+<!-- <link rel="icon" type="image/png" sizes="96x96" href=/ecen330/icon/favicon-96x96.png>
+<link rel="icon" type="image/png" sizes="32x32" href=/ecen330/icon/favicon-32x32.png>
+<link rel="icon" type="image/png" sizes="16x16" href=/ecen330/icon/favicon-16x16.png> -->
+
+<script src="https://kit.fontawesome.com/d794f0229e.js" crossorigin="anonymous"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script type="text/javascript">
+    $(function () {
+        console.log("hi there");
+        // this will get the full URL at the address bar
+        var url = window.location.href;
+        console.log(url);
+
+        // passes on every "a" tag
+        $(".list-group a").each(function () {
+            console.log(this)
+            // checks if its the same on the address bar
+            if (url == (this.href)) {
+                $(this).addClass("active");
+            }
+        });
+    });        
+</script>
+
+</head>
+
+<body>
+  <div class="d-flex" id="wrapper">
+    <div class="border-right sidebar-color" id="sidebar-wrapper">
+    <div class="sidebar-sticky">
+        <div class="sidebar-heading-big">
+            <a href="/ecen330/">
+                ECEN 330</a>
+        </div>
+        <div class="list-group list-group-flush sidebar-color">
+
+            
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <!-- <a href="https://slack.com/app_redirect?team=T01J887F8MU&channel=C01JF1N6TH8"
+                class="list-item-normal list-group-item list-group-item-action sidebar-item" target="_blank"><i
+                    class="fa fa-question-circle"></i>
+                Slack</a> -->
+
+        </div>
+
+        <div class="sidebar-heading">Setup</div>
+        <div class="list-group list-group-flush">
+            
+            <a href="/ecen330/setup/step-1/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Setup Step #1
+
+            </a>
+            
+            <a href="/ecen330/setup/linux/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                Home Setup: Linux
+
+            </a>
+            
+            <a href="/ecen330/setup/vm/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                Home Setup: VM
+
+            </a>
+            
+            <a href="/ecen330/setup/step-2/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Setup Step #2
+
+            </a>
+            
+        </div>
+
+        
+        <div class="sidebar-heading">Labs</div>
+        <div class="list-group list-group-flush">
+            
+            <a href="/ecen330/labs/hello-world/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">1</span>
+                
+
+                Hello World
+
+            </a>
+            
+            <a href="/ecen330/labs/gpio/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">2</span>
+                
+
+                GPIO Driver
+
+            </a>
+            
+            <a href="/ecen330/labs/timer/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">3</span>
+                
+
+                Timer Driver
+
+            </a>
+            
+            <a href="/ecen330/labs/interrupts/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">4</span>
+                
+
+                Interrupt Driver
+
+            </a>
+            
+            <a href="/ecen330/labs/touchscreen/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">5</span>
+                
+
+                Touchscreen Driver
+
+            </a>
+            
+            <a href="/ecen330/labs/clock/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">6</span>
+                
+
+                Clock
+
+            </a>
+            
+            <a href="/ecen330/labs/tictactoe/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">7</span>
+                
+
+                Tic Tac Toe
+
+            </a>
+            
+            <a href="/ecen330/labs/tictactoe-m1/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey"></span>
+                &emsp;
+
+                M1: Minimax
+
+            </a>
+            
+            <a href="/ecen330/labs/tictactoe-m2/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey"></span>
+                &emsp;
+
+                M2: Control
+
+            </a>
+            
+            <a href="/ecen330/labs/missile-command/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">8</span>
+                
+
+                Missile Command
+
+            </a>
+            
+            <a href="/ecen330/labs/missile-command-m1/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey"></span>
+                &emsp;
+
+                M1: Missiles
+
+            </a>
+            
+            <a href="/ecen330/labs/missile-command-m2/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey"></span>
+                &emsp;
+
+                M2: Game Control
+
+            </a>
+            
+            <a href="/ecen330/labs/missile-command-m3/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey"></span>
+                &emsp;
+
+                M3: Plane & Stats
+
+            </a>
+            
+            <a href="/ecen330/labs/project/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">9</span>
+                
+
+                Choose Your Own
+
+            </a>
+            
+        </div>
+
+        <div class="sidebar-heading">Documentation</div>
+        <div class="list-group list-group-flush">
+            
+            <a href="/ecen330/documentation/development-tools/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Development Tools
+
+            </a>
+            
+            <a href="/ecen330/documentation/compiling/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                Compiling and Running
+
+            </a>
+            
+            <a href="/ecen330/documentation/cmake/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                CMake
+
+            </a>
+            
+            <a href="/ecen330/documentation/headers/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                Header Files
+
+            </a>
+            
+            <a href="/ecen330/documentation/submission/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                Submitting Code
+
+            </a>
+            
+            <a href="/ecen330/documentation/vscode/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                Coding/Debugging Tips
+
+            </a>
+            
+            <a href="/ecen330/documentation/devices/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                System Platform
+
+            </a>
+            
+            <a href="/ecen330/documentation/graphics/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                LCD Graphics
+
+            </a>
+            
+            <a href="/ecen330/documentation/gpio/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                GPIO
+
+            </a>
+            
+            <a href="/ecen330/documentation/timer/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                Interval Timer
+
+            </a>
+            
+            <a href="/ecen330/documentation/intc/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                Interrupt Controller
+
+            </a>
+            
+            <a href="/ecen330/documentation/touchscreen/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                Touchscreen
+
+            </a>
+            
+        </div>
+
+        <div class="sidebar-heading">Other</div>
+        <div class="list-group list-group-flush">
+            
+            <a href="/ecen330/other/c-programming/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                'C Programming' Study Questions
+
+            </a>
+            
+            <a href="/ecen330/other/coding-standard/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Coding Standard
+
+            </a>
+            
+            <a href="/ecen330/other/coding-state-machines/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Coding State Machines
+
+            </a>
+            
+            <a href="/ecen330/other/suggestions/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Suggestions
+
+            </a>
+            
+            <a href="/ecen330/other/simon/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Old Lab: Simon
+
+            </a>
+            
+            <a href="/ecen330/other/wam/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Old Lab: Whack-a-Mole
+
+            </a>
+            
+        </div>
+    </div>
+</div>
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+
+      <nav class="navbar sticky-top navbar-expand-lg border-bottom">
+        <button class="btn btn-brand" id="menu-toggle">
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <a href="" class="navbar-brand mb-0 h1 page-title-bar text-center mx-auto" id="page-title-bar"></a>
+
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link btn btn-brand suggest-edits" target="_blank" rel="noopener noreferrer"
+              href="https://piazza.com/byu/fall2023/ecen330"><i class="far fa-question-circle"></i> Piazza</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link btn btn-brand suggest-edits" target="_blank" rel="noopener noreferrer"
+              href="https://github.com/byu-cpe/ecen330/issues/new?labels=website&title=Updates to GPIO page"><i
+                class="fab fa-github"></i> Suggest
+              Edits</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="container">
+        
+
+        <article class="page">
+  <h1 class="page-title" id="page-title">
+    
+    GPIO
+  </h1>
+
+  <div class="page-content">
+    
+
+    <p>General Purpose I/O (GPIO) refers to pins on a chip that can be either input or output, and logic-high (0) or logic-low (1), but have no predefined purpose (as opposed to specialized pins that may implement specific protocols, such as RX/TX pins for a UART).  GPIO pins are appropriate for simple input and output devices such as switches, buttons, LEDs, etc.</p>
+
+<p>Often we want to control and observe these pins from our software code (reading input pins and setting output pins).  This requires a special piece of hardware called a <em>GPIO Controller</em> that interfaces between the processor bus and the actual pins.  This allows the processor to interface with the individual pins by reading and writing to specific addresses that belong to the GPIO Controller (See the <a href="/ecen330/documentation/devices/#address-map">Address Map</a> section for details about this).</p>
+
+<p>In your lab, you will write a simple <em>driver</em> for the GPIO Controller, which will abstract away the hardware access and provide simple software functions to read the state of the buttons and switches.</p>
+
+<!-- and test driver software for the slide switches and push buttons that are on the 330 board.  -->
+
+<h2 id="class-slides">Class Slides</h2>
+<ul>
+  <li><a href="/ecen330/media/gpio/lab_gpio.pdf">Slides</a></li>
+</ul>
+
+<h2 id="schematic">Schematic</h2>
+<p>The schematic showing how the GPIO pins are connected to the buttons and switches on the printed circuit board (PCB) is shown on Page 22 of the <a href="/ecen330/media/documentation/zybo_rm_b_v6.pdf">ZYBO reference manual</a>, and included here:</p>
+
+<p><img src="/ecen330/media/gpio/zyboswitchbuttonschematic.png" width="500" alt="Zybo buttons and switches schematic" /></p>
+
+<p>As shown in the schematic, these buttons and slide switches are attached to pins on the Zynq processing chip (mounted on the center of the PCB).</p>
+
+<p><strong>Question:</strong> What is the logic value of the pin attached to the push-button when the button is pushed? When it is released?</p>
+
+<h2 id="gpio-controller">GPIO Controller</h2>
+<!-- OK, so far, so good, but how do we access them?  -->
+
+<p>A GPIO controller provides an interface between the processor running software and GPIO pins.  On our Zynq processing chip, this hardware is called the <em>AXI GPIO</em>, and is described in <a href="/ecen330/media/gpio/ds744_axi_gpio.pdf">this data sheet</a>.</p>
+
+<p>I have included the schematic from page 3 of the data sheet below:</p>
+
+<p><img src="/ecen330/media/gpio/gpioschematicannotated.jpg" width="600" alt="GPIO Schematic, annotated" /></p>
+
+<p>This shows one pin (one bit) of the GPIO connection.  The circuit is replicated for each pin of the GPIO controller (so one of these circuits for each slide switch and each push button).  There is a separate GPIO controller for the push-buttons and a separate GPIO block for the slide switches. Both GPIO blocks are 4-bits wide because there are 4 push-buttons and 4 slide-switches.</p>
+
+<p>I have annotated the schematic to show the path that the button or slide-switch logic value will take through the GPIO IP. Also, note that each pin of the GPIO block can function as either an input or output. <strong>You want all of the GPIO pins to function as an input so you can read the switch and button values.</strong> When a pin is functioning as input, the tri-state driver must be turned off; when functioning as an output, the tri-state driver is turned on. You turn the tri-state driver off or on by writing the correct value to the GPIO_TRI register (see Page 9 of the GPIO documentation).</p>
+
+<h3 id="registers">Registers</h3>
+<p>Each GPIO block provides 4 inputs/outputs so both the <em>GPIO_TRI</em> and <em>GPIO_DATA</em> registers are each 4 bits wide. When reading the <em>GPIO_DATA</em> register, bit 0 corresponds to <em>BTN_0</em>, bit 1 corresponds to <em>BTN_1</em>, etc. When writing the <em>GPIO_TRI</em> register to configure the GPIO so that it provides inputs, bit 0 corresponds to <em>BTN_0</em>, bit 1 corresponds to <em>BTN_1</em>, etc. You will write the <em>GPIO_TRI</em> register in the <em>_init</em> functions so that the GPIO block is setup as having only inputs. See Page 9 of the GPIO documentation for programming details for the <em>GPIO_TRI</em> register.</p>
+
+<p>Even though the hardware registers are only 4 bits wide, when you perform software reads and writes, you will always access them as 32-bit registers, so you can ignore the upper 28 bits of data.</p>
+
+<p>For example, if I read the <em>GPI_DATA</em> register and receive the hexadecimal value <strong>000F</strong> (0000_0000_0000_1111 in binary), this means that all push-buttons are depressed. If I read the <em>GPIO_DATA</em> and receive the hexadecimal value <strong>000A</strong> (0000_0000_0000_1010), this means that push-buttons <em>BTN_3</em> and <em>BTN_1</em> are depressed.</p>
+
+<p><strong>Pro Tip:</strong> One way to check to see if hardware is present is to write a write-able register with a value and then read it back to see if the value still exists. If you cannot not successfully write the selected register, the proper hardware may not be present. It would be good to print out an error message in this case to notify the application programmer or user about a catastrophic problem. For example, in the <em>buttons_init()</em> function (for example), you could write the value to the <em>GPIO_TRI</em> register to setup the GPIO hardware to serve as inputs and then <em>read</em> the value back and check to see that it is the correct value.</p>
+
+<h3 id="accessing-registers-from-software">Accessing Registers from Software</h3>
+<p>OK, the hardware seems straightforward enough but how do you access the GPIO hardware from software? As you can see in the schematic shown above, three registers are shown (<em>GPIO_TRI</em>, <em>GPIO_DATA</em>, and <em>READ_REG_IN</em>). However, there are only two actual registers that you can access: <em>GPIO_TRI</em> and <em>GPIO_DATA</em>. <em>GPIO_DATA</em> does double duty; when you write it, the value appears at the output (this would be useful for turning on an LED). When you read it, you are reading the value of the switch or button. The Xilinx schematic is a little confusing in this regard. For purposes of this lab, you will only read the <em>GPIO_DATA</em> register. A larger picture that shows how the ARM core, the GPIO block, and the switches are organized is shown below.</p>
+
+<p><img src="/ecen330/media/gpio/zynqgpiobuttonblockdiagram.jpg" width="800" alt="GPIO Block Diagram" /></p>
+
+<p>The documentation for the <em>AXI GPIO</em> contains a specific section that discusses the registers available to the processor.  This critical information is commonly found in datasheets for hardware devices, and provides you with the information you need to interface between software and hardware, and write a device driver.  A summarizing table from this section is included here:</p>
+
+<p><img src="/ecen330/media/gpio/gpioregisteroffsets.jpg" width="800" alt="GPIO register offsets" /></p>
+
+<p>The table shows the addresses in the <a href="/ecen330/documentation/devices/#address-map">Address Map</a> that correspond to each registers.  However, because the Zynq processing chip we are using is a <em>reconfigurable device</em> (FPGA), the addresses are not fixed and can be chosen by the user when the system is designed.  As such, the addresses are not listed as absolute addresses, but rather as offsets from a chosen <em>base address</em>.</p>
+
+<p>So for example, if the base address was 0x12340000, then the <em>GPIO_DATA</em> register would be located at address 0x12340000 and the <em>GPIO_TRI</em> register would be at address 0x12340004.</p>
+
+<h3 id="base-addresses">Base Addresses</h3>
+
+<p>The configured base addresses for our system can be found in <a href="https://github.com/byu-cpe/ecen330_student/blob/main/platforms/zybo/xil_arm_toolchain/bsp/ps7_cortexa9_0/include/xparameters.h">xparameters.h</a>.  This file contains some content similar to this:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/* Definitions for peripheral GPIO_PUSH_BUTTONS */
+#define XPAR_PUSH_BUTTONS_BASEADDR 0x41240000
+#define XPAR_PUSH_BUTTONS_HIGHADDR 0x4124FFFF
+#define XPAR_PUSH_BUTTONS_DEVICE_ID 3
+#define XPAR_PUSH_BUTTONS_INTERRUPT_PRESENT 1
+#define XPAR_PUSH_BUTTONS_IS_DUAL 0
+
+
+/* Definitions for peripheral GPIO_SLIDE_SWITCHES */
+#define XPAR_SLIDE_SWITCHES_BASEADDR 0x41280000
+#define XPAR_SLIDE_SWITCHES_HIGHADDR 0x4128FFFF
+#define XPAR_SLIDE_SWITCHES_DEVICE_ID 4
+#define XPAR_SLIDE_SWITCHES_INTERRUPT_PRESENT 1
+#define XPAR_SLIDE_SWITCHES_IS_DUAL 0
+</code></pre></div></div>
+
+<p><strong>Please note that this excerpt is only an example of what the <em>xparameters.h</em> file could contain. You should never hardcode these values in your program. Always <code class="language-plaintext highlighter-rouge">#include "xparameters.h"</code> in your code and use the constants defined there.</strong></p>
+
+<p>For this lab, you only need to know the base address for the push buttons (<em>XPAR_PUSH_BUTTONS_BASEADDR</em>) and the slide switches (<em>XPAR_SLIDE_SWITCHES_BASEADDR</em>). You can ignore all of the other lines with #define.</p>
+
+<h2 id="accessing-device-registers">Accessing Device Registers</h2>
+<p>Armed with a knowledge of the base addresses for the two GPIO blocks, how do you access GPIO registers via ‘C’? Xilinx makes it very simple. There are two functions defined in “xil_io.h” that you should use:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>uint32_t Xil_In32(uint32_t Addr); // Returns the value at the address.
+
+void Xil_Out32(uint32_t Addr, uint32_t Value);  // Writes value to the address.
+</code></pre></div></div>
+
+<p>Before using these functions you should <code class="language-plaintext highlighter-rouge">#include "xil_io.h"</code> at the top of your program.   You can find <em>xil_io.h</em> at <a href="https://github.com/byu-cpe/ecen330_student/blob/main/platforms/zybo/xil_arm_toolchain/bsp/ps7_cortexa9_0/include/xil_io.h">zybo/xil_arm_toolchain/bsp/ps7_cortexa9_0/include/xil_io.h</a>.</p>
+
+<h3 id="helper-functions">Helper functions</h3>
+
+<p>Rather than calling these register access functions throughout your driver code, you should instead create helper functions. Here is an example of helper functions to use for the buttons driver:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>static uint32_t readRegister(uint32_t offset) {
+   return Xil_In32(XPAR_PUSH_BUTTONS_BASEADDR + offset);
+}
+
+static void writeRegister(uint32_t offset, uint32_t value) {
+   Xil_Out32(XPAR_PUSH_BUTTONS_BASEADDR + offset, value);
+}
+</code></pre></div></div>
+
+<p>While it may seem silly to create extra functions that are so simple, it is a good design practice to abstract away the hardware access functions.  As you write more complex drivers that have <em>many</em> accesses to registers, the simpler helper functions will make your code cleaner, more readable, and less likely to contain mistakes and bugs.</p>
+
+
+  </div>
+</article>
+      </div>
+    </div>
+    <!-- /#page-content-wrapper -->
+
+  </div>
+  <!-- /#wrapper -->
+
+  <!-- Bootstrap core JavaScript -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+<script src=/ecen330/js/jquery.visible.min.js></script>
+
+<!-- Menu Toggle Script -->
+<script>
+    $("#menu-toggle").click(function (e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+
+    var prevVisible = $('#page-title').visible();
+
+    $(window).scroll(function () {
+        currentVisible = $('#page-title').visible()
+        if (prevVisible && !currentVisible) {
+            console.log("Do something!");
+            $("#page-title-bar").html($('#page-title').text());
+        }
+
+        if (!prevVisible && currentVisible) {
+            $("#page-title-bar").html("")
+        }
+
+        prevVisible = currentVisible;
+    });
+
+</script>
+
+</body>
+
+</html>

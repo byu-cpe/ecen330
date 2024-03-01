@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<title>
+    
+    Coding State Machines • ECEN 330
+    
+</title>
+
+<!-- Bootstrap core CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+<!-- Custom styles for this template -->
+<link rel="stylesheet" href=/ecen330/css/main.css>
+
+<!-- <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet"> -->
+<!-- <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet"> -->
+<link rel="stylesheet" href="https://use.typekit.net/jcn6ybb.css">
+
+<!-- <link rel="icon" type="image/png" sizes="96x96" href=/ecen330/icon/favicon-96x96.png>
+<link rel="icon" type="image/png" sizes="32x32" href=/ecen330/icon/favicon-32x32.png>
+<link rel="icon" type="image/png" sizes="16x16" href=/ecen330/icon/favicon-16x16.png> -->
+
+<script src="https://kit.fontawesome.com/d794f0229e.js" crossorigin="anonymous"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script type="text/javascript">
+    $(function () {
+        console.log("hi there");
+        // this will get the full URL at the address bar
+        var url = window.location.href;
+        console.log(url);
+
+        // passes on every "a" tag
+        $(".list-group a").each(function () {
+            console.log(this)
+            // checks if its the same on the address bar
+            if (url == (this.href)) {
+                $(this).addClass("active");
+            }
+        });
+    });        
+</script>
+
+</head>
+
+<body>
+  <div class="d-flex" id="wrapper">
+    <div class="border-right sidebar-color" id="sidebar-wrapper">
+    <div class="sidebar-sticky">
+        <div class="sidebar-heading-big">
+            <a href="/ecen330/">
+                ECEN 330</a>
+        </div>
+        <div class="list-group list-group-flush sidebar-color">
+
+            
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <!-- <a href="https://slack.com/app_redirect?team=T01J887F8MU&channel=C01JF1N6TH8"
+                class="list-item-normal list-group-item list-group-item-action sidebar-item" target="_blank"><i
+                    class="fa fa-question-circle"></i>
+                Slack</a> -->
+
+        </div>
+
+        <div class="sidebar-heading">Setup</div>
+        <div class="list-group list-group-flush">
+            
+            <a href="/ecen330/setup/step-1/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Setup Step #1
+
+            </a>
+            
+            <a href="/ecen330/setup/linux/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                Home Setup: Linux
+
+            </a>
+            
+            <a href="/ecen330/setup/vm/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                Home Setup: VM
+
+            </a>
+            
+            <a href="/ecen330/setup/step-2/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Setup Step #2
+
+            </a>
+            
+        </div>
+
+        
+        <div class="sidebar-heading">Labs</div>
+        <div class="list-group list-group-flush">
+            
+            <a href="/ecen330/labs/hello-world/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">1</span>
+                
+
+                Hello World
+
+            </a>
+            
+            <a href="/ecen330/labs/gpio/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">2</span>
+                
+
+                GPIO Driver
+
+            </a>
+            
+            <a href="/ecen330/labs/timer/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">3</span>
+                
+
+                Timer Driver
+
+            </a>
+            
+            <a href="/ecen330/labs/interrupts/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">4</span>
+                
+
+                Interrupt Driver
+
+            </a>
+            
+            <a href="/ecen330/labs/touchscreen/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">5</span>
+                
+
+                Touchscreen Driver
+
+            </a>
+            
+            <a href="/ecen330/labs/clock/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">6</span>
+                
+
+                Clock
+
+            </a>
+            
+            <a href="/ecen330/labs/tictactoe/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">7</span>
+                
+
+                Tic Tac Toe
+
+            </a>
+            
+            <a href="/ecen330/labs/tictactoe-m1/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey"></span>
+                &emsp;
+
+                M1: Minimax
+
+            </a>
+            
+            <a href="/ecen330/labs/tictactoe-m2/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey"></span>
+                &emsp;
+
+                M2: Control
+
+            </a>
+            
+            <a href="/ecen330/labs/missile-command/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">8</span>
+                
+
+                Missile Command
+
+            </a>
+            
+            <a href="/ecen330/labs/missile-command-m1/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey"></span>
+                &emsp;
+
+                M1: Missiles
+
+            </a>
+            
+            <a href="/ecen330/labs/missile-command-m2/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey"></span>
+                &emsp;
+
+                M2: Game Control
+
+            </a>
+            
+            <a href="/ecen330/labs/missile-command-m3/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey"></span>
+                &emsp;
+
+                M3: Plane & Stats
+
+            </a>
+            
+            <a href="/ecen330/labs/project/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">9</span>
+                
+
+                Choose Your Own
+
+            </a>
+            
+        </div>
+
+        <div class="sidebar-heading">Documentation</div>
+        <div class="list-group list-group-flush">
+            
+            <a href="/ecen330/documentation/development-tools/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Development Tools
+
+            </a>
+            
+            <a href="/ecen330/documentation/compiling/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                Compiling and Running
+
+            </a>
+            
+            <a href="/ecen330/documentation/cmake/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                CMake
+
+            </a>
+            
+            <a href="/ecen330/documentation/headers/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                Header Files
+
+            </a>
+            
+            <a href="/ecen330/documentation/submission/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                Submitting Code
+
+            </a>
+            
+            <a href="/ecen330/documentation/vscode/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                Coding/Debugging Tips
+
+            </a>
+            
+            <a href="/ecen330/documentation/devices/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                System Platform
+
+            </a>
+            
+            <a href="/ecen330/documentation/graphics/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                LCD Graphics
+
+            </a>
+            
+            <a href="/ecen330/documentation/gpio/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                GPIO
+
+            </a>
+            
+            <a href="/ecen330/documentation/timer/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                Interval Timer
+
+            </a>
+            
+            <a href="/ecen330/documentation/intc/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                Interrupt Controller
+
+            </a>
+            
+            <a href="/ecen330/documentation/touchscreen/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                Touchscreen
+
+            </a>
+            
+        </div>
+
+        <div class="sidebar-heading">Other</div>
+        <div class="list-group list-group-flush">
+            
+            <a href="/ecen330/other/c-programming/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                'C Programming' Study Questions
+
+            </a>
+            
+            <a href="/ecen330/other/coding-standard/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Coding Standard
+
+            </a>
+            
+            <a href="/ecen330/other/coding-state-machines/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Coding State Machines
+
+            </a>
+            
+            <a href="/ecen330/other/suggestions/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Suggestions
+
+            </a>
+            
+            <a href="/ecen330/other/simon/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Old Lab: Simon
+
+            </a>
+            
+            <a href="/ecen330/other/wam/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Old Lab: Whack-a-Mole
+
+            </a>
+            
+        </div>
+    </div>
+</div>
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+
+      <nav class="navbar sticky-top navbar-expand-lg border-bottom">
+        <button class="btn btn-brand" id="menu-toggle">
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <a href="" class="navbar-brand mb-0 h1 page-title-bar text-center mx-auto" id="page-title-bar"></a>
+
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link btn btn-brand suggest-edits" target="_blank" rel="noopener noreferrer"
+              href="https://piazza.com/byu/fall2023/ecen330"><i class="far fa-question-circle"></i> Piazza</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link btn btn-brand suggest-edits" target="_blank" rel="noopener noreferrer"
+              href="https://github.com/byu-cpe/ecen330/issues/new?labels=website&title=Updates to Coding State Machines page"><i
+                class="fab fa-github"></i> Suggest
+              Edits</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="container">
+        
+
+        <article class="page">
+  <h1 class="page-title" id="page-title">
+    
+    Coding State Machines
+  </h1>
+
+  <div class="page-content">
+    
+
+    <h2 id="how-to-write-good-code-for-state-machines">How to Write Good Code for State Machines</h2>
+
+<p>The Zybook text does a reasonable job explaining how to implement control as software-based state machines. However, it provides little guidance regarding a good implementation strategy. I tried several different strategies over the summer and have found one that works well. We will adopt it as part of the coding standard for state machines for this course.</p>
+
+<h3 id="in-the-tick-function-state-update-then-state-action">In the Tick Function: State Update then State Action</h3>
+
+<p>In the text, the authors implement the <code class="language-plaintext highlighter-rouge">tick()</code> function with two switch statements. We will still follow this approach.  The first switch statement will perform the state-update, and the second switch statement will perform the state-action.</p>
+
+<h3 id="state-machine-initialization-function">State Machine Initialization Function</h3>
+
+<p>All state machines should have an initialization function that will initialize the current state as well as initialize any state machine variables.  This initialization function should be called by <code class="language-plaintext highlighter-rouge">main</code> before entering the loop that is responsible for calling the <code class="language-plaintext highlighter-rouge">tick</code> function.</p>
+
+<p>Why do this?</p>
+<ul>
+  <li>It ensures all variables in the state machine are properly initialized (including the starting state).</li>
+  <li>It provides a single function that can be called to reset the state machine.</li>
+  <li>You cannot perform initialization in the first state of your state machine because the tick function first performs the state transition, and then the state action, so assuming you immediately transition out of your first state, <strong>any actions you place in your initial state will be skipped and never executed</strong>.</li>
+</ul>
+
+<h3 id="file-organization">File Organization</h3>
+<p>Your state-machine will be completely contained in a single file. The name of this file will be given in the description for each of the labs. This single file will contain everything that the state-machine needs to implement control. Other non-control functions such as updating the display and so forth will be located in a different file. You will also have a single “.h” file to advertise the init and tick functions. The name that you must use with this “.h” will be given to you in the lab description.</p>
+
+<h4 id="all-variables-used-by-the-tick-function-have-file-or-function-scope">All Variables Used By the tick() Function Have File or function Scope</h4>
+<p>Any variable defined outside of a function needs to be defined using the <code class="language-plaintext highlighter-rouge">static</code> keyword. This ensures that the variable is local to a single file and avoids multiple-definition errors from the compiler/linker. If the variables are defined inside the tick function, they have local scope but you probably still need to use the <code class="language-plaintext highlighter-rouge">static</code> keyword because you will often want the value preserved between “tick” invocations, (e.g., a variable that you increment to implement a timer).</p>
+
+<h2 id="example">Example</h2>
+<p>I will provide a snippet from my implementation of the clock lab so that you can see what I mean.</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// States for the controller state machine.</span>
+<span class="k">enum</span> <span class="n">clockControl_st_t</span> <span class="p">{</span>
+	<span class="n">init_st</span><span class="p">,</span>                 <span class="c1">// Start here, transition out of this state on the first tick.</span>
+	<span class="n">never_touched_st</span><span class="p">,</span>        <span class="c1">// Wait here until the first touch - clock is disabled until set.</span>
+	<span class="n">waiting_for_touch_st</span><span class="p">,</span>    <span class="c1">// waiting for touch, clock is enabled and running.</span>
+	<span class="n">ad_timer_running_st</span><span class="p">,</span>     <span class="c1">// waiting for the touch-controller ADC to settle.</span>
+	<span class="n">auto_timer_running_st</span><span class="p">,</span>   <span class="c1">// waiting for the auto-update delay to expire </span>
+                                 <span class="c1">// (user is holding down button for auto-inc/dec)</span>
+	<span class="n">rate_timer_running_st</span><span class="p">,</span>   <span class="c1">// waiting for the rate-timer to expire to know when to perform the auto inc/dec.</span>
+	<span class="n">rate_timer_expired_st</span><span class="p">,</span>   <span class="c1">// when the rate-timer expires, perform the inc/dec function.</span>
+	<span class="n">add_second_to_clock_st</span>   <span class="c1">// add a second to the clock time and reset the ms counter.</span>
+<span class="p">};</span>
+<span class="k">static</span> <span class="k">enum</span> <span class="n">clockControl_st_t</span> <span class="n">currentState</span><span class="p">;</span>
+
+<span class="kt">void</span> <span class="nf">clockControl_init</span><span class="p">()</span> <span class="p">{</span>
+  <span class="n">currentState</span> <span class="o">=</span> <span class="n">init_st</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">clockControl_tick</span><span class="p">()</span> <span class="p">{</span>  
+  <span class="c1">// Perform state update first.</span>
+  <span class="k">switch</span><span class="p">(</span><span class="n">currentState</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">case</span> <span class="n">init_st</span><span class="p">:</span>
+      <span class="k">break</span><span class="p">;</span>
+    <span class="k">case</span> <span class="n">never_touched_st</span><span class="p">:</span>
+      <span class="k">break</span><span class="p">;</span>
+    <span class="k">case</span> <span class="n">waiting_for_touch_st</span><span class="p">:</span>
+      <span class="k">break</span><span class="p">;</span>
+    <span class="k">case</span> <span class="n">ad_timer_running_st</span><span class="p">:</span>
+      <span class="k">break</span><span class="p">;</span>
+    <span class="k">case</span> <span class="n">auto_timer_running_st</span><span class="p">:</span>
+      <span class="k">break</span><span class="p">;</span>
+    <span class="k">case</span> <span class="n">rate_timer_running_st</span><span class="p">:</span>
+      <span class="k">break</span><span class="p">;</span>
+    <span class="k">case</span> <span class="n">rate_timer_expired_st</span><span class="p">:</span>
+      <span class="k">break</span><span class="p">;</span>
+    <span class="k">case</span> <span class="n">add_second_to_clock_st</span><span class="p">:</span>
+      <span class="k">break</span><span class="p">;</span>
+    <span class="nl">default:</span>
+      <span class="c1">// print an error message here.</span>
+      <span class="k">break</span><span class="p">;</span>
+  <span class="p">}</span>
+  
+  <span class="c1">// Perform state action next.</span>
+  <span class="k">switch</span><span class="p">(</span><span class="n">currentState</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">case</span> <span class="n">init_st</span><span class="p">:</span>
+      <span class="k">break</span><span class="p">;</span>
+    <span class="k">case</span> <span class="n">never_touched_st</span><span class="p">:</span>
+      <span class="k">break</span><span class="p">;</span>
+    <span class="k">case</span> <span class="n">waiting_for_touch_st</span><span class="p">:</span>
+      <span class="k">break</span><span class="p">;</span>
+    <span class="k">case</span> <span class="n">ad_timer_running_st</span><span class="p">:</span>
+      <span class="k">break</span><span class="p">;</span>
+    <span class="k">case</span> <span class="n">auto_timer_running_st</span><span class="p">:</span>
+      <span class="k">break</span><span class="p">;</span>
+    <span class="k">case</span> <span class="n">rate_timer_running_st</span><span class="p">:</span>
+      <span class="k">break</span><span class="p">;</span>
+    <span class="k">case</span> <span class="n">rate_timer_expired_st</span><span class="p">:</span>
+      <span class="k">break</span><span class="p">;</span>
+     <span class="nl">default:</span>
+      <span class="c1">// print an error message here.</span>
+      <span class="k">break</span><span class="p">;</span>
+  <span class="p">}</span>  
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="requirements">Requirements</h2>
+<p>Please follow the template shown above.</p>
+<ul>
+  <li>State-update before state-action.</li>
+  <li>You must declare a <em>currentState</em> variable as part of the enum state declaration. Use <em>currentState</em> as shown above.</li>
+  <li>Have an init function that initializes <em>currentState</em> and any other state variables.</li>
+  <li>The state names used in the <em>enum</em> must be the same names as those used in your state diagrams.</li>
+  <li>Each state machine will be placed in its own file.</li>
+  <li>Follow the <em>enum</em> approach shown above.</li>
+</ul>
+
+<h2 id="debugging-software-state-machines">Debugging Software State Machines</h2>
+<p>Debugging software-based state machines, especially those that are time based (referred to as synchronous in the text) can be difficult using a conventional debugger because stopping the program interferes with execution and can make it difficult to find the bug. Often it is helpful to have your state machines print out messages as they change state so you can watch state transitions occur in real-time.</p>
+
+<p>The snippet of code shown below would be placed in the same file as the clock state-machine shown above. Call this function at the top of the tick function. The function shown below will print out state changes as they occur. What makes this code particularly helpful is that it only prints out a message when currentState changes value. This eliminates a lot of extraneous printing that often hides what you are trying to see. It keeps track of the previous value of currentState by using a static variable. Try using this function, I suspect that you will find it to be quite useful.</p>
+
+<p>Place this function before the tick() function in the file to keep the compiler happy. Also make sure to <code class="language-plaintext highlighter-rouge">#include &lt;stdio.h&gt;</code>.</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// All printed messages for states are provided here.</span>
+<span class="cp">#define INIT_ST_MSG "init state\n"
+#define NEVER_TOUCHED_ST_MSG "never_touched_st\n"
+#define WAITING_FOR_TOUCH_ST_MSG "waiting for touch_st\n"
+#define AD_TIMER_RUNNING_ST_MSG "ad_timer_running_st\n"
+#define AUTO_TIMER_RUNNING_ST_MSG "auto_timer_running_st\n"
+#define RATE_TIMER_RUNNING_ST_MSG "rate_timer_running_st\n"
+#define RATE_TIMER_EXPIRED_ST_MSG "rate_timer_expired_st\n"
+</span><span class="c1">// This is a debug state print routine. It will print the names of the states each</span>
+<span class="c1">// time tick() is called. It only prints states if they are different than the</span>
+<span class="c1">// previous state.</span>
+<span class="kt">void</span> <span class="nf">debugStatePrint</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">static</span> <span class="k">enum</span> <span class="n">clockControl_st_t</span> <span class="n">previousState</span><span class="p">;</span>
+  <span class="k">static</span> <span class="n">bool</span> <span class="n">firstPass</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span>
+  <span class="c1">// Only print the message if:</span>
+  <span class="c1">// 1. This the first pass and the value for previousState is unknown.</span>
+  <span class="c1">// 2. previousState != currentState - this prevents reprinting the same state name over and over.</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">previousState</span> <span class="o">!=</span> <span class="n">currentState</span> <span class="o">||</span> <span class="n">firstPass</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">firstPass</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>                <span class="c1">// previousState will be defined, firstPass is false.</span>
+    <span class="n">previousState</span> <span class="o">=</span> <span class="n">currentState</span><span class="p">;</span>     <span class="c1">// keep track of the last state that you were in.</span>
+    <span class="k">switch</span><span class="p">(</span><span class="n">currentState</span><span class="p">)</span> <span class="p">{</span>            <span class="c1">// This prints messages based upon the state that you were in.</span>
+      <span class="k">case</span> <span class="n">init_st</span><span class="p">:</span>
+        <span class="n">printf</span><span class="p">(</span><span class="n">INIT_ST_MSG</span><span class="p">);</span>
+        <span class="k">break</span><span class="p">;</span>
+      <span class="k">case</span> <span class="n">never_touched_st</span><span class="p">:</span>
+        <span class="n">printf</span><span class="p">(</span><span class="n">NEVER_TOUCHED_ST_MSG</span><span class="p">);</span>
+        <span class="k">break</span><span class="p">;</span>
+      <span class="k">case</span> <span class="n">waiting_for_touch_st</span><span class="p">:</span>
+        <span class="n">printf</span><span class="p">(</span><span class="n">WAITING_FOR_TOUCH_ST_MSG</span><span class="p">);</span>
+        <span class="k">break</span><span class="p">;</span>
+      <span class="k">case</span> <span class="n">ad_timer_running_st</span><span class="p">:</span>
+        <span class="n">printf</span><span class="p">(</span><span class="n">AD_TIMER_RUNNING_ST</span><span class="p">);</span>
+        <span class="k">break</span><span class="p">;</span>
+      <span class="k">case</span> <span class="n">auto_timer_running_st</span><span class="p">:</span>
+        <span class="n">printf</span><span class="p">(</span><span class="n">AUTO_TIMER_RUNNING_ST</span><span class="p">);</span>
+        <span class="k">break</span><span class="p">;</span>
+      <span class="k">case</span> <span class="n">rate_timer_running_st</span><span class="p">:</span>
+        <span class="n">printf</span><span class="p">(</span><span class="n">RATE_TIMER_RUNNING_ST_MSG</span><span class="p">);</span>
+        <span class="k">break</span><span class="p">;</span>
+      <span class="k">case</span> <span class="n">rate_timer_expired_st</span><span class="p">:</span>
+        <span class="n">printf</span><span class="p">(</span><span class="n">RATE_TIMER_EXPIRED_ST_MSG</span><span class="p">);</span>
+        <span class="k">break</span><span class="p">;</span>
+     <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+  </div>
+</article>
+      </div>
+    </div>
+    <!-- /#page-content-wrapper -->
+
+  </div>
+  <!-- /#wrapper -->
+
+  <!-- Bootstrap core JavaScript -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+<script src=/ecen330/js/jquery.visible.min.js></script>
+
+<!-- Menu Toggle Script -->
+<script>
+    $("#menu-toggle").click(function (e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+
+    var prevVisible = $('#page-title').visible();
+
+    $(window).scroll(function () {
+        currentVisible = $('#page-title').visible()
+        if (prevVisible && !currentVisible) {
+            console.log("Do something!");
+            $("#page-title-bar").html($('#page-title').text());
+        }
+
+        if (!prevVisible && currentVisible) {
+            $("#page-title-bar").html("")
+        }
+
+        prevVisible = currentVisible;
+    });
+
+</script>
+
+</body>
+
+</html>

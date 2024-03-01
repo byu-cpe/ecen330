@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<title>
+    
+    Old Lab: Simon • ECEN 330
+    
+</title>
+
+<!-- Bootstrap core CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+<!-- Custom styles for this template -->
+<link rel="stylesheet" href=/ecen330/css/main.css>
+
+<!-- <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet"> -->
+<!-- <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet"> -->
+<link rel="stylesheet" href="https://use.typekit.net/jcn6ybb.css">
+
+<!-- <link rel="icon" type="image/png" sizes="96x96" href=/ecen330/icon/favicon-96x96.png>
+<link rel="icon" type="image/png" sizes="32x32" href=/ecen330/icon/favicon-32x32.png>
+<link rel="icon" type="image/png" sizes="16x16" href=/ecen330/icon/favicon-16x16.png> -->
+
+<script src="https://kit.fontawesome.com/d794f0229e.js" crossorigin="anonymous"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script type="text/javascript">
+    $(function () {
+        console.log("hi there");
+        // this will get the full URL at the address bar
+        var url = window.location.href;
+        console.log(url);
+
+        // passes on every "a" tag
+        $(".list-group a").each(function () {
+            console.log(this)
+            // checks if its the same on the address bar
+            if (url == (this.href)) {
+                $(this).addClass("active");
+            }
+        });
+    });        
+</script>
+
+</head>
+
+<body>
+  <div class="d-flex" id="wrapper">
+    <div class="border-right sidebar-color" id="sidebar-wrapper">
+    <div class="sidebar-sticky">
+        <div class="sidebar-heading-big">
+            <a href="/ecen330/">
+                ECEN 330</a>
+        </div>
+        <div class="list-group list-group-flush sidebar-color">
+
+            
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <!-- <a href="https://slack.com/app_redirect?team=T01J887F8MU&channel=C01JF1N6TH8"
+                class="list-item-normal list-group-item list-group-item-action sidebar-item" target="_blank"><i
+                    class="fa fa-question-circle"></i>
+                Slack</a> -->
+
+        </div>
+
+        <div class="sidebar-heading">Setup</div>
+        <div class="list-group list-group-flush">
+            
+            <a href="/ecen330/setup/step-1/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Setup Step #1
+
+            </a>
+            
+            <a href="/ecen330/setup/linux/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                Home Setup: Linux
+
+            </a>
+            
+            <a href="/ecen330/setup/vm/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                Home Setup: VM
+
+            </a>
+            
+            <a href="/ecen330/setup/step-2/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Setup Step #2
+
+            </a>
+            
+        </div>
+
+        
+        <div class="sidebar-heading">Labs</div>
+        <div class="list-group list-group-flush">
+            
+            <a href="/ecen330/labs/hello-world/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">1</span>
+                
+
+                Hello World
+
+            </a>
+            
+            <a href="/ecen330/labs/gpio/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">2</span>
+                
+
+                GPIO Driver
+
+            </a>
+            
+            <a href="/ecen330/labs/timer/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">3</span>
+                
+
+                Timer Driver
+
+            </a>
+            
+            <a href="/ecen330/labs/interrupts/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">4</span>
+                
+
+                Interrupt Driver
+
+            </a>
+            
+            <a href="/ecen330/labs/touchscreen/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">5</span>
+                
+
+                Touchscreen Driver
+
+            </a>
+            
+            <a href="/ecen330/labs/clock/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">6</span>
+                
+
+                Clock
+
+            </a>
+            
+            <a href="/ecen330/labs/tictactoe/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">7</span>
+                
+
+                Tic Tac Toe
+
+            </a>
+            
+            <a href="/ecen330/labs/tictactoe-m1/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey"></span>
+                &emsp;
+
+                M1: Minimax
+
+            </a>
+            
+            <a href="/ecen330/labs/tictactoe-m2/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey"></span>
+                &emsp;
+
+                M2: Control
+
+            </a>
+            
+            <a href="/ecen330/labs/missile-command/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">8</span>
+                
+
+                Missile Command
+
+            </a>
+            
+            <a href="/ecen330/labs/missile-command-m1/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey"></span>
+                &emsp;
+
+                M1: Missiles
+
+            </a>
+            
+            <a href="/ecen330/labs/missile-command-m2/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey"></span>
+                &emsp;
+
+                M2: Game Control
+
+            </a>
+            
+            <a href="/ecen330/labs/missile-command-m3/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey"></span>
+                &emsp;
+
+                M3: Plane & Stats
+
+            </a>
+            
+            <a href="/ecen330/labs/project/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">9</span>
+                
+
+                Choose Your Own
+
+            </a>
+            
+        </div>
+
+        <div class="sidebar-heading">Documentation</div>
+        <div class="list-group list-group-flush">
+            
+            <a href="/ecen330/documentation/development-tools/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Development Tools
+
+            </a>
+            
+            <a href="/ecen330/documentation/compiling/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                Compiling and Running
+
+            </a>
+            
+            <a href="/ecen330/documentation/cmake/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                CMake
+
+            </a>
+            
+            <a href="/ecen330/documentation/headers/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                Header Files
+
+            </a>
+            
+            <a href="/ecen330/documentation/submission/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                Submitting Code
+
+            </a>
+            
+            <a href="/ecen330/documentation/vscode/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                Coding/Debugging Tips
+
+            </a>
+            
+            <a href="/ecen330/documentation/devices/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                System Platform
+
+            </a>
+            
+            <a href="/ecen330/documentation/graphics/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                LCD Graphics
+
+            </a>
+            
+            <a href="/ecen330/documentation/gpio/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                GPIO
+
+            </a>
+            
+            <a href="/ecen330/documentation/timer/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                Interval Timer
+
+            </a>
+            
+            <a href="/ecen330/documentation/intc/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                Interrupt Controller
+
+            </a>
+            
+            <a href="/ecen330/documentation/touchscreen/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                Touchscreen
+
+            </a>
+            
+        </div>
+
+        <div class="sidebar-heading">Other</div>
+        <div class="list-group list-group-flush">
+            
+            <a href="/ecen330/other/c-programming/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                'C Programming' Study Questions
+
+            </a>
+            
+            <a href="/ecen330/other/coding-standard/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Coding Standard
+
+            </a>
+            
+            <a href="/ecen330/other/coding-state-machines/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Coding State Machines
+
+            </a>
+            
+            <a href="/ecen330/other/suggestions/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Suggestions
+
+            </a>
+            
+            <a href="/ecen330/other/simon/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Old Lab: Simon
+
+            </a>
+            
+            <a href="/ecen330/other/wam/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Old Lab: Whack-a-Mole
+
+            </a>
+            
+        </div>
+    </div>
+</div>
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+
+      <nav class="navbar sticky-top navbar-expand-lg border-bottom">
+        <button class="btn btn-brand" id="menu-toggle">
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <a href="" class="navbar-brand mb-0 h1 page-title-bar text-center mx-auto" id="page-title-bar"></a>
+
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link btn btn-brand suggest-edits" target="_blank" rel="noopener noreferrer"
+              href="https://piazza.com/byu/fall2023/ecen330"><i class="far fa-question-circle"></i> Piazza</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link btn btn-brand suggest-edits" target="_blank" rel="noopener noreferrer"
+              href="https://github.com/byu-cpe/ecen330/issues/new?labels=website&title=Updates to Old Lab: Simon page"><i
+                class="fab fa-github"></i> Suggest
+              Edits</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="container">
+        
+
+        <article class="page lab">
+    <h1 class="page-title" id="page-title">
+        Old Lab: Simon
+        
+    </h1>
+
+    <div class="page-content">
+        
+        <div class="lab-toc col-md-6 col-lg-5 bg-light">
+            <h4>Table of Contents</h4>
+            <ul>
+  <li><a href="#overview">Overview</a></li>
+  <li><a href="#objectives">Objectives</a></li>
+  <li><a href="#preliminary">Preliminary</a></li>
+  <li><a href="#implementation-strategy">Implementation Strategy</a></li>
+  <li><a href="#milestones">Milestones</a></li>
+  <li><a href="#system-organization">System Organization</a>
+    <ul>
+      <li><a href="#controlling-state-machines-with-interlocks">Controlling State Machines with Interlocks</a></li>
+    </ul>
+  </li>
+  <li><a href="#requirements">Requirements</a>
+    <ul>
+      <li><a href="#simoncontrol-state-machine-code">simonControl State Machine Code</a></li>
+      <li><a href="#other-requirements">Other Requirements</a></li>
+    </ul>
+  </li>
+  <li><a href="#submission--pass-off">Submission &amp; Pass Off</a>
+    <ul>
+      <li><a href="#grade-breakdown">Grade breakdown</a></li>
+    </ul>
+  </li>
+</ul>
+
+        </div>
+        
+
+        
+
+        <iframe width="560" height="315" allow="fullscreen" src="https://www.youtube.com/embed/S8Ndaw5tfdo"> </iframe>
+
+<h2 id="overview">Overview</h2>
+
+<p>In this lab you will create the ECEN 330 version of the electronic Simon game. Electronic Simon, as you probably recall, is a game where the computer plays a sequence to you and you attempt to re-key in the sequence correctly. Correct attempts allow you to go on to attempt longer sequences. Electronic versions of Simon often combine colored lights with sound. For our lab, we will use the LCD/touch-pad to generate colored squares that the user will attempt to touch in the correct sequence (we won’t use sound).</p>
+
+<p>This lab will be implemented using four concurrent, synchronous state machines. As before, I will stipulate the file-names, function-names, and so forth to expose you to at least one good way to implement the game.</p>
+
+<h2 id="objectives">Objectives</h2>
+<ul>
+  <li>Learn how to implement a complex game using concurrent, synchronous state machines.</li>
+  <li>Learn effective ways to communicate between concurrent state machines.</li>
+  <li>Learn how state machines can be controlled by other state machines.</li>
+  <li>Learn how to handle global variables with functions.</li>
+  <li>Learn how to interlock state machines.</li>
+</ul>
+
+<h2 id="preliminary">Preliminary</h2>
+
+<h2 id="implementation-strategy">Implementation Strategy</h2>
+
+<p>Simon is much more complex than Tic-Tac-Toe, so we need to look at how the game is played in detail so we can come up with good implementation strategies. Our Simon game, as shown in the video above, will use four colored regions on the LCD. The colored sequence will be shown using these colored regions and the user will attempt to follow the computer’s sequence by touching the right sequence of colored regions.</p>
+
+<p>Here is the organizational strategy that we will use:</p>
+
+<ul>
+  <li>Provide a set of display functions to draw the colored regions implemented in: <em>simonDisplay.h/simonDisplay.c:</em></li>
+  <li>Use a <em>buttonHandler</em> state machine to handle drawing buttons and for detecting touches and time-outs.</li>
+  <li>Use a <em>flashSequence</em> state machine to flash the sequence that the user must attempt to mimic.</li>
+  <li>Use a <em>verifySequence</em> state machine to verify that the sequence of user touches matches the computer-generated sequence.</li>
+  <li>Use a <em>simonControl</em> state machine to control everything at the top level.</li>
+</ul>
+
+<h2 id="milestones">Milestones</h2>
+
+<p>You will complete this lab in four milestones:</p>
+<ul>
+  <li>Milestone 1: Implement the <em>buttonHandler</em> state machine and <em>simonDisplay</em> code.</li>
+  <li>Milestone 2: Implement the <em>flashSequence</em> state machine and <em>globals</em> code.</li>
+  <li>Milestone 3: Implement the <em>verifySequence</em> state machine.</li>
+  <li>Milestone 4: Implement the top-level <em>simonControl</em> state machine so that you implement a Simon game with the same behavior as shown in the demo video for the Simon game.</li>
+</ul>
+
+<p>Once again you are provided a <em>main.c</em> with code that can be uncommented to run the chosen milestone.  Aside from uncommenting one of these lines, do not change <em>main.c</em>.</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">////////////////////////////////////////////////////////////////////////////////</span>
+<span class="c1">// Uncomment one of the following lines to run Milestone 1, 2, 3, or 4    //////</span>
+<span class="c1">////////////////////////////////////////////////////////////////////////////////</span>
+<span class="c1">// #define RUN_PROGRAM MILESTONE_1</span>
+<span class="c1">// #define RUN_PROGRAM MILESTONE_2</span>
+<span class="c1">// #define RUN_PROGRAM MILESTONE_3</span>
+<span class="c1">// #define RUN_PROGRAM MILESTONE_4</span>
+</code></pre></div></div>
+
+<h2 id="system-organization">System Organization</h2>
+
+<p>The figure below shows the “architecture” for the Simon game and shows how the state machines communicate with each other.
+Starting at the far left, the <em>simonControl</em> state machine coordinates the operation of the other state machines to implement the Simon game. The <em>simonControl</em> state machine uses <em>flashSequence_enable()</em> and <em>flashSequence_disable()</em> to control when the <em>flashSequence</em> state machine displays the color sequence to the user. <em>simonControl</em> then activates the <em>verifySequence</em> state machine to verify that the user correctly taps the color sequence. The related <em>verifySequence_enable()</em> and <em>verifySequence_disable()</em> functions are used to enable and disable the <em>verifySequence</em> state machine. The <em>verifySequence</em> state machine controls the <em>buttonHandler</em> state machine (again using <em>buttonHandler_enable()/buttonHandler_disable()</em> functions) to determine which colors the user has touched. All of the state machines use functions provided by either <em>simonDisplay.h</em> or <em>display.h</em> to interact with the LCD display/touch pad. Note that some of the function names have been abbreviated in the figure. Also, the figure does not show interactions between the state machines and global variables. This is discussed later in this document.</p>
+
+<p><img src="/ecen330/media/lab6/simonsoftwarearchitecture.jpg" width="1000" alt="Simon software architecture" /></p>
+
+<h3 id="controlling-state-machines-with-interlocks">Controlling State Machines with Interlocks</h3>
+
+<p>You will need to use “interlocks” to control when state machines can start up. You need to use an interlock to prevent the state machine from “racing” through to a new state when you may not be ready. Using the <em>flashSequence</em> state machine as an example, you use <em>flashSequence_enable()</em> to start the machine. You can find out when it has finished “flashing the sequence” by calling <em>flashSequence_completed()</em>. If this function returns true, then you know that the state machine has completed its task. Next, you invoke <em>flashSequence_disable()</em> to turn off the state machine until you are ready to invoke it again. Invoking this function allows the <em>flashSequence</em> state machine to return to its initial state where it waits until you invoke <em>flashSequence_enable()</em> to enable the state machine to flash the next element of the sequence. Three of the state machines will require interlocks of this type: <em>flashSequence</em>, <em>buttonHandler</em>, and <em>verifySequence</em>. It is most effective and straightforward if you implement the interlocks in the same general way as shown in the figure below.</p>
+
+<p>The interlock template as shown below will work with any state machine that requires interlocks to synchronize its operation with other state machines. As shown in the figure, assume the existence of some initial state and some final state. These states are not special states but are just the normal states that comprise your state machine. At startup, the state machine does not leave the initial state until a variable named <em>enable</em> is set to true (provide a <em>_enable()</em> function that sets an enable flag to true). Once the state machine reaches its final state, it stays in that final state until the <em>enable</em> variable is set to false (provide a <em>_disable()</em> to set the enable variable to false). If you design your state machines using this kind of interlock, you will find that it is straightforward to control them. If you don’t use this <em>enable()/disable()</em> approach, it is difficult to keep the state machine from immediately commencing operation from the final state.</p>
+
+<p>If you look closely at the provided test programs, you will find that the code carefully exercises the interlock capability. Just look for the related <em>_enable()</em> and <em>_disable()</em> functions in the source code. If you study the code carefully, you will understand how these interlocks work.</p>
+
+<p><img src="/ecen330/media/lab6/interlocks.jpg" width="600" alt="FSM interlocks" /></p>
+
+<p>There are a couple of things to keep in mind with this approach. If you are doing things that must only be done once in either the initial or final state, you may need to add additional states (one after the initial state, one before the final state), or perhaps you can meet the need with a Mealy action.</p>
+
+<h2 id="requirements">Requirements</h2>
+
+<p>This lab will be completed as several interacting modules.  Individual descriptions of simon modules with helps and suggestions:</p>
+
+<ul>
+  <li><a href="/ecen330/simon-display/">Writing the simonDisplay Code</a></li>
+  <li><a href="/ecen330/simon-button/">Writing the buttonHandler Code</a></li>
+  <li><a href="/ecen330/simon-flash/">Writing the flashSequence Code</a></li>
+  <li><a href="/ecen330/simon-verify/">Writing the verifySequence Code</a></li>
+  <li><a href="/ecen330/simon-globals/">Writing the globals Code</a></li>
+  <li><a href="/ecen330/simon-suggestions/">Helps and Suggestions</a></li>
+</ul>
+
+<h3 id="simoncontrol-state-machine-code">simonControl State Machine Code</h3>
+
+<p><em>simonControl</em> provides the top-level control for the Simon Game and it coordinates the behavior of the other state machines to implement the Simon game. You can watch the video at the top of this page to see how things are supposed to work.</p>
+
+<p>We provide you with <a href="https://github.com/byu-cpe/ecen330_student/blob/main/archive/lab_simon/simonControl.h">simonControl.h</a>. You must implement at least the <em>simonControl_init()</em>, <em>simonControl_tick()</em>, and <em>simonControl_enable()</em> functions so that the provided simon <em>main.c</em> can compile, link, and operate properly.</p>
+
+<h3 id="other-requirements">Other Requirements</h3>
+<ul>
+  <li>You must follow the coding standard.</li>
+  <li>You must follow the coding standard/strategy for state machines.</li>
+  <li>You are not allowed to use <em>util_msDelay()</em> in any of your code. You must implement delays using counters in your state machines.</li>
+  <li>You can select a suitable delay for time-out and a speed for flashing the sequence.</li>
+  <li>If the user selects the incorrect color or you detect a time-out, just display the longest sequence number correctly achieved (allowing enough time for the user to read the message) and go back to the starting screen (see the video that demonstrates the simon game at the top of this page).</li>
+</ul>
+
+<h2 id="submission--pass-off">Submission &amp; Pass Off</h2>
+<p>Follow the <a href="/ecen330/documentation/submission/">instructions on submitting source code</a> to submit your code.</p>
+
+<h3 id="grade-breakdown">Grade breakdown</h3>
+
+<ul>
+  <li>10%: Milestone 1</li>
+  <li>15%: Milestone 2</li>
+  <li>15%: Milestone 3</li>
+  <li>40%: Milestone 4
+    <ul>
+      <li>-10% overall, if game play is not smooth, correct, responsive. To receive the entire 10% your game must work correctly with no observable bugs. Your game should be responsive and be fun to play.</li>
+    </ul>
+  </li>
+  <li>20%: Code Quality (adhering to the coding standard)</li>
+</ul>
+
+    </div>
+</article>
+      </div>
+    </div>
+    <!-- /#page-content-wrapper -->
+
+  </div>
+  <!-- /#wrapper -->
+
+  <!-- Bootstrap core JavaScript -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+<script src=/ecen330/js/jquery.visible.min.js></script>
+
+<!-- Menu Toggle Script -->
+<script>
+    $("#menu-toggle").click(function (e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+
+    var prevVisible = $('#page-title').visible();
+
+    $(window).scroll(function () {
+        currentVisible = $('#page-title').visible()
+        if (prevVisible && !currentVisible) {
+            console.log("Do something!");
+            $("#page-title-bar").html($('#page-title').text());
+        }
+
+        if (!prevVisible && currentVisible) {
+            $("#page-title-bar").html("")
+        }
+
+        prevVisible = currentVisible;
+    });
+
+</script>
+
+</body>
+
+</html>

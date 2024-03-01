@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<title>
+    
+    Old Lab: Whack-a-Mole • ECEN 330
+    
+</title>
+
+<!-- Bootstrap core CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+<!-- Custom styles for this template -->
+<link rel="stylesheet" href=/ecen330/css/main.css>
+
+<!-- <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet"> -->
+<!-- <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet"> -->
+<link rel="stylesheet" href="https://use.typekit.net/jcn6ybb.css">
+
+<!-- <link rel="icon" type="image/png" sizes="96x96" href=/ecen330/icon/favicon-96x96.png>
+<link rel="icon" type="image/png" sizes="32x32" href=/ecen330/icon/favicon-32x32.png>
+<link rel="icon" type="image/png" sizes="16x16" href=/ecen330/icon/favicon-16x16.png> -->
+
+<script src="https://kit.fontawesome.com/d794f0229e.js" crossorigin="anonymous"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script type="text/javascript">
+    $(function () {
+        console.log("hi there");
+        // this will get the full URL at the address bar
+        var url = window.location.href;
+        console.log(url);
+
+        // passes on every "a" tag
+        $(".list-group a").each(function () {
+            console.log(this)
+            // checks if its the same on the address bar
+            if (url == (this.href)) {
+                $(this).addClass("active");
+            }
+        });
+    });        
+</script>
+
+</head>
+
+<body>
+  <div class="d-flex" id="wrapper">
+    <div class="border-right sidebar-color" id="sidebar-wrapper">
+    <div class="sidebar-sticky">
+        <div class="sidebar-heading-big">
+            <a href="/ecen330/">
+                ECEN 330</a>
+        </div>
+        <div class="list-group list-group-flush sidebar-color">
+
+            
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <!-- <a href="https://slack.com/app_redirect?team=T01J887F8MU&channel=C01JF1N6TH8"
+                class="list-item-normal list-group-item list-group-item-action sidebar-item" target="_blank"><i
+                    class="fa fa-question-circle"></i>
+                Slack</a> -->
+
+        </div>
+
+        <div class="sidebar-heading">Setup</div>
+        <div class="list-group list-group-flush">
+            
+            <a href="/ecen330/setup/step-1/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Setup Step #1
+
+            </a>
+            
+            <a href="/ecen330/setup/linux/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                Home Setup: Linux
+
+            </a>
+            
+            <a href="/ecen330/setup/vm/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                Home Setup: VM
+
+            </a>
+            
+            <a href="/ecen330/setup/step-2/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Setup Step #2
+
+            </a>
+            
+        </div>
+
+        
+        <div class="sidebar-heading">Labs</div>
+        <div class="list-group list-group-flush">
+            
+            <a href="/ecen330/labs/hello-world/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">1</span>
+                
+
+                Hello World
+
+            </a>
+            
+            <a href="/ecen330/labs/gpio/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">2</span>
+                
+
+                GPIO Driver
+
+            </a>
+            
+            <a href="/ecen330/labs/timer/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">3</span>
+                
+
+                Timer Driver
+
+            </a>
+            
+            <a href="/ecen330/labs/interrupts/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">4</span>
+                
+
+                Interrupt Driver
+
+            </a>
+            
+            <a href="/ecen330/labs/touchscreen/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">5</span>
+                
+
+                Touchscreen Driver
+
+            </a>
+            
+            <a href="/ecen330/labs/clock/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">6</span>
+                
+
+                Clock
+
+            </a>
+            
+            <a href="/ecen330/labs/tictactoe/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">7</span>
+                
+
+                Tic Tac Toe
+
+            </a>
+            
+            <a href="/ecen330/labs/tictactoe-m1/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey"></span>
+                &emsp;
+
+                M1: Minimax
+
+            </a>
+            
+            <a href="/ecen330/labs/tictactoe-m2/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey"></span>
+                &emsp;
+
+                M2: Control
+
+            </a>
+            
+            <a href="/ecen330/labs/missile-command/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">8</span>
+                
+
+                Missile Command
+
+            </a>
+            
+            <a href="/ecen330/labs/missile-command-m1/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey"></span>
+                &emsp;
+
+                M1: Missiles
+
+            </a>
+            
+            <a href="/ecen330/labs/missile-command-m2/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey"></span>
+                &emsp;
+
+                M2: Game Control
+
+            </a>
+            
+            <a href="/ecen330/labs/missile-command-m3/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey"></span>
+                &emsp;
+
+                M3: Plane & Stats
+
+            </a>
+            
+            <a href="/ecen330/labs/project/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">9</span>
+                
+
+                Choose Your Own
+
+            </a>
+            
+        </div>
+
+        <div class="sidebar-heading">Documentation</div>
+        <div class="list-group list-group-flush">
+            
+            <a href="/ecen330/documentation/development-tools/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Development Tools
+
+            </a>
+            
+            <a href="/ecen330/documentation/compiling/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                Compiling and Running
+
+            </a>
+            
+            <a href="/ecen330/documentation/cmake/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                CMake
+
+            </a>
+            
+            <a href="/ecen330/documentation/headers/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                Header Files
+
+            </a>
+            
+            <a href="/ecen330/documentation/submission/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                Submitting Code
+
+            </a>
+            
+            <a href="/ecen330/documentation/vscode/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                Coding/Debugging Tips
+
+            </a>
+            
+            <a href="/ecen330/documentation/devices/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                System Platform
+
+            </a>
+            
+            <a href="/ecen330/documentation/graphics/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                LCD Graphics
+
+            </a>
+            
+            <a href="/ecen330/documentation/gpio/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                GPIO
+
+            </a>
+            
+            <a href="/ecen330/documentation/timer/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                Interval Timer
+
+            </a>
+            
+            <a href="/ecen330/documentation/intc/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                Interrupt Controller
+
+            </a>
+            
+            <a href="/ecen330/documentation/touchscreen/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                Touchscreen
+
+            </a>
+            
+        </div>
+
+        <div class="sidebar-heading">Other</div>
+        <div class="list-group list-group-flush">
+            
+            <a href="/ecen330/other/c-programming/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                'C Programming' Study Questions
+
+            </a>
+            
+            <a href="/ecen330/other/coding-standard/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Coding Standard
+
+            </a>
+            
+            <a href="/ecen330/other/coding-state-machines/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Coding State Machines
+
+            </a>
+            
+            <a href="/ecen330/other/suggestions/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Suggestions
+
+            </a>
+            
+            <a href="/ecen330/other/simon/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Old Lab: Simon
+
+            </a>
+            
+            <a href="/ecen330/other/wam/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Old Lab: Whack-a-Mole
+
+            </a>
+            
+        </div>
+    </div>
+</div>
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+
+      <nav class="navbar sticky-top navbar-expand-lg border-bottom">
+        <button class="btn btn-brand" id="menu-toggle">
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <a href="" class="navbar-brand mb-0 h1 page-title-bar text-center mx-auto" id="page-title-bar"></a>
+
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link btn btn-brand suggest-edits" target="_blank" rel="noopener noreferrer"
+              href="https://piazza.com/byu/fall2023/ecen330"><i class="far fa-question-circle"></i> Piazza</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link btn btn-brand suggest-edits" target="_blank" rel="noopener noreferrer"
+              href="https://github.com/byu-cpe/ecen330/issues/new?labels=website&title=Updates to Old Lab: Whack-a-Mole page"><i
+                class="fab fa-github"></i> Suggest
+              Edits</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="container">
+        
+
+        <article class="page lab">
+    <h1 class="page-title" id="page-title">
+        Old Lab: Whack-a-Mole
+        
+    </h1>
+
+    <div class="page-content">
+        
+        <div class="lab-toc col-md-6 col-lg-5 bg-light">
+            <h4>Table of Contents</h4>
+            <ul>
+  <li><a href="#-warning"><span style="color:red"> Warning</span></a>
+    <ul>
+      <li><a href="#overview">Overview</a></li>
+      <li><a href="#objectives">Objectives</a></li>
+      <li><a href="#preliminary">Preliminary</a>
+        <ul>
+          <li><a href="#program-organization">Program Organization</a></li>
+          <li><a href="#source-code">Source Code</a></li>
+        </ul>
+      </li>
+      <li><a href="#implementation">Implementation</a>
+        <ul>
+          <li><a href="#milestones">Milestones</a></li>
+        </ul>
+      </li>
+      <li><a href="#requirements">Requirements</a></li>
+      <li><a href="#submission--pass-off">Submission &amp; Pass Off</a>
+        <ul>
+          <li><a href="#grade-breakdown">Grade Breakdown</a></li>
+        </ul>
+      </li>
+      <li><a href="#videos">Videos</a>
+        <ul>
+          <li><a href="#milestone-1">Milestone 1</a></li>
+          <li><a href="#complete-game">Complete Game</a></li>
+        </ul>
+      </li>
+      <li><a href="#resources">Resources</a></li>
+    </ul>
+  </li>
+</ul>
+
+        </div>
+        
+
+        
+
+        <h1 id="-warning"><span style="color:red"> Warning</span></h1>
+
+<p><span style="color:red"> 
+Please read through the <a href="/ecen330/labs/project/">project page</a> before starting this lab. Completing this lab will only provide partial credit for the project.
+</span></p>
+
+<iframe width="560" height="315" allow="fullscreen" src="https://www.youtube.com/embed/hEq2CnNf5V4"> </iframe>
+
+<h2 id="overview">Overview</h2>
+
+<p>In this lab you will create a touch-screen version of the Whack A Mole game. In the arcade game, moles pop out of holes and your job is to “whack” them by hitting them before they go back into their hole. In our version of the game, the moles are drawn on a screen. When they appear, you touch them with your finger to “whack” them. Perhaps we should rename the game “Pet the Mole”.</p>
+
+<p>You will need to support three different configurations of the game: 9 moles, 6 moles, and 4 moles. The user chooses the configuration by sliding the switches appropriately. Watch the videos in the Videos Section to view the three different board configurations.</p>
+
+<p>As was done with prior labs, the Whack a Mole game is conceptually organized and developed in two parts: display (wamDisplay) and control (wamControl). wam is an abbreviation for Whack A Mole and it helps shorten file-names, function-names, variable-names, etc.</p>
+
+<h2 id="objectives">Objectives</h2>
+<ul>
+  <li>Learn how to use <em>malloc()</em> and <em>free()</em> to implement dynamically-sized arrays.</li>
+  <li>Learn to make your code more flexible and responsive to user input by changing the mole layout according to user input via the slide switches. Your game will support at least three layouts: 9 moles, 6 moles, and 4 moles.</li>
+  <li>More practice using the <em>rand()</em> and <em>srand()</em> functions.</li>
+  <li>More practice with structs.</li>
+  <li>More exposure to different implementation approaches (the implementation style for this game moves complexity to the display software and simplifies overall control).</li>
+  <li>Practice using object-oriented implementation strategy.</li>
+  <li>Whack Moles :-)</li>
+</ul>
+
+<h2 id="preliminary">Preliminary</h2>
+
+<h3 id="program-organization">Program Organization</h3>
+<p>The organization of the game is similar to past labs where the display code is separated from the control code. However, in this lab, the display code will be significantly smarter than in past labs. Responsibilities for the display code include:</p>
+<ul>
+  <li>drawing the mole display,</li>
+  <li>supporting three different configurations of the mole board: 9 moles, 6 moles, and 4 moles,</li>
+  <li>activating random moles,</li>
+  <li>keeping track of the number of active moles,</li>
+  <li>drawing and erasing moles as they wake up and go dormant, or get whacked.</li>
+  <li>determining if a mole has been whacked by the user,</li>
+  <li>keeping and displaying a tally of hits, misses, and the current level of difficulty.</li>
+</ul>
+
+<p>The controller is quite simple (my controller only has three states). The responsibilities of the controller include:</p>
+<ul>
+  <li>waiting for the user to touch the display,</li>
+  <li>waiting for the touch analog-to-digital converters to settle,</li>
+  <li>sending the touch coordinates to the display code.</li>
+</ul>
+
+<h3 id="source-code">Source Code</h3>
+
+<p>Three files are provided:</p>
+<ul>
+  <li><a href="https://github.com/byu-cpe/ecen330_student/blob/main/archive/lab_wam/wamControl.h">wamControl.h</a></li>
+  <li><a href="https://github.com/byu-cpe/ecen330_student/blob/main/archive/lab_wam/wamDisplay.h">wamDisplay.h</a></li>
+  <li><a href="https://github.com/byu-cpe/ecen330_student/blob/main/archive/lab_wam/main.c">main.c</a>.</li>
+</ul>
+
+<p><strong>Note: Much of the functionality of the various functions is described in the commented code in the provided files. Carefully read these comments as it will save you a lot of time.</strong></p>
+
+<h2 id="implementation">Implementation</h2>
+
+<p>This following sections discuss how the wamDisplay and wamControl code are organized. Links to source code are also provided.</p>
+
+<ul>
+  <li><a href="/ecen330/wam-data-structures/">Representing Moles with a Data Structure</a></li>
+  <li><a href="/ecen330/wam-rand/">Using rand() to Create Random Behavior</a></li>
+  <li><a href="/ecen330/wam-drawing/">Drawing and Erasing Moles</a></li>
+  <li><a href="/ecen330/wam-control-main/">wamControl and main</a></li>
+</ul>
+
+<h3 id="milestones">Milestones</h3>
+<p>The game will be completed in two milestones.</p>
+<ul>
+  <li><strong>Milestone 1</strong>: Implement enough of the game so that you can:
+    <ul>
+      <li>display the mole screen with the score display for 9, 6, and 4 moles, using the slide switches as described in <em>main.c</em>.</li>
+      <li>Fully implement the game-start and game-over screens.</li>
+      <li>test can be implemented as a separate <em>run_test()</em> function in <em>wamDisplay.c</em>. There is a <em>wamDisplay_runMilestone1_test()</em> function declaration provided for this purpose.</li>
+      <li>See the demonstration video for details.</li>
+    </ul>
+  </li>
+  <li><strong>Milestone 2</strong>:
+    <ul>
+      <li>Finish the game so that it meets all of the requirements.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="requirements">Requirements</h2>
+<ul>
+  <li>You must create a Whack a Mole game that supports 9, 6, and 4 moles with behavior that closely resembles the game shown in the videos. The number of moles is selected before starting the game by pushing the slide switches as discussed in <em>main.c</em>. Pushing the slide switches should not interrupt game play.</li>
+  <li>The game can be forced to quit by pressing any push-button. Upon quitting, the game should go to the game-over screen.</li>
+  <li>The game layout must be very close to the one shown in the video. It must also have a dedicated score screen at the bottom of the screen that is very similar to the one shown in the video. The score screen must display hit counts, miss counts, and the current difficulty level.</li>
+  <li>Game play should become progressively more difficult during game play. Levels should automatically advance during game play as the hit-count increases. You make the game more difficult in at least two ways: increasing the number of active moles and decreasing the time they are present (<em>ticksUntilDormant</em>).</li>
+  <li>You must have a start-screen and a game-over screen as shown in the video.</li>
+  <li>You must use <em>malloc()</em> and <em>free()</em> to allocate and deallocate memory for the mole-info records when resizing the game.
+  <!-- - You must use the *wamControl_setMsPerTick()* function to inform the controller how many ms transpire between each tick. In turn, the wamDisplay software must use *wamControl_getRandomMoleAsleepInterval()* and *wamControl_getRandomMoleAwakeInterval()* to set the tick counts for *ticksUntilAwake* and *ticksUntilDormant* variables in the mole-info record. --></li>
+</ul>
+
+<h2 id="submission--pass-off">Submission &amp; Pass Off</h2>
+<p>Follow the <a href="/ecen330/documentation/submission/">instructions on submitting source code</a> to submit your code.</p>
+
+<h3 id="grade-breakdown">Grade Breakdown</h3>
+
+<ul>
+  <li>40%: Milestone 1</li>
+  <li>40%: Milestone 2</li>
+  <li>20%: Code quality (adherence to coding standard)</li>
+</ul>
+
+<h2 id="videos">Videos</h2>
+
+<h3 id="milestone-1">Milestone 1</h3>
+<iframe width="560" height="315" allow="fullscreen" src="https://www.youtube.com/embed/E4fJg1MWaHI"> </iframe>
+
+<h3 id="complete-game">Complete Game</h3>
+<iframe width="560" height="315" allow="fullscreen" src="https://www.youtube.com/embed/akiCjLoxr3Q"> </iframe>
+
+<h2 id="resources">Resources</h2>
+<p>The web has quite a bit of information on how to use <em>rand()</em> and pointers, including <em>malloc()</em> and <em>free()</em>. Here are a few curated links.</p>
+<ul>
+  <li><a href="https://www.cplusplus.com/reference/cstdlib/rand/">https://www.cplusplus.com/reference/cstdlib/rand/</a></li>
+  <li><a href="https://www.cplusplus.com/reference/cstdlib/malloc/">https://www.cplusplus.com/reference/cstdlib/malloc/</a> (Also check out the “See also” links at the bottom of the page.)</li>
+  <li><a href="https://www.cplusplus.com/reference/cstdlib/free/">https://www.cplusplus.com/reference/cstdlib/free/</a></li>
+  <li><a href="https://en.cppreference.com/w/cpp/language/sizeof">https://en.cppreference.com/w/cpp/language/sizeof</a></li>
+</ul>
+
+    </div>
+</article>
+      </div>
+    </div>
+    <!-- /#page-content-wrapper -->
+
+  </div>
+  <!-- /#wrapper -->
+
+  <!-- Bootstrap core JavaScript -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+<script src=/ecen330/js/jquery.visible.min.js></script>
+
+<!-- Menu Toggle Script -->
+<script>
+    $("#menu-toggle").click(function (e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+
+    var prevVisible = $('#page-title').visible();
+
+    $(window).scroll(function () {
+        currentVisible = $('#page-title').visible()
+        if (prevVisible && !currentVisible) {
+            console.log("Do something!");
+            $("#page-title-bar").html($('#page-title').text());
+        }
+
+        if (!prevVisible && currentVisible) {
+            $("#page-title-bar").html("")
+        }
+
+        prevVisible = currentVisible;
+    });
+
+</script>
+
+</body>
+
+</html>

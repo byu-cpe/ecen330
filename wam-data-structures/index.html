@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<title>
+    
+    Whack-a-Mole: Data Structures • ECEN 330
+    
+</title>
+
+<!-- Bootstrap core CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+<!-- Custom styles for this template -->
+<link rel="stylesheet" href=/ecen330/css/main.css>
+
+<!-- <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet"> -->
+<!-- <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet"> -->
+<link rel="stylesheet" href="https://use.typekit.net/jcn6ybb.css">
+
+<!-- <link rel="icon" type="image/png" sizes="96x96" href=/ecen330/icon/favicon-96x96.png>
+<link rel="icon" type="image/png" sizes="32x32" href=/ecen330/icon/favicon-32x32.png>
+<link rel="icon" type="image/png" sizes="16x16" href=/ecen330/icon/favicon-16x16.png> -->
+
+<script src="https://kit.fontawesome.com/d794f0229e.js" crossorigin="anonymous"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script type="text/javascript">
+    $(function () {
+        console.log("hi there");
+        // this will get the full URL at the address bar
+        var url = window.location.href;
+        console.log(url);
+
+        // passes on every "a" tag
+        $(".list-group a").each(function () {
+            console.log(this)
+            // checks if its the same on the address bar
+            if (url == (this.href)) {
+                $(this).addClass("active");
+            }
+        });
+    });        
+</script>
+
+</head>
+
+<body>
+  <div class="d-flex" id="wrapper">
+    <div class="border-right sidebar-color" id="sidebar-wrapper">
+    <div class="sidebar-sticky">
+        <div class="sidebar-heading-big">
+            <a href="/ecen330/">
+                ECEN 330</a>
+        </div>
+        <div class="list-group list-group-flush sidebar-color">
+
+            
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <!-- <a href="https://slack.com/app_redirect?team=T01J887F8MU&channel=C01JF1N6TH8"
+                class="list-item-normal list-group-item list-group-item-action sidebar-item" target="_blank"><i
+                    class="fa fa-question-circle"></i>
+                Slack</a> -->
+
+        </div>
+
+        <div class="sidebar-heading">Setup</div>
+        <div class="list-group list-group-flush">
+            
+            <a href="/ecen330/setup/step-1/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Setup Step #1
+
+            </a>
+            
+            <a href="/ecen330/setup/linux/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                Home Setup: Linux
+
+            </a>
+            
+            <a href="/ecen330/setup/vm/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                Home Setup: VM
+
+            </a>
+            
+            <a href="/ecen330/setup/step-2/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Setup Step #2
+
+            </a>
+            
+        </div>
+
+        
+        <div class="sidebar-heading">Labs</div>
+        <div class="list-group list-group-flush">
+            
+            <a href="/ecen330/labs/hello-world/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">1</span>
+                
+
+                Hello World
+
+            </a>
+            
+            <a href="/ecen330/labs/gpio/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">2</span>
+                
+
+                GPIO Driver
+
+            </a>
+            
+            <a href="/ecen330/labs/timer/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">3</span>
+                
+
+                Timer Driver
+
+            </a>
+            
+            <a href="/ecen330/labs/interrupts/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">4</span>
+                
+
+                Interrupt Driver
+
+            </a>
+            
+            <a href="/ecen330/labs/touchscreen/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">5</span>
+                
+
+                Touchscreen Driver
+
+            </a>
+            
+            <a href="/ecen330/labs/clock/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">6</span>
+                
+
+                Clock
+
+            </a>
+            
+            <a href="/ecen330/labs/tictactoe/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">7</span>
+                
+
+                Tic Tac Toe
+
+            </a>
+            
+            <a href="/ecen330/labs/tictactoe-m1/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey"></span>
+                &emsp;
+
+                M1: Minimax
+
+            </a>
+            
+            <a href="/ecen330/labs/tictactoe-m2/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey"></span>
+                &emsp;
+
+                M2: Control
+
+            </a>
+            
+            <a href="/ecen330/labs/missile-command/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">8</span>
+                
+
+                Missile Command
+
+            </a>
+            
+            <a href="/ecen330/labs/missile-command-m1/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey"></span>
+                &emsp;
+
+                M1: Missiles
+
+            </a>
+            
+            <a href="/ecen330/labs/missile-command-m2/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey"></span>
+                &emsp;
+
+                M2: Game Control
+
+            </a>
+            
+            <a href="/ecen330/labs/missile-command-m3/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey"></span>
+                &emsp;
+
+                M3: Plane & Stats
+
+            </a>
+            
+            <a href="/ecen330/labs/project/"
+                class="list-item-normal list-group-item list-group-item-action bg-light sidebar-item">
+                <span class="badge badge-pill badge-dark-grey">9</span>
+                
+
+                Choose Your Own
+
+            </a>
+            
+        </div>
+
+        <div class="sidebar-heading">Documentation</div>
+        <div class="list-group list-group-flush">
+            
+            <a href="/ecen330/documentation/development-tools/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Development Tools
+
+            </a>
+            
+            <a href="/ecen330/documentation/compiling/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                Compiling and Running
+
+            </a>
+            
+            <a href="/ecen330/documentation/cmake/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                CMake
+
+            </a>
+            
+            <a href="/ecen330/documentation/headers/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                Header Files
+
+            </a>
+            
+            <a href="/ecen330/documentation/submission/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                Submitting Code
+
+            </a>
+            
+            <a href="/ecen330/documentation/vscode/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                Coding/Debugging Tips
+
+            </a>
+            
+            <a href="/ecen330/documentation/devices/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                System Platform
+
+            </a>
+            
+            <a href="/ecen330/documentation/graphics/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                LCD Graphics
+
+            </a>
+            
+            <a href="/ecen330/documentation/gpio/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                GPIO
+
+            </a>
+            
+            <a href="/ecen330/documentation/timer/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                Interval Timer
+
+            </a>
+            
+            <a href="/ecen330/documentation/intc/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                Interrupt Controller
+
+            </a>
+            
+            <a href="/ecen330/documentation/touchscreen/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                &emsp;
+
+                Touchscreen
+
+            </a>
+            
+        </div>
+
+        <div class="sidebar-heading">Other</div>
+        <div class="list-group list-group-flush">
+            
+            <a href="/ecen330/other/c-programming/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                'C Programming' Study Questions
+
+            </a>
+            
+            <a href="/ecen330/other/coding-standard/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Coding Standard
+
+            </a>
+            
+            <a href="/ecen330/other/coding-state-machines/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Coding State Machines
+
+            </a>
+            
+            <a href="/ecen330/other/suggestions/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Suggestions
+
+            </a>
+            
+            <a href="/ecen330/other/simon/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Old Lab: Simon
+
+            </a>
+            
+            <a href="/ecen330/other/wam/"
+                class="list-item-narrow list-group-item list-group-item-action bg-light sidebar-item">
+                
+
+                Old Lab: Whack-a-Mole
+
+            </a>
+            
+        </div>
+    </div>
+</div>
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+
+      <nav class="navbar sticky-top navbar-expand-lg border-bottom">
+        <button class="btn btn-brand" id="menu-toggle">
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <a href="" class="navbar-brand mb-0 h1 page-title-bar text-center mx-auto" id="page-title-bar"></a>
+
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link btn btn-brand suggest-edits" target="_blank" rel="noopener noreferrer"
+              href="https://piazza.com/byu/fall2023/ecen330"><i class="far fa-question-circle"></i> Piazza</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link btn btn-brand suggest-edits" target="_blank" rel="noopener noreferrer"
+              href="https://github.com/byu-cpe/ecen330/issues/new?labels=website&title=Updates to Whack-a-Mole: Data Structures page"><i
+                class="fab fa-github"></i> Suggest
+              Edits</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="container">
+        
+
+        <article class="page">
+  <h1 class="page-title" id="page-title">
+    
+    Whack-a-Mole: Data Structures
+  </h1>
+
+  <div class="page-content">
+    
+
+    <h2 id="wamdisplay_moleinfo_t-struct">wamDisplay_moleInfo_t Struct</h2>
+
+<p>Moles are represented using a struct that is shown below. Carefully read the comments associated with the struct to understand how the struct is used. The ticksUntilAwake/ticksUntilDormant will be decremented at a regular rate by the controlling state machine.</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">typedef</span> <span class="k">struct</span> <span class="p">{</span>
+        <span class="n">wamDisplay_point_t</span> <span class="n">origin</span><span class="p">;</span>  <span class="c1">// This is the origin of the hole for this mole.</span>
+
+        <span class="c1">// A mole is active if either of the tick counts are non-zero. The mole is dormant otherwise.</span>
+        <span class="c1">// During operation, non-zero tick counts are decremented at a regular rate by the control state machine.</span>
+        <span class="c1">// The mole remains in his hole until ticksUntilAwake decrements to zero and then he pops out.</span>
+        <span class="c1">// The mole remains popped out of his hole until ticksUntilDormant decrements to zero.</span>
+        <span class="c1">// Once ticksUntilDormant goes to zero, the mole hides in his hole and remains dormant until activated again.</span>
+        <span class="n">wamDisplay_moleTickCount_t</span> <span class="n">ticksUntilAwake</span><span class="p">;</span>  <span class="c1">// Moles wake up (pop out of hole) when this goes from 1 -&gt; 0.</span>
+        <span class="n">wamDisplay_moleTickCount_t</span> <span class="n">ticksUntilDormant</span><span class="p">;</span> <span class="c1">// Moles go dormant (back in hole) this goes 1 -&gt; 0.</span>
+<span class="p">}</span> <span class="n">wamDisplay_moleInfo_t</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>Each mole is represented by a single mole-info record that provides the mole’s screen coordinates and awake/dormant status (<em>ticksUntilAwake</em>, <em>ticksUntilDormant</em>). You will use a one-dimensional array of pointers to keep track of, and to access your mole-info records. You will need to resize this array whenever the user selects a different number of moles for game play. You will allocate/deallocate memory using <em>malloc()/free()</em> whenever you resize the array.</p>
+
+<h2 id="coding-example-for-malloc-and-free">Coding Example for malloc() and free()</h2>
+
+<p>The mole-info records will be accessed via a one-dimensional array of pointers, where each pointer will point to a single mole-info record. The order that these mole-info records occur within the array is unimportant. It is only important that you can access each of the mole-info records.  The following code is a good starting point for <em>wamDisplay.c</em>:</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// This will contain pointers to all of the mole info records.</span>
+<span class="c1">// This will ultimately be treated as an array of pointers.</span>
+<span class="k">static</span> <span class="n">wamDisplay_moleInfo_t</span><span class="o">**</span> <span class="n">wamDisplay_moleInfo</span><span class="p">;</span>
+
+<span class="c1">// Allocates the memory for wamDisplay_moleInfo_t records.</span>
+<span class="c1">// Computes the origin for each mole assuming a simple row-column layout:</span>
+<span class="c1">// 9 moles: 3 rows, 3 columns, 6 moles: 2 rows, 3 columns, 4 moles: 2 rows, 2 columns</span>
+<span class="c1">// Also inits the tick counts for awake and dormant.</span>
+<span class="kt">void</span> <span class="nf">wamDisplay_computeMoleInfo</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// Setup all of the moles, creates and inits mole info records.</span>
+    <span class="c1">// Create the container array. It contains pointers to each of the mole-hole info records.</span>
+    <span class="c1">//    wamDisplay_moleInfo =  // Need to uncomment this line and initialize this variable via malloc().</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>The array of pointers will be stored at <em>wamDisplay_moleInfo</em> (see above). To illustrate how this is done, here is a simple example that performs tasks similar to those that you will need to perform. You can compile this program if you like. Also, though the steps that assign and print-out the values of the structs is not described here it is provided so you can see how to access the variables in the struct.</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;stdint.h&gt;</span><span class="cp">
+#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp">
+#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span>
+<span class="k">typedef</span> <span class="k">struct</span> <span class="p">{</span><span class="kt">uint16_t</span> <span class="n">x</span><span class="p">;</span> <span class="kt">uint16_t</span> <span class="n">y</span><span class="p">;}</span> <span class="n">myStruct</span><span class="p">;</span>  <span class="c1">// Simple struct as an example.</span>
+
+<span class="c1">// Step 1: Define the variable that will contain the array of pointers.</span>
+<span class="k">static</span> <span class="n">myStruct</span><span class="o">**</span> <span class="n">arrayOfPointers</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>  <span class="c1">// This is just a pointer, it doesn't point to anything yet.</span>
+
+<span class="cp">#define NUMBER_OF_POINTERS 4
+</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+ 
+    <span class="c1">// Step 2: allocate enough memory to hold NUMBER_OF_POINTERS. I need enough storage for 4</span>
+    <span class="c1">// pointers. sizeof(myStruct*) returns the number of bytes for a single pointer to a myStruct. </span>
+    <span class="c1">// Multiply that value by 4 to get enough memory for 4 pointers. </span>
+    <span class="c1">// malloc() returns a (void *) so you must cast it to match the type of arrayOfPointers.</span>
+    <span class="c1">// Rule of thumb: the number of stars (*) must match on both sides of the equation.</span>
+    <span class="c1">// arrayOfPointers is pointer-to-pointer (myStruct**) so you need two stars (*) for the cast.</span>
+    <span class="n">arrayOfPointers</span> <span class="o">=</span> <span class="p">(</span><span class="n">myStruct</span><span class="o">**</span><span class="p">)</span> <span class="n">malloc</span><span class="p">(</span><span class="n">NUMBER_OF_POINTERS</span> <span class="o">*</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">myStruct</span><span class="o">*</span><span class="p">));</span>
+
+    <span class="c1">// Step 3: Allocate memory for each myStruct.</span>
+    <span class="c1">// sizeof(myStruct) returns the number of bytes required by a single myStruct.</span>
+    <span class="c1">// The for-loop iterates 4 times, during each iteration, it grabs enough memory</span>
+    <span class="c1">// for a single myStruct and stores it address (the pointer value) in a location in arrayOfPointers.</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">uint16_t</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">NUMBER_OF_POINTERS</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// Second, allocate an instance of myStruct and point to it.</span>
+        <span class="n">arrayOfPointers</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">myStruct</span><span class="o">*</span><span class="p">)</span> <span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="n">myStruct</span><span class="p">));</span>
+    <span class="p">}</span>
+    <span class="c1">// Step 4: assign values to these structs.</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">uint16_t</span> <span class="n">j</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">j</span><span class="o">&lt;</span><span class="n">NUMBER_OF_POINTERS</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">arrayOfPointers</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">-&gt;</span><span class="n">x</span> <span class="o">=</span> <span class="n">j</span><span class="p">;</span>  <span class="c1">// Just need a number.</span>
+        <span class="n">arrayOfPointers</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">-&gt;</span><span class="n">y</span> <span class="o">=</span> <span class="n">NUMBER_OF_POINTERS</span> <span class="o">-</span> <span class="n">j</span><span class="p">;</span>  <span class="c1">// Just need a number.</span>
+    <span class="p">}</span>
+    <span class="c1">// Verify that the assignments worked.</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">uint16_t</span> <span class="n">k</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">k</span><span class="o">&lt;</span><span class="n">NUMBER_OF_POINTERS</span><span class="p">;</span> <span class="n">k</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">"Struct contents x:%d, y:%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">arrayOfPointers</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="o">-&gt;</span><span class="n">x</span><span class="p">,</span> <span class="n">arrayOfPointers</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="o">-&gt;</span><span class="n">y</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="c1">// When you are done, you must return the memory to the system or you will create a memory leak.</span>
+    <span class="c1">// First deallocate all of the structs.</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">uint16_t</span> <span class="n">l</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">l</span><span class="o">&lt;</span><span class="n">NUMBER_OF_POINTERS</span><span class="p">;</span> <span class="n">l</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">free</span><span class="p">(</span><span class="n">arrayOfPointers</span><span class="p">[</span><span class="n">l</span><span class="p">]);</span>   <span class="c1">// This deallocates the memory. </span>
+        <span class="n">arrayOfPointers</span><span class="p">[</span><span class="n">l</span><span class="p">]</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>  <span class="c1">// This step is not necessary but will keep you from reusing deallocated memory.</span>
+    <span class="p">}</span>
+    <span class="c1">// Next, deallocate the array that contains the pointers to the structs.</span>
+    <span class="n">free</span><span class="p">(</span><span class="n">arrayOfPointers</span><span class="p">);</span>   <span class="c1">// Deallocates the container of arrays.</span>
+    <span class="n">arrayOfPointers</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>  <span class="c1">// Also keeps you from reusing the deallocated memory.</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Let’s work through the three labeled steps of the above example. See the figure below for additional explanation.</p>
+
+<p>Step 1: Define the pointer to the array of pointers. This pointer doesn’t yet point to anything.</p>
+
+<p>Step 2: Allocate sufficient memory to contain 4 pointers, where each pointer will eventually point to a struct. <em>arrayOfPointers</em> now points to something; however, the memory it contains does not point to anything.</p>
+
+<p>Step 3: Allocate 4 instances of <em>myStruct</em> and point to them using the <em>arrayOfPointers</em>.</p>
+
+<p><img src="/ecen330/media/lab7/pointerexample.jpg" width="700" alt="Diagram of pointer to pointers" /></p>
+
+<p>The code example also demonstrates how to deallocate memory when you are done. This is an important step to make sure that the memory footprint of your program doesn’t grow indiscriminately over time.</p>
+
+
+  </div>
+</article>
+      </div>
+    </div>
+    <!-- /#page-content-wrapper -->
+
+  </div>
+  <!-- /#wrapper -->
+
+  <!-- Bootstrap core JavaScript -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+<script src=/ecen330/js/jquery.visible.min.js></script>
+
+<!-- Menu Toggle Script -->
+<script>
+    $("#menu-toggle").click(function (e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+
+    var prevVisible = $('#page-title').visible();
+
+    $(window).scroll(function () {
+        currentVisible = $('#page-title').visible()
+        if (prevVisible && !currentVisible) {
+            console.log("Do something!");
+            $("#page-title-bar").html($('#page-title').text());
+        }
+
+        if (!prevVisible && currentVisible) {
+            $("#page-title-bar").html("")
+        }
+
+        prevVisible = currentVisible;
+    });
+
+</script>
+
+</body>
+
+</html>
